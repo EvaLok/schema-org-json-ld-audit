@@ -1,0 +1,41 @@
+{
+  "last_updated": "",
+  "main_repo": {
+    "last_commit_audited": "",
+    "last_orchestrator_issue_reviewed": 0,
+    "orchestrator_cycle_count": 0,
+    "self_improvement_actions": [],
+    "recurring_pr_revision_patterns": [],
+    "prompt_last_modified": "",
+    "agents_md_last_modified": ""
+  },
+  "qc_repo": {
+    "last_commit_audited": "",
+    "last_orchestrator_issue_reviewed": 0,
+    "orchestrator_cycle_count": 0,
+    "self_improvement_actions": [],
+    "prompt_last_modified": ""
+  },
+  "cross_repo_health": {
+    "avg_report_to_fix_hours": 0,
+    "avg_ack_latency_hours": 0,
+    "stale_threads": [],
+    "protocol_friction_notes": []
+  },
+  "recommendations": {
+    "open": [],
+    "accepted": [],
+    "rejected": [],
+    "deferred": []
+  },
+  "metrics": {
+    "total_filed": 0,
+    "total_accepted": 0,
+    "acceptance_rate": 0
+  },
+  "last_cycle": {
+    "issue": 0,
+    "timestamp": "",
+    "summary": ""
+  }
+}
