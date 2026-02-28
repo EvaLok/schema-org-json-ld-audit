@@ -1,41 +1,76 @@
 {
-  "last_updated": "",
+  "last_updated": "2026-02-28T11:16:00Z",
   "main_repo": {
-    "last_commit_audited": "",
-    "last_orchestrator_issue_reviewed": 0,
-    "orchestrator_cycle_count": 0,
-    "self_improvement_actions": [],
-    "recurring_pr_revision_patterns": [],
-    "prompt_last_modified": "",
-    "agents_md_last_modified": ""
+    "last_commit_audited": "5971b5a",
+    "last_orchestrator_issue_reviewed": 243,
+    "orchestrator_cycle_count": 63,
+    "self_improvement_actions": [
+      "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
+      "6 skills created: github-issues-comments, journal-entries, orchestrator-permissions, pr-review-workflow, schema-implementation, writing-skills",
+      "9 bash tools created in tools/ (non-functional in sandbox)",
+      "STARTUP_CHECKLIST refined after 40 permission denials audit (2026-02-26)",
+      "journal-entries skill added per Eva request (2026-02-27)"
+    ],
+    "recurring_pr_revision_patterns": [
+      "94.4% Copilot PR merge rate (17/18 sessions)"
+    ],
+    "prompt_last_modified": "No CLAUDE.md; uses AGENTS.md + STARTUP_CHECKLIST.md",
+    "agents_md_last_modified": "2026-02-26T23:07:00Z",
+    "v1_released": "2026-02-27T13:25:27Z",
+    "steady_state_since_cycle": 50,
+    "schema_types": 28,
+    "total_classes": 98,
+    "test_count": 321,
+    "phpstan_level": 9
   },
   "qc_repo": {
-    "last_commit_audited": "",
-    "last_orchestrator_issue_reviewed": 0,
-    "orchestrator_cycle_count": 0,
-    "self_improvement_actions": [],
-    "prompt_last_modified": ""
+    "last_commit_audited": "53af61b",
+    "last_orchestrator_issue_reviewed": 90,
+    "orchestrator_cycle_count": 90,
+    "self_improvement_actions": [
+      "Journal and worklog alignment per Eva request (2026-02-27)",
+      "PHP 8.5 CI support added (2026-02-27)"
+    ],
+    "prompt_last_modified": "Unknown — STARTUP_CHECKLIST exists",
+    "unit_tests": 188,
+    "e2e_tests": 39,
+    "e2e_pass": 39,
+    "e2e_errors": 0,
+    "e2e_warnings_total": 15,
+    "e2e_warnings_false_positives": 15,
+    "steady_state_since_session": 87
   },
   "cross_repo_health": {
-    "avg_report_to_fix_hours": 0,
-    "avg_ack_latency_hours": 0,
+    "avg_report_to_fix_hours": 12,
+    "avg_ack_latency_hours": 1,
     "stale_threads": [],
-    "protocol_friction_notes": []
+    "protocol_friction_notes": [
+      "Protocol is working well — 3 QC reports filed and resolved, 8 validation requests completed",
+      "All cross-repo threads currently closed"
+    ],
+    "qc_outbound_reports": 3,
+    "qc_inbound_requests": 8,
+    "all_threads_resolved": true
   },
   "recommendations": {
-    "open": [],
+    "open": [
+      {"issue": 2, "title": "Idle cycle spinning", "filed": "2026-02-28"},
+      {"issue": 3, "title": "Non-functional tools directory", "filed": "2026-02-28"},
+      {"issue": 4, "title": "False positives not communicated to users", "filed": "2026-02-28"},
+      {"issue": 5, "title": "Cron frequency / maintenance mode (question-for-eva)", "filed": "2026-02-28"}
+    ],
     "accepted": [],
     "rejected": [],
     "deferred": []
   },
   "metrics": {
-    "total_filed": 0,
+    "total_filed": 4,
     "total_accepted": 0,
     "acceptance_rate": 0
   },
   "last_cycle": {
-    "issue": 0,
-    "timestamp": "",
-    "summary": ""
+    "issue": 1,
+    "timestamp": "2026-02-28T11:10:00Z",
+    "summary": "First audit cycle. Baseline assessment complete. 4 recommendations filed: idle cycle spinning (#2), non-functional tools (#3), false positives not communicated (#4), cron frequency question (#5)."
   }
 }
