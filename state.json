@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-02-28T14:22:00Z",
+  "last_updated": "2026-02-28T17:10:00Z",
   "main_repo": {
-    "last_commit_audited": "293f270",
-    "last_orchestrator_issue_reviewed": 248,
-    "orchestrator_cycle_count": 65,
+    "last_commit_audited": "3588d28",
+    "last_orchestrator_issue_reviewed": 252,
+    "orchestrator_cycle_count": 67,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
       "6 skills created: github-issues-comments, journal-entries, orchestrator-permissions, pr-review-workflow, schema-implementation, writing-skills",
@@ -14,7 +14,10 @@
       "Known Validator Limitations added to README per audit #4 (2026-02-28)",
       "Audit repo polling added to STARTUP_CHECKLIST (step 5) (2026-02-28)",
       "Orchestrator prompt inlined — eliminated system-prompt repo dependency (2026-02-28)",
-      "Permissions loosened to add bash, php, cat, head, tail (2026-02-28)"
+      "Permissions loosened to add bash, php, cat, head, tail (2026-02-28)",
+      "Audit feedback loop added to STARTUP_CHECKLIST step 5 per audit #7 (2026-02-28)",
+      "New-language prerequisite gate added as STARTUP_CHECKLIST step 5.5 per audit #8 (2026-02-28)",
+      "Self-modification tracking convention added to writing conventions per audit #9 (2026-02-28)"
     ],
     "recurring_pr_revision_patterns": [
       "94.4% Copilot PR merge rate (17/18 sessions)"
@@ -24,10 +27,19 @@
     "v1_released": "2026-02-27T13:25:27Z",
     "steady_state_since_cycle": 50,
     "typescript_plan": {
-      "status": "draft_v1_posted",
+      "status": "draft_v2_posted",
       "issue": 247,
       "qc_coordination_issue": 249,
-      "awaiting": "Eva feedback/approval"
+      "plan_version": 2,
+      "awaiting": "Eva feedback/approval on v2 (polyglot structure, v2.0.0 tag, @evabee scope)",
+      "qc_validation_strategy": "Aligned — QC repo #98: ts-consumer/ dir, parity testing, begins after Phase 1 merge",
+      "eva_decisions": {
+        "linter": "Biome",
+        "node_minimum": "20 (also test on 24)",
+        "license": "MIT",
+        "agents_md": "Extend with per-language sub-files (AGENTS-php.md, AGENTS-ts.md)"
+      },
+      "cron_frequency": "Eva says hold current schedule — expansion coming soon"
     },
     "schema_types": 28,
     "total_classes": 98,
@@ -35,15 +47,17 @@
     "phpstan_level": 9
   },
   "qc_repo": {
-    "last_commit_audited": "a7c2575",
-    "last_orchestrator_issue_reviewed": 91,
-    "orchestrator_cycle_count": 91,
+    "last_commit_audited": "578adc0",
+    "last_orchestrator_issue_reviewed": 97,
+    "orchestrator_cycle_count": 97,
     "self_improvement_actions": [
       "Journal and worklog alignment per Eva request (2026-02-27)",
       "PHP 8.5 CI support added (2026-02-27)",
       "Idle cycle detection added to STARTUP_CHECKLIST (step 4) per audit #2 (2026-02-28)",
       "Audit repo polling added to STARTUP_CHECKLIST (step 10) (2026-02-28)",
-      "False positive doc check added to STARTUP_CHECKLIST (step 11) per audit #4 (2026-02-28)"
+      "False positive doc check added to STARTUP_CHECKLIST (step 11) per audit #4 (2026-02-28)",
+      "Self-modification tracking added to worklog template per audit #9 (2026-02-28)",
+      "TypeScript validation strategy proposed via QC-ACK #98 (2026-02-28)"
     ],
     "prompt_last_modified": "Unknown — STARTUP_CHECKLIST exists",
     "unit_tests": 188,
@@ -52,50 +66,56 @@
     "e2e_errors": 0,
     "e2e_warnings_total": 15,
     "e2e_warnings_false_positives": 15,
-    "steady_state_since_session": 87
+    "steady_state_since_session": 87,
+    "write_access_gap": "QC cannot comment on audit repo — filed qc#99"
   },
   "cross_repo_health": {
     "avg_report_to_fix_hours": 12,
     "avg_ack_latency_hours": 1,
     "audit_recommendation_response_hours": 3,
-    "stale_threads": [],
+    "stale_threads": ["qc#96 (question-for-eva, cron frequency — answered on main#245 but QC version still open)"],
     "protocol_friction_notes": [
-      "Protocol is working well — 3 QC reports filed and resolved, 8 validation requests completed",
-      "All cross-repo threads currently closed",
-      "Three-way audit loop now operational — audit recommendations processed by both repos within 3 hours",
-      "Gap: orchestrators respond on their own repos but don't comment on audit-outbound issues (recommendation #7)"
+      "Main orchestrator feedback loop closed — comments directly on audit-outbound issues",
+      "QC orchestrator feedback loop asymmetric — uses audit-inbound issues on own repo (write-access gap)",
+      "Three-way audit loop operational — recommendations processed within 3 hours by both repos",
+      "Cross-repo question-for-eva sync missing — Eva's answer on main#245 didn't propagate to qc#96",
+      "Audit-inbound issues accumulating on QC repo (6 open) with no lifecycle management"
     ],
     "qc_outbound_reports": 3,
     "qc_inbound_requests": 8,
-    "all_threads_resolved": true
+    "all_threads_resolved": false
   },
   "recommendations": {
     "open": [
-      {"issue": 7, "title": "Audit feedback loop — orchestrators don't comment on audit-outbound issues", "filed": "2026-02-28"},
-      {"issue": 8, "title": "TypeScript agent sessions need prerequisite guardrails", "filed": "2026-02-28"},
-      {"issue": 9, "title": "Infrastructure self-modifications not tracked in worklogs/journals", "filed": "2026-02-28"}
+      {"issue": 11, "title": "QC write-access gap in three-way audit protocol", "filed": "2026-02-28", "labels": ["audit-outbound", "question-for-eva"]},
+      {"issue": 12, "title": "Audit-inbound issue lifecycle management", "filed": "2026-02-28"},
+      {"issue": 13, "title": "Cross-repo question-for-eva synchronization gap", "filed": "2026-02-28"}
     ],
     "accepted": [
       {"issue": 2, "title": "Idle cycle spinning", "filed": "2026-02-28", "accepted": "2026-02-28", "main_response": "main#246", "qc_response": "qc#92"},
       {"issue": 3, "title": "Non-functional tools directory", "filed": "2026-02-28", "accepted": "2026-02-28", "main_response": "main#246", "qc_response": "qc#93 (N/A)"},
-      {"issue": 4, "title": "False positives not communicated to users", "filed": "2026-02-28", "accepted": "2026-02-28", "main_response": "main#246", "qc_response": "qc#94 (partial)"}
+      {"issue": 4, "title": "False positives not communicated to users", "filed": "2026-02-28", "accepted": "2026-02-28", "main_response": "main#246", "qc_response": "qc#94 (partial)"},
+      {"issue": 7, "title": "Audit feedback loop", "filed": "2026-02-28", "accepted": "2026-02-28", "main_response": "main#251", "qc_response": "qc#99 (partial — write-access gap)"},
+      {"issue": 8, "title": "TypeScript prerequisite guardrails", "filed": "2026-02-28", "accepted": "2026-02-28", "main_response": "main#251 (step 5.5 gate)", "qc_response": "qc#100 + QC-ACK #98"},
+      {"issue": 9, "title": "Self-modification tracking", "filed": "2026-02-28", "accepted": "2026-02-28", "main_response": "main#251", "qc_response": "qc#101"}
     ],
     "rejected": [],
     "deferred": [
-      {"issue": 5, "title": "Cron frequency / maintenance mode", "filed": "2026-02-28", "deferred": "2026-02-28", "reason": "Requires Eva action on workflow files", "main_response": "main#245", "qc_response": "qc#96"}
+      {"issue": 5, "title": "Cron frequency / maintenance mode", "filed": "2026-02-28", "deferred": "2026-02-28", "resolved": "2026-02-28", "reason": "Eva says hold current schedule — expansion coming soon", "main_response": "main#245 (closed)", "qc_response": "qc#96 (still open — sync gap)"}
     ]
   },
   "metrics": {
-    "total_filed": 7,
-    "total_accepted": 3,
+    "total_filed": 10,
+    "total_accepted": 6,
     "total_deferred": 1,
     "total_rejected": 0,
-    "acceptance_rate": 0.75,
-    "response_rate": 1.0
+    "acceptance_rate": 0.86,
+    "response_rate": 1.0,
+    "trend": "improving — acceptance rate up from 0.75 to 0.86, all cycle 2 recommendations accepted"
   },
   "last_cycle": {
-    "issue": 6,
-    "timestamp": "2026-02-28T14:03:12Z",
-    "summary": "Second audit cycle. All 4 previous recommendations actioned (3 accepted, 1 deferred to Eva). Both repos implemented idle cycle detection, audit repo awareness, and checklist improvements. Main repo began TypeScript expansion (Eva directive #247). 3 new recommendations filed: audit feedback loop (#7), TypeScript prerequisites (#8), self-modification tracking (#9)."
+    "issue": 10,
+    "timestamp": "2026-02-28T17:03:00Z",
+    "summary": "Third audit cycle. All 3 cycle-2 recommendations (#7, #8, #9) accepted by both repos. Main orchestrator now comments directly on audit-outbound issues (feedback loop closed). TypeScript plan at Draft v2, awaiting Eva approval. QC identified write-access gap — cannot comment on audit repo. 3 new recommendations filed: write-access gap (#11), audit-inbound lifecycle (#12), question-for-eva sync (#13)."
   }
 }
