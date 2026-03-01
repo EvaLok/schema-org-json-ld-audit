@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-02-28T23:38:00Z",
+  "last_updated": "2026-03-01T03:14:00Z",
   "main_repo": {
-    "last_commit_audited": "96b1469",
-    "last_orchestrator_issue_reviewed": 258,
-    "orchestrator_cycle_count": 71,
+    "last_commit_audited": "31a6791",
+    "last_orchestrator_issue_reviewed": 264,
+    "orchestrator_cycle_count": 73,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
       "6 skills created: github-issues-comments, journal-entries, orchestrator-permissions, pr-review-workflow, schema-implementation, writing-skills",
@@ -22,23 +22,31 @@
       "Cross-repo question-for-eva sync added to STARTUP_CHECKLIST step 2 per audit #13 (2026-02-28)",
       "All audit-inbound issues closed (#246, #251, #254) — lifecycle management operational (2026-02-28)",
       "AGENTS-ts.md created with TS conventions (cycle 70) per audit #16 (2026-02-28)",
-      "TS implementation skill created (cycle 71) per audit #16 (2026-02-28)"
+      "TS implementation skill created (cycle 71) per audit #16 (2026-02-28)",
+      "Conditional approval reconciliation step 1.5 added to STARTUP_CHECKLIST per audit #19 (2026-03-01)",
+      "AGENTS-ts.md updated with options object pattern per audit #20 (2026-03-01)",
+      "TS skill updated with Pattern A/B constructor guidance per audit #20 (2026-03-01)",
+      "Draft v3 created on #247 reconciling Eva's conditional approval per audit #19 (2026-03-01)",
+      "Phase 0 executed: PR #263 merged, PHP restructured under php/ prefix (2026-03-01)",
+      "QC-REQUEST #265 sent for post-restructure validation per audit #15 gate (2026-03-01)"
     ],
     "recurring_pr_revision_patterns": [
-      "94.4% Copilot PR merge rate (17/18 sessions)"
+      "94.4% Copilot PR merge rate (17/18 sessions)",
+      "Phase 0 PR #263: 195 files, pure renames, only 3 stale README paths needed fix"
     ],
     "prompt_last_modified": "Inlined into repo (commit d0ae8fa, 2026-02-28)",
     "agents_md_last_modified": "2026-02-26T23:07:00Z",
+    "agents_ts_md_last_modified": "2026-03-01T00:30:00Z",
     "v1_released": "2026-02-27T13:25:27Z",
     "steady_state_since_cycle": 50,
     "consecutive_idle_cycles": 0,
     "typescript_plan": {
-      "status": "approved_with_modifications",
+      "status": "approved_executing",
       "issue": 247,
       "qc_coordination_issue": 249,
-      "plan_version": 2,
+      "plan_version": 3,
       "eva_approval": "2026-02-28T23:05:22Z — conditional approval: proceed with restructure, no v2 tag needed (non-breaking), scoped @evabee package",
-      "awaiting": "Main orchestrator to reconcile approval into Draft v3, then begin Phase 0",
+      "current_phase": "Phase 0 merged, Phase 1 blocked on QC validation",
       "qc_validation_strategy": "Aligned — QC repo #98: ts-consumer/ dir, parity testing, begins after Phase 1 merge",
       "eva_decisions": {
         "linter": "Biome",
@@ -48,27 +56,36 @@
         "version_bump": "No v2.0.0 — restructure is non-breaking, keep v1.x",
         "scoped_package": "@evabee/schema-org-json-ld"
       },
-      "cron_frequency": "Eva says hold current schedule — expansion coming soon",
+      "phases": [
+        {"phase": 0, "name": "Restructure to polyglot dirs (v1.x)", "status": "merged", "pr": 263, "qc_validation": "pending (QC-REQUEST #265)"},
+        {"phase": 1, "name": "TypeScript scaffold", "status": "blocked_on_qc_validation"},
+        {"phase": 2, "name": "Enum & shared sub-type port", "status": "planned"},
+        {"phase": 3, "name": "Schema type port", "status": "planned"},
+        {"phase": 4, "name": "Build, test, publish", "status": "planned"}
+      ],
       "audit_observations": [
         "Phase 0 needs QC validation checkpoint before Phase 1 (audit #15 — accepted, closed)",
         "TypeScript agent guardrails need concrete enumeration before first dispatch (audit #16 — accepted, closed)",
-        "Plan approval requires reconciliation step for conditional approvals (audit #19)",
-        "AGENTS-ts.md constructor pattern needs options object for types with many props (audit #20)"
+        "Plan approval requires reconciliation step for conditional approvals (audit #19 — accepted, closed)",
+        "AGENTS-ts.md constructor pattern needs options object for types with many props (audit #20 — accepted, closed)",
+        "QC idle detection path pattern stale after Phase 0 restructure (audit #23 — filed)",
+        "Orchestrator comments need identity signing convention (audit #24 — filed, per input-from-eva #21)"
       ],
       "preparatory_artifacts": {
-        "AGENTS-ts.md": "Created cycle 70, comprehensive TS conventions",
-        "ts_implementation_skill": "Created cycle 71, step-by-step TS schema implementation procedure"
+        "AGENTS-ts.md": "Created cycle 70, updated cycle 72 (options object pattern per audit #20)",
+        "ts_implementation_skill": "Created cycle 71, updated cycle 72 (Pattern A/B per audit #20)"
       }
     },
     "schema_types": 28,
     "total_classes": 98,
     "test_count": 321,
-    "phpstan_level": 9
+    "phpstan_level": 9,
+    "directory_layout": "php/src/, php/test/ (restructured 2026-03-01, PR #263)"
   },
   "qc_repo": {
-    "last_commit_audited": "4478fbe",
-    "last_orchestrator_issue_reviewed": 106,
-    "orchestrator_cycle_count": 106,
+    "last_commit_audited": "03cecc0",
+    "last_orchestrator_issue_reviewed": 109,
+    "orchestrator_cycle_count": 109,
     "self_improvement_actions": [
       "Journal and worklog alignment per Eva request (2026-02-27)",
       "PHP 8.5 CI support added (2026-02-27)",
@@ -81,7 +98,8 @@
       "Cross-repo question-for-eva sync added to STARTUP_CHECKLIST step 3 per audit #13 (2026-02-28)",
       "All 10 audit-inbound issues closed — lifecycle management operational (2026-02-28)",
       "Stale qc#96 (question-for-eva) closed after discovering Eva answered on main#245 (2026-02-28)",
-      "Audit #15 and #16 processed — Phase 0 QC checkpoint and TS guardrails acknowledged (2026-02-28)"
+      "Audit #15 and #16 processed — Phase 0 QC checkpoint and TS guardrails acknowledged (2026-02-28)",
+      "Smarter idle detection implemented: checks for actual PHP source file changes, not just hash (2026-03-01, per audit #18)"
     ],
     "prompt_last_modified": "Unknown — STARTUP_CHECKLIST exists",
     "unit_tests": 188,
@@ -92,61 +110,64 @@
     "e2e_warnings_false_positives": 15,
     "steady_state_since_session": 87,
     "consecutive_idle_cycles": 0,
-    "idle_cycle_waste_observed": "4 of 8 cycles on 2026-02-28 ran full validation with no new commits — see audit #18",
+    "idle_cycle_detection": "Smarter detection implemented session #109 — but path pattern (src/*.php) is stale after Phase 0 restructure (see audit #23)",
     "write_access_gap": "Acknowledged constraint — QC uses audit-inbound issues on own repo (Eva: keep as-is)"
   },
   "cross_repo_health": {
     "avg_report_to_fix_hours": 12,
     "avg_ack_latency_hours": 1,
     "audit_recommendation_response_hours": 3,
-    "stale_threads": ["main#257 (audit-inbound still open — minor lifecycle gap)"],
+    "stale_threads": [],
     "protocol_friction_notes": [
       "Main orchestrator feedback loop closed — comments directly on audit-outbound issues",
       "QC orchestrator feedback loop asymmetric — uses audit-inbound issues on own repo (accepted constraint)",
-      "Three-way audit loop operational — all 12 recommendations processed, 100% response rate",
-      "Eva approved TS plan (conditional) at 23:05 UTC — system transitioning from idle to active",
-      "Audit-inbound #257 still open on main repo — should be closed next cycle"
+      "Three-way audit loop operational — all 17 recommendations processed, 100% response rate",
+      "Phase 0 merged, QC validation gate active (QC-REQUEST #265 pending)",
+      "Communication identity problem identified — signing convention proposed (audit #24, input-from-eva #21)"
     ],
     "qc_outbound_reports": 3,
-    "qc_inbound_requests": 8,
-    "all_threads_resolved": false
+    "qc_inbound_requests": 9,
+    "qc_request_265_status": "pending — post-Phase 0 E2E validation",
+    "all_threads_resolved": true
   },
   "recommendations": {
     "open": [
-      {"issue": 18, "title": "QC idle cycles should skip full validation when no new package commits exist", "filed": "2026-02-28"},
-      {"issue": 19, "title": "Plan approval workflow needs reconciliation step for conditional approvals", "filed": "2026-02-28"},
-      {"issue": 20, "title": "AGENTS-ts.md constructor pattern will fail for types with many optional properties", "filed": "2026-02-28"}
+      {"issue": 23, "title": "QC idle detection path pattern stale after Phase 0 directory restructure", "filed": "2026-03-01"},
+      {"issue": 24, "title": "Orchestrator comments need identity signing convention for multi-agent clarity", "filed": "2026-03-01"}
     ],
     "accepted": [
-      {"issue": 2, "title": "Idle cycle spinning", "filed": "2026-02-28", "accepted": "2026-02-28", "main_response": "main#246", "qc_response": "qc#92"},
-      {"issue": 3, "title": "Non-functional tools directory", "filed": "2026-02-28", "accepted": "2026-02-28", "main_response": "main#246", "qc_response": "qc#93 (N/A)"},
-      {"issue": 4, "title": "False positives not communicated to users", "filed": "2026-02-28", "accepted": "2026-02-28", "main_response": "main#246", "qc_response": "qc#94 (partial)"},
-      {"issue": 7, "title": "Audit feedback loop", "filed": "2026-02-28", "accepted": "2026-02-28", "main_response": "main#251", "qc_response": "qc#99 (partial — write-access gap)"},
-      {"issue": 8, "title": "TypeScript prerequisite guardrails", "filed": "2026-02-28", "accepted": "2026-02-28", "main_response": "main#251 (step 5.5 gate)", "qc_response": "qc#100 + QC-ACK #98"},
-      {"issue": 9, "title": "Self-modification tracking", "filed": "2026-02-28", "accepted": "2026-02-28", "main_response": "main#251", "qc_response": "qc#101"},
-      {"issue": 12, "title": "Audit-inbound issue lifecycle management", "filed": "2026-02-28", "accepted": "2026-02-28", "main_response": "main#254 (closed)", "qc_response": "qc#104 (6 stale issues closed)"},
-      {"issue": 13, "title": "Cross-repo question-for-eva synchronization", "filed": "2026-02-28", "accepted": "2026-02-28", "main_response": "main#254", "qc_response": "qc#105 (qc#96 closed)"},
-      {"issue": 15, "title": "Phase 0 QC validation checkpoint", "filed": "2026-02-28", "accepted": "2026-02-28", "main_response": "main#257", "qc_response": "qc#107"},
-      {"issue": 16, "title": "TypeScript agent guardrails concrete enumeration", "filed": "2026-02-28", "accepted": "2026-02-28", "main_response": "main#257 (AGENTS-ts.md + TS skill created)", "qc_response": "qc#108"}
+      {"issue": 2, "title": "Idle cycle spinning", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
+      {"issue": 3, "title": "Non-functional tools directory", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
+      {"issue": 4, "title": "False positives not communicated to users", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
+      {"issue": 7, "title": "Audit feedback loop", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
+      {"issue": 8, "title": "TypeScript prerequisite guardrails", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
+      {"issue": 9, "title": "Self-modification tracking", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
+      {"issue": 12, "title": "Audit-inbound issue lifecycle management", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
+      {"issue": 13, "title": "Cross-repo question-for-eva synchronization", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
+      {"issue": 15, "title": "Phase 0 QC validation checkpoint", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
+      {"issue": 16, "title": "TypeScript agent guardrails concrete enumeration", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
+      {"issue": 18, "title": "QC idle cycles should skip full validation when no new package commits exist", "filed": "2026-02-28", "accepted": "2026-03-01", "closed": "2026-03-01"},
+      {"issue": 19, "title": "Plan approval workflow needs reconciliation step for conditional approvals", "filed": "2026-02-28", "accepted": "2026-03-01", "closed": "2026-03-01"},
+      {"issue": 20, "title": "AGENTS-ts.md constructor pattern will fail for types with many optional properties", "filed": "2026-02-28", "accepted": "2026-03-01", "closed": "2026-03-01"}
     ],
     "rejected": [],
     "deferred": [
-      {"issue": 5, "title": "Cron frequency / maintenance mode", "filed": "2026-02-28", "deferred": "2026-02-28", "resolved": "2026-02-28", "reason": "Eva says hold current schedule — expansion coming soon", "main_response": "main#245 (closed)", "qc_response": "qc#96 (now closed)"},
-      {"issue": 11, "title": "QC write-access gap in three-way audit protocol", "filed": "2026-02-28", "deferred": "2026-02-28", "resolved": "2026-02-28", "reason": "Eva says keep as-is. Asymmetric protocol is functional.", "main_response": "main#254", "qc_response": "qc#103"}
+      {"issue": 5, "title": "Cron frequency / maintenance mode", "filed": "2026-02-28", "deferred": "2026-02-28", "resolved": "2026-02-28", "reason": "Eva says hold current schedule — expansion coming soon"},
+      {"issue": 11, "title": "QC write-access gap in three-way audit protocol", "filed": "2026-02-28", "deferred": "2026-02-28", "resolved": "2026-02-28", "reason": "Eva says keep as-is. Asymmetric protocol is functional."}
     ]
   },
   "metrics": {
-    "total_filed": 15,
-    "total_accepted": 10,
+    "total_filed": 17,
+    "total_accepted": 13,
     "total_deferred": 2,
     "total_rejected": 0,
-    "acceptance_rate": 0.83,
+    "acceptance_rate": 0.87,
     "response_rate": 1.0,
-    "trend": "Improving — 10 accepted, 2 deferred (both resolved), 0 rejected. Cycle 5 continues output quality focus with forward-looking TS recommendations. Eva TS plan approval received — system entering active Phase 0."
+    "trend": "Improving — 13 accepted, 2 deferred (both resolved), 0 rejected. All 3 cycle-5 recommendations accepted and implemented. Phase 0 executed successfully. System entering active TypeScript development phase."
   },
   "last_cycle": {
-    "issue": 17,
-    "timestamp": "2026-02-28T23:03:12Z",
-    "summary": "Fifth audit cycle. Both cycle-4 recommendations (#15, #16) accepted by both repos: main created AGENTS-ts.md and TS implementation skill, QC acknowledged. Eva approved TS plan (conditional — no v2 tag) at 23:05 UTC. Filed 3 new recommendations: #18 (QC idle validation waste), #19 (conditional approval reconciliation), #20 (TS constructor ergonomics blind spot). System transitioning from idle holding pattern to active Phase 0 execution."
+    "issue": 22,
+    "timestamp": "2026-03-01T03:00:06Z",
+    "summary": "Sixth audit cycle. All 3 cycle-5 recommendations (#18, #19, #20) accepted and closed. Phase 0 merged (PR #263, 195 files restructured). QC validation gate active (QC-REQUEST #265 pending). Addressed input-from-eva #21 on communication organization. Filed 2 new recommendations: #23 (QC idle detection path pattern stale after Phase 0) and #24 (orchestrator comment signing convention). Acceptance rate improved to 87%."
   }
 }
