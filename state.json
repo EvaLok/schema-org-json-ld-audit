@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-03-01T17:23:00Z",
+  "last_updated": "2026-03-01T20:13:00Z",
   "main_repo": {
-    "last_commit_audited": "f70f36d",
-    "last_orchestrator_issue_reviewed": 308,
-    "orchestrator_cycle_count": 83,
+    "last_commit_audited": "bc114d3",
+    "last_orchestrator_issue_reviewed": 313,
+    "orchestrator_cycle_count": 85,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
       "6 skills created: github-issues-comments, journal-entries, orchestrator-permissions, pr-review-workflow, schema-implementation, writing-skills",
@@ -44,32 +44,35 @@
       "NPM_TOKEN question-for-eva #304 filed (2026-03-01, cycle 81)",
       "Audit #35 accepted: Definition of Done with 5 criteria posted on QC-REQUEST #299 (2026-03-01, cycle 82)",
       "STARTUP_CHECKLIST Step 4 updated to require DoD sections in all QC-REQUESTs per audit #35 (2026-03-01, cycle 82)",
-      "QC validation COMPLETE: 23/23 parity, 0 E2E errors. QC-REQUEST #299 closed (2026-03-01, cycle 83)"
+      "QC validation COMPLETE: 23/23 parity, 0 E2E errors. QC-REQUEST #299 closed (2026-03-01, cycle 83)",
+      "Audit #37 accepted: QAPage + Restaurant ported via PR #312, class inventory reconciliation step 5.6 added (2026-03-01, cycle 84)",
+      "Housekeeping: removed 10 stale Phase 2-3 draft spec files (2026-03-01, cycle 85)"
     ],
     "recurring_pr_revision_patterns": [
       "100% Copilot PR merge rate for TS port Phases 1-3g: 11/11 sessions merged without revision",
       "Phase 4a PR #301: 1 revision (Quick Start example used instance method instead of static, badge format) — first revision in 13 TS sessions",
       "Phase 4b PR #305: Copilot completed in ~3 minutes, first-time correct",
       "Phase 0 PR #263: 195 files, pure renames, only 3 stale README paths needed fix",
-      "Overall TS Copilot merge rate: 12/13 sessions (92%) merged without revision"
+      "QAPage+Restaurant PR #312: merged in ~10 minutes, zero revisions",
+      "Overall TS Copilot merge rate: 13/14 sessions (93%) merged without revision"
     ],
     "prompt_last_modified": "Inlined into repo (commit d0ae8fa, 2026-02-28)",
     "agents_md_last_modified": "2026-02-26T23:07:00Z",
     "agents_ts_md_last_modified": "2026-03-01T05:04:00Z",
     "v1_released": "2026-02-27T13:25:27Z",
     "steady_state_since_cycle": 50,
-    "consecutive_idle_cycles": 0,
+    "consecutive_idle_cycles": 1,
     "typescript_plan": {
       "status": "approved_executing",
       "issue": 247,
       "qc_coordination_issue": 299,
-      "qc_coordination_status": "CLOSED — 23/23 parity validated, all DoD criteria satisfied (2026-03-01T16:43Z)",
+      "qc_coordination_status": "CLOSED — 25/25 parity validated (including QAPage + Restaurant), all DoD criteria satisfied (2026-03-01T16:43Z)",
       "plan_version": 3,
       "eva_approval": "2026-02-28T23:05:22Z — conditional approval: proceed with restructure, no v2 tag needed (non-breaking), scoped @evabee package",
-      "current_phase": "Phase 4 in progress. Phases 0-3 complete. QC validation COMPLETE (23/23 parity). Phase 4a merged, 4b awaiting Eva (PR #305), 4c blocked on Eva (merge + NPM_TOKEN).",
-      "qc_validation_strategy": "COMPLETE. QC built tools/ts-parity-check.ts (session #121), expanded to 23/23 types (session #124). All 5 audit #35 DoD criteria satisfied. QC-ACK #122 closed.",
-      "missing_classes": ["QAPage", "Restaurant"],
-      "missing_classes_note": "2 PHP schema classes have no TS equivalents. Detected by QC session #124 but not treated as blocking. Audit #37 filed.",
+      "current_phase": "Phase 4 in progress. Phases 0-3 COMPLETE (86/86 schema classes). QC validation COMPLETE (25/25 parity). Phase 4a merged, 4b awaiting Eva (PR #305), 4c blocked on Eva (merge + NPM_TOKEN).",
+      "qc_validation_strategy": "COMPLETE. QC built tools/ts-parity-check.ts (session #121), expanded to 25/25 types (sessions #124, #126). All DoD criteria satisfied. QC-ACK #122 closed.",
+      "missing_classes": [],
+      "missing_classes_note": "RESOLVED. QAPage and Restaurant ported via PR #312 (cycle 84, per audit #37). Class inventory: 86 PHP = 86 TS.",
       "eva_decisions": {
         "linter": "Biome",
         "node_minimum": "20 (also test on 24)",
@@ -82,8 +85,8 @@
         {"phase": 0, "name": "Restructure to polyglot dirs (v1.x)", "status": "complete", "pr": 263, "qc_validation": "passed (QC #114, 2026-03-01T04:43Z)"},
         {"phase": 1, "name": "TypeScript scaffold", "status": "complete", "issue": 269, "pr": 270, "merged_at": "2026-03-01T08:50:04Z", "ci_verified": true},
         {"phase": 2, "name": "Enum & shared sub-type port", "status": "complete", "dispatch_strategy": "sequential (per audit #29)", "decomposition": {"2a": {"status": "merged", "pr": 277, "merged_at": "2026-03-01T09:17:42Z"}, "2b": {"status": "merged", "pr": 279, "merged_at": "2026-03-01T09:26:06Z"}, "2c": {"status": "merged", "pr": 281, "merged_at": "2026-03-01T09:36:17Z"}}},
-        {"phase": 3, "name": "Schema type port", "status": "complete_with_gaps", "dispatch_strategy": "sequential (per audit #29)", "note": "84 of 86 PHP schema classes ported. QAPage and Restaurant missing.", "decomposition": {"3a": {"status": "merged", "pr": 283, "merged_at": "2026-03-01T09:47:23Z"}, "3b": {"status": "merged", "pr": 285, "merged_at": "2026-03-01T10:49:00Z"}, "3c": {"status": "merged", "pr": 288, "merged_at": "2026-03-01T11:07:16Z"}, "3d": {"status": "merged", "pr": 290, "merged_at": "2026-03-01T11:19:35Z"}, "3e": {"status": "merged", "pr": 292, "merged_at": "2026-03-01T11:31:02Z"}, "3f": {"status": "merged", "pr": 294, "merged_at": "2026-03-01T11:46:07Z"}, "3g": {"status": "merged", "pr": 296, "merged_at": "2026-03-01T12:11:00Z"}}},
-        {"phase": 4, "name": "Build, test, publish", "status": "in_progress", "decomposition": {"4a": {"status": "merged", "pr": 301, "merged_at": "2026-03-01T12:22:48Z"}, "4b": {"status": "dispatched", "pr": 305, "note": "Awaiting Eva (workflow file). NPM_TOKEN needed (#304)."}, "4c": {"status": "planned", "qc_gate": "PASSED (2026-03-01T16:37Z, 23/23 parity)", "note": "Blocked on Eva: merge PR #305 + configure NPM_TOKEN"}}}
+        {"phase": 3, "name": "Schema type port", "status": "complete", "dispatch_strategy": "sequential (per audit #29)", "note": "86/86 PHP schema classes ported (including QAPage+Restaurant via PR #312, audit #37).", "decomposition": {"3a": {"status": "merged", "pr": 283, "merged_at": "2026-03-01T09:47:23Z"}, "3b": {"status": "merged", "pr": 285, "merged_at": "2026-03-01T10:49:00Z"}, "3c": {"status": "merged", "pr": 288, "merged_at": "2026-03-01T11:07:16Z"}, "3d": {"status": "merged", "pr": 290, "merged_at": "2026-03-01T11:19:35Z"}, "3e": {"status": "merged", "pr": 292, "merged_at": "2026-03-01T11:31:02Z"}, "3f": {"status": "merged", "pr": 294, "merged_at": "2026-03-01T11:46:07Z"}, "3g": {"status": "merged", "pr": 296, "merged_at": "2026-03-01T12:11:00Z"}, "fix": {"status": "merged", "pr": 312, "merged_at": "2026-03-01T18:18:42Z", "note": "QAPage + Restaurant (audit #37)"}}},
+        {"phase": 4, "name": "Build, test, publish", "status": "in_progress", "decomposition": {"4a": {"status": "merged", "pr": 301, "merged_at": "2026-03-01T12:22:48Z"}, "4b": {"status": "dispatched", "pr": 305, "note": "Awaiting Eva (workflow file). NPM_TOKEN needed (#304)."}, "4c": {"status": "planned", "qc_gate": "PASSED (2026-03-01T16:37Z, 25/25 parity)", "note": "Blocked on Eva: merge PR #305 + configure NPM_TOKEN"}}}
       ],
       "audit_observations": [
         "Phase 0 needs QC validation checkpoint before Phase 1 (audit #15 — accepted, closed)",
@@ -96,23 +99,24 @@
         "Parallel dispatch will produce merge conflicts on shared barrel file (audit #29 — accepted, closed)",
         "QC TS validation infrastructure needs to start before TS port completes (audit #32 — accepted, closed)",
         "QC TS validation needs concrete exit criteria before Phase 4c publish (audit #35 — accepted, closed)",
-        "TS port missing QAPage and Restaurant — needs class inventory reconciliation (audit #37 — filed)"
+        "TS port missing QAPage and Restaurant — needs class inventory reconciliation (audit #37 — accepted, closed)",
+        "First npm publish will ship untested build artifact — needs post-build validation (audit #39 — filed)"
       ]
     },
-    "ts_modules_on_master": 98,
-    "ts_schema_classes": 84,
+    "ts_modules_on_master": 100,
+    "ts_schema_classes": 86,
     "php_schema_classes": 86,
     "schema_types": 28,
-    "total_classes": 98,
+    "total_classes": 100,
     "test_count": 321,
     "ts_test_count": 301,
     "phpstan_level": 9,
-    "directory_layout": "php/src/, php/test/, ts/src/, ts/test/ (restructured 2026-03-01, PR #263; TS port 2026-03-01, 11 PRs — 84/86 schema classes ported)"
+    "directory_layout": "php/src/, php/test/, ts/src/, ts/test/ (restructured 2026-03-01, PR #263; TS port COMPLETE 2026-03-01, 14 PRs — 86/86 schema classes ported)"
   },
   "qc_repo": {
-    "last_commit_audited": "f70f36d",
-    "last_orchestrator_issue_reviewed": 124,
-    "orchestrator_cycle_count": 124,
+    "last_commit_audited": "51f562f",
+    "last_orchestrator_issue_reviewed": 126,
+    "orchestrator_cycle_count": 126,
     "self_improvement_actions": [
       "Journal and worklog alignment per Eva request (2026-02-27)",
       "PHP 8.5 CI support added (2026-02-27)",
@@ -140,7 +144,9 @@
       "QC-ACK #98 closed, superseded by operational QC-ACK #122 (2026-03-01, session #121)",
       "TS parity expanded from 4 to 23 types — all match (2026-03-01, session #124)",
       "QC-ACK #122 closed with full DoD satisfaction (23/23 parity, 0 E2E errors) (2026-03-01, session #124)",
-      "Identified QAPage and Restaurant as PHP types without TS equivalents (2026-03-01, session #124)"
+      "Identified QAPage and Restaurant as PHP types without TS equivalents (2026-03-01, session #124)",
+      "TS parity expanded from 23 to 25 types (QAPage + Restaurant) — all match (2026-03-01, session #126)",
+      "Audit #37 accepted — class inventory verified 86/86 (2026-03-01, session #126)"
     ],
     "prompt_last_modified": "Unknown — STARTUP_CHECKLIST exists",
     "unit_tests": 188,
@@ -150,14 +156,14 @@
     "e2e_warnings_total": 15,
     "e2e_warnings_false_positives": 15,
     "ts_vitest_pass": 301,
-    "ts_parity_checked": 23,
-    "ts_parity_total": 23,
-    "ts_parity_note": "23/23 types with TS classes pass parity. 2 PHP types (QAPage, Restaurant) lack TS equivalents — not tested.",
+    "ts_parity_checked": 25,
+    "ts_parity_total": 25,
+    "ts_parity_note": "25/25 types pass parity (including QAPage + Restaurant added in session #126). 86 PHP = 86 TS schema classes.",
     "steady_state_since_session": 87,
     "consecutive_idle_cycles": 0,
     "idle_cycle_detection": "Resilient pattern implemented session #113 — checks for any .php file changes regardless of directory prefix (survives future restructures)",
     "write_access_gap": "Acknowledged constraint — QC uses audit-inbound issues on own repo (Eva: keep as-is)",
-    "ts_validation_status": "COMPLETE. 23/23 parity match, 0 E2E errors, all 5 DoD criteria satisfied. QC-ACK #122 closed (2026-03-01T16:37Z)."
+    "ts_validation_status": "COMPLETE. 25/25 parity match, 0 E2E errors, all DoD criteria satisfied. Class inventory 86/86. QC-ACK #122 closed (2026-03-01T16:37Z)."
   },
   "cross_repo_health": {
     "avg_report_to_fix_hours": 12,
@@ -167,13 +173,14 @@
     "protocol_friction_notes": [
       "Main orchestrator feedback loop closed — comments directly on audit-outbound issues",
       "QC orchestrator feedback loop asymmetric — uses audit-inbound issues on own repo (accepted constraint)",
-      "Three-way audit loop operational — all 22 recommendations processed, 100% response rate",
+      "Three-way audit loop operational — all 23 recommendations processed, 100% response rate",
       "Comment identity signing operational across all three orchestrators",
-      "TS port complete (98 modules, 11 PRs, 3.5 hours). Phase 4 in progress.",
-      "QC TS validation COMPLETE (23/23 parity). Exit criteria from audit #35 working well.",
-      "Sequential dispatch (per audit #29) working perfectly — zero merge conflicts across 11 PRs",
+      "TS port COMPLETE (100 modules, 14 PRs, 86/86 schema classes). Phase 4 in progress.",
+      "QC TS validation COMPLETE (25/25 parity, including QAPage + Restaurant). Class inventory 86/86.",
+      "Sequential dispatch (per audit #29) working perfectly — zero merge conflicts across all 14 PRs",
       "QC-REQUEST #299 → full validation → close: ~4.5 hours (12:12Z to 16:43Z). Strong turnaround.",
-      "Audit #35 DoD → QC structured response against exact criteria. Pattern validated."
+      "Audit #35 DoD → QC structured response against exact criteria. Pattern validated.",
+      "Audit #37 → both orchestrators resolved in one cycle: main ported types, QC expanded parity."
     ],
     "qc_outbound_reports": 3,
     "qc_inbound_requests": 10,
@@ -181,7 +188,7 @@
   },
   "recommendations": {
     "open": [
-      {"issue": 37, "title": "TS port missing QAPage and Restaurant — needs class inventory reconciliation step", "filed": "2026-03-01"}
+      {"issue": 39, "title": "First npm publish will ship untested build artifact — needs post-build validation", "filed": "2026-03-01"}
     ],
     "accepted": [
       {"issue": 2, "title": "Idle cycle spinning", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
@@ -202,7 +209,8 @@
       {"issue": 26, "title": "Phase 1 PR introduces new CI workflow — TS code will merge without CI validation", "filed": "2026-03-01", "accepted": "2026-03-01", "closed": "2026-03-01"},
       {"issue": 29, "title": "Parallel agent dispatch will produce merge conflicts on shared barrel file", "filed": "2026-03-01", "accepted": "2026-03-01", "closed": "2026-03-01"},
       {"issue": 32, "title": "QC TypeScript validation infrastructure needs to start before TS port completes", "filed": "2026-03-01", "accepted": "2026-03-01", "closed": "2026-03-01"},
-      {"issue": 35, "title": "QC TypeScript validation needs concrete exit criteria before Phase 4c npm publish", "filed": "2026-03-01", "accepted": "2026-03-01", "closed": "2026-03-01"}
+      {"issue": 35, "title": "QC TypeScript validation needs concrete exit criteria before Phase 4c npm publish", "filed": "2026-03-01", "accepted": "2026-03-01", "closed": "2026-03-01"},
+      {"issue": 37, "title": "TS port missing QAPage and Restaurant — needs class inventory reconciliation step", "filed": "2026-03-01", "accepted": "2026-03-01", "closed": "2026-03-01"}
     ],
     "rejected": [],
     "deferred": [
@@ -211,17 +219,17 @@
     ]
   },
   "metrics": {
-    "total_filed": 22,
-    "total_accepted": 19,
+    "total_filed": 23,
+    "total_accepted": 20,
     "total_deferred": 2,
     "total_rejected": 0,
     "acceptance_rate": 0.91,
     "response_rate": 1.0,
-    "trend": "Sustained high performance — 19 accepted (streak of 19 consecutive), 2 deferred (both resolved), 0 rejected. QC validation complete (23/23 parity). Phase 4c QC gate cleared. Only Eva blockers remain (PR #305, NPM_TOKEN). Audit found 2 missing TS classes (QAPage, Restaurant) via directory comparison — filed #37. Acceptance rate 91%."
+    "trend": "Sustained high performance — 20 accepted (streak of 20 consecutive), 2 deferred (both resolved), 0 rejected. TS port COMPLETE (86/86 schema classes, 100 modules). QC validation COMPLETE (25/25 parity). System idle waiting on Eva (PR #305, NPM_TOKEN #304). Filed #39 for post-build artifact validation before first npm publish. Acceptance rate 91%."
   },
   "last_cycle": {
-    "issue": 36,
-    "timestamp": "2026-03-01T17:04:40Z",
-    "summary": "Eleventh audit cycle. Audit #35 accepted by main orchestrator (cycle 82) — closed. QC validation COMPLETE: 23/23 parity, 0 E2E errors, all 5 DoD criteria satisfied. QC-ACK #122 and QC-REQUEST #299 both closed. Found 2 PHP schema classes (QAPage, Restaurant) missing from TS — coincidental 98=98 count masked the gap. Filed #37 recommending class inventory reconciliation step. Cleaned up stale cycle issues #27, #30, #33."
+    "issue": 38,
+    "timestamp": "2026-03-01T20:13:00Z",
+    "summary": "Twelfth audit cycle. Audit #37 accepted by both orchestrators — closed. QAPage+Restaurant ported (PR #312), class inventory 86/86, QC parity 25/25. System in healthy idle state waiting on Eva (PR #305 merge + NPM_TOKEN). Found post-publish validation gap: publish workflow tests source code but not built artifact. Filed #39. Cumulative: 23 filed, 20 accepted, 0 rejected."
   }
 }
