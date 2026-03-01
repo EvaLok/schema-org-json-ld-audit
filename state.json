@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-03-01T11:20:00Z",
+  "last_updated": "2026-03-01T14:32:00Z",
   "main_repo": {
-    "last_commit_audited": "76cc992",
-    "last_orchestrator_issue_reviewed": 286,
-    "orchestrator_cycle_count": 79,
+    "last_commit_audited": "dcf11fc",
+    "last_orchestrator_issue_reviewed": 302,
+    "orchestrator_cycle_count": 81,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
       "6 skills created: github-issues-comments, journal-entries, orchestrator-permissions, pr-review-workflow, schema-implementation, writing-skills",
@@ -36,13 +36,19 @@
       "Phase 2 decomposed into 2a/2b/2c with full issue specs prepared (2026-03-01, cycles 76-77)",
       "STARTUP_CHECKLIST Step 8 updated with shared file conflict check per audit #29 (2026-03-01, cycle 78)",
       "Sequential dispatch adopted — Phase 2 (2a/2b/2c) and Phase 3 (3a/3b/3c) all dispatched sequentially per audit #29 (2026-03-01, cycles 78-79)",
-      "Phase 3 decomposed into 7 batches (3a-3g) by dependency level — 69 types mapped (2026-03-01, cycle 78)"
+      "Phase 3 decomposed into 7 batches (3a-3g) by dependency level — 69 types mapped (2026-03-01, cycle 78)",
+      "Phase 3 COMPLETE: all 3a-3g merged, 98 TS modules on master (2026-03-01, cycle 80)",
+      "Audit #32 accepted — sent QC-REQUEST #299 for TS validation (2026-03-01, cycle 80)",
+      "Phase 4a merged: npm package polish (PR #301, 1 revision) (2026-03-01, cycle 80)",
+      "Phase 4b dispatched: npm publish workflow (PR #305, awaiting Eva) (2026-03-01, cycle 81)",
+      "NPM_TOKEN question-for-eva #304 filed (2026-03-01, cycle 81)"
     ],
     "recurring_pr_revision_patterns": [
-      "100% Copilot PR merge rate for TS port: 7/7 sessions (Phases 1, 2a, 2b, 2c, 3a, 3b, 3c) all merged without revision",
+      "100% Copilot PR merge rate for TS port Phases 1-3g: 11/11 sessions merged without revision",
+      "Phase 4a PR #301: 1 revision (Quick Start example used instance method instead of static, badge format) — first revision in 13 TS sessions",
+      "Phase 4b PR #305: Copilot completed in ~3 minutes, first-time correct",
       "Phase 0 PR #263: 195 files, pure renames, only 3 stale README paths needed fix",
-      "Phase 1 PR #270: 14 files, first TypeScript code — high quality scaffold from gpt-5.3-codex",
-      "Phase 2-3c: 6 consecutive PRs merged in ~2 hours via sequential dispatch, zero conflicts"
+      "Overall TS Copilot merge rate: 12/13 sessions (92%) merged without revision"
     ],
     "prompt_last_modified": "Inlined into repo (commit d0ae8fa, 2026-02-28)",
     "agents_md_last_modified": "2026-02-26T23:07:00Z",
@@ -53,11 +59,11 @@
     "typescript_plan": {
       "status": "approved_executing",
       "issue": 247,
-      "qc_coordination_issue": 249,
+      "qc_coordination_issue": 299,
       "plan_version": 3,
       "eva_approval": "2026-02-28T23:05:22Z — conditional approval: proceed with restructure, no v2 tag needed (non-breaking), scoped @evabee package",
-      "current_phase": "Phase 3 in progress. 3a-3c complete, 3d in-flight (PR #290 open). 62 TS modules on master. 37 types remaining across 3d-3g.",
-      "qc_validation_strategy": "Planned in QC-ACK #98 but no implementation started. Audit #32 filed recommending immediate infrastructure scaffolding.",
+      "current_phase": "Phase 4 in progress. Phases 0-3 complete. 98 TS modules on master. Phase 4a merged, 4b awaiting Eva (PR #305), 4c planned.",
+      "qc_validation_strategy": "QC built tools/ts-parity-check.ts (session #121). Initial parity: 4/4 types pass. Expanding coverage. Audit #35 filed recommending concrete exit criteria.",
       "eva_decisions": {
         "linter": "Biome",
         "node_minimum": "20 (also test on 24)",
@@ -70,8 +76,8 @@
         {"phase": 0, "name": "Restructure to polyglot dirs (v1.x)", "status": "complete", "pr": 263, "qc_validation": "passed (QC #114, 2026-03-01T04:43Z)"},
         {"phase": 1, "name": "TypeScript scaffold", "status": "complete", "issue": 269, "pr": 270, "merged_at": "2026-03-01T08:50:04Z", "ci_verified": true},
         {"phase": 2, "name": "Enum & shared sub-type port", "status": "complete", "dispatch_strategy": "sequential (per audit #29)", "decomposition": {"2a": {"status": "merged", "pr": 277, "merged_at": "2026-03-01T09:17:42Z"}, "2b": {"status": "merged", "pr": 279, "merged_at": "2026-03-01T09:26:06Z"}, "2c": {"status": "merged", "pr": 281, "merged_at": "2026-03-01T09:36:17Z"}}},
-        {"phase": 3, "name": "Schema type port", "status": "in_progress", "dispatch_strategy": "sequential (per audit #29)", "decomposition": {"3a": {"status": "merged", "pr": 283, "merged_at": "2026-03-01T09:47:23Z"}, "3b": {"status": "merged", "pr": 285, "merged_at": "2026-03-01T10:49:00Z"}, "3c": {"status": "merged", "pr": 288, "merged_at": "2026-03-01T11:07:16Z"}, "3d": {"status": "dispatched", "issue": 289, "pr": 290}, "3e": {"status": "planned"}, "3f": {"status": "planned"}, "3g": {"status": "planned"}}},
-        {"phase": 4, "name": "Build, test, publish", "status": "planned"}
+        {"phase": 3, "name": "Schema type port", "status": "complete", "dispatch_strategy": "sequential (per audit #29)", "decomposition": {"3a": {"status": "merged", "pr": 283, "merged_at": "2026-03-01T09:47:23Z"}, "3b": {"status": "merged", "pr": 285, "merged_at": "2026-03-01T10:49:00Z"}, "3c": {"status": "merged", "pr": 288, "merged_at": "2026-03-01T11:07:16Z"}, "3d": {"status": "merged", "pr": 290, "merged_at": "2026-03-01T11:19:35Z"}, "3e": {"status": "merged", "pr": 292, "merged_at": "2026-03-01T11:31:02Z"}, "3f": {"status": "merged", "pr": 294, "merged_at": "2026-03-01T11:46:07Z"}, "3g": {"status": "merged", "pr": 296, "merged_at": "2026-03-01T12:11:00Z"}}},
+        {"phase": 4, "name": "Build, test, publish", "status": "in_progress", "decomposition": {"4a": {"status": "merged", "pr": 301, "merged_at": "2026-03-01T12:22:48Z"}, "4b": {"status": "dispatched", "pr": 305, "note": "Awaiting Eva (workflow file). NPM_TOKEN needed (#304)."}, "4c": {"status": "planned", "note": "After QC validation + Eva merges 4b + NPM_TOKEN configured"}}}
       ],
       "audit_observations": [
         "Phase 0 needs QC validation checkpoint before Phase 1 (audit #15 — accepted, closed)",
@@ -82,20 +88,22 @@
         "Orchestrator comments need identity signing convention (audit #24 — accepted, closed)",
         "Phase 1 PR introduces new CI workflow — TS code merges without CI validation (audit #26 — accepted, closed)",
         "Parallel dispatch will produce merge conflicts on shared barrel file (audit #29 — accepted, closed)",
-        "QC TS validation infrastructure needs to start before TS port completes (audit #32 — filed)"
+        "QC TS validation infrastructure needs to start before TS port completes (audit #32 — accepted, closed)",
+        "QC TS validation needs concrete exit criteria before Phase 4c publish (audit #35 — filed)"
       ]
     },
-    "ts_modules_on_master": 62,
+    "ts_modules_on_master": 98,
     "schema_types": 28,
     "total_classes": 98,
     "test_count": 321,
+    "ts_test_count": 301,
     "phpstan_level": 9,
-    "directory_layout": "php/src/, php/test/, ts/src/, ts/test/ (restructured 2026-03-01, PR #263; TS scaffold PR #270)"
+    "directory_layout": "php/src/, php/test/, ts/src/, ts/test/ (restructured 2026-03-01, PR #263; TS port complete 2026-03-01, 11 PRs)"
   },
   "qc_repo": {
-    "last_commit_audited": "78e73e8",
-    "last_orchestrator_issue_reviewed": 119,
-    "orchestrator_cycle_count": 119,
+    "last_commit_audited": "a2a61bd",
+    "last_orchestrator_issue_reviewed": 121,
+    "orchestrator_cycle_count": 121,
     "self_improvement_actions": [
       "Journal and worklog alignment per Eva request (2026-02-27)",
       "PHP 8.5 CI support added (2026-02-27)",
@@ -116,7 +124,11 @@
       "Audit #26 acknowledged — committed to post-Phase 1 CI verification (2026-03-01, session #117)",
       "Audit #29 acknowledged — barrel file conflicts target main orchestrator (2026-03-01, session #119)",
       "TS CI operational confirmed — ci-ts.yml runs on push and PR events (2026-03-01, session #119)",
-      "QC-ACK #98 updated with TS progress assessment (2026-03-01, session #119)"
+      "QC-ACK #98 updated with TS progress assessment (2026-03-01, session #119)",
+      "tools/ts-parity-check.ts created for TS/PHP parity validation (2026-03-01, session #121)",
+      "STARTUP_CHECKLIST updated with TS parity check step (2026-03-01, session #121)",
+      "Audit #32 accepted — built TS validation infrastructure (2026-03-01, session #121)",
+      "QC-ACK #98 closed, superseded by operational QC-ACK #122 (2026-03-01, session #121)"
     ],
     "prompt_last_modified": "Unknown — STARTUP_CHECKLIST exists",
     "unit_tests": 188,
@@ -125,11 +137,14 @@
     "e2e_errors": 0,
     "e2e_warnings_total": 15,
     "e2e_warnings_false_positives": 15,
+    "ts_vitest_pass": 301,
+    "ts_parity_checked": 4,
+    "ts_parity_total": 28,
     "steady_state_since_session": 87,
     "consecutive_idle_cycles": 0,
     "idle_cycle_detection": "Resilient pattern implemented session #113 — checks for any .php file changes regardless of directory prefix (survives future restructures)",
     "write_access_gap": "Acknowledged constraint — QC uses audit-inbound issues on own repo (Eva: keep as-is)",
-    "ts_validation_planning": "QC-ACK #98 open, updated session #119 with progress assessment. No ts-consumer/ implementation started. Audit #32 filed recommending immediate scaffolding."
+    "ts_validation_status": "Operational. tools/ts-parity-check.ts built session #121. Initial parity: 4/4 types (Article, BreadcrumbList, FAQPage, Event) match. Expanding to all 28 top-level types. QC-ACK #122 open."
   },
   "cross_repo_health": {
     "avg_report_to_fix_hours": 12,
@@ -139,19 +154,20 @@
     "protocol_friction_notes": [
       "Main orchestrator feedback loop closed — comments directly on audit-outbound issues",
       "QC orchestrator feedback loop asymmetric — uses audit-inbound issues on own repo (accepted constraint)",
-      "Three-way audit loop operational — all 20 recommendations processed, 100% response rate",
+      "Three-way audit loop operational — all 21 recommendations processed, 100% response rate",
       "Comment identity signing operational across all three orchestrators",
-      "TS port executing at high velocity — Phase 3d in-flight, 62 modules on master",
-      "QC-ACK #98 updated but no ts-consumer/ infrastructure started — timing risk flagged in audit #32",
-      "Sequential dispatch (per audit #29) working perfectly — zero merge conflicts across 7 PRs"
+      "TS port complete (98 modules, 11 PRs, 3.5 hours). Phase 4 in progress.",
+      "QC TS validation operational (4/28 types checked). Exit criteria undefined — audit #35 filed.",
+      "Sequential dispatch (per audit #29) working perfectly — zero merge conflicts across 11 PRs",
+      "QC-REQUEST #299 → QC-ACK #122 turnaround: ~1 hour. Strong cross-repo responsiveness."
     ],
     "qc_outbound_reports": 3,
-    "qc_inbound_requests": 9,
-    "all_threads_resolved": true
+    "qc_inbound_requests": 10,
+    "all_threads_resolved": false
   },
   "recommendations": {
     "open": [
-      {"issue": 32, "title": "QC TypeScript validation infrastructure needs to start before TS port completes", "filed": "2026-03-01"}
+      {"issue": 35, "title": "QC TypeScript validation needs concrete exit criteria before Phase 4c npm publish", "filed": "2026-03-01"}
     ],
     "accepted": [
       {"issue": 2, "title": "Idle cycle spinning", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
@@ -170,7 +186,8 @@
       {"issue": 23, "title": "QC idle detection path pattern stale after Phase 0 directory restructure", "filed": "2026-03-01", "accepted": "2026-03-01", "closed": "2026-03-01"},
       {"issue": 24, "title": "Orchestrator comments need identity signing convention for multi-agent clarity", "filed": "2026-03-01", "accepted": "2026-03-01", "closed": "2026-03-01"},
       {"issue": 26, "title": "Phase 1 PR introduces new CI workflow — TS code will merge without CI validation", "filed": "2026-03-01", "accepted": "2026-03-01", "closed": "2026-03-01"},
-      {"issue": 29, "title": "Parallel agent dispatch will produce merge conflicts on shared barrel file", "filed": "2026-03-01", "accepted": "2026-03-01", "closed": "2026-03-01"}
+      {"issue": 29, "title": "Parallel agent dispatch will produce merge conflicts on shared barrel file", "filed": "2026-03-01", "accepted": "2026-03-01", "closed": "2026-03-01"},
+      {"issue": 32, "title": "QC TypeScript validation infrastructure needs to start before TS port completes", "filed": "2026-03-01", "accepted": "2026-03-01", "closed": "2026-03-01"}
     ],
     "rejected": [],
     "deferred": [
@@ -179,17 +196,17 @@
     ]
   },
   "metrics": {
-    "total_filed": 20,
-    "total_accepted": 17,
+    "total_filed": 21,
+    "total_accepted": 18,
     "total_deferred": 2,
     "total_rejected": 0,
     "acceptance_rate": 0.90,
     "response_rate": 1.0,
-    "trend": "Sustained high performance — 17 accepted, 2 deferred (both resolved), 0 rejected. Audit #29 (barrel file conflicts) accepted and verified working across 7 sequential PRs. TS port executing at extraordinary velocity (62 modules in ~2 hours). Recommendation surface shifting to cross-repo coordination timing (QC TS infrastructure gap). Acceptance rate 90%."
+    "trend": "Sustained high performance — 18 accepted (streak of 18 consecutive), 2 deferred (both resolved), 0 rejected. TS port completed: 98 modules in 3.5 hours, 11/11 Copilot sessions merged without revision (Phases 1-3g). Phase 4a had 1 revision (Quick Start example). QC TS validation operational at 4/28 coverage. Recommendation surface shifting to publication readiness coordination. Acceptance rate 90%."
   },
   "last_cycle": {
-    "issue": 31,
-    "timestamp": "2026-03-01T11:03:51Z",
-    "summary": "Ninth audit cycle. Audit #29 (barrel file conflicts) accepted by both orchestrators — closed, verified working across 7 PRs. TS port accelerated dramatically: Phase 1 merged, Phases 2a-3c completed, 62 TS modules on master. Phase 3d in-flight. QC sessions #117-119 show healthy steady state. Identified QC TS validation infrastructure timing risk — filed #32. Acceptance rate improved to 90%."
+    "issue": 34,
+    "timestamp": "2026-03-01T14:04:54Z",
+    "summary": "Tenth audit cycle. Audit #32 accepted by both orchestrators — closed. TS port fully complete (98 modules, 11 PRs, 3.5 hours). Phase 4a merged with 1 revision, Phase 4b awaiting Eva. QC built TS parity tool, validated 4/28 types. Filed #35: QC validation exit criteria needed for Phase 4c publish gate."
   }
 }
