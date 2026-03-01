@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-03-01T08:11:00Z",
+  "last_updated": "2026-03-01T11:20:00Z",
   "main_repo": {
-    "last_commit_audited": "71493e4",
-    "last_orchestrator_issue_reviewed": 273,
-    "orchestrator_cycle_count": 77,
+    "last_commit_audited": "76cc992",
+    "last_orchestrator_issue_reviewed": 286,
+    "orchestrator_cycle_count": 79,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
       "6 skills created: github-issues-comments, journal-entries, orchestrator-permissions, pr-review-workflow, schema-implementation, writing-skills",
@@ -31,15 +31,18 @@
       "QC-REQUEST #265 sent for post-restructure validation per audit #15 gate (2026-03-01)",
       "Comment signing convention adopted per audit #24 (2026-03-01, cycle 74)",
       "AGENTS-ts.md directory structure fixed to match Draft v3 layout (2026-03-01, cycle 75)",
-      "Phase 1 TypeScript scaffold dispatched as #269, PR #270 open (2026-03-01, cycle 75)",
+      "Phase 1 TypeScript scaffold dispatched as #269, PR #270 merged (2026-03-01, cycle 75-78)",
       "Post-merge CI verification step added to STARTUP_CHECKLIST per audit #26 (2026-03-01, cycle 76)",
-      "PR #270 reviewed and approved by orchestrator (2026-03-01, cycle 76)",
-      "Phase 2 decomposed into 2a/2b/2c with full issue specs prepared (2026-03-01, cycles 76-77)"
+      "Phase 2 decomposed into 2a/2b/2c with full issue specs prepared (2026-03-01, cycles 76-77)",
+      "STARTUP_CHECKLIST Step 8 updated with shared file conflict check per audit #29 (2026-03-01, cycle 78)",
+      "Sequential dispatch adopted — Phase 2 (2a/2b/2c) and Phase 3 (3a/3b/3c) all dispatched sequentially per audit #29 (2026-03-01, cycles 78-79)",
+      "Phase 3 decomposed into 7 batches (3a-3g) by dependency level — 69 types mapped (2026-03-01, cycle 78)"
     ],
     "recurring_pr_revision_patterns": [
-      "94.4% Copilot PR merge rate (17/18 sessions)",
+      "100% Copilot PR merge rate for TS port: 7/7 sessions (Phases 1, 2a, 2b, 2c, 3a, 3b, 3c) all merged without revision",
       "Phase 0 PR #263: 195 files, pure renames, only 3 stale README paths needed fix",
-      "Phase 1 PR #270: 14 files, first TypeScript code — high quality scaffold from gpt-5.3-codex"
+      "Phase 1 PR #270: 14 files, first TypeScript code — high quality scaffold from gpt-5.3-codex",
+      "Phase 2-3c: 6 consecutive PRs merged in ~2 hours via sequential dispatch, zero conflicts"
     ],
     "prompt_last_modified": "Inlined into repo (commit d0ae8fa, 2026-02-28)",
     "agents_md_last_modified": "2026-02-26T23:07:00Z",
@@ -53,8 +56,8 @@
       "qc_coordination_issue": 249,
       "plan_version": 3,
       "eva_approval": "2026-02-28T23:05:22Z — conditional approval: proceed with restructure, no v2 tag needed (non-breaking), scoped @evabee package",
-      "current_phase": "Phase 1 PR #270 approved by orchestrator, awaiting Eva merge (workflow file). Phase 2 specs (2a/2b/2c) fully prepared, blocked on Phase 1 merge.",
-      "qc_validation_strategy": "Aligned — QC repo #98: ts-consumer/ dir, parity testing, begins after Phase 1 merge",
+      "current_phase": "Phase 3 in progress. 3a-3c complete, 3d in-flight (PR #290 open). 62 TS modules on master. 37 types remaining across 3d-3g.",
+      "qc_validation_strategy": "Planned in QC-ACK #98 but no implementation started. Audit #32 filed recommending immediate infrastructure scaffolding.",
       "eva_decisions": {
         "linter": "Biome",
         "node_minimum": "20 (also test on 24)",
@@ -65,9 +68,9 @@
       },
       "phases": [
         {"phase": 0, "name": "Restructure to polyglot dirs (v1.x)", "status": "complete", "pr": 263, "qc_validation": "passed (QC #114, 2026-03-01T04:43Z)"},
-        {"phase": 1, "name": "TypeScript scaffold", "status": "pr_approved_awaiting_eva_merge", "issue": 269, "pr": 270, "dispatched_at": "2026-03-01T05:08:00Z", "approved_at": "2026-03-01T06:18:00Z", "note": "Eva must merge (workflow file). TS CI cannot validate pre-merge (bootstrap problem — audit #26 accepted, closed)."},
-        {"phase": 2, "name": "Enum & shared sub-type port", "status": "specs_ready_blocked_on_phase1", "decomposition": {"2a": "All 12 enums (1 session)", "2b": "Leaf sub-types batch 1: 9 types (1 session)", "2c": "Leaf sub-types batch 2: 9 types (1 session)"}, "specs_location": "docs/draft-phase-2a-enums.json, docs/draft-phase-2b-leaf-subtypes.json, docs/draft-phase-2c-leaf-subtypes-2.json"},
-        {"phase": 3, "name": "Schema type port", "status": "planned"},
+        {"phase": 1, "name": "TypeScript scaffold", "status": "complete", "issue": 269, "pr": 270, "merged_at": "2026-03-01T08:50:04Z", "ci_verified": true},
+        {"phase": 2, "name": "Enum & shared sub-type port", "status": "complete", "dispatch_strategy": "sequential (per audit #29)", "decomposition": {"2a": {"status": "merged", "pr": 277, "merged_at": "2026-03-01T09:17:42Z"}, "2b": {"status": "merged", "pr": 279, "merged_at": "2026-03-01T09:26:06Z"}, "2c": {"status": "merged", "pr": 281, "merged_at": "2026-03-01T09:36:17Z"}}},
+        {"phase": 3, "name": "Schema type port", "status": "in_progress", "dispatch_strategy": "sequential (per audit #29)", "decomposition": {"3a": {"status": "merged", "pr": 283, "merged_at": "2026-03-01T09:47:23Z"}, "3b": {"status": "merged", "pr": 285, "merged_at": "2026-03-01T10:49:00Z"}, "3c": {"status": "merged", "pr": 288, "merged_at": "2026-03-01T11:07:16Z"}, "3d": {"status": "dispatched", "issue": 289, "pr": 290}, "3e": {"status": "planned"}, "3f": {"status": "planned"}, "3g": {"status": "planned"}}},
         {"phase": 4, "name": "Build, test, publish", "status": "planned"}
       ],
       "audit_observations": [
@@ -78,24 +81,21 @@
         "QC idle detection path pattern stale after Phase 0 restructure (audit #23 — accepted, closed)",
         "Orchestrator comments need identity signing convention (audit #24 — accepted, closed)",
         "Phase 1 PR introduces new CI workflow — TS code merges without CI validation (audit #26 — accepted, closed)",
-        "Parallel dispatch will produce merge conflicts on shared barrel file (audit #29 — filed)"
-      ],
-      "preparatory_artifacts": {
-        "AGENTS-ts.md": "Created cycle 70, updated cycle 72 (options object), updated cycle 75 (directory layout fix)",
-        "ts_implementation_skill": "Created cycle 71, updated cycle 72 (Pattern A/B per audit #20)",
-        "phase_2_specs": "3 draft JSON files created cycle 77 (2a enums, 2b leaf batch 1, 2c leaf batch 2)"
-      }
+        "Parallel dispatch will produce merge conflicts on shared barrel file (audit #29 — accepted, closed)",
+        "QC TS validation infrastructure needs to start before TS port completes (audit #32 — filed)"
+      ]
     },
+    "ts_modules_on_master": 62,
     "schema_types": 28,
     "total_classes": 98,
     "test_count": 321,
     "phpstan_level": 9,
-    "directory_layout": "php/src/, php/test/ (restructured 2026-03-01, PR #263)"
+    "directory_layout": "php/src/, php/test/, ts/src/, ts/test/ (restructured 2026-03-01, PR #263; TS scaffold PR #270)"
   },
   "qc_repo": {
-    "last_commit_audited": "caf796b",
-    "last_orchestrator_issue_reviewed": 117,
-    "orchestrator_cycle_count": 117,
+    "last_commit_audited": "78e73e8",
+    "last_orchestrator_issue_reviewed": 119,
+    "orchestrator_cycle_count": 119,
     "self_improvement_actions": [
       "Journal and worklog alignment per Eva request (2026-02-27)",
       "PHP 8.5 CI support added (2026-02-27)",
@@ -113,7 +113,10 @@
       "Idle detection path pattern fixed to resilient *.php pattern per audit #23 (2026-03-01, session #113)",
       "Comment identity signing adopted per audit #24 (2026-03-01, session #113)",
       "tools/discover-types.sh updated with php/src path and pre-Phase 0 fallback (2026-03-01, session #113)",
-      "Audit #26 acknowledged — committed to post-Phase 1 CI verification (2026-03-01, session #117)"
+      "Audit #26 acknowledged — committed to post-Phase 1 CI verification (2026-03-01, session #117)",
+      "Audit #29 acknowledged — barrel file conflicts target main orchestrator (2026-03-01, session #119)",
+      "TS CI operational confirmed — ci-ts.yml runs on push and PR events (2026-03-01, session #119)",
+      "QC-ACK #98 updated with TS progress assessment (2026-03-01, session #119)"
     ],
     "prompt_last_modified": "Unknown — STARTUP_CHECKLIST exists",
     "unit_tests": 188,
@@ -126,7 +129,7 @@
     "consecutive_idle_cycles": 0,
     "idle_cycle_detection": "Resilient pattern implemented session #113 — checks for any .php file changes regardless of directory prefix (survives future restructures)",
     "write_access_gap": "Acknowledged constraint — QC uses audit-inbound issues on own repo (Eva: keep as-is)",
-    "ts_validation_planning": "QC-ACK #98 open since 2026-02-28, no updates since creation — legitimately awaiting Phase 1 merge"
+    "ts_validation_planning": "QC-ACK #98 open, updated session #119 with progress assessment. No ts-consumer/ implementation started. Audit #32 filed recommending immediate scaffolding."
   },
   "cross_repo_health": {
     "avg_report_to_fix_hours": 12,
@@ -136,11 +139,11 @@
     "protocol_friction_notes": [
       "Main orchestrator feedback loop closed — comments directly on audit-outbound issues",
       "QC orchestrator feedback loop asymmetric — uses audit-inbound issues on own repo (accepted constraint)",
-      "Three-way audit loop operational — all 19 recommendations processed, 100% response rate",
-      "Phase 1 PR #270 approved, awaiting Eva merge. Phase 2 specs prepared.",
+      "Three-way audit loop operational — all 20 recommendations processed, 100% response rate",
       "Comment identity signing operational across all three orchestrators",
-      "QC-ACK #98 (TS validation planning) legitimately waiting for Phase 1 merge — not stale",
-      "Both orchestrators productively using blocked time (main: Phase 2 specs, QC: steady state validation)"
+      "TS port executing at high velocity — Phase 3d in-flight, 62 modules on master",
+      "QC-ACK #98 updated but no ts-consumer/ infrastructure started — timing risk flagged in audit #32",
+      "Sequential dispatch (per audit #29) working perfectly — zero merge conflicts across 7 PRs"
     ],
     "qc_outbound_reports": 3,
     "qc_inbound_requests": 9,
@@ -148,7 +151,7 @@
   },
   "recommendations": {
     "open": [
-      {"issue": 29, "title": "Parallel agent dispatch will produce merge conflicts on shared barrel file", "filed": "2026-03-01"}
+      {"issue": 32, "title": "QC TypeScript validation infrastructure needs to start before TS port completes", "filed": "2026-03-01"}
     ],
     "accepted": [
       {"issue": 2, "title": "Idle cycle spinning", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
@@ -166,7 +169,8 @@
       {"issue": 20, "title": "AGENTS-ts.md constructor pattern will fail for types with many optional properties", "filed": "2026-02-28", "accepted": "2026-03-01", "closed": "2026-03-01"},
       {"issue": 23, "title": "QC idle detection path pattern stale after Phase 0 directory restructure", "filed": "2026-03-01", "accepted": "2026-03-01", "closed": "2026-03-01"},
       {"issue": 24, "title": "Orchestrator comments need identity signing convention for multi-agent clarity", "filed": "2026-03-01", "accepted": "2026-03-01", "closed": "2026-03-01"},
-      {"issue": 26, "title": "Phase 1 PR introduces new CI workflow — TS code will merge without CI validation", "filed": "2026-03-01", "accepted": "2026-03-01", "closed": "2026-03-01"}
+      {"issue": 26, "title": "Phase 1 PR introduces new CI workflow — TS code will merge without CI validation", "filed": "2026-03-01", "accepted": "2026-03-01", "closed": "2026-03-01"},
+      {"issue": 29, "title": "Parallel agent dispatch will produce merge conflicts on shared barrel file", "filed": "2026-03-01", "accepted": "2026-03-01", "closed": "2026-03-01"}
     ],
     "rejected": [],
     "deferred": [
@@ -175,17 +179,17 @@
     ]
   },
   "metrics": {
-    "total_filed": 19,
-    "total_accepted": 16,
+    "total_filed": 20,
+    "total_accepted": 17,
     "total_deferred": 2,
     "total_rejected": 0,
-    "acceptance_rate": 0.89,
+    "acceptance_rate": 0.90,
     "response_rate": 1.0,
-    "trend": "Sustained improvement — 16 accepted, 2 deferred (both resolved), 0 rejected. Audit #26 accepted within one cycle. System blocked on Eva merging PR #270 but using time productively. Phase 2 specs demonstrate mature planning. Recommendations now targeting increasingly specific execution patterns (barrel file conflicts)."
+    "trend": "Sustained high performance — 17 accepted, 2 deferred (both resolved), 0 rejected. Audit #29 (barrel file conflicts) accepted and verified working across 7 sequential PRs. TS port executing at extraordinary velocity (62 modules in ~2 hours). Recommendation surface shifting to cross-repo coordination timing (QC TS infrastructure gap). Acceptance rate 90%."
   },
   "last_cycle": {
-    "issue": 28,
-    "timestamp": "2026-03-01T08:03:46Z",
-    "summary": "Eighth audit cycle. Audit #26 (CI bootstrap blind spot) accepted by both orchestrators — closed. PR #270 still awaiting Eva merge. Main orchestrator productively prepared Phase 2a/2b/2c specs during blocked time. Reviewed Phase 2 decomposition quality — found barrel file merge conflict risk with parallel dispatch. Filed #29. QC session #117 near-idle, all tests passing. Acceptance rate improved to 89%."
+    "issue": 31,
+    "timestamp": "2026-03-01T11:03:51Z",
+    "summary": "Ninth audit cycle. Audit #29 (barrel file conflicts) accepted by both orchestrators — closed, verified working across 7 PRs. TS port accelerated dramatically: Phase 1 merged, Phases 2a-3c completed, 62 TS modules on master. Phase 3d in-flight. QC sessions #117-119 show healthy steady state. Identified QC TS validation infrastructure timing risk — filed #32. Acceptance rate improved to 90%."
   }
 }
