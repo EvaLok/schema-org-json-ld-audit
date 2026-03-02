@@ -125,6 +125,22 @@ Suggest concrete process improvements (checklist changes, new tools, prompt twea
 - Do journal entries lead to process changes, or are they write-only?
 - Are the orchestrators creating tools/skills when they identify repeated manual patterns?
 
+## 8.5. Verify active work — stall detection (per input-from-eva #55)
+
+**MANDATORY every cycle. Never skip this step, even when the system appears healthy.**
+
+For each orchestrator (main and QC), answer these questions:
+
+1. **Are there known coverage gaps or open work items?** Check: uncovered schema types, open QC-REQUESTs, unvalidated parity types, pending Copilot dispatch, open PRs awaiting review.
+2. **If work exists, is the orchestrator actively dispatching or working on it?** Check: are Copilot agents being dispatched? Are PRs being reviewed and merged? Is parity expanding between cycles?
+3. **Are metrics advancing?** Compare current parity/coverage numbers against the previous cycle. If a metric has been static for >2 cycles while work remains, flag as stalled.
+4. **Is the orchestrator in a false idle state?** An orchestrator may pass its own idle check while ignoring available work. Check whether idle criteria are correctly calibrated — e.g., the QC's idle check should not trigger when 47 uncovered types exist.
+5. **Is the orchestrator dispatching work to Copilot agents when appropriate?** Both orchestrators are designed to use Copilot for implementation. If an orchestrator is performing work itself that could be dispatched, or not dispatching at all, flag it.
+
+**If stalled behavior is detected**: File an `audit-outbound` recommendation with the specific checklist/prompt change needed to prevent the stall pattern. If the issue requires system prompt or workflow file changes, file a `question-for-eva` issue.
+
+**The audit itself must not enter a holding pattern.** Even when both orchestrators are idle, this step requires verifying that idleness is *justified* — i.e., there is genuinely no work available, not that the orchestrators have failed to detect available work.
+
 ## 9. Check for blind spots
 
 - What should the orchestrators have caught but didn't?
