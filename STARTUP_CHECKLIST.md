@@ -139,7 +139,15 @@ Each recommendation should include:
 
 If a recommendation requires changes beyond the audit agent's permissions (workflow files, repo settings, secrets, cron schedules, architectural changes), file it as a `question-for-eva` issue.
 
-## 12. Update state
+## 12. Housekeeping — own repo
+
+Before updating state, clean up stale issues on this repo:
+
+- (a) **Stale `orchestrator-run` issues**: Query open issues with `orchestrator-run` label. Close any from previous cycles (only the current cycle trigger should be open).
+- (b) **Resolved `audit-outbound` issues**: Cross-reference open `audit-outbound` issues against `state.json` recommendations. If an issue is tracked as accepted/closed in state.json but still open on GitHub, close it with a note.
+- (c) **State.json / GitHub sync**: Verify that every recommendation listed as "closed" in state.json is actually closed on GitHub. Fix any discrepancies.
+
+## 13. Update state
 
 Update `state.json` with:
 - Current assessment of both repos
@@ -147,13 +155,13 @@ Update `state.json` with:
 - Recommendation tracking
 - Last cycle info
 
-## 13. Write worklog and journal
+## 14. Write worklog and journal
 
 Create a worklog entry in `docs/worklog/` with a summary of this cycle's findings and actions.
 
 Update `JOURNAL.md` or create a dated journal entry in `docs/journal/` with reflections.
 
-## 14. Close cycle issue
+## 15. Close cycle issue
 
 Post a summary comment and close the triggering issue:
 

@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-03-02T03:05:00Z",
+  "last_updated": "2026-03-02T05:35:00Z",
   "main_repo": {
-    "last_commit_audited": "78088e0",
-    "last_orchestrator_issue_reviewed": 320,
-    "orchestrator_cycle_count": 89,
+    "last_commit_audited": "2ddb600",
+    "last_orchestrator_issue_reviewed": 323,
+    "orchestrator_cycle_count": 91,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
       "6 skills created: github-issues-comments, journal-entries, orchestrator-permissions, pr-review-workflow, schema-implementation, writing-skills",
@@ -48,7 +48,8 @@
       "Audit #37 accepted: QAPage + Restaurant ported via PR #312, class inventory reconciliation step 5.6 added (2026-03-01, cycle 84)",
       "Housekeeping: removed 10 stale Phase 2-3 draft spec files (2026-03-01, cycle 85)",
       "Audit #39 accepted: verify-build artifact smoke test dispatched (cycle 86), PR #317 merged (cycle 87). Validates ESM+CJS+JSON-LD from packed tarball. (2026-03-01)",
-      "Audit #42 acknowledged (cycle 88): QC-targeted recommendation, no main repo action needed (2026-03-02)"
+      "Audit #42 acknowledged (cycle 88): QC-targeted recommendation, no main repo action needed (2026-03-02)",
+      "Audit #44 accepted (cycle 90): STARTUP_CHECKLIST steps 5.7 (one-time post-publish transition) and 5.8 (dual-language consistency check) added. Step 9 updated with dual-language dispatch. Version coordination deferred to Eva. (2026-03-02)"
     ],
     "recurring_pr_revision_patterns": [
       "100% Copilot PR merge rate for TS port Phases 1-3g: 11/11 sessions merged without revision",
@@ -64,7 +65,7 @@
     "agents_ts_md_last_modified": "2026-03-01T05:04:00Z",
     "v1_released": "2026-02-27T13:25:27Z",
     "steady_state_since_cycle": 50,
-    "consecutive_idle_cycles": 2,
+    "consecutive_idle_cycles": 1,
     "typescript_plan": {
       "status": "approved_executing",
       "issue": 247,
@@ -72,7 +73,7 @@
       "qc_coordination_status": "CLOSED — 25/25 parity validated (including QAPage + Restaurant), all DoD criteria satisfied (2026-03-01T16:43Z)",
       "plan_version": 3,
       "eva_approval": "2026-02-28T23:05:22Z — conditional approval: proceed with restructure, no v2 tag needed (non-breaking), scoped @evabee package",
-      "current_phase": "Phase 4 in progress. Phases 0-3 COMPLETE (86/86 schema classes). QC validation COMPLETE (25/25 parity). Phase 4a merged, 4b awaiting Eva (PR #305), 4c blocked on Eva (merge + NPM_TOKEN). verify-build smoke test merged (PR #317, audit #39).",
+      "current_phase": "Phase 4 in progress. Phases 0-3 COMPLETE (86/86 schema classes). QC validation COMPLETE (25/25 parity). Phase 4a merged, 4b awaiting Eva (PR #305), 4c blocked on Eva (merge + NPM_TOKEN). verify-build smoke test merged (PR #317, audit #39). Post-publish transition plan ready (steps 5.7/5.8, per audit #44).",
       "qc_validation_strategy": "COMPLETE. QC built tools/ts-parity-check.ts (session #121), expanded to 25/25 types (sessions #124, #126). All DoD criteria satisfied. QC-ACK #122 closed.",
       "missing_classes": [],
       "missing_classes_note": "RESOLVED. QAPage and Restaurant ported via PR #312 (cycle 84, per audit #37). Class inventory: 86 PHP = 86 TS.",
@@ -105,7 +106,7 @@
         "TS port missing QAPage and Restaurant — needs class inventory reconciliation (audit #37 — accepted, closed)",
         "First npm publish will ship untested build artifact — needs post-build validation (audit #39 — accepted, closed)",
         "QC stale-issue self-healing for orchestrator-run and audit-inbound issues (audit #42 — accepted, closed)",
-        "Post-publish transition plan needed for dual-language maintenance (audit #44 — filed)"
+        "Post-publish transition plan needed for dual-language maintenance (audit #44 — accepted, closed)"
       ]
     },
     "ts_modules_on_master": 100,
@@ -119,9 +120,9 @@
     "directory_layout": "php/src/, php/test/, ts/src/, ts/test/ (restructured 2026-03-01, PR #263; TS port COMPLETE 2026-03-01, 14 PRs — 86/86 schema classes ported)"
   },
   "qc_repo": {
-    "last_commit_audited": "dddb437",
-    "last_orchestrator_issue_reviewed": 130,
-    "orchestrator_cycle_count": 130,
+    "last_commit_audited": "e12daaa",
+    "last_orchestrator_issue_reviewed": 132,
+    "orchestrator_cycle_count": 132,
     "self_improvement_actions": [
       "Journal and worklog alignment per Eva request (2026-02-27)",
       "PHP 8.5 CI support added (2026-02-27)",
@@ -155,7 +156,8 @@
       "Audit #39 accepted — STARTUP_CHECKLIST step 8 added for npm publish check (2026-03-01, session #128)",
       "Audit-inbound #129 created and closed for audit #39 (2026-03-01, session #128)",
       "Audit #42 accepted — STARTUP_CHECKLIST step 12 updated with explicit stale-issue self-healing (2026-03-02, session #130)",
-      "Stale issues qc#123 and qc#124 closed via self-healing mechanism (2026-03-02, session #130)"
+      "Stale issues qc#123 and qc#124 closed via self-healing mechanism (2026-03-02, session #130)",
+      "Audit #44 accepted — warning baselines, dual-language consistency (step 6), operational_mode tracking, recurring npm check (step 8) added (2026-03-02, session #132)"
     ],
     "stale_issues": [],
     "prompt_last_modified": "Unknown — STARTUP_CHECKLIST exists",
@@ -173,7 +175,13 @@
     "consecutive_idle_cycles": 0,
     "idle_cycle_detection": "Resilient pattern implemented session #113 — checks for any .php file changes regardless of directory prefix (survives future restructures)",
     "write_access_gap": "Acknowledged constraint — QC uses audit-inbound issues on own repo (Eva: keep as-is)",
-    "ts_validation_status": "COMPLETE. 25/25 parity match, 0 E2E errors, all DoD criteria satisfied. Class inventory 86/86. QC-ACK #122 closed (2026-03-01T16:37Z)."
+    "ts_validation_status": "COMPLETE. 25/25 parity match, 0 E2E errors, all DoD criteria satisfied. Class inventory 86/86. QC-ACK #122 closed (2026-03-01T16:37Z).",
+    "operational_mode": "dual_language_pre_publish (added session #132 per audit #44)",
+    "warning_baselines": {
+      "e2e": 15,
+      "ts_parity": 14,
+      "note": "Added session #132 per audit #44. Increases must be investigated before baseline update."
+    }
   },
   "cross_repo_health": {
     "avg_report_to_fix_hours": 12,
@@ -188,21 +196,17 @@
       "TS port COMPLETE (100 modules, 15 PRs, 86/86 schema classes). Phase 4 in progress.",
       "QC TS validation COMPLETE (25/25 parity, including QAPage + Restaurant). Class inventory 86/86.",
       "Sequential dispatch (per audit #29) working perfectly — zero merge conflicts across all 15 PRs",
-      "Audit #42 accepted by both orchestrators: QC implemented stale-issue self-healing, main acknowledged QC-targeted.",
-      "QC stale issues (qc#123, qc#124) resolved via self-healing in session #130.",
-      "Audit repo housekeeping: #39 (accepted but not closed), #40 (orphaned trigger) closed in cycle 14.",
-      "Audit #35 DoD → QC structured response against exact criteria. Pattern validated.",
-      "Audit #37 → both orchestrators resolved in one cycle: main ported types, QC expanded parity.",
-      "Filed #44: post-publish transition plan for dual-language maintenance mode."
+      "Audit #44 accepted by both orchestrators: main added steps 5.7/5.8, QC added warning baselines + operational_mode.",
+      "Both orchestrators now have post-publish transition plans — complementary implementations (main: dispatch, QC: validation).",
+      "Audit repo self-housekeeping step 12 added to STARTUP_CHECKLIST (cycle 15) — fixing our own 'write-only journal' gap.",
+      "System in healthy idle state — blocked on Eva (PR #305, NPM_TOKEN #304)."
     ],
     "qc_outbound_reports": 3,
     "qc_inbound_requests": 10,
     "all_threads_resolved": true
   },
   "recommendations": {
-    "open": [
-      {"issue": 44, "title": "Both orchestrators need a post-publish transition plan — no operational model exists for dual-language maintenance", "filed": "2026-03-02"}
-    ],
+    "open": [],
     "accepted": [
       {"issue": 2, "title": "Idle cycle spinning", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
       {"issue": 3, "title": "Non-functional tools directory", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
@@ -225,7 +229,8 @@
       {"issue": 35, "title": "QC TypeScript validation needs concrete exit criteria before Phase 4c npm publish", "filed": "2026-03-01", "accepted": "2026-03-01", "closed": "2026-03-01"},
       {"issue": 37, "title": "TS port missing QAPage and Restaurant — needs class inventory reconciliation step", "filed": "2026-03-01", "accepted": "2026-03-01", "closed": "2026-03-01"},
       {"issue": 39, "title": "First npm publish will ship untested build artifact — needs post-build validation", "filed": "2026-03-01", "accepted": "2026-03-01", "closed": "2026-03-02"},
-      {"issue": 42, "title": "QC startup checklist needs stale-issue self-healing for orchestrator-run and audit-inbound issues", "filed": "2026-03-01", "accepted": "2026-03-02", "closed": "2026-03-02"}
+      {"issue": 42, "title": "QC startup checklist needs stale-issue self-healing for orchestrator-run and audit-inbound issues", "filed": "2026-03-01", "accepted": "2026-03-02", "closed": "2026-03-02"},
+      {"issue": 44, "title": "Both orchestrators need a post-publish transition plan — no operational model exists for dual-language maintenance", "filed": "2026-03-02", "accepted": "2026-03-02", "closed": "2026-03-02"}
     ],
     "rejected": [],
     "deferred": [
@@ -235,16 +240,16 @@
   },
   "metrics": {
     "total_filed": 25,
-    "total_accepted": 22,
+    "total_accepted": 23,
     "total_deferred": 2,
     "total_rejected": 0,
     "acceptance_rate": 0.92,
     "response_rate": 1.0,
-    "trend": "22 consecutive accepted recommendations (streak continues), 0 rejected. Audit #42 accepted by QC (session #130) — stale-issue self-healing implemented. Own housekeeping: closed #39 (missed in cycle 13), #40 (orphaned trigger). Filed #44: post-publish transition plan for dual-language maintenance. System healthy but idle — waiting on Eva (PR #305, NPM_TOKEN #304). Acceptance rate 92%."
+    "trend": "23 consecutive accepted recommendations, 0 rejected. Audit #44 accepted by both orchestrators — complementary post-publish transition plans implemented. All 25 recommendations now processed (23 accepted, 2 deferred). 0 open recommendations. System healthy but idle — waiting on Eva (PR #305, NPM_TOKEN #304). Own STARTUP_CHECKLIST updated with housekeeping step 12."
   },
   "last_cycle": {
-    "issue": 43,
-    "timestamp": "2026-03-02T03:05:00Z",
-    "summary": "Fourteenth audit cycle. Closed 3 stale issues: #39 (accepted but never closed on GitHub), #40 (orphaned cycle trigger), #42 (accepted by both orchestrators — QC implemented stale-issue self-healing). Filed #44: post-publish transition plan for dual-language maintenance mode. Cumulative: 25 filed, 22 accepted, 0 rejected."
+    "issue": 45,
+    "timestamp": "2026-03-02T05:35:00Z",
+    "summary": "Fifteenth audit cycle. Closed #44 (accepted by both orchestrators — main added steps 5.7/5.8 for post-publish transition, QC added warning baselines + operational_mode tracking). No new recommendations filed — system healthy and idle. Self-improvement: added housekeeping step 12 to own STARTUP_CHECKLIST (fixing the 'write-only journal' gap identified in cycle 14). Cumulative: 25 filed, 23 accepted, 0 rejected, 0 open."
   }
 }
