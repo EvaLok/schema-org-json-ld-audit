@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-03-01T23:08:00Z",
+  "last_updated": "2026-03-02T03:05:00Z",
   "main_repo": {
-    "last_commit_audited": "a3919b3",
-    "last_orchestrator_issue_reviewed": 318,
-    "orchestrator_cycle_count": 87,
+    "last_commit_audited": "78088e0",
+    "last_orchestrator_issue_reviewed": 320,
+    "orchestrator_cycle_count": 89,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
       "6 skills created: github-issues-comments, journal-entries, orchestrator-permissions, pr-review-workflow, schema-implementation, writing-skills",
@@ -47,7 +47,8 @@
       "QC validation COMPLETE: 23/23 parity, 0 E2E errors. QC-REQUEST #299 closed (2026-03-01, cycle 83)",
       "Audit #37 accepted: QAPage + Restaurant ported via PR #312, class inventory reconciliation step 5.6 added (2026-03-01, cycle 84)",
       "Housekeeping: removed 10 stale Phase 2-3 draft spec files (2026-03-01, cycle 85)",
-      "Audit #39 accepted: verify-build artifact smoke test dispatched (cycle 86), PR #317 merged (cycle 87). Validates ESM+CJS+JSON-LD from packed tarball. (2026-03-01)"
+      "Audit #39 accepted: verify-build artifact smoke test dispatched (cycle 86), PR #317 merged (cycle 87). Validates ESM+CJS+JSON-LD from packed tarball. (2026-03-01)",
+      "Audit #42 acknowledged (cycle 88): QC-targeted recommendation, no main repo action needed (2026-03-02)"
     ],
     "recurring_pr_revision_patterns": [
       "100% Copilot PR merge rate for TS port Phases 1-3g: 11/11 sessions merged without revision",
@@ -63,7 +64,7 @@
     "agents_ts_md_last_modified": "2026-03-01T05:04:00Z",
     "v1_released": "2026-02-27T13:25:27Z",
     "steady_state_since_cycle": 50,
-    "consecutive_idle_cycles": 0,
+    "consecutive_idle_cycles": 2,
     "typescript_plan": {
       "status": "approved_executing",
       "issue": 247,
@@ -103,7 +104,8 @@
         "QC TS validation needs concrete exit criteria before Phase 4c publish (audit #35 — accepted, closed)",
         "TS port missing QAPage and Restaurant — needs class inventory reconciliation (audit #37 — accepted, closed)",
         "First npm publish will ship untested build artifact — needs post-build validation (audit #39 — accepted, closed)",
-        "QC stale-issue self-healing for orchestrator-run and audit-inbound issues (audit #42 — filed)"
+        "QC stale-issue self-healing for orchestrator-run and audit-inbound issues (audit #42 — accepted, closed)",
+        "Post-publish transition plan needed for dual-language maintenance (audit #44 — filed)"
       ]
     },
     "ts_modules_on_master": 100,
@@ -117,9 +119,9 @@
     "directory_layout": "php/src/, php/test/, ts/src/, ts/test/ (restructured 2026-03-01, PR #263; TS port COMPLETE 2026-03-01, 14 PRs — 86/86 schema classes ported)"
   },
   "qc_repo": {
-    "last_commit_audited": "cd008f8",
-    "last_orchestrator_issue_reviewed": 128,
-    "orchestrator_cycle_count": 128,
+    "last_commit_audited": "dddb437",
+    "last_orchestrator_issue_reviewed": 130,
+    "orchestrator_cycle_count": 130,
     "self_improvement_actions": [
       "Journal and worklog alignment per Eva request (2026-02-27)",
       "PHP 8.5 CI support added (2026-02-27)",
@@ -151,9 +153,11 @@
       "TS parity expanded from 23 to 25 types (QAPage + Restaurant) — all match (2026-03-01, session #126)",
       "Audit #37 accepted — class inventory verified 86/86 (2026-03-01, session #126)",
       "Audit #39 accepted — STARTUP_CHECKLIST step 8 added for npm publish check (2026-03-01, session #128)",
-      "Audit-inbound #129 created and closed for audit #39 (2026-03-01, session #128)"
+      "Audit-inbound #129 created and closed for audit #39 (2026-03-01, session #128)",
+      "Audit #42 accepted — STARTUP_CHECKLIST step 12 updated with explicit stale-issue self-healing (2026-03-02, session #130)",
+      "Stale issues qc#123 and qc#124 closed via self-healing mechanism (2026-03-02, session #130)"
     ],
-    "stale_issues": ["qc#123 (audit-inbound, audit #32 — should be closed)", "qc#124 (orchestrator-run session — should be closed)"],
+    "stale_issues": [],
     "prompt_last_modified": "Unknown — STARTUP_CHECKLIST exists",
     "unit_tests": 188,
     "e2e_tests": 39,
@@ -175,27 +179,29 @@
     "avg_report_to_fix_hours": 12,
     "avg_ack_latency_hours": 1,
     "audit_recommendation_response_hours": 1.5,
-    "stale_threads": ["qc#123 (audit-inbound)", "qc#124 (orchestrator-run)"],
+    "stale_threads": [],
     "protocol_friction_notes": [
       "Main orchestrator feedback loop closed — comments directly on audit-outbound issues",
       "QC orchestrator feedback loop asymmetric — uses audit-inbound issues on own repo (accepted constraint)",
-      "Three-way audit loop operational — all 24 recommendations processed, 100% response rate",
+      "Three-way audit loop operational — all 25 recommendations processed, 100% response rate",
       "Comment identity signing operational across all three orchestrators",
       "TS port COMPLETE (100 modules, 15 PRs, 86/86 schema classes). Phase 4 in progress.",
       "QC TS validation COMPLETE (25/25 parity, including QAPage + Restaurant). Class inventory 86/86.",
       "Sequential dispatch (per audit #29) working perfectly — zero merge conflicts across all 15 PRs",
-      "Audit #39 accepted and resolved within ~1.5 hours (cycles 86-87). PR #317 merged.",
-      "QC has 2 stale issues (qc#123, qc#124) — housekeeping step not catching them. Filed #42.",
+      "Audit #42 accepted by both orchestrators: QC implemented stale-issue self-healing, main acknowledged QC-targeted.",
+      "QC stale issues (qc#123, qc#124) resolved via self-healing in session #130.",
+      "Audit repo housekeeping: #39 (accepted but not closed), #40 (orphaned trigger) closed in cycle 14.",
       "Audit #35 DoD → QC structured response against exact criteria. Pattern validated.",
-      "Audit #37 → both orchestrators resolved in one cycle: main ported types, QC expanded parity."
+      "Audit #37 → both orchestrators resolved in one cycle: main ported types, QC expanded parity.",
+      "Filed #44: post-publish transition plan for dual-language maintenance mode."
     ],
     "qc_outbound_reports": 3,
     "qc_inbound_requests": 10,
-    "all_threads_resolved": false
+    "all_threads_resolved": true
   },
   "recommendations": {
     "open": [
-      {"issue": 42, "title": "QC startup checklist needs stale-issue self-healing for orchestrator-run and audit-inbound issues", "filed": "2026-03-01"}
+      {"issue": 44, "title": "Both orchestrators need a post-publish transition plan — no operational model exists for dual-language maintenance", "filed": "2026-03-02"}
     ],
     "accepted": [
       {"issue": 2, "title": "Idle cycle spinning", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
@@ -218,7 +224,8 @@
       {"issue": 32, "title": "QC TypeScript validation infrastructure needs to start before TS port completes", "filed": "2026-03-01", "accepted": "2026-03-01", "closed": "2026-03-01"},
       {"issue": 35, "title": "QC TypeScript validation needs concrete exit criteria before Phase 4c npm publish", "filed": "2026-03-01", "accepted": "2026-03-01", "closed": "2026-03-01"},
       {"issue": 37, "title": "TS port missing QAPage and Restaurant — needs class inventory reconciliation step", "filed": "2026-03-01", "accepted": "2026-03-01", "closed": "2026-03-01"},
-      {"issue": 39, "title": "First npm publish will ship untested build artifact — needs post-build validation", "filed": "2026-03-01", "accepted": "2026-03-01", "closed": "2026-03-01"}
+      {"issue": 39, "title": "First npm publish will ship untested build artifact — needs post-build validation", "filed": "2026-03-01", "accepted": "2026-03-01", "closed": "2026-03-02"},
+      {"issue": 42, "title": "QC startup checklist needs stale-issue self-healing for orchestrator-run and audit-inbound issues", "filed": "2026-03-01", "accepted": "2026-03-02", "closed": "2026-03-02"}
     ],
     "rejected": [],
     "deferred": [
@@ -227,17 +234,17 @@
     ]
   },
   "metrics": {
-    "total_filed": 24,
-    "total_accepted": 21,
+    "total_filed": 25,
+    "total_accepted": 22,
     "total_deferred": 2,
     "total_rejected": 0,
-    "acceptance_rate": 0.91,
+    "acceptance_rate": 0.92,
     "response_rate": 1.0,
-    "trend": "Sustained high performance — 21 accepted (streak of 21 consecutive), 2 deferred (both resolved), 0 rejected. Audit #39 accepted and resolved within ~1.5 hours (PR #317). TS port COMPLETE (86/86). QC validation COMPLETE (25/25). System idle waiting on Eva (PR #305, NPM_TOKEN #304). Found QC stale-issue gap: qc#123 and qc#124 open despite completed work. Filed #42. Acceptance rate 91%."
+    "trend": "22 consecutive accepted recommendations (streak continues), 0 rejected. Audit #42 accepted by QC (session #130) — stale-issue self-healing implemented. Own housekeeping: closed #39 (missed in cycle 13), #40 (orphaned trigger). Filed #44: post-publish transition plan for dual-language maintenance. System healthy but idle — waiting on Eva (PR #305, NPM_TOKEN #304). Acceptance rate 92%."
   },
   "last_cycle": {
-    "issue": 41,
-    "timestamp": "2026-03-01T23:08:00Z",
-    "summary": "Thirteenth audit cycle. Audit #39 accepted by both orchestrators — closed. PR #317 merged (verify-build smoke test). System healthy, idle waiting on Eva. Found QC stale-issue lifecycle gap: qc#123 (audit-inbound) and qc#124 (orchestrator-run) open despite completed work, not caught by subsequent sessions. Filed #42. Cumulative: 24 filed, 21 accepted, 0 rejected."
+    "issue": 43,
+    "timestamp": "2026-03-02T03:05:00Z",
+    "summary": "Fourteenth audit cycle. Closed 3 stale issues: #39 (accepted but never closed on GitHub), #40 (orphaned cycle trigger), #42 (accepted by both orchestrators — QC implemented stale-issue self-healing). Filed #44: post-publish transition plan for dual-language maintenance mode. Cumulative: 25 filed, 22 accepted, 0 rejected."
   }
 }
