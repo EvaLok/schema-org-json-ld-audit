@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-03-02T11:13:00Z",
+  "last_updated": "2026-03-02T14:20:00Z",
   "main_repo": {
-    "last_commit_audited": "2daf4ea",
-    "last_orchestrator_issue_reviewed": 327,
-    "orchestrator_cycle_count": 95,
+    "last_commit_audited": "3c148be",
+    "last_orchestrator_issue_reviewed": 330,
+    "orchestrator_cycle_count": 97,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
       "6 skills created: github-issues-comments, journal-entries, orchestrator-permissions, pr-review-workflow, schema-implementation, writing-skills",
@@ -49,7 +49,8 @@
       "Housekeeping: removed 10 stale Phase 2-3 draft spec files (2026-03-01, cycle 85)",
       "Audit #39 accepted: verify-build artifact smoke test dispatched (cycle 86), PR #317 merged (cycle 87). Validates ESM+CJS+JSON-LD from packed tarball. (2026-03-01)",
       "Audit #42 acknowledged (cycle 88): QC-targeted recommendation, no main repo action needed (2026-03-02)",
-      "Audit #44 accepted (cycle 90): STARTUP_CHECKLIST steps 5.7 (one-time post-publish transition) and 5.8 (dual-language consistency check) added. Step 9 updated with dual-language dispatch. Version coordination deferred to Eva. (2026-03-02)"
+      "Audit #44 accepted (cycle 90): STARTUP_CHECKLIST steps 5.7 (one-time post-publish transition) and 5.8 (dual-language consistency check) added. Step 9 updated with dual-language dispatch. Version coordination deferred to Eva. (2026-03-02)",
+      "Eva directive #329 processed (cycle 97): halted Phase 4b/4c, created comprehensive QC-REQUEST #331 (86/86 parity, built-package, consumer testing). Added STARTUP_CHECKLIST step 1.1 (Eva comment tracking). Broke 6-cycle idle streak. (2026-03-02)"
     ],
     "recurring_pr_revision_patterns": [
       "100% Copilot PR merge rate for TS port Phases 1-3g: 11/11 sessions merged without revision",
@@ -65,16 +66,18 @@
     "agents_ts_md_last_modified": "2026-03-01T05:04:00Z",
     "v1_released": "2026-02-27T13:25:27Z",
     "steady_state_since_cycle": 50,
-    "consecutive_idle_cycles": 5,
+    "consecutive_idle_cycles": 0,
     "typescript_plan": {
-      "status": "approved_executing",
+      "status": "blocked_on_qc_validation",
       "issue": 247,
-      "qc_coordination_issue": 299,
-      "qc_coordination_status": "CLOSED — 25/25 parity validated (including QAPage + Restaurant), all DoD criteria satisfied (2026-03-01T16:43Z)",
+      "qc_coordination_issue": 331,
+      "qc_coordination_status": "OPEN — QC-REQUEST #331 for comprehensive 86/86 parity validation (filed cycle 97 per Eva directive #329)",
+      "previous_qc_coordination": "QC-REQUEST #299: CLOSED — 25/86 parity validated (29%). Scope was insufficient for publish gate.",
       "plan_version": 3,
       "eva_approval": "2026-02-28T23:05:22Z — conditional approval: proceed with restructure, no v2 tag needed (non-breaking), scoped @evabee package",
-      "current_phase": "Phase 4 in progress. Phases 0-3 COMPLETE (86/86 schema classes). QC validation COMPLETE (25/25 parity). Phase 4a merged, 4b awaiting Eva (PR #305), 4c blocked on Eva (merge + NPM_TOKEN). verify-build smoke test merged (PR #317, audit #39). Post-publish transition plan ready (steps 5.7/5.8, per audit #44).",
-      "qc_validation_strategy": "COMPLETE. QC built tools/ts-parity-check.ts (session #121), expanded to 25/25 types (sessions #124, #126). All DoD criteria satisfied. QC-ACK #122 closed.",
+      "eva_directive_329": "Eva flagged insufficient QC validation (25/86 types, no built-package testing). Halted Phase 4b/4c until comprehensive validation completes. 'Test thoroughly first before releasing, always.'",
+      "current_phase": "Phase 4 HALTED per Eva directive #329. Phases 0-3 COMPLETE (86/86 schema classes). QC-REQUEST #331 open for comprehensive validation (86/86 parity, built-package, consumer testing). Phase 4b PR #305 deprioritised. Phase 4c blocked on QC validation + Eva.",
+      "qc_validation_strategy": "INSUFFICIENT — being corrected. Previous: 25/86 parity (29%). New QC-REQUEST #331 requires 86/86 parity, built-package validation, consumer testing, Adobe E2E.",
       "missing_classes": [],
       "missing_classes_note": "RESOLVED. QAPage and Restaurant ported via PR #312 (cycle 84, per audit #37). Class inventory: 86 PHP = 86 TS.",
       "eva_decisions": {
@@ -90,7 +93,7 @@
         {"phase": 1, "name": "TypeScript scaffold", "status": "complete", "issue": 269, "pr": 270, "merged_at": "2026-03-01T08:50:04Z", "ci_verified": true},
         {"phase": 2, "name": "Enum & shared sub-type port", "status": "complete", "dispatch_strategy": "sequential (per audit #29)", "decomposition": {"2a": {"status": "merged", "pr": 277, "merged_at": "2026-03-01T09:17:42Z"}, "2b": {"status": "merged", "pr": 279, "merged_at": "2026-03-01T09:26:06Z"}, "2c": {"status": "merged", "pr": 281, "merged_at": "2026-03-01T09:36:17Z"}}},
         {"phase": 3, "name": "Schema type port", "status": "complete", "dispatch_strategy": "sequential (per audit #29)", "note": "86/86 PHP schema classes ported (including QAPage+Restaurant via PR #312, audit #37).", "decomposition": {"3a": {"status": "merged", "pr": 283, "merged_at": "2026-03-01T09:47:23Z"}, "3b": {"status": "merged", "pr": 285, "merged_at": "2026-03-01T10:49:00Z"}, "3c": {"status": "merged", "pr": 288, "merged_at": "2026-03-01T11:07:16Z"}, "3d": {"status": "merged", "pr": 290, "merged_at": "2026-03-01T11:19:35Z"}, "3e": {"status": "merged", "pr": 292, "merged_at": "2026-03-01T11:31:02Z"}, "3f": {"status": "merged", "pr": 294, "merged_at": "2026-03-01T11:46:07Z"}, "3g": {"status": "merged", "pr": 296, "merged_at": "2026-03-01T12:11:00Z"}, "fix": {"status": "merged", "pr": 312, "merged_at": "2026-03-01T18:18:42Z", "note": "QAPage + Restaurant (audit #37)"}}},
-        {"phase": 4, "name": "Build, test, publish", "status": "in_progress", "decomposition": {"4a": {"status": "merged", "pr": 301, "merged_at": "2026-03-01T12:22:48Z"}, "4b": {"status": "dispatched", "pr": 305, "note": "Awaiting Eva (workflow file). NPM_TOKEN needed (#304)."}, "4c": {"status": "planned", "qc_gate": "PASSED (2026-03-01T16:37Z, 25/25 parity)", "note": "Blocked on Eva: merge PR #305 + configure NPM_TOKEN"}, "verify_build": {"status": "merged", "pr": 317, "merged_at": "2026-03-01T22:43:20Z", "note": "Per audit #39. scripts/verify-build.mjs validates packed tarball."}}}
+        {"phase": 4, "name": "Build, test, publish", "status": "blocked_on_qc_validation", "decomposition": {"4a": {"status": "merged", "pr": 301, "merged_at": "2026-03-01T12:22:48Z"}, "4b": {"status": "halted_pending_qc", "pr": 305, "note": "Eva directive #329: comprehensive QC validation required before publish. PR stays open but deprioritised."}, "4c": {"status": "blocked_on_qc_validation", "qc_gate": "INSUFFICIENT (25/86 parity, 29%). QC-REQUEST #331 open for comprehensive validation.", "note": "Blocked on: QC-REQUEST #331 completion + Eva merge PR #305 + NPM_TOKEN"}, "verify_build": {"status": "merged", "pr": 317, "merged_at": "2026-03-01T22:43:20Z", "note": "Per audit #39. scripts/verify-build.mjs validates packed tarball."}}}
       ],
       "audit_observations": [
         "Phase 0 needs QC validation checkpoint before Phase 1 (audit #15 — accepted, closed)",
@@ -106,7 +109,8 @@
         "TS port missing QAPage and Restaurant — needs class inventory reconciliation (audit #37 — accepted, closed)",
         "First npm publish will ship untested build artifact — needs post-build validation (audit #39 — accepted, closed)",
         "QC stale-issue self-healing for orchestrator-run and audit-inbound issues (audit #42 — accepted, closed)",
-        "Post-publish transition plan needed for dual-language maintenance (audit #44 — accepted, closed)"
+        "Post-publish transition plan needed for dual-language maintenance (audit #44 — accepted, closed)",
+        "QC parity metrics use self-scoped denominators — partial coverage invisible to consumers (audit #49 — filed)"
       ]
     },
     "ts_modules_on_master": 100,
@@ -120,9 +124,9 @@
     "directory_layout": "php/src/, php/test/, ts/src/, ts/test/ (restructured 2026-03-01, PR #263; TS port COMPLETE 2026-03-01, 14 PRs — 86/86 schema classes ported)"
   },
   "qc_repo": {
-    "last_commit_audited": "6024990",
-    "last_orchestrator_issue_reviewed": 135,
-    "orchestrator_cycle_count": 135,
+    "last_commit_audited": "80bd53a",
+    "last_orchestrator_issue_reviewed": 136,
+    "orchestrator_cycle_count": 136,
     "self_improvement_actions": [
       "Journal and worklog alignment per Eva request (2026-02-27)",
       "PHP 8.5 CI support added (2026-02-27)",
@@ -170,12 +174,14 @@
     "ts_vitest_pass": 301,
     "ts_parity_checked": 25,
     "ts_parity_total": 25,
-    "ts_parity_note": "25/25 types pass parity (including QAPage + Restaurant added in session #126). 86 PHP = 86 TS schema classes.",
+    "ts_parity_actual_total": 86,
+    "ts_parity_coverage_pct": 29,
+    "ts_parity_note": "INSUFFICIENT for publish. 25/86 types validated (29%). QC-REQUEST main#331 open for comprehensive 86/86 validation. Per audit #49: denominator should be actual total (86), not self-scoped (25).",
     "steady_state_since_session": 87,
-    "consecutive_idle_cycles": 2,
+    "consecutive_idle_cycles": 3,
     "idle_cycle_detection": "Resilient pattern implemented session #113 — checks for any .php file changes regardless of directory prefix (survives future restructures)",
     "write_access_gap": "Acknowledged constraint — QC uses audit-inbound issues on own repo (Eva: keep as-is)",
-    "ts_validation_status": "COMPLETE. 25/25 parity match, 0 E2E errors, all DoD criteria satisfied. Class inventory 86/86. QC-ACK #122 closed (2026-03-01T16:37Z).",
+    "ts_validation_status": "INSUFFICIENT for publish. 25/86 parity (29%). QC-REQUEST main#331 pending for comprehensive validation. Previous QC-ACK #122 scope was too narrow.",
     "operational_mode": "dual_language_pre_publish (added session #132 per audit #44)",
     "warning_baselines": {
       "e2e": 15,
@@ -191,23 +197,25 @@
     "protocol_friction_notes": [
       "Main orchestrator feedback loop closed — comments directly on audit-outbound issues",
       "QC orchestrator feedback loop asymmetric — uses audit-inbound issues on own repo (accepted constraint)",
-      "Three-way audit loop operational — all 25 recommendations processed, 100% response rate",
+      "Three-way audit loop operational — 26 recommendations filed, 100% response rate",
       "Comment identity signing operational across all three orchestrators",
-      "TS port COMPLETE (100 modules, 15 PRs, 86/86 schema classes). Phase 4 in progress.",
-      "QC TS validation COMPLETE (25/25 parity, including QAPage + Restaurant). Class inventory 86/86.",
-      "Sequential dispatch (per audit #29) working perfectly — zero merge conflicts across all 15 PRs",
-      "Audit #44 accepted by both orchestrators: main added steps 5.7/5.8, QC added warning baselines + operational_mode.",
-      "Both orchestrators now have post-publish transition plans — complementary implementations (main: dispatch, QC: validation).",
-      "Audit repo self-housekeeping step 12 added to STARTUP_CHECKLIST (cycle 15) — fixing our own 'write-only journal' gap.",
-      "System in healthy idle state — blocked on Eva (PR #305, NPM_TOKEN #304).",
-      "Main repo at 5 consecutive idle cycles — worklog/journal suppressed per step 2.5. QC at 2 idle cycles. Both correctly waiting."
+      "TS port COMPLETE (100 modules, 15 PRs, 86/86 schema classes). Phase 4 HALTED per Eva directive #329.",
+      "QC TS validation INSUFFICIENT (25/86 parity, 29%). QC-REQUEST #331 open for comprehensive validation.",
+      "Eva correctly identified QC coverage gap — all three orchestrators consumed self-scoped 25/25 metric at face value (audit #49 filed).",
+      "Main orchestrator response to Eva #329 was excellent: halted Phase 4, created comprehensive QC-REQUEST, added Eva comment tracking (step 1.1).",
+      "Eva comment on main#303 missed for ~3 hours — only caught when Eva created dedicated #329 issue. Step 1.1 closes this sensor gap.",
+      "Idle streak broken at 6 cycles (main). System now actively working on comprehensive QC validation.",
+      "Audit's own blind spot acknowledged: cycles 15-17 declared 'ready for transition' without verifying denominator."
     ],
     "qc_outbound_reports": 3,
-    "qc_inbound_requests": 10,
-    "all_threads_resolved": true
+    "qc_inbound_requests": 11,
+    "all_threads_resolved": false,
+    "open_qc_request": 331
   },
   "recommendations": {
-    "open": [],
+    "open": [
+      {"issue": 49, "title": "QC parity metrics use self-scoped denominators — partial coverage is invisible to consumers", "filed": "2026-03-02"}
+    ],
     "accepted": [
       {"issue": 2, "title": "Idle cycle spinning", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
       {"issue": 3, "title": "Non-functional tools directory", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
@@ -240,17 +248,18 @@
     ]
   },
   "metrics": {
-    "total_filed": 25,
+    "total_filed": 26,
     "total_accepted": 23,
     "total_deferred": 2,
     "total_rejected": 0,
+    "total_open": 1,
     "acceptance_rate": 0.92,
     "response_rate": 1.0,
-    "trend": "23 consecutive accepted recommendations, 0 rejected. All 25 recommendations processed (23 accepted, 2 deferred). 0 open. System healthy and idle — main at 5 consecutive idle cycles (worklog/journal suppressed), QC at 2. Both correctly blocked on Eva (PR #305, NPM_TOKEN #304). Post-publish transition plans ready on both sides. Third consecutive audit cycle with no new recommendations."
+    "trend": "New recommendation filed (#49) after 3 consecutive clean cycles. Eva's directive #329 exposed a blind spot shared by all three orchestrators: QC coverage reported as 25/25 (100%) was actually 25/86 (29%). Main orchestrator response was excellent. Audit acknowledges its own failure to verify the denominator across cycles 15-17. Cumulative: 26 filed, 23 accepted, 2 deferred, 0 rejected, 1 open."
   },
   "last_cycle": {
-    "issue": 47,
-    "timestamp": "2026-03-02T11:13:00Z",
-    "summary": "Seventeenth audit cycle. No new recommendations (third consecutive clean cycle). Main repo at cycle 95 (5 consecutive idle, worklog/journal suppressed), QC at session 135 (2 idle). Both correctly blocked on Eva (PR #305, NPM_TOKEN #304). All 25 previous recommendations remain processed. Housekeeping clean. Cumulative: 25 filed, 23 accepted, 0 rejected, 0 open."
+    "issue": 48,
+    "timestamp": "2026-03-02T14:20:00Z",
+    "summary": "Eighteenth audit cycle. Eva returned with directive main#329, flagging insufficient QC validation (25/86 types = 29%) before npm publish. Main orchestrator responded well (cycle 97): halted Phase 4b/4c, created comprehensive QC-REQUEST #331, added Eva comment tracking step 1.1. Filed audit #49 about QC parity metric framing (self-scoped denominators). Acknowledged audit's own blind spot: cycles 15-17 declared 'ready for transition' without verifying QC coverage denominator. System no longer idle — active work on comprehensive QC validation."
   }
 }
