@@ -60,6 +60,22 @@ Read main repo state:
 gh api "repos/EvaLok/schema-org-json-ld/contents/docs/state.json" --jq '.content' -H "Accept: application/vnd.github.v3+json"
 ```
 
+## 3.5. Poll for cross-repo responses
+
+Discover `audit-inbound` response issues from both repos. These are how the main and QC orchestrators communicate their responses to audit recommendations (since neither can write directly to this repo).
+
+Responses from main repo:
+```bash
+gh api "repos/EvaLok/schema-org-json-ld/issues?labels=audit-inbound&state=all&sort=created&direction=desc&per_page=10" --jq '.[] | {number, title, state, created_at}'
+```
+
+Responses from QC repo:
+```bash
+gh api "repos/EvaLok/schema-org-json-ld-qc/issues?labels=audit-inbound&state=all&sort=created&direction=desc&per_page=10" --jq '.[] | {number, title, state, created_at}'
+```
+
+Cross-reference against `state.json` recommendations to identify new responses. Update recommendation status accordingly.
+
 ## 4. Read QC repo activity
 
 Recent orchestrator issues:

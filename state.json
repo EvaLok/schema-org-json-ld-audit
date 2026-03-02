@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-03-02T17:15:00Z",
+  "last_updated": "2026-03-02T20:06:00Z",
   "main_repo": {
-    "last_commit_audited": "936afb5",
-    "last_orchestrator_issue_reviewed": 334,
-    "orchestrator_cycle_count": 99,
+    "last_commit_audited": "ead0a31",
+    "last_orchestrator_issue_reviewed": 336,
+    "orchestrator_cycle_count": 101,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
       "6 skills created: github-issues-comments, journal-entries, orchestrator-permissions, pr-review-workflow, schema-implementation, writing-skills",
@@ -52,7 +52,8 @@
       "Audit #44 accepted (cycle 90): STARTUP_CHECKLIST steps 5.7 (one-time post-publish transition) and 5.8 (dual-language consistency check) added. Step 9 updated with dual-language dispatch. Version coordination deferred to Eva. (2026-03-02)",
       "Eva directive #329 processed (cycle 97): halted Phase 4b/4c, created comprehensive QC-REQUEST #331 (86/86 parity, built-package, consumer testing). Added STARTUP_CHECKLIST step 1.1 (Eva comment tracking). Broke 6-cycle idle streak. (2026-03-02)",
       "Audit #49 accepted (cycle 98): STARTUP_CHECKLIST step 5.9 (pre-publish absolute denominator gate) added. Verifies ts_parity_checked == ts_parity_total AND ts_parity_total == total_schema_types. (2026-03-02)",
-      "QC-ACK #138 acknowledged (cycle 99): QC parity at 39/86 (45%). Built-package validation PASS. Monitoring multi-cycle progress. (2026-03-02)"
+      "QC-ACK #138 acknowledged (cycle 99): QC parity at 39/86 (45%). Built-package validation PASS. Monitoring multi-cycle progress. (2026-03-02)",
+      "PAT write access to audit repo discovered missing (cycle 99). audit-inbound issues on main repo now sole response channel. (2026-03-02)"
     ],
     "recurring_pr_revision_patterns": [
       "100% Copilot PR merge rate for TS port Phases 1-3g: 11/11 sessions merged without revision",
@@ -68,7 +69,7 @@
     "agents_ts_md_last_modified": "2026-03-01T05:04:00Z",
     "v1_released": "2026-02-27T13:25:27Z",
     "steady_state_since_cycle": 50,
-    "consecutive_idle_cycles": 0,
+    "consecutive_idle_cycles": 2,
     "typescript_plan": {
       "status": "blocked_on_qc_validation",
       "issue": 247,
@@ -112,7 +113,8 @@
         "First npm publish will ship untested build artifact — needs post-build validation (audit #39 — accepted, closed)",
         "QC stale-issue self-healing for orchestrator-run and audit-inbound issues (audit #42 — accepted, closed)",
         "Post-publish transition plan needed for dual-language maintenance (audit #44 — accepted, closed)",
-        "QC parity metrics use self-scoped denominators — partial coverage invisible to consumers (audit #49 — accepted, closed)"
+        "QC parity metrics use self-scoped denominators — partial coverage invisible to consumers (audit #49 — accepted, closed)",
+        "Cross-repo communication skill: standardized polling, response, state tracking (audit #53 — open, awaiting feedback)"
       ]
     },
     "ts_modules_on_master": 100,
@@ -126,9 +128,9 @@
     "directory_layout": "php/src/, php/test/, ts/src/, ts/test/ (restructured 2026-03-01, PR #263; TS port COMPLETE 2026-03-01, 14 PRs — 86/86 schema classes ported)"
   },
   "qc_repo": {
-    "last_commit_audited": "392c13a",
-    "last_orchestrator_issue_reviewed": 137,
-    "orchestrator_cycle_count": 137,
+    "last_commit_audited": "8fa0cd4",
+    "last_orchestrator_issue_reviewed": 140,
+    "orchestrator_cycle_count": 140,
     "self_improvement_actions": [
       "Journal and worklog alignment per Eva request (2026-02-27)",
       "PHP 8.5 CI support added (2026-02-27)",
@@ -182,9 +184,9 @@
     "ts_parity_coverage_pct": 45,
     "ts_parity_note": "IN PROGRESS for publish. 39/86 types validated (45%). QC-ACK #138 tracking multi-cycle effort. Built-package validation PASS. Consumer test from tarball PASS (10 types). Per audit #49: using absolute denominators.",
     "steady_state_since_session": 87,
-    "consecutive_idle_cycles": 0,
+    "consecutive_idle_cycles": 1,
     "idle_cycle_detection": "Resilient pattern implemented session #113 — checks for any .php file changes regardless of directory prefix (survives future restructures)",
-    "write_access_gap": "Acknowledged constraint — QC uses audit-inbound issues on own repo (Eva: keep as-is)",
+    "write_access_gap": "Acknowledged constraint — QC uses audit-inbound issues on own repo. Now applies to ALL orchestrators per GitHub PAT fix (2026-03-02).",
     "ts_validation_status": "IN PROGRESS. 39/86 parity (45%), built-package PASS, 10-type consumer test PASS. QC-ACK #138 open for continued expansion toward 86/86.",
     "operational_mode": "dual_language_pre_publish (added session #132 per audit #44)",
     "warning_baselines": {
@@ -199,14 +201,15 @@
     "audit_recommendation_response_hours": 1.5,
     "stale_threads": [],
     "protocol_friction_notes": [
-      "Main orchestrator feedback loop closed — comments directly on audit-outbound issues",
-      "QC orchestrator feedback loop asymmetric — uses audit-inbound issues on own repo (accepted constraint)",
-      "Three-way audit loop operational — 26 recommendations filed, 100% response rate",
+      "BREAKING CHANGE: Main orchestrator PAT no longer has write access to audit repo (GitHub bug fix, 2026-03-02). Main discovered at cycle 99.",
+      "All orchestrators now restricted to own-repo writes only. QC pattern (audit-inbound on own repo) is now the universal pattern.",
+      "Main orchestrator Step 5 references stale direct-comment pattern — needs updating per audit #53.",
+      "Audit STARTUP_CHECKLIST updated with step 3.5 (poll for audit-inbound responses on main/QC repos).",
+      "Cross-repo communication skill proposed (#53) to standardize protocol across all three repos.",
+      "Three-way audit loop operational — 27 recommendations filed, 100% response rate",
       "Comment identity signing operational across all three orchestrators",
       "TS port COMPLETE (100 modules, 15 PRs, 86/86 schema classes). Phase 4 HALTED per Eva directive #329.",
       "QC comprehensive validation IN PROGRESS — 39/86 parity (45%), up from 25/86 (29%). Built-package PASS.",
-      "Eva correctly identified QC coverage gap — all three orchestrators consumed self-scoped 25/25 metric at face value. Audit #49 filed, accepted, and closed.",
-      "Main orchestrator response to Eva #329 was excellent: halted Phase 4, created comprehensive QC-REQUEST, added Eva comment tracking (step 1.1).",
       "QC-REQUEST #331 → QC-ACK #138 round-trip: ~3 hours. Protocol efficient.",
       "Both orchestrators adopted absolute denominators per audit #49. Denominator problem resolved.",
       "System actively working on comprehensive QC validation. No more idle spinning."
@@ -218,7 +221,9 @@
     "open_qc_ack": 138
   },
   "recommendations": {
-    "open": [],
+    "open": [
+      {"issue": 53, "title": "Cross-repo communication skill: standardized polling, response, and state tracking methodology", "filed": "2026-03-02", "note": "Design proposal per input-from-eva #51. Awaiting feedback from both orchestrators."}
+    ],
     "accepted": [
       {"issue": 2, "title": "Idle cycle spinning", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
       {"issue": 3, "title": "Non-functional tools directory", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
@@ -248,22 +253,22 @@
     "rejected": [],
     "deferred": [
       {"issue": 5, "title": "Cron frequency / maintenance mode", "filed": "2026-02-28", "deferred": "2026-02-28", "resolved": "2026-02-28", "reason": "Eva says hold current schedule — expansion coming soon"},
-      {"issue": 11, "title": "QC write-access gap in three-way audit protocol", "filed": "2026-02-28", "deferred": "2026-02-28", "resolved": "2026-02-28", "reason": "Eva says keep as-is. Asymmetric protocol is functional."}
+      {"issue": 11, "title": "QC write-access gap in three-way audit protocol", "filed": "2026-02-28", "deferred": "2026-02-28", "resolved": "2026-02-28", "reason": "Eva says keep as-is. Asymmetric protocol is functional. NOTE: now ALL orchestrators have this constraint per GitHub PAT fix."}
     ]
   },
   "metrics": {
-    "total_filed": 26,
+    "total_filed": 27,
     "total_accepted": 24,
     "total_deferred": 2,
     "total_rejected": 0,
-    "total_open": 0,
+    "total_open": 1,
     "acceptance_rate": 0.92,
     "response_rate": 1.0,
-    "trend": "Audit #49 accepted by both orchestrators — recommendation board clear (0 open). QC validation progressing: 39/86 parity (45%), built-package PASS. Both orchestrators adopted absolute denominators. System executing well on Eva's correction. Cumulative: 26 filed, 24 accepted, 2 deferred, 0 rejected, 0 open."
+    "trend": "Audit #53 filed per Eva's input-from-eva #51 — cross-repo communication skill design proposal. GitHub PAT bug fix means all orchestrators now restricted to own-repo writes. Protocol needs formal adaptation. QC parity unchanged at 39/86 (45%). Main at 2 consecutive idle cycles (101). Cumulative: 27 filed, 24 accepted, 2 deferred, 0 rejected, 1 open."
   },
   "last_cycle": {
-    "issue": 50,
-    "timestamp": "2026-03-02T17:15:00Z",
-    "summary": "Nineteenth audit cycle. Audit #49 (self-scoped denominators) accepted by both orchestrators — closed. Main at cycle 99: processed #49 (added step 5.9), acknowledged QC-ACK #138 (parity at 39/86). QC at session 137: expanded parity 25→39 (45%), built-package validation PASS, npm-build-check.sh created, 2 constructor mismatches fixed (ItemList, ContactPoint). No new recommendations — system executing well on comprehensive QC validation. Recommendation board clear: 0 open, 24 accepted, 2 deferred."
+    "issue": 52,
+    "timestamp": "2026-03-02T20:06:00Z",
+    "summary": "Twentieth audit cycle. Priority: processed input-from-eva #51 (inter-repo communication pattern redesign). Filed #53 with comprehensive cross-repo communication skill design — standardized polling, response format, state tracking, and lifecycle management. GitHub PAT bug fix confirmed: main orchestrator can no longer write to audit repo (discovered cycle 99). Added STARTUP_CHECKLIST step 3.5 for polling audit-inbound responses. Main at cycle 101 (2 consecutive idle). QC at session 140 (1 idle since session 137 parity expansion). QC parity unchanged at 39/86 (45%). Input-from-eva #51 remains open pending feedback collection."
   }
 }
