@@ -1,0 +1,10 @@
+[package]
+name = "audit-journal"
+version = "0.1.0"
+edition = "2021"
+description = "Journal and worklog management tool for the audit orchestrator"
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+chrono = "0.4"
+regex = "1"

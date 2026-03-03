@@ -12,3 +12,6 @@ Thumbs.db
 .vscode
 *.swp
 *.swo
+
+# Rust build artifacts
+tools/rust/target/

@@ -8,21 +8,25 @@ user-invocable: false
 
 ## Allowed commands
 
-The audit orchestrator workflow only permits these Bash command prefixes:
+The audit orchestrator workflow permits these Bash command prefixes:
 
 | Prefix | Examples |
 |--------|----------|
 | `gh *` | `gh api ...`, `gh issue list ...`, `gh pr view ...` |
 | `git *` | `git add`, `git commit`, `git push`, `git branch` |
 | `jq *` | `jq '.field' file.json`, `jq -n --arg ...` |
+| `bash *` | `bash tools/audit-journal create ...` |
+| `cargo *` | `cargo build --release --manifest-path tools/rust/Cargo.toml` |
+| `mkdir *` | `mkdir -p docs/journal` |
 | `ls *` | `ls tools/`, `ls -la file` |
 | `date *` | `date -u '+%Y-%m-%d'` |
 | `wc *` | `wc -l file` |
 | `sort *` | `sort file` |
+| `cat *` | `cat file.json` |
+| `head *` | `head -20 file.md` |
+| `tail *` | `tail -20 file.md` |
 
 WebFetch is allowed for `schema.org`, `developers.google.com`, `search.google.com` domains only.
-
-**NOT allowed** (unlike the main repo orchestrator): `composer`, `php`, `bun` — the audit agent does not run code or tests.
 
 ## BLOCKED constructs (will cause denial and waste turns)
 
@@ -43,17 +47,15 @@ These shell constructs are **always blocked** by the prefix-based permission sys
 ### Key rule
 **Each Bash tool call must be a single, simple command with no shell constructs.** If you need compound operations, use separate Bash tool calls.
 
-## NOT allowed commands (will require user approval)
+## Invoking Rust tools
 
-- `bash`, `sh` — cannot run scripts directly
-- `echo`, `printf` — cannot produce text output
-- `cat`, `head`, `tail` — cannot read files (use Read tool instead)
-- `grep`, `rg` — cannot search (use Grep tool instead)
-- `chmod` — cannot change permissions
-- `env`, `printenv` — cannot inspect environment
-- `curl`, `wget` — cannot make HTTP requests (use `gh api` or WebFetch)
-- `composer`, `php`, `bun` — audit agent does not run code
-- Any other command not in the allow list
+Pre-built Rust tools are invoked via shell wrappers:
+
+```bash
+bash tools/audit-journal create --date 2026-03-03 --title "Audit Cycle"
+```
+
+The wrapper handles finding the binary (pre-built in CI) or falling back to `cargo build`.
 
 ## Reliable patterns for common operations
 

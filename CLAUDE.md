@@ -2,13 +2,29 @@
 
 ## Sandbox-safe patterns
 
-The orchestrator workflow only permits specific Bash commands. See `.claude/skills/orchestrator-permissions/SKILL.md` for the full list.
+The orchestrator workflow permits specific Bash commands. See `.claude/skills/orchestrator-permissions/SKILL.md` for the full list.
 
 **Critical rules:**
 - NEVER use `${}` variable substitution, pipes (`|`), compound commands (`&&`), heredocs (`<<`), or command substitution (`$()`) in Bash tool calls
 - Each Bash call must be a single, simple command
 - Use the Write tool for file creation, Read tool for file reading, Grep/Glob for search
 - Use `gh api` with `-F body=@file` for posting comments (write body to file first with Write tool)
+
+## Rust tools
+
+The audit orchestrator has a Rust workspace at `tools/rust/` for compiled CLI tools. Tools are invoked via shell wrappers in `tools/`.
+
+**Invocation pattern:**
+```bash
+bash tools/audit-journal create --date 2026-03-03 --title "Audit Cycle"
+```
+
+**Available tools:**
+| Tool | Wrapper | Purpose |
+|------|---------|---------|
+| `audit-journal` | `tools/audit-journal` | Journal/worklog entry management and JOURNAL.md index |
+
+**Creating new tools:** See `.claude/skills/rust-tooling/SKILL.md` for how to add new Rust tool crates to the workspace. The agent is encouraged to build tools for itself when it identifies repeated manual patterns.
 
 ## Project context
 

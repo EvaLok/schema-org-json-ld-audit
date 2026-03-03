@@ -2,7 +2,7 @@
 
 Follow this checklist at the start of every audit cycle. Do not skip steps.
 
-**Permission note**: The audit workflow only allows specific Bash commands: `gh`, `git`, `jq`, `ls`, `date`, `wc`, `sort`. All other commands will be blocked. Use dedicated tools (Read, Write, Edit, Grep, Glob) for file operations. See `.claude/skills/orchestrator-permissions/SKILL.md` for the full list and workarounds.
+**Permission note**: The audit workflow allows specific Bash commands: `gh`, `git`, `jq`, `bash`, `cargo`, `mkdir`, `ls`, `date`, `wc`, `sort`, `cat`, `head`, `tail`. Use dedicated tools (Read, Write, Edit, Grep, Glob) for file operations. See `.claude/skills/orchestrator-permissions/SKILL.md` for the full list and workarounds.
 
 **Critical**: NEVER use `${}` variable substitution, pipes (`|`), compound commands (`&&`), heredocs (`<<`), or command substitution (`$()`) in Bash tool calls. Each call must be a single, simple command. See `.claude/skills/orchestrator-permissions/SKILL.md` for details.
 
@@ -209,9 +209,17 @@ Update `state.json` with:
 
 ## 14. Write worklog and journal
 
-Create a worklog entry in `docs/worklog/` with a summary of this cycle's findings and actions.
+Use the `audit-journal` tool to create entries:
 
-Update `JOURNAL.md` or create a dated journal entry in `docs/journal/` with reflections.
+```bash
+bash tools/audit-journal worklog --date YYYY-MM-DD --cycle N --summary "Brief summary"
+```
+
+```bash
+bash tools/audit-journal create --date YYYY-MM-DD --title "Cycle title"
+```
+
+Then edit the created files with the Write/Edit tools to fill in the content. The `create` command automatically rebuilds `JOURNAL.md`.
 
 ## 15. Close cycle issue
 

@@ -12,13 +12,28 @@ Independent auditor of the orchestrator ecosystem. Evaluates how well the main a
 - Evaluates cross-repo communication, self-improvement behavior, and blind spots
 - Files recommendations as `audit-outbound` issues on this repo
 - Tracks recommendation acceptance/rejection rates over time
+- Builds and maintains its own tools when it identifies repeated manual patterns
+
+## Self-tooling
+
+The agent builds tools **for itself** to improve its own workflow efficiency. This is distinct from modifying the audited repos.
+
+- Rust tool crates live in `tools/rust/crates/`
+- Shell wrappers in `tools/` provide the invocation interface
+- See `.claude/skills/rust-tooling/SKILL.md` for how to create new tools
+- Tools are pre-built in CI before the orchestrator session starts
+
+**Examples of appropriate self-tooling:**
+- Journal/worklog management (`audit-journal`)
+- State file manipulation and validation
+- Cross-repo data extraction and summarization
+- Report generation
+- Analysis tools that read/audit the main and QC codebases
 
 ## What it does NOT do
 
-- Write code, open PRs, or fix bugs
-- Modify files on other repos
-- Run tests, linters, or build tools
-- Directly implement its own recommendations
+- Modify files on other repos (main or QC)
+- Directly implement its own recommendations on audited repos
 
 ## Recommendations
 
