@@ -154,6 +154,20 @@ For each orchestrator (main and QC), answer these questions:
 - Are there trends — improving, declining, stagnant?
 - Calibrate recommendation quality based on acceptance rate
 
+## 10.5. Verify previous acceptances — proactive correction (per input-from-eva #65)
+
+**MANDATORY every cycle. Do not take "acknowledged" at face value.**
+
+For each recommendation accepted in the last 3 cycles:
+1. **Verify implementation**: Check whether the promised process change was actually made (checklist step added, skill created, state.json updated, etc.)
+2. **Verify effectiveness**: If the change was implemented, did it actually prevent the targeted problem from recurring? Check for recurrences.
+3. **Re-file if ignored**: If a recommendation was "accepted" but the implementation is missing or incomplete, re-file a stronger version referencing the original acceptance and the gap.
+
+For persistent issues noted in previous worklogs/journals but never filed:
+1. **Scan your last 2 worklogs** for observations labeled as concerns, blind spots, or noted-but-not-filed items.
+2. **If you noted the same issue 2+ times without filing, it is now MANDATORY to file it.** The threshold for proactive filing has been reached.
+3. **Never self-censor a valid finding.** If an issue exists, file it. Do not rationalize non-action with "it's minor" or "they'll probably catch it."
+
 ## 11. File recommendations
 
 For each actionable finding, create an `audit-outbound` issue on this repo:
@@ -168,6 +182,12 @@ Each recommendation should include:
 - What was observed
 - Why the existing process didn't catch it
 - Concrete suggestion for which prompt/skill/checklist to update and how
+
+**Proactive correction principles (per input-from-eva #65):**
+- File issues for ALL identified problems, not just major ones. The cost of over-filing is low; the cost of letting an issue persist is high.
+- When filing about a previously-noted-but-unfiled issue, include "This has been observed for N cycles without action" to convey urgency.
+- When a recommendation targets a specific orchestrator's behavior, include the exact file/step/line that needs to change.
+- If the same class of problem recurs after a previous fix was "accepted," file a follow-up recommendation noting the recurrence and the inadequacy of the original fix.
 
 If a recommendation requires changes beyond the audit agent's permissions (workflow files, repo settings, secrets, cron schedules, architectural changes), file it as a `question-for-eva` issue.
 
