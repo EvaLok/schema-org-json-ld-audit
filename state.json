@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-03-03T17:30:00Z",
+  "last_updated": "2026-03-03T20:15:00Z",
   "main_repo": {
-    "last_commit_audited": "0bf28ce",
-    "last_orchestrator_issue_reviewed": 390,
-    "orchestrator_cycle_count": 113,
+    "last_commit_audited": "1eb2ab1",
+    "last_orchestrator_issue_reviewed": 397,
+    "orchestrator_cycle_count": 115,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
       "6 skills created: github-issues-comments, journal-entries, orchestrator-permissions, pr-review-workflow, schema-implementation, writing-skills",
@@ -64,7 +64,9 @@
       "Eva directive #378 processed (cycle 110): AST-over-regex convention adopted. Parity tool rewritten with TypeScript Compiler API + php-parser (PR #381 merged). tool-creation-guidelines skill created. (2026-03-03)",
       "Cycle 111: identified 34:1 PHP/TS documentation ratio in README. Dispatched #383 (TS examples) and #385 (edge-case tests). PRs #384, #386 in flight. (2026-03-03)",
       "Cycle 112: PRs #384 (TS README parity, 1 revision) and #386 (52 edge-case tests, zero revisions) merged. Audit #67 and #68 accepted. Step 7 stale-sweep and step 5.9 denominator fix implemented. 29/29 merge rate. (2026-03-03)",
-      "Cycle 113: Audit #71 accepted — STARTUP_CHECKLIST step 4 updated for QC-REPORT fix notifications on active coordination thread. Retroactive AggregateRating fix posted on #331. WebPageElement last positional-param class detected by AST parity tool, dispatched and merged (PR #393). Constructor refactoring 100% complete (89 TS classes). 30/30 Copilot merge rate. (2026-03-03)"
+      "Cycle 113: Audit #71 accepted — STARTUP_CHECKLIST step 4 updated for QC-REPORT fix notifications on active coordination thread. Retroactive AggregateRating fix posted on #331. WebPageElement last positional-param class detected by AST parity tool, dispatched and merged (PR #393). Constructor refactoring 100% complete (89 TS classes). 30/30 Copilot merge rate. (2026-03-03)",
+      "Cycle 114: Audit #73 accepted — STARTUP_CHECKLIST step 5.9 updated to 73 standalone-parity-testable types. QC gate SATISFIED. QC-REQUEST #331 closed. QC status updated from 49/86 to 73/73. Audit-inbound #395 created/closed. (2026-03-03)",
+      "Cycle 115: Eva directive #396 processed (Node 22 CI). PHPStan regression fixed (PR #399 merged, level max). Eva pushed publish-npm.yml (OIDC provenance, no NPM_TOKEN). PR #305 potentially superseded. 31/31 Copilot merge rate. (2026-03-03)"
     ],
     "recurring_pr_revision_patterns": [
       "100% Copilot PR merge rate for TS port Phases 1-3g: 11/11 sessions merged without revision",
@@ -83,7 +85,8 @@
       "README TS examples PR #384: merged, 1 revision (missing required constructor properties in examples)",
       "Edge-case tests PR #386: merged, zero revisions (52 edge-case tests for 10 standalone types)",
       "WebPageElement constructor PR #393: merged, zero revisions. Last positional-param class detected by AST parity tool.",
-      "Overall Copilot merge rate: 30/30 sessions merged. First-pass success rate: 28/30 (93%)"
+      "PHPStan max fix PR #399: merged, zero revisions. Fixed mixed-offset errors from PR #364.",
+      "Overall Copilot merge rate: 31/31 sessions merged. First-pass success rate: 29/31 (94%)"
     ],
     "prompt_last_modified": "Inlined into repo (commit d0ae8fa, 2026-02-28)",
     "agents_md_last_modified": "2026-03-03T02:30:00Z",
@@ -92,10 +95,10 @@
     "steady_state_since_cycle": 50,
     "consecutive_idle_cycles": 0,
     "typescript_plan": {
-      "status": "blocked_on_qc_validation",
+      "status": "qc_gate_cleared_awaiting_publish",
       "issue": 247,
       "qc_coordination_issue": 331,
-      "qc_coordination_status": "OPEN — QC-ACK #138 tracking. Parity at 73/76 testable (96%), E2E at 73/73 (0 failures — AggregateRating FIXED). Built-package PASS. QC at 92/92 coverage (100%). PR #173 MERGED. PARITY GAP: gate expects 76, QC maxes at 73 standalone-testable. Filed audit #73.",
+      "qc_coordination_status": "CLOSED — QC gate SATISFIED. 73/73 standalone parity (100%). 0 E2E errors. Built-package PASS. Class inventory 88/88 PHP=TS. QC-ACK qc#138 still open but body stale (shows 29%, actual 100%). Filed audit #76.",
       "previous_qc_coordination": "QC-REQUEST #299: CLOSED — 25/86 parity validated (29%). Scope was insufficient for publish gate.",
       "plan_version": 3,
       "eva_approval": "2026-02-28T23:05:22Z — conditional approval: proceed with restructure, no v2 tag needed (non-breaking), scoped @evabee package",
@@ -104,25 +107,29 @@
       "eva_directive_348": "Every cycle must produce value — idle cycle mechanism eliminated (cycle 105).",
       "eva_directive_372": "Copilot tasks too simple — give harder, multi-concern tasks. Use Copilot for auditing/planning, not just coding (cycle 109).",
       "eva_directive_378": "Use AST over regex for tools. TypeScript Compiler API and php-parser already installed (cycle 110).",
-      "current_phase": "Phase 4 HALTED per Eva directive #329. Phases 0-3 COMPLETE (88/88 schema classes). All 89 TS constructors standardized to options-object (including WebPageElement fix, cycle 113). QC-REQUEST #331 open, QC-ACK #138 tracking. QC coverage 92/92 (100%), parity 73/76 testable (96%), E2E 73/73 (0 failures). Phase 4b PR #305 deprioritised. Phase 4c blocked on parity gap (audit #73) + Eva. NEW DENOMINATOR MISMATCH: gate expects 76, QC maxes at 73.",
-      "qc_validation_strategy": "QC coverage COMPLETE (92/92). Parity 73/76 testable (96%). E2E 73/73 (0 failures — AggregateRating FIXED in session 174). Built-package PASS. PR #173 MERGED. NEW ISSUE: publish gate expects ts_parity_total==76 but QC's standalone-testable count is 73. 3 building-block types in the 76 can't be standalone-parity-tested. Filed as audit #73.",
+      "eva_directive_396": "Node 22 added to TS CI matrix (cycle 115). Minor informational directive.",
+      "eva_directive_400": "npm trusted publishing (OIDC) configured — no NPM_TOKEN secret needed. Publish triggered by GitHub Release creation.",
+      "eva_directive_401": "verify-build.mjs had broken Brand constructor. Eva requests pre-publish step review and multi-party (QC + audit) redundancy before recommending publishing.",
+      "current_phase": "Phase 4 QC GATE CLEARED. Phases 0-3 COMPLETE (88/88 schema classes). All 89 TS constructors standardized to options-object. QC-REQUEST #331 CLOSED. QC parity 73/73 standalone (100%), E2E 73/73 (0 failures). Eva pushed publish-npm.yml (OIDC). Phase 4b PR #305 likely superseded by Eva's direct push. Phase 4c awaiting Eva's GitHub Release creation. NPM_TOKEN #304 obsolete (OIDC). Eva directives #400, #401 NOT YET PROCESSED by main orchestrator.",
+      "qc_validation_strategy": "QC coverage COMPLETE (92/92). Parity 73/73 standalone (100%). E2E 73/73 (0 failures). Built-package PASS. QC gate SATISFIED per audit #73 alignment to 73 standalone-parity-testable types.",
       "missing_classes": [],
       "missing_classes_note": "RESOLVED. Class inventory: 88 PHP = 88 TS.",
       "eva_decisions": {
         "linter": "Biome",
-        "node_minimum": "20 (also test on 24)",
+        "node_minimum": "20 (also test on 22 and 24)",
         "license": "MIT",
         "agents_md": "Extend with per-language sub-files (AGENTS-php.md, AGENTS-ts.md)",
         "version_bump": "No v2.0.0 — restructure is non-breaking, keep v1.x",
         "scoped_package": "@evabee/schema-org-json-ld",
-        "constructor_pattern": "Uniform options-object for all TS classes (directive #340)"
+        "constructor_pattern": "Uniform options-object for all TS classes (directive #340)",
+        "npm_publishing": "Trusted publishing via OIDC — no NPM_TOKEN (directive #400)"
       },
       "phases": [
         {"phase": 0, "name": "Restructure to polyglot dirs (v1.x)", "status": "complete", "pr": 263, "qc_validation": "passed (QC #114, 2026-03-01T04:43Z)"},
         {"phase": 1, "name": "TypeScript scaffold", "status": "complete", "issue": 269, "pr": 270, "merged_at": "2026-03-01T08:50:04Z", "ci_verified": true},
         {"phase": 2, "name": "Enum & shared sub-type port", "status": "complete", "dispatch_strategy": "sequential (per audit #29)", "decomposition": {"2a": {"status": "merged", "pr": 277, "merged_at": "2026-03-01T09:17:42Z"}, "2b": {"status": "merged", "pr": 279, "merged_at": "2026-03-01T09:26:06Z"}, "2c": {"status": "merged", "pr": 281, "merged_at": "2026-03-01T09:36:17Z"}}},
         {"phase": 3, "name": "Schema type port", "status": "complete", "dispatch_strategy": "sequential (per audit #29)", "note": "88/88 PHP schema classes ported.", "decomposition": {"3a": {"status": "merged", "pr": 283}, "3b": {"status": "merged", "pr": 285}, "3c": {"status": "merged", "pr": 288}, "3d": {"status": "merged", "pr": 290}, "3e": {"status": "merged", "pr": 292}, "3f": {"status": "merged", "pr": 294}, "3g": {"status": "merged", "pr": 296}, "fix": {"status": "merged", "pr": 312, "note": "QAPage + Restaurant (audit #37)"}}},
-        {"phase": 4, "name": "Build, test, publish", "status": "blocked_on_qc_validation", "decomposition": {"4a": {"status": "merged", "pr": 301}, "4b": {"status": "halted_pending_qc", "pr": 305, "note": "Eva directive #329: comprehensive QC validation required before publish."}, "4c": {"status": "blocked_on_qc_validation", "qc_gate": "QC parity 73/73 standalone (100%). Gate expects 76 but QC maxes at 73 (audit #73). Coverage 92/92 (100%). E2E 73/73 (0 failures).", "note": "Blocked on: QC-REQUEST #331 completion + Eva merge PR #305 + NPM_TOKEN"}, "verify_build": {"status": "merged", "pr": 317, "note": "Per audit #39. scripts/verify-build.mjs validates packed tarball."}}}
+        {"phase": 4, "name": "Build, test, publish", "status": "qc_gate_cleared_awaiting_publish", "decomposition": {"4a": {"status": "merged", "pr": 301}, "4b": {"status": "likely_superseded_by_eva_push", "pr": 305, "note": "Eva pushed publish-npm.yml directly (commit f59a531, OIDC). PR #305 may be superseded."}, "4c": {"status": "awaiting_eva_release", "qc_gate": "SATISFIED. 73/73 standalone parity (100%). 0 E2E errors. Per audit #73.", "note": "Awaiting Eva to create GitHub Release to trigger publish-npm.yml workflow."}, "verify_build": {"status": "merged_but_was_broken", "pr": 317, "note": "Per audit #39. verify-build.mjs had stale Brand constructor from cycle 104-115. Fixed by Eva in commit f59a531. Filed audit #75."}}}
       ],
       "audit_observations": [
         "Phase 0 needs QC validation checkpoint before Phase 1 (audit #15 — accepted, closed)",
@@ -148,7 +155,9 @@
         "Main audit-inbound lifecycle management not catching stale issues — #353 open for 4+ cycles (audit #67 — accepted, closed)",
         "Pre-publish gate denominator mismatch — step 5.9 expects 88, QC targeting 76 testable (audit #68 — accepted, closed)",
         "QC-REPORT feedback loop incomplete — fixes merged but originating reports never acknowledged (audit #71 — accepted, closed)",
-        "Publish gate parity denominator still misaligned — gate expects 76, QC architecture maxes at 73 standalone-testable (audit #73 — open)"
+        "Publish gate parity denominator still misaligned — gate expects 76, QC architecture maxes at 73 standalone-testable (audit #73 — accepted, closed)",
+        "Pre-publish validation scripts must be CI-tested — verify-build.mjs broken for 11 cycles (audit #75 — open)",
+        "QC-ACK tracking issue body stale — shows 29% when actual is 100% (audit #76 — open)"
       ]
     },
     "ts_modules_on_master": 102,
@@ -156,15 +165,15 @@
     "php_schema_classes": 88,
     "schema_types": 28,
     "total_classes": 102,
-    "test_count": 338,
-    "ts_test_count": 301,
+    "test_count": 423,
+    "ts_test_count": 409,
     "phpstan_level": "max",
     "directory_layout": "php/src/, php/test/, ts/src/, ts/test/ (restructured 2026-03-01, PR #263; TS port COMPLETE 2026-03-01, 14 PRs — 88/88 schema classes)"
   },
   "qc_repo": {
-    "last_commit_audited": "session_174",
-    "last_orchestrator_issue_reviewed": 174,
-    "orchestrator_cycle_count": 174,
+    "last_commit_audited": "session_176",
+    "last_orchestrator_issue_reviewed": 176,
+    "orchestrator_cycle_count": 176,
     "self_improvement_actions": [
       "Journal and worklog alignment per Eva request (2026-02-27)",
       "PHP 8.5 CI support added (2026-02-27)",
@@ -220,29 +229,30 @@
       "PR #173 merged (session #174): SizeSpecification + UnitPriceSpecification. Coverage now 92/92 testable (100%). (2026-03-03)",
       "AggregateRating E2E FIXED (session #174): re-validated with itemReviewed from main PR #371. E2E now 73/73, 0 failures. (2026-03-03)",
       "QC-REPORT #160 closed (session #174) with re-validation. Step 5a added per audit #71. (2026-03-03)",
-      "Audit #71 accepted (session #174): STARTUP_CHECKLIST step 5a added — check open QC-REPORTs for upstream fixes. (2026-03-03)"
+      "Audit #71 accepted (session #174): STARTUP_CHECKLIST step 5a added — check open QC-REPORTs for upstream fixes. (2026-03-03)",
+      "Audit #73 accepted (session #176): standalone_testable_count: 73 added to state.json. QC-ACK #138 updated via comment (73/73 parity, 0 E2E errors). audit-inbound #177 created. (2026-03-03)"
     ],
-    "stale_issues": [],
+    "stale_issues": ["qc#177 (audit-inbound for #73, still open — awaiting main repo side confirmation)"],
     "prompt_last_modified": "Unknown — STARTUP_CHECKLIST exists",
     "unit_tests": 383,
     "e2e_tests": 73,
     "e2e_pass": 73,
     "e2e_errors": 0,
-    "e2e_error_note": "AggregateRating FIXED (session 174). itemReviewed added by main PR #371. Re-validated, QC-REPORT #160 closed.",
+    "e2e_error_note": "AggregateRating FIXED (session 174). All 73/73 E2E pass with 0 failures.",
     "e2e_warnings_total": 25,
     "e2e_warnings_false_positives": 25,
     "ts_vitest_pass": 301,
     "ts_parity_checked": 73,
-    "ts_parity_total": 76,
-    "ts_parity_total_note": "76 testable types = 88 total - 12 enums (per audit #62 type classification)",
-    "ts_parity_coverage_pct": 96,
+    "ts_parity_total": 73,
+    "ts_parity_total_note": "73 standalone-parity-testable types = 88 total - 12 enums - 3 building-block-only = 73. Per audit #73.",
+    "ts_parity_coverage_pct": 100,
     "ts_e2e_covered": 73,
-    "ts_e2e_covered_pct": 96,
-    "ts_parity_note": "COVERAGE COMPLETE (92/92). Parity 73/76 (96%). E2E 73/73 (0 failures). PR #173 merged. PARITY GAP: 3 building-block types in the 76 can't be standalone-parity-tested. QC considers 73/73 as complete. Gate expects 76. Filed as audit #73.",
+    "ts_e2e_covered_pct": 100,
+    "ts_parity_note": "COVERAGE COMPLETE (92/92). Parity 73/73 standalone (100%). E2E 73/73 (0 failures). All coverage targets met. QC-ACK #138 body stale (shows 29%) — filed audit #76.",
     "copilot_agents_in_flight": [],
     "copilot_agents_completed": ["qc#145", "qc#146", "qc#155", "qc#156", "qc#162", "qc#163", "qc#169", "qc#172"],
     "copilot_agents_failed": ["qc#151", "qc#152"],
-    "copilot_agents_note": "12 batches dispatched total: 8 completed, 2 failed silently, 0 in-flight. 20-type mega-batch #169 delivered 18/20 (90%). Dispatch-to-PR rate: 26/29 (90%). PR merge rate: 26/26 (100%). Zero-revision streak: 8+ consecutive.",
+    "copilot_agents_note": "12 batches dispatched total: 8 completed, 2 failed silently, 0 in-flight. Coverage complete — no further dispatches expected.",
     "copilot_metrics": {
       "dispatch_to_pr_rate": "26/29 (90%)",
       "pr_merge_rate": "26/26 (100%)",
@@ -252,7 +262,7 @@
     "consecutive_idle_cycles": 0,
     "idle_cycle_detection": "Resilient pattern implemented session #113. Updated session #144: uncovered types now prevent idle classification.",
     "write_access_gap": "Acknowledged constraint — QC uses audit-inbound issues on own repo.",
-    "ts_validation_status": "COVERAGE COMPLETE. 92/92 (100%). Parity 73/76 (96%). E2E 73/73 (0 failures). Built-package PASS. QC-ACK #138 open. Parity gap: gate expects 76, QC maxes at 73 (filed audit #73).",
+    "ts_validation_status": "COVERAGE COMPLETE. 92/92 (100%). Parity 73/73 standalone (100%). E2E 73/73 (0 failures). Built-package PASS. QC-ACK #138 open (body stale). QC gate SATISFIED.",
     "operational_mode": "dual_language_pre_publish (added session #132 per audit #44)",
     "warning_baselines": {
       "e2e": 25,
@@ -264,34 +274,35 @@
     "avg_report_to_fix_hours": 6,
     "avg_ack_latency_hours": 1,
     "audit_recommendation_response_hours": 1.5,
-    "stale_threads": [],
+    "stale_threads": ["QC-ACK qc#138 body stale (shows 29%, actual 100%) — filed audit #76"],
     "protocol_friction_notes": [
       "Cross-repo communication skill adopted by all three repos (2026-03-02). Protocol formally documented.",
       "All orchestrators now restricted to own-repo writes only. Symmetric protocol.",
       "Audit STARTUP_CHECKLIST step 3.5 operational — polls for audit-inbound responses on main/QC repos.",
       "Audit STARTUP_CHECKLIST step 8.5 — mandatory stall detection per input-from-eva #55.",
       "Audit STARTUP_CHECKLIST step 10.5 — mandatory verification of accepted recommendations per input-from-eva #65.",
-      "Three-way audit loop operational — 35 recommendations filed, 100% response rate",
+      "Three-way audit loop operational — 37 recommendations filed, 100% response rate",
       "Comment identity signing operational across all three orchestrators",
       "TS port COMPLETE (102 modules, 88/88 schema classes). All constructors standardized to options-object.",
-      "QC coverage COMPLETE (92/92). Parity 73/76 (96%). E2E 73/73 (0 failures). AggregateRating fixed. QC-REPORT #160 closed.",
-      "QC-REQUEST #331 → QC-ACK #138 round-trip: ~3 hours. Protocol efficient.",
+      "QC coverage COMPLETE (92/92). Parity 73/73 standalone (100%). E2E 73/73 (0 failures). QC gate SATISFIED.",
+      "QC-REQUEST #331 CLOSED (2026-03-03, cycle 114). QC gate satisfied.",
+      "QC-ACK qc#138 still open — body stale, comments current. Filed audit #76.",
       "Both orchestrators adopted absolute denominators per audit #49.",
-      "QC Copilot pipeline fully operational: dual metrics (89% dispatch-to-PR, 100% merge), type classification, stale dispatch detection.",
-      "Main proactively communicating property additions and convention changes on #331.",
-      "DENOMINATOR MISMATCH RESOLVED: Main step 5.9 updated to 76 per audit #68. Both repos aligned on 76 testable types.",
-      "Main audit-inbound #353 closed — lifecycle management gap fixed per audit #67.",
-      "QC-REPORT #160 feedback loop broken: main fixed issue (PR #371) but QC not notified via monitored channel. Filed as audit #71."
+      "DENOMINATOR RESOLVED: Main step 5.9 aligned to 73 standalone-parity-testable per audit #73. Three-fix series complete (#49→#68→#73).",
+      "Eva pushed publish-npm.yml (OIDC provenance) and fixed verify-build.mjs (commit f59a531). NPM_TOKEN #304 obsolete.",
+      "Eva directive #401: verify-build.mjs was broken — requests multi-party pre-publish verification. Filed audit #75.",
+      "Main audit-inbound #395 created and closed for audit #73. QC audit-inbound #177 still open."
     ],
     "qc_outbound_reports": 4,
     "qc_inbound_requests": 12,
     "all_threads_resolved": false,
-    "open_qc_request": 331,
+    "open_qc_request": null,
     "open_qc_ack": 138
   },
   "recommendations": {
     "open": [
-      {"issue": 73, "title": "Publish gate parity denominator still misaligned — gate expects 76 but QC architecture maxes at 73 standalone-testable types", "filed": "2026-03-03", "note": "Third denominator mismatch in series (#49→#68→#73). QC type classification: 73 standalone + 3 building-block + 12 enums = 88. Gate expects ts_parity_total==76, but only 73 can be standalone-parity-tested. QC considers 73/73 complete. Gate will silently block Phase 4c."}
+      {"issue": 75, "title": "Pre-publish validation scripts must be CI-tested — verify-build.mjs was broken for 11 cycles undetected", "filed": "2026-03-03", "note": "Addresses Eva directive #401. Four layers of defense failed: convention sweep missed scripts/, verify-build not in CI, QC tools self-contained, audit verified creation but not maintenance. Recommends: CI testing, sweep expansion, multi-party pre-publish checkpoint."},
+      {"issue": 76, "title": "QC-ACK tracking issue body is stale — shows 29% parity when actual is 100%", "filed": "2026-03-03", "note": "QC-ACK qc#138 body shows 25/86 (29%) when actual is 73/73 (100%). QC posts comments but doesn't edit issue body. Recommends: edit body when posting significant progress updates, check DoD boxes."}
     ],
     "accepted": [
       {"issue": 2, "title": "Idle cycle spinning", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
@@ -325,7 +336,8 @@
       {"issue": 62, "title": "QC coverage expansion dispatches building-block types that predictably fail standalone E2E — needs type classification before dispatch", "filed": "2026-03-03", "accepted": "2026-03-03", "closed": "2026-03-03"},
       {"issue": 67, "title": "Main orchestrator audit-inbound lifecycle management not catching stale issues", "filed": "2026-03-03", "accepted": "2026-03-03", "closed": "2026-03-03"},
       {"issue": 68, "title": "Pre-publish gate denominator mismatch — step 5.9 expects 88 types but type classification excludes 12 enums", "filed": "2026-03-03", "accepted": "2026-03-03", "closed": "2026-03-03"},
-      {"issue": 71, "title": "QC-REPORT feedback loop incomplete — fixes merged but originating reports never acknowledged or closed", "filed": "2026-03-03", "accepted": "2026-03-03", "closed": "2026-03-03"}
+      {"issue": 71, "title": "QC-REPORT feedback loop incomplete — fixes merged but originating reports never acknowledged or closed", "filed": "2026-03-03", "accepted": "2026-03-03", "closed": "2026-03-03"},
+      {"issue": 73, "title": "Publish gate parity denominator still misaligned — gate expects 76 but QC architecture maxes at 73 standalone-testable types", "filed": "2026-03-03", "accepted": "2026-03-03", "closed": "2026-03-03"}
     ],
     "rejected": [],
     "deferred": [
@@ -334,18 +346,18 @@
     ]
   },
   "metrics": {
-    "total_filed": 35,
-    "total_accepted": 32,
+    "total_filed": 37,
+    "total_accepted": 33,
     "total_deferred": 2,
     "total_rejected": 0,
-    "total_open": 1,
-    "acceptance_rate": 0.97,
+    "total_open": 2,
+    "acceptance_rate": 0.94,
     "response_rate": 1.0,
-    "trend": "Audit #71 accepted (32nd consecutive acceptance). Both repos implemented: main updated step 4 for QC-REPORT fix notifications, QC added step 5a for upstream fix checking. Filed #73 (third denominator mismatch — gate expects 76 but QC maxes at 73 standalone-testable). Main at cycle 113 — PR #393 merged (WebPageElement), 30/30 merge rate. QC at session 174 — PR #173 merged, coverage 92/92 (100%), parity 73/73 standalone, E2E 73/73 (0 failures). Cumulative: 35 filed, 32 accepted, 2 deferred, 0 rejected, 1 open."
+    "trend": "Audit #73 accepted (33rd consecutive acceptance). Denominator saga resolved (#49→#68→#73). QC gate SATISFIED. QC-REQUEST #331 closed. Eva pushed publish-npm.yml (OIDC), fixed verify-build.mjs (broken Brand constructor). Filed #75 (verify-build CI testing, multi-party pre-publish) and #76 (QC-ACK body stale). Main at cycle 115 — 31/31 merge rate, PHPStan max, Eva directives #400/#401 pending. QC at session 176 — 73/73 parity, 92/92 coverage, 73/73 E2E. Cumulative: 37 filed, 33 accepted, 2 deferred, 0 rejected, 2 open."
   },
   "last_cycle": {
-    "issue": 72,
-    "timestamp": "2026-03-03T17:30:00Z",
-    "summary": "Twenty-seventh audit cycle. Closed #71 (32nd consecutive acceptance — both repos implemented QC-REPORT feedback loop fix). Filed #73 (third denominator mismatch: publish gate expects 76, QC architecture maxes at 73 standalone-testable types). Main at cycle 113 — PR #393 merged (WebPageElement last positional-param class), 30/30 Copilot merge rate, constructor refactoring 100% complete (89 TS classes). QC at session 174 — PR #173 merged (last 2 types), coverage 92/92 (100%), parity 73/73 standalone, E2E 73/73 (0 failures, AggregateRating FIXED). QC-REPORT #160 closed. Both repos NOT stalled. Main QC tracking stale (shows 49/86 vs actual 73/76) — monitoring."
+    "issue": 74,
+    "timestamp": "2026-03-03T20:15:00Z",
+    "summary": "Twenty-eighth audit cycle. Closed #73 (33rd consecutive acceptance — both repos aligned denominator to 73). QC gate SATISFIED. QC-REQUEST #331 CLOSED. Eva pushed publish-npm.yml (OIDC) and fixed broken verify-build.mjs. Filed #75 (verify-build must be CI-tested, multi-party pre-publish checkpoint per Eva #401) and #76 (QC-ACK #138 body stale). Main at cycle 115 — 31/31 Copilot merge rate, PHPStan level max. QC at session 176 — coverage 92/92 (100%), parity 73/73 standalone (100%), E2E 73/73. Both repos NOT stalled. Project at publish gate — awaiting Eva's GitHub Release."
   }
 }
