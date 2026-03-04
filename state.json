@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-03-04T03:05:00Z",
+  "last_updated": "2026-03-04T05:18:00Z",
   "main_repo": {
-    "last_commit_audited": "81b4c3f",
-    "last_orchestrator_issue_reviewed": 409,
-    "orchestrator_cycle_count": 119,
+    "last_commit_audited": "8d17772",
+    "last_orchestrator_issue_reviewed": 412,
+    "orchestrator_cycle_count": 121,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
       "6 skills created: github-issues-comments, journal-entries, orchestrator-permissions, pr-review-workflow, schema-implementation, writing-skills",
@@ -70,7 +70,9 @@
       "Cycle 116: Eva directives #400 (OIDC publishing) and #401 (pre-publish review) processed. Audit #75 accepted — convention sweep expanded to scripts/tools/, step 5.10 multi-party pre-publish checkpoint added, workflow-change #403 filed. Audit #76 accepted — alert posted on #331. PR #305 closed (superseded by Eva push). #304 closed (OIDC). (2026-03-03)",
       "Cycle 117: Housekeeping cycle. Audit-inbound #404/#405 closed. #303 closed (superseded). test_count fixed (338→832 structured). Proactive infrastructure scan — all current. (2026-03-03)",
       "Cycle 118: Audit #78 accepted — STARTUP_CHECKLIST step 5.11 added (periodic state.json metric verification every 5 cycles). First verification performed — all fields accurate. Class inheritance documentation gap found: 7 PHP classes undocumented for 118 cycles, all 4 agent files updated (AGENTS.md, AGENTS-ts.md, PHP skill, TS skill). Audit-inbound #408 created/closed. (2026-03-04)",
-      "Cycle 119: Eva directives #329 and #401 formally closed with detailed summaries. Eva applied verify-build CI fix directly (commit 1b8ff8f), #403 closed. Proactive infrastructure scan of 14 files — one stale merge rate reference fixed (94%→100%). (2026-03-04)"
+      "Cycle 119: Eva directives #329 and #401 formally closed with detailed summaries. Eva applied verify-build CI fix directly (commit 1b8ff8f), #403 closed. Proactive infrastructure scan of 14 files — one stale merge rate reference fixed (94%→100%). (2026-03-04)",
+      "Cycle 120: Audit #80 accepted (37th acceptance) — field_inventory section added to state.json (structural fix for metric staleness). Step 5.11 split into enumerated checks + inventory sweep. AGENTS.md doc accuracy fixes (public const, public function). Audit-inbound #411 created/closed. (2026-03-04)",
+      "Cycle 121: Test coverage gap analysis — 14-test PHP/TS delta traced to JsonLdGenerator (21 PHP tests vs 7 TS). Dispatched #413 for TS JsonLdGenerator test expansion (PR #414 open). First Copilot dispatch in 6 cycles. (2026-03-04)"
     ],
     "recurring_pr_revision_patterns": [
       "100% Copilot PR merge rate for TS port Phases 1-3g: 11/11 sessions merged without revision",
@@ -90,7 +92,8 @@
       "Edge-case tests PR #386: merged, zero revisions (52 edge-case tests for 10 standalone types)",
       "WebPageElement constructor PR #393: merged, zero revisions. Last positional-param class detected by AST parity tool.",
       "PHPStan max fix PR #399: merged, zero revisions. Fixed mixed-offset errors from PR #364.",
-      "Overall Copilot merge rate: 31/31 sessions merged. First-pass success rate: 29/31 (94%)"
+      "TS JsonLdGenerator test expansion PR #414: open (dispatched cycle 121, in-flight)",
+      "Overall Copilot merge rate: 31/31 sessions merged (PR #414 pending). First-pass success rate: 29/31 (94%)"
     ],
     "prompt_last_modified": "Inlined into repo (commit d0ae8fa, 2026-02-28)",
     "agents_md_last_modified": "2026-03-03T02:30:00Z",
@@ -114,7 +117,7 @@
       "eva_directive_396": "Node 22 added to TS CI matrix (cycle 115). Minor informational directive.",
       "eva_directive_400": "npm trusted publishing (OIDC) configured — no NPM_TOKEN secret needed. Publish triggered by GitHub Release creation. PROCESSED cycle 116.",
       "eva_directive_401": "verify-build.mjs had broken Brand constructor. Eva requests pre-publish step review and multi-party (QC + audit) redundancy before recommending publishing. CLOSED cycle 119 — multi-party checkpoint, verify-build CI, metric verification all implemented.",
-      "current_phase": "Phase 4 QC GATE CLEARED. All technical work complete. All Eva directives closed (#329, #400, #401). Eva applied verify-build CI fix (commit 1b8ff8f), #403 closed. Awaiting Eva's GitHub Release creation for npm publish.",
+      "current_phase": "Phase 4 QC GATE CLEARED. All technical work complete. All Eva directives closed. Field inventory pattern implemented (cycle 120). JsonLdGenerator test expansion dispatched (cycle 121, PR #414). Awaiting Eva's GitHub Release creation for npm publish.",
       "qc_validation_strategy": "QC coverage COMPLETE (92/92). Parity 73/73 standalone (100%). E2E 73/73 (0 failures). Built-package PASS. QC gate SATISFIED per audit #73 alignment to 73 standalone-parity-testable types.",
       "missing_classes": [],
       "missing_classes_note": "RESOLVED. Class inventory: 88 PHP = 88 TS.",
@@ -163,7 +166,9 @@
         "Pre-publish validation scripts must be CI-tested — verify-build.mjs broken for 11 cycles (audit #75 — accepted, closed)",
         "QC-ACK tracking issue body stale — shows 29% when actual is 100% (audit #76 — accepted, closed)",
         "State.json mutable metrics go stale without systematic verification (audit #78 — accepted, closed)",
-        "State.json metric verification steps enumerate known fields but miss aggregate summaries (audit #80 — open)"
+        "State.json metric verification steps enumerate known fields but miss aggregate summaries (audit #80 — accepted, closed)",
+        "QC metric verification still uses enumeration strategy — should adopt field_inventory pattern (audit #82 — open)",
+        "QC Copilot dispatch pipeline has 3 undiagnosed silent failures (audit #83 — open)"
       ]
     },
     "ts_modules_on_master": 102,
@@ -177,9 +182,9 @@
     "directory_layout": "php/src/, php/test/, ts/src/, ts/test/ (restructured 2026-03-01, PR #263; TS port COMPLETE 2026-03-01, 14 PRs — 88/88 schema classes)"
   },
   "qc_repo": {
-    "last_commit_audited": "session_181",
-    "last_orchestrator_issue_reviewed": 181,
-    "orchestrator_cycle_count": 181,
+    "last_commit_audited": "session_183",
+    "last_orchestrator_issue_reviewed": 183,
+    "orchestrator_cycle_count": 183,
     "self_improvement_actions": [
       "Journal and worklog alignment per Eva request (2026-02-27)",
       "PHP 8.5 CI support added (2026-02-27)",
@@ -239,7 +244,8 @@
       "Audit #73 accepted (session #176): standalone_testable_count: 73 added to state.json. QC-ACK #138 updated via comment (73/73 parity, 0 E2E errors). audit-inbound #177 created. (2026-03-03)",
       "Audit #75 accepted (session #178): main-repo-side fix acknowledged. QC's existing validation suite covers QC side. audit-inbound #179 created/closed. (2026-03-03)",
       "Audit #76 accepted (session #178): QC-ACK #138 body UPDATED with current metrics (73/73 parity, 73/73 E2E, 92/92 coverage). STARTUP_CHECKLIST step 5b added for tracking issue body maintenance. audit-inbound #180 created/closed. (2026-03-03)",
-      "Audit #78 accepted (session #181): STARTUP_CHECKLIST step 7a added — post-validation state.json metric verification. All 92 per-type entries updated with fresh dates/commits (5 stale commit hashes fixed). audit-inbound #182 created. (2026-03-04)"
+      "Audit #78 accepted (session #181): STARTUP_CHECKLIST step 7a added — post-validation state.json metric verification. All 92 per-type entries updated with fresh dates/commits (5 stale commit hashes fixed). audit-inbound #182 created. (2026-03-04)",
+      "Audit #80 accepted (session #183): Step 7a expanded from 1-line to 8-category enumeration. Found and fixed 8 stale aggregate fields (e2e_status.last_run, ts_validation.last_run, cross_repo notes, qc_reports). Field_inventory structural approach deferred. audit-inbound #184 created. (2026-03-04)"
     ],
     "stale_issues": [],
     "prompt_last_modified": "Unknown — STARTUP_CHECKLIST exists",
@@ -290,7 +296,7 @@
       "Audit STARTUP_CHECKLIST step 3.5 operational — polls for audit-inbound responses on main/QC repos.",
       "Audit STARTUP_CHECKLIST step 8.5 — mandatory stall detection per input-from-eva #55.",
       "Audit STARTUP_CHECKLIST step 10.5 — mandatory verification of accepted recommendations per input-from-eva #65.",
-      "Three-way audit loop operational — 39 recommendations filed, 100% response rate",
+      "Three-way audit loop operational — 41 recommendations filed, 100% response rate",
       "Comment identity signing operational across all three orchestrators",
       "TS port COMPLETE (102 modules, 88/88 schema classes). All constructors standardized to options-object.",
       "QC coverage COMPLETE (92/92). Parity 73/73 standalone (100%). E2E 73/73 (0 failures). QC gate SATISFIED.",
@@ -301,7 +307,9 @@
       "Eva pushed publish-npm.yml (OIDC provenance) and fixed verify-build.mjs (commit f59a531). NPM_TOKEN #304 obsolete.",
       "Multi-party pre-publish checkpoint (step 5.10) added to main STARTUP_CHECKLIST per audit #75.",
       "Eva applied verify-build CI fix (commit 1b8ff8f), #403 closed. Workflow-change complete.",
-      "Eva directives #329, #401 formally closed cycle 119 with detailed summaries. All Eva directives resolved."
+      "Eva directives #329, #401 formally closed cycle 119 with detailed summaries. All Eva directives resolved.",
+      "Main repo field_inventory pattern provides structural fix for metric staleness (cycle 120). QC deferred adoption.",
+      "Main repo broke 6-cycle maintenance plateau with JsonLdGenerator test dispatch (cycle 121, PR #414 in-flight)."
     ],
     "qc_outbound_reports": 4,
     "qc_inbound_requests": 12,
@@ -311,7 +319,8 @@
   },
   "recommendations": {
     "open": [
-      {"issue": 80, "title": "State.json metric verification steps enumerate known fields but miss aggregate summaries — checklist approach structurally incomplete", "filed": "2026-03-04", "note": "Follow-up to #78. QC step 7a refreshed per-type entries but missed aggregate-level fields (e2e_status.last_run, ts_validation.last_run, cross_repo notes, qc_reports). 7th instance of same pattern class. Recommends: comprehensive field inventory or self-describing refresh cadence."}
+      {"issue": 82, "title": "QC metric verification still uses enumeration strategy — should adopt field_inventory pattern from main repo", "filed": "2026-03-04", "note": "Follow-up to #80. QC accepted #80 but deferred field_inventory structural fix. Expanded step 7a to 8-category enumeration. 8th instance of same pattern class. Main repo has reference implementation (cycle 120)."},
+      {"issue": 83, "title": "QC Copilot dispatch pipeline has 3 undiagnosed silent failures — no post-mortem or prevention mechanism", "filed": "2026-03-04", "note": "Mandatory filing per step 10.5 (noted 2 consecutive cycles). 3 silent failures (qc#42, qc#151, qc#152) with no root-cause analysis. 10% failure rate. Pipeline will reactivate post-publish."}
     ],
     "accepted": [
       {"issue": 2, "title": "Idle cycle spinning", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
@@ -349,7 +358,8 @@
       {"issue": 73, "title": "Publish gate parity denominator still misaligned — gate expects 76 but QC architecture maxes at 73 standalone-testable types", "filed": "2026-03-03", "accepted": "2026-03-03", "closed": "2026-03-03"},
       {"issue": 75, "title": "Pre-publish validation scripts must be CI-tested — verify-build.mjs was broken for 11 cycles undetected", "filed": "2026-03-03", "accepted": "2026-03-03", "closed": "2026-03-03"},
       {"issue": 76, "title": "QC-ACK tracking issue body is stale — shows 29% parity when actual is 100%", "filed": "2026-03-03", "accepted": "2026-03-03", "closed": "2026-03-03"},
-      {"issue": 78, "title": "State.json mutable metrics go stale without systematic verification", "filed": "2026-03-03", "accepted": "2026-03-04", "closed": "2026-03-04"}
+      {"issue": 78, "title": "State.json mutable metrics go stale without systematic verification", "filed": "2026-03-03", "accepted": "2026-03-04", "closed": "2026-03-04"},
+      {"issue": 80, "title": "State.json metric verification steps enumerate known fields but miss aggregate summaries", "filed": "2026-03-04", "accepted": "2026-03-04", "closed": "2026-03-04"}
     ],
     "rejected": [],
     "deferred": [
@@ -358,18 +368,18 @@
     ]
   },
   "metrics": {
-    "total_filed": 39,
-    "total_accepted": 36,
+    "total_filed": 41,
+    "total_accepted": 37,
     "total_deferred": 2,
     "total_rejected": 0,
-    "total_open": 1,
+    "total_open": 2,
     "acceptance_rate": 0.95,
     "response_rate": 1.0,
-    "trend": "Audit #78 accepted (36th consecutive acceptance). Both repos implemented metric verification steps. QC implementation incomplete — aggregate fields missed, prompting follow-up #80. Main at cycle 119 — Eva directives #329/#401 closed, verify-build CI applied by Eva, class inheritance docs fixed. QC at session 181 — all green, per-type metrics refreshed. All Eva directives now resolved. Project at publish gate — awaiting Eva's GitHub Release. Cumulative: 39 filed, 36 accepted, 2 deferred, 0 rejected, 1 open."
+    "trend": "Audit #80 accepted (37th consecutive acceptance). Main repo implemented structural field_inventory (cycle 120) and broke 6-cycle maintenance plateau with JsonLdGenerator test dispatch (cycle 121, PR #414). QC expanded step 7a enumeration but deferred field_inventory — filed follow-up #82. Mandatory filing #83 for 3 undiagnosed silent Copilot dispatch failures (noted 2 cycles without action). Project at publish gate — awaiting Eva's GitHub Release. Cumulative: 41 filed, 37 accepted, 2 deferred, 0 rejected, 2 open."
   },
   "last_cycle": {
-    "issue": 79,
-    "timestamp": "2026-03-04T03:05:00Z",
-    "summary": "Thirtieth audit cycle. Closed #78 (36th acceptance — both repos added metric verification steps). Filed #80 (QC step 7a refreshed per-type entries but missed aggregate-level state.json fields — 7th instance of mutable-state-staleness pattern). Main at cycle 119 — Eva directives #329/#401 closed, verify-build CI applied, #403 closed, class inheritance docs gap found and fixed. QC at session 181 — all green. No stalls. Project at publish gate — awaiting Eva's GitHub Release."
+    "issue": 81,
+    "timestamp": "2026-03-04T05:18:00Z",
+    "summary": "Thirty-first audit cycle. Closed #80 (37th acceptance — main repo implemented structural field_inventory, QC expanded enumeration but deferred structural fix). Filed #82 (QC should adopt field_inventory pattern — 8th instance of enumeration-vs-mechanism pattern class). Filed #83 (mandatory: QC has 3 undiagnosed silent Copilot dispatch failures — noted 2 cycles per step 10.5). Main at cycle 121 — first Copilot dispatch in 6 cycles (PR #414 JsonLdGenerator tests). QC at session 183 — all green but reactive-only. No stalls. Project at publish gate."
   }
 }
