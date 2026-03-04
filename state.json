@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-03-04T11:20:00Z",
+  "last_updated": "2026-03-04T14:21:00Z",
   "main_repo": {
-    "last_commit_audited": "3a14a57",
-    "last_orchestrator_issue_reviewed": 419,
-    "orchestrator_cycle_count": 125,
+    "last_commit_audited": "0d99ce5",
+    "last_orchestrator_issue_reviewed": 423,
+    "orchestrator_cycle_count": 127,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
       "6 skills created: github-issues-comments, journal-entries, orchestrator-permissions, pr-review-workflow, schema-implementation, writing-skills",
@@ -76,7 +76,9 @@
       "Cycle 122: PR #414 merged (zero revisions, +8 TS tests). TS tests 409→417, total 840. 32/32 Copilot merge rate. (2026-03-04)",
       "Cycle 123: Metric verification — type_classification fixed (88→89, SeekToAction was 89th schema file from cycle 107, narrative note stale for 16 cycles). building_block_only 3→4. standalone_parity_testable remains 73. All field_inventory refreshed. (2026-03-04)",
       "Cycle 124: Audit #85 accepted — field_inventory completeness enforcement sub-step added to STARTUP_CHECKLIST step 5.11. field_inventory expanded 13→20 fields (9 missing entries found and added). Google property verification: LocalBusiness, JobPosting (100%). Audit-inbound #418 created/closed. (2026-03-04)",
-      "Cycle 125: Google property verification: SoftwareApplication, Movie, Dataset (all 100% coverage). README TypeScript examples verified (36 usages correct). Rolling verification at 9/26 types. (2026-03-04)"
+      "Cycle 125: Google property verification: SoftwareApplication, Movie, Dataset (all 100% coverage). README TypeScript examples verified (36 usages correct). Rolling verification at 9/26 types. (2026-03-04)",
+      "Cycle 126: Audit #87 accepted — check-field-inventory.jq tool created, found 11 gaps (20→31 fields, 100%). Google verification: FAQ, Organization, Course (12/26). Audit-inbound #421/#422 created/closed. (2026-03-04)",
+      "Cycle 127: Google property verification COMPLETE — all 26/26 types verified. QAPage comment gap found, dispatched #424, PR #425 open. 33/33 Copilot dispatch count (PR #425 in flight). (2026-03-04)"
     ],
     "recurring_pr_revision_patterns": [
       "100% Copilot PR merge rate for TS port Phases 1-3g: 11/11 sessions merged without revision",
@@ -97,7 +99,8 @@
       "WebPageElement constructor PR #393: merged, zero revisions. Last positional-param class detected by AST parity tool.",
       "PHPStan max fix PR #399: merged, zero revisions. Fixed mixed-offset errors from PR #364.",
       "TS JsonLdGenerator test expansion PR #414: merged cycle 122, zero revisions. +8 TS tests (+172 lines).",
-      "Overall Copilot merge rate: 32/32 sessions merged. First-pass success rate: 30/32 (94%)"
+      "QAPage comment PR #425: in flight (dispatched cycle 127). CI pending. Copilot firewall warning — couldn't run PHP tests locally.",
+      "Overall Copilot merge rate: 32/32 sessions merged, 1 in flight (#425). First-pass success rate: 30/32 (94%)"
     ],
     "prompt_last_modified": "Inlined into repo (commit d0ae8fa, 2026-02-28)",
     "agents_md_last_modified": "2026-03-03T02:30:00Z",
@@ -174,8 +177,9 @@
         "QC metric verification still uses enumeration strategy — should adopt field_inventory pattern (audit #82 — accepted, closed)",
         "QC Copilot dispatch pipeline has 3 undiagnosed silent failures (audit #83 — accepted, closed)",
         "QC field_inventory violated its own convention on first use — new fields unregistered (audit #85 — accepted, closed)",
-        "Field_inventory enforcement delegates exhaustive comparison to LLM — both repos need a programmatic tool (audit #87 — open)",
-        "QC steady-state checklist has no proactive quality improvement step — idle cycles default to repetitive green confirmation (audit #88 — open)"
+        "Field_inventory enforcement delegates exhaustive comparison to LLM — both repos need a programmatic tool (audit #87 — accepted, closed)",
+        "QC steady-state checklist has no proactive quality improvement step — idle cycles default to repetitive green confirmation (audit #88 — accepted, closed)",
+        "QC quality improvement step (4b) discovers findings but has no mandatory follow-through — gaps found go unacted-on (audit #90 — open)"
       ]
     },
     "ts_modules_on_master": 103,
@@ -189,9 +193,9 @@
     "directory_layout": "php/src/, php/test/, ts/src/, ts/test/ (restructured 2026-03-01, PR #263; TS port COMPLETE 2026-03-01, 14 PRs — 89/89 schema classes including SeekToAction)"
   },
   "qc_repo": {
-    "last_commit_audited": "session_188",
-    "last_orchestrator_issue_reviewed": 188,
-    "orchestrator_cycle_count": 188,
+    "last_commit_audited": "session_190",
+    "last_orchestrator_issue_reviewed": 190,
+    "orchestrator_cycle_count": 190,
     "self_improvement_actions": [
       "Journal and worklog alignment per Eva request (2026-02-27)",
       "PHP 8.5 CI support added (2026-02-27)",
@@ -255,7 +259,9 @@
       "Audit #80 accepted (session #183): Step 7a expanded from 1-line to 8-category enumeration. Found and fixed 8 stale aggregate fields (e2e_status.last_run, ts_validation.last_run, cross_repo notes, qc_reports). Field_inventory structural approach deferred. audit-inbound #184 created. (2026-03-04)",
       "Audit #82 accepted (session #185): field_inventory adopted — 26 mutable fields with refresh cadences. Step 7a expanded with inventory sweep. Convention: new fields MUST include inventory entry. audit-inbound #186 created. (2026-03-04)",
       "Audit #83 accepted (session #185): Copilot dispatch failure post-mortem completed — all 3 failures traced to Copilot infrastructure. 4-step diagnostic protocol added to step 14a. failure_analysis added to state.json. audit-inbound #187 created. (2026-03-04)",
-      "Audit #85 accepted (session #188): 3 missing field_inventory entries added (failure_analysis fields, 26→29 total). Enforcement sub-step added to STARTUP_CHECKLIST step 7a — diff state.json fields against inventory after any modification. audit-inbound #189 created. (2026-03-04)"
+      "Audit #85 accepted (session #188): 3 missing field_inventory entries added (failure_analysis fields, 26→29 total). Enforcement sub-step added to STARTUP_CHECKLIST step 7a — diff state.json fields against inventory after any modification. audit-inbound #189 created. (2026-03-04)",
+      "Audit #87 accepted (session #190): check-field-inventory.ts tool created (TypeScript/Bun). Found 33 gaps. field_inventory grew 29→62 entries (100%). Tool integrated into STARTUP_CHECKLIST step 7a. audit-inbound #191 created. (2026-03-04)",
+      "Audit #88 accepted (session #190): STARTUP_CHECKLIST step 4b added — proactive quality improvement with 3 rotating checks (property depth, minimal data, building-block integration). First execution: Event property depth (10/11, previousStartDate missing). audit-inbound #192 created. (2026-03-04)"
     ],
     "stale_issues": [],
     "prompt_last_modified": "Unknown — STARTUP_CHECKLIST exists",
@@ -322,9 +328,9 @@
       "Main repo broke 6-cycle maintenance plateau with JsonLdGenerator test dispatch (cycle 121, PR #414 merged cycle 122).",
       "Both repos now have field_inventory in state.json. QC gap fixed: failure_analysis fields registered (audit #85, session 188).",
       "Main repo type_classification fixed 88→89 (cycle 123). SeekToAction was 89th schema file, stale narrative for 16 cycles.",
-      "Both repos' field_inventories significantly underpopulated (~57% coverage of mutable fields). Enforcement steps added but delegate exhaustive comparison to LLM. Audit #87 recommends programmatic tool.",
-      "Main repo rolling Google property verification: 9/26 types verified, all 100% coverage. Pace: 2-3 types/cycle.",
-      "QC depth testing absent for 4 consecutive audit cycles (30-33). Mandatory filing triggered: audit #88."
+      "Both repos created programmatic field_inventory tools per audit #87. Main jq tool found 11 gaps (31/31). QC TS tool found 33 gaps (62/62). Metric staleness arc complete (#78→#80→#82→#85→#87).",
+      "Main repo Google property verification COMPLETE: 26/26 types verified (cycle 127). QAPage comment gap found, PR #425 dispatched.",
+      "QC quality improvement step 4b added per audit #88. First finding (Event previousStartDate) went unacted-on. Follow-up #90 filed for mandatory follow-through."
     ],
     "qc_outbound_reports": 4,
     "qc_inbound_requests": 12,
@@ -334,8 +340,7 @@
   },
   "recommendations": {
     "open": [
-      {"issue": 87, "title": "Field_inventory enforcement delegates exhaustive comparison to LLM — both repos need a programmatic tool", "filed": "2026-03-04", "note": "5th in metric staleness arc (#78→#80→#82→#85→#87). Both repos have ~57% field_inventory coverage. LLM checklist steps can't reliably perform exhaustive JSON traversal. Recommends jq/Rust/TS tool."},
-      {"issue": 88, "title": "QC steady-state checklist has no proactive quality improvement step — idle cycles default to repetitive green confirmation", "filed": "2026-03-04", "note": "Mandatory filing per step 10.5. Noted 4 consecutive cycles (30-33). QC defaults to 'run tests, report green' when all targets met. No mechanism to question test adequacy."}
+      {"issue": 90, "title": "QC quality improvement step (4b) discovers findings but has no mandatory follow-through — gaps found go unacted-on", "filed": "2026-03-04", "note": "Follow-up to #88. Step 4b implemented but first finding (Event previousStartDate gap) went unacted-on. Step needs mandatory remediation sub-steps."}
     ],
     "accepted": [
       {"issue": 2, "title": "Idle cycle spinning", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
@@ -377,7 +382,9 @@
       {"issue": 80, "title": "State.json metric verification steps enumerate known fields but miss aggregate summaries", "filed": "2026-03-04", "accepted": "2026-03-04", "closed": "2026-03-04"},
       {"issue": 82, "title": "QC metric verification still uses enumeration strategy — should adopt field_inventory pattern from main repo", "filed": "2026-03-04", "accepted": "2026-03-04", "closed": "2026-03-04"},
       {"issue": 83, "title": "QC Copilot dispatch pipeline has 3 undiagnosed silent failures — no post-mortem or prevention mechanism", "filed": "2026-03-04", "accepted": "2026-03-04", "closed": "2026-03-04"},
-      {"issue": 85, "title": "QC field_inventory violated its own convention on first use — new fields added same session are unregistered", "filed": "2026-03-04", "accepted": "2026-03-04", "closed": "2026-03-04"}
+      {"issue": 85, "title": "QC field_inventory violated its own convention on first use — new fields added same session are unregistered", "filed": "2026-03-04", "accepted": "2026-03-04", "closed": "2026-03-04"},
+      {"issue": 87, "title": "Field_inventory enforcement delegates exhaustive comparison to LLM — both repos need a programmatic tool", "filed": "2026-03-04", "accepted": "2026-03-04", "closed": "2026-03-04"},
+      {"issue": 88, "title": "QC steady-state checklist has no proactive quality improvement step — idle cycles default to repetitive green confirmation", "filed": "2026-03-04", "accepted": "2026-03-04", "closed": "2026-03-04"}
     ],
     "rejected": [],
     "deferred": [
@@ -386,18 +393,18 @@
     ]
   },
   "metrics": {
-    "total_filed": 44,
-    "total_accepted": 40,
+    "total_filed": 45,
+    "total_accepted": 42,
     "total_deferred": 2,
     "total_rejected": 0,
-    "total_open": 2,
+    "total_open": 1,
     "acceptance_rate": 0.95,
     "response_rate": 1.0,
-    "trend": "Audit #85 accepted (40th consecutive acceptance). Both repos added field_inventory enforcement sub-steps. But both inventories are ~57% populated — enforcement mechanism delegates exhaustive comparison to LLM. Filed #87 (programmatic tool) and #88 (QC quality improvement step, mandatory filing per 4-cycle observation). Main at cycle 125 — rolling Google property verification (9/26). QC at session 188 — steady state. Project at publish gate. Cumulative: 44 filed, 40 accepted, 2 deferred, 0 rejected, 2 open."
+    "trend": "Audit #87 and #88 both accepted (41st, 42nd). Main created jq field_inventory tool (11 gaps found), QC created TS tool (33 gaps found). Both inventories now 100%. QC added quality improvement step 4b but first finding (Event previousStartDate) went unacted-on — filed #90 (follow-through enforcement). Main completed Google property verification 26/26 — QAPage comment gap found, PR #425 dispatched. Main at cycle 127. QC at session 190. Project at publish gate. Cumulative: 45 filed, 42 accepted, 2 deferred, 0 rejected, 1 open."
   },
   "last_cycle": {
-    "issue": 86,
-    "timestamp": "2026-03-04T11:20:00Z",
-    "summary": "Thirty-third audit cycle. Closed #85 (40th acceptance — both repos added field_inventory enforcement sub-steps). Filed #87 (field_inventory enforcement delegates exhaustive comparison to LLM — both repos need a programmatic tool) and #88 (QC steady-state quality improvement step — mandatory filing after 4 cycles of observation). Main at cycle 125 — rolling Google property verification 9/26 types. QC at session 188 — field_inventory at 29 fields with enforcement. No stalls. Project at publish gate."
+    "issue": 89,
+    "timestamp": "2026-03-04T14:21:00Z",
+    "summary": "Thirty-fourth audit cycle. Closed #87 (41st acceptance — both repos created programmatic field_inventory tools, main jq finding 11 gaps, QC TypeScript finding 33 gaps) and #88 (42nd acceptance — QC added quality improvement step 4b). Filed #90 (QC step 4b follow-through gap — first finding went unacted-on). Main at cycle 127 — Google property verification complete 26/26, PR #425 in flight. QC at session 190 — field_inventory at 62 entries, quality improvement step operational. No stalls. Project at publish gate."
   }
 }
