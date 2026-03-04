@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-03-04T14:21:00Z",
+  "last_updated": "2026-03-04T17:20:00Z",
   "main_repo": {
-    "last_commit_audited": "0d99ce5",
-    "last_orchestrator_issue_reviewed": 423,
-    "orchestrator_cycle_count": 127,
+    "last_commit_audited": "fa3a944",
+    "last_orchestrator_issue_reviewed": 437,
+    "orchestrator_cycle_count": 130,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
       "6 skills created: github-issues-comments, journal-entries, orchestrator-permissions, pr-review-workflow, schema-implementation, writing-skills",
@@ -78,7 +78,10 @@
       "Cycle 124: Audit #85 accepted — field_inventory completeness enforcement sub-step added to STARTUP_CHECKLIST step 5.11. field_inventory expanded 13→20 fields (9 missing entries found and added). Google property verification: LocalBusiness, JobPosting (100%). Audit-inbound #418 created/closed. (2026-03-04)",
       "Cycle 125: Google property verification: SoftwareApplication, Movie, Dataset (all 100% coverage). README TypeScript examples verified (36 usages correct). Rolling verification at 9/26 types. (2026-03-04)",
       "Cycle 126: Audit #87 accepted — check-field-inventory.jq tool created, found 11 gaps (20→31 fields, 100%). Google verification: FAQ, Organization, Course (12/26). Audit-inbound #421/#422 created/closed. (2026-03-04)",
-      "Cycle 127: Google property verification COMPLETE — all 26/26 types verified. QAPage comment gap found, dispatched #424, PR #425 open. 33/33 Copilot dispatch count (PR #425 in flight). (2026-03-04)"
+      "Cycle 127: Google property verification COMPLETE — all 26/26 types verified. QAPage comment gap found, dispatched #424, PR #425 open. 33/33 Copilot dispatch count (PR #425 in flight). (2026-03-04)",
+      "Cycle 128: Audit #90 acknowledged (QC-targeted). Test count verified PHP 423→425, TS 417→419 (total 844) from PR #425. 5-cycle metric verification cadence operational. audit-inbound #427 created/closed. (2026-03-04)",
+      "Cycle 129: Eva directives #428 (Rust tooling), #429 (expanded Copilot usage), #430 (accountability) processed. metric-snapshot Rust tool (PR #433) and TS consistency audit (PR #435) dispatched and merged. metric-snapshot caught stale core_modules (2→3) on first run. First non-implementation Copilot dispatches ever. (2026-03-04)",
+      "Cycle 130: Eva directive #436 (Rust tool pipeline) processed — publish blocked until automated verification pipeline completes. cycle-status tool dispatched (#438, PR #439 in flight). tool_pipeline tracker added to state.json. (2026-03-04)"
     ],
     "recurring_pr_revision_patterns": [
       "100% Copilot PR merge rate for TS port Phases 1-3g: 11/11 sessions merged without revision",
@@ -99,8 +102,11 @@
       "WebPageElement constructor PR #393: merged, zero revisions. Last positional-param class detected by AST parity tool.",
       "PHPStan max fix PR #399: merged, zero revisions. Fixed mixed-offset errors from PR #364.",
       "TS JsonLdGenerator test expansion PR #414: merged cycle 122, zero revisions. +8 TS tests (+172 lines).",
-      "QAPage comment PR #425: in flight (dispatched cycle 127). CI pending. Copilot firewall warning — couldn't run PHP tests locally.",
-      "Overall Copilot merge rate: 32/32 sessions merged, 1 in flight (#425). First-pass success rate: 30/32 (94%)"
+      "QAPage comment PR #425: merged cycle 129. CI passed. Copilot firewall warning — couldn't run PHP tests locally.",
+      "TS consistency audit PR #435: merged cycle 129, zero revisions. 6 missing Options interfaces added.",
+      "metric-snapshot Rust tool PR #433: merged cycle 129, zero revisions. Caught stale core_modules (2→3) on first run.",
+      "cycle-status Rust tool PR #439: in flight (dispatched cycle 130). Phase 1 of Eva directive #436 tool pipeline.",
+      "Overall Copilot merge rate: 35/36 sessions merged, 1 in flight (#439). First-pass success rate: 33/35 (94%)"
     ],
     "prompt_last_modified": "Inlined into repo (commit d0ae8fa, 2026-02-28)",
     "agents_md_last_modified": "2026-03-03T02:30:00Z",
@@ -179,7 +185,8 @@
         "QC field_inventory violated its own convention on first use — new fields unregistered (audit #85 — accepted, closed)",
         "Field_inventory enforcement delegates exhaustive comparison to LLM — both repos need a programmatic tool (audit #87 — accepted, closed)",
         "QC steady-state checklist has no proactive quality improvement step — idle cycles default to repetitive green confirmation (audit #88 — accepted, closed)",
-        "QC quality improvement step (4b) discovers findings but has no mandatory follow-through — gaps found go unacted-on (audit #90 — open)"
+        "QC quality improvement step (4b) discovers findings but has no mandatory follow-through — gaps found go unacted-on (audit #90 — accepted, closed)",
+        "QC quality_checks.backlog has no dispatch threshold — accumulation without action path (audit #92 — open)"
       ]
     },
     "ts_modules_on_master": 103,
@@ -187,15 +194,15 @@
     "php_schema_classes": 89,
     "schema_types": 28,
     "total_classes": 103,
-    "test_count": {"php": 423, "ts": 417, "total": 840, "note": "Updated cycle 32: PR #414 added 8 TS tests (cycle 122). SeekToAction added cycle 107 (89th schema class)."},
-    "ts_test_count": 417,
+    "test_count": {"php": 425, "ts": 419, "total": 844, "note": "Updated cycle 35: PR #425 added Question/Answer comment tests (cycle 128). PR #414 added 8 TS tests (cycle 122). SeekToAction added cycle 107 (89th schema class)."},
+    "ts_test_count": 419,
     "phpstan_level": "max",
     "directory_layout": "php/src/, php/test/, ts/src/, ts/test/ (restructured 2026-03-01, PR #263; TS port COMPLETE 2026-03-01, 14 PRs — 89/89 schema classes including SeekToAction)"
   },
   "qc_repo": {
-    "last_commit_audited": "session_190",
-    "last_orchestrator_issue_reviewed": 190,
-    "orchestrator_cycle_count": 190,
+    "last_commit_audited": "session_194",
+    "last_orchestrator_issue_reviewed": 194,
+    "orchestrator_cycle_count": 194,
     "self_improvement_actions": [
       "Journal and worklog alignment per Eva request (2026-02-27)",
       "PHP 8.5 CI support added (2026-02-27)",
@@ -261,7 +268,8 @@
       "Audit #83 accepted (session #185): Copilot dispatch failure post-mortem completed — all 3 failures traced to Copilot infrastructure. 4-step diagnostic protocol added to step 14a. failure_analysis added to state.json. audit-inbound #187 created. (2026-03-04)",
       "Audit #85 accepted (session #188): 3 missing field_inventory entries added (failure_analysis fields, 26→29 total). Enforcement sub-step added to STARTUP_CHECKLIST step 7a — diff state.json fields against inventory after any modification. audit-inbound #189 created. (2026-03-04)",
       "Audit #87 accepted (session #190): check-field-inventory.ts tool created (TypeScript/Bun). Found 33 gaps. field_inventory grew 29→62 entries (100%). Tool integrated into STARTUP_CHECKLIST step 7a. audit-inbound #191 created. (2026-03-04)",
-      "Audit #88 accepted (session #190): STARTUP_CHECKLIST step 4b added — proactive quality improvement with 3 rotating checks (property depth, minimal data, building-block integration). First execution: Event property depth (10/11, previousStartDate missing). audit-inbound #192 created. (2026-03-04)"
+      "Audit #88 accepted (session #190): STARTUP_CHECKLIST step 4b added — proactive quality improvement with 3 rotating checks (property depth, minimal data, building-block integration). First execution: Event property depth (10/11, previousStartDate missing). audit-inbound #192 created. (2026-03-04)",
+      "Audit #90 accepted (session #194): STARTUP_CHECKLIST step 4b expanded with mandatory sub-steps (a-c). quality_checks section added to state.json with history and backlog arrays. Retroactive logging of session 190 finding. Answer/Question comment gaps tracked in backlog. audit-inbound #195 created/closed. (2026-03-04)"
     ],
     "stale_issues": [],
     "prompt_last_modified": "Unknown — STARTUP_CHECKLIST exists",
@@ -312,7 +320,7 @@
       "Audit STARTUP_CHECKLIST step 3.5 operational — polls for audit-inbound responses on main/QC repos.",
       "Audit STARTUP_CHECKLIST step 8.5 — mandatory stall detection per input-from-eva #55.",
       "Audit STARTUP_CHECKLIST step 10.5 — mandatory verification of accepted recommendations per input-from-eva #65.",
-      "Three-way audit loop operational — 44 recommendations filed, 100% response rate",
+      "Three-way audit loop operational — 46 recommendations filed, 100% response rate",
       "Comment identity signing operational across all three orchestrators",
       "TS port COMPLETE (103 modules, 89/89 schema classes). All constructors standardized to options-object.",
       "QC coverage COMPLETE (92/92). Parity 73/73 standalone (100%). E2E 73/73 (0 failures). QC gate SATISFIED.",
@@ -330,7 +338,10 @@
       "Main repo type_classification fixed 88→89 (cycle 123). SeekToAction was 89th schema file, stale narrative for 16 cycles.",
       "Both repos created programmatic field_inventory tools per audit #87. Main jq tool found 11 gaps (31/31). QC TS tool found 33 gaps (62/62). Metric staleness arc complete (#78→#80→#82→#85→#87).",
       "Main repo Google property verification COMPLETE: 26/26 types verified (cycle 127). QAPage comment gap found, PR #425 dispatched.",
-      "QC quality improvement step 4b added per audit #88. First finding (Event previousStartDate) went unacted-on. Follow-up #90 filed for mandatory follow-through."
+      "QC quality improvement step 4b added per audit #88. First finding (Event previousStartDate) went unacted-on. Follow-up #90 filed for mandatory follow-through.",
+      "Audit #90 accepted: QC added mandatory follow-through sub-steps and quality_checks tracking. Follow-up #92 filed for backlog dispatch threshold.",
+      "Eva directive #436: Rust tool pipeline blocks npm publish. Main building cycle-status (phase 1), metric-snapshot already operational. Major project shift from maintenance to tool-building.",
+      "Eva directives #428 (Rust tooling), #429 (expanded Copilot), #430 (accountability) processed cycle 129. First non-implementation Copilot dispatches."
     ],
     "qc_outbound_reports": 4,
     "qc_inbound_requests": 12,
@@ -340,7 +351,7 @@
   },
   "recommendations": {
     "open": [
-      {"issue": 90, "title": "QC quality improvement step (4b) discovers findings but has no mandatory follow-through — gaps found go unacted-on", "filed": "2026-03-04", "note": "Follow-up to #88. Step 4b implemented but first finding (Event previousStartDate gap) went unacted-on. Step needs mandatory remediation sub-steps."}
+      {"issue": 92, "title": "QC quality_checks.backlog has no dispatch threshold — accumulation without action path", "filed": "2026-03-04", "note": "Follow-up to #90. Backlog correctly tracks findings but has no dispatch trigger. Recommends 5-item or 5-session threshold."}
     ],
     "accepted": [
       {"issue": 2, "title": "Idle cycle spinning", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
@@ -384,7 +395,8 @@
       {"issue": 83, "title": "QC Copilot dispatch pipeline has 3 undiagnosed silent failures — no post-mortem or prevention mechanism", "filed": "2026-03-04", "accepted": "2026-03-04", "closed": "2026-03-04"},
       {"issue": 85, "title": "QC field_inventory violated its own convention on first use — new fields added same session are unregistered", "filed": "2026-03-04", "accepted": "2026-03-04", "closed": "2026-03-04"},
       {"issue": 87, "title": "Field_inventory enforcement delegates exhaustive comparison to LLM — both repos need a programmatic tool", "filed": "2026-03-04", "accepted": "2026-03-04", "closed": "2026-03-04"},
-      {"issue": 88, "title": "QC steady-state checklist has no proactive quality improvement step — idle cycles default to repetitive green confirmation", "filed": "2026-03-04", "accepted": "2026-03-04", "closed": "2026-03-04"}
+      {"issue": 88, "title": "QC steady-state checklist has no proactive quality improvement step — idle cycles default to repetitive green confirmation", "filed": "2026-03-04", "accepted": "2026-03-04", "closed": "2026-03-04"},
+      {"issue": 90, "title": "QC quality improvement step (4b) discovers findings but has no mandatory follow-through — gaps found go unacted-on", "filed": "2026-03-04", "accepted": "2026-03-04", "closed": "2026-03-04"}
     ],
     "rejected": [],
     "deferred": [
@@ -393,18 +405,18 @@
     ]
   },
   "metrics": {
-    "total_filed": 45,
-    "total_accepted": 42,
+    "total_filed": 46,
+    "total_accepted": 43,
     "total_deferred": 2,
     "total_rejected": 0,
     "total_open": 1,
-    "acceptance_rate": 0.95,
+    "acceptance_rate": 0.96,
     "response_rate": 1.0,
-    "trend": "Audit #87 and #88 both accepted (41st, 42nd). Main created jq field_inventory tool (11 gaps found), QC created TS tool (33 gaps found). Both inventories now 100%. QC added quality improvement step 4b but first finding (Event previousStartDate) went unacted-on — filed #90 (follow-through enforcement). Main completed Google property verification 26/26 — QAPage comment gap found, PR #425 dispatched. Main at cycle 127. QC at session 190. Project at publish gate. Cumulative: 45 filed, 42 accepted, 2 deferred, 0 rejected, 1 open."
+    "trend": "Audit #90 accepted (43rd). QC added mandatory follow-through sub-steps and quality_checks tracking. Filed #92 (backlog dispatch threshold). Major project shift: Eva directive #436 creates Rust tool pipeline that blocks npm publish. Main at cycle 130 (metric-snapshot tool built, cycle-status in progress). QC at session 194. Cumulative: 46 filed, 43 accepted, 2 deferred, 0 rejected, 1 open."
   },
   "last_cycle": {
-    "issue": 89,
-    "timestamp": "2026-03-04T14:21:00Z",
-    "summary": "Thirty-fourth audit cycle. Closed #87 (41st acceptance — both repos created programmatic field_inventory tools, main jq finding 11 gaps, QC TypeScript finding 33 gaps) and #88 (42nd acceptance — QC added quality improvement step 4b). Filed #90 (QC step 4b follow-through gap — first finding went unacted-on). Main at cycle 127 — Google property verification complete 26/26, PR #425 in flight. QC at session 190 — field_inventory at 62 entries, quality improvement step operational. No stalls. Project at publish gate."
+    "issue": 91,
+    "timestamp": "2026-03-04T17:20:00Z",
+    "summary": "Thirty-fifth audit cycle. Closed #90 (43rd acceptance — QC added mandatory follow-through sub-steps and quality_checks tracking to state.json). Filed #92 (QC backlog dispatch threshold — no exit condition for accumulated findings). Major project shift: Eva directive #436 creates Rust tool pipeline that blocks npm publish until automated verification is proven reliable. Main at cycle 130 — metric-snapshot tool operational (caught stale core_modules on first run), cycle-status tool in progress (PR #439). QC at session 194 — field_inventory 64/64, quality checks operational with 3-item backlog. No stalls."
   }
 }
