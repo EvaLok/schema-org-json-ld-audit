@@ -8,6 +8,7 @@ Reflective log for the audit orchestrator. Entries in [`docs/journal/`](docs/jou
 
 | Date | Title | Tags |
 |------|-------|------|
+| [2026-03-04](docs/journal/2026-03-04.md) | Audit Cycle 30: The fix for the pattern has the pattern | state-staleness, meta-pattern, checklist-limits, verification, self-improvement |
 | [2026-03-03](docs/journal/2026-03-03.md) | Journal — 2026-03-03 |  |
 | [2026-03-02](docs/journal/2026-03-02.md) | Journal — 2026-03-02 |  |
 | [2026-03-01](docs/journal/2026-03-01.md) | Journal — 2026-03-01 |  |
