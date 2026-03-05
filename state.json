@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-03-05T20:11:00Z",
+  "last_updated": "2026-03-05T23:45:00Z",
   "main_repo": {
-    "last_commit_audited": "b26aa50",
-    "last_orchestrator_issue_reviewed": 511,
-    "orchestrator_cycle_count": 148,
+    "last_commit_audited": "f3a1020",
+    "last_orchestrator_issue_reviewed": 521,
+    "orchestrator_cycle_count": 150,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
       "6 skills created: github-issues-comments, journal-entries, orchestrator-permissions, pr-review-workflow, schema-implementation, writing-skills",
@@ -121,7 +121,9 @@
       "Cycle 145: Consumed cycle 144 review (score 3/5). Fixed publish_gate narrative drift (10→12). Clarified test_count scope (PHP+TS only). Pipeline reliability SATISFIED (12 cycles). 52 Copilot dispatches, 49 merged. (2026-03-05)",
       "Cycle 146: Audit #106 accepted (51st) — recurrence escalation rule added to STARTUP_CHECKLIST step 0.5. QC-REQUEST #496 initiated for pre-publish final validation. Eva directives #499-502 processed — tool-first philosophy, state.json as database, coding agent for review, near-term tool targets. Copilot setup expanded (Node.js, Bun, Rust). 13th clean pipeline cycle. 53 Copilot dispatches. (2026-03-05)",
       "Cycle 147: Audit #108 accepted (52nd) — STARTUP_CHECKLIST step 5.12 added (post-QC commit-freeze check), publish_gate tracking in state.json, cycle-status tool enhanced (PR #508). Eva directives #499-503 all closed/verified. QC-ACK #213 processed. Pre-publish sign-off requested via audit-inbound #506. 14 consecutive clean pipeline cycles. 54 Copilot dispatches. (2026-03-05)",
-      "Cycle 148: State-freshness and state-consistency fixes from review agent (score 2/5, 13 findings). reliability_clock structured sub-object replaces hardcoded narrative cycle counts. PR #508 merged (commit-freeze divergence checks). 15 consecutive clean pipeline cycles. 55 Copilot dispatches. (2026-03-05)"
+      "Cycle 148: State-freshness and state-consistency fixes from review agent (score 2/5, 13 findings). reliability_clock structured sub-object replaces hardcoded narrative cycle counts. PR #508 merged (commit-freeze divergence checks). 15 consecutive clean pipeline cycles. 55 Copilot dispatches. (2026-03-05)",
+      "Cycle 149: Audit #110 accepted (53rd) — step 5.10.7 timeout/escalation added (3-cycle/24-hour). cycle-status tool hardened: fail-closed on check errors, SHA validation, reachability check (PR #514 merged). Eva directive #516 (fail-closed tool quality). Review agent score 3/5, 10 findings. 57 Copilot dispatches. (2026-03-05)",
+      "Cycle 150: State.json contradictions fixed per review findings (blockers.remaining_actions stale 'PENDING', review_agent pointer). state-invariants Rust tool dispatched (#523). 59 Copilot dispatches. (2026-03-05)"
     ],
     "prompt_last_modified": "Inlined into repo (commit d0ae8fa, 2026-02-28)",
     "agents_md_last_modified": "2026-03-03T02:30:00Z",
@@ -225,9 +227,9 @@
     "directory_layout": "php/src/, php/test/, ts/src/, ts/test/ (restructured 2026-03-01, PR #263; TS port COMPLETE 2026-03-01, 14 PRs — 89/89 schema classes including SeekToAction)"
   },
   "qc_repo": {
-    "last_commit_audited": "session_216",
-    "last_orchestrator_issue_reviewed": 216,
-    "orchestrator_cycle_count": 216,
+    "last_commit_audited": "session_218",
+    "last_orchestrator_issue_reviewed": 218,
+    "orchestrator_cycle_count": 218,
     "self_improvement_actions": [
       "Journal and worklog alignment per Eva request (2026-02-27)",
       "PHP 8.5 CI support added (2026-02-27)",
@@ -407,8 +409,8 @@
   },
   "recommendations": {
     "open": [
-      {"issue": 110, "title": "Pre-publish sign-off request has no timeout or escalation path for unresponsive audit agent", "filed": "2026-03-05", "note": "Pre-publish sign-off creates blocking dependency on audit cycle cadence with no timeout. If audit is unavailable, main orchestrator waits indefinitely."},
-      {"issue": 111, "title": "Pre-publish sign-off CONFIRMED — all validation gates verified (responding to main#506)", "filed": "2026-03-05", "note": "Formal sign-off response. All 7 gates independently verified. Package at commit 73d1b1b ready for npm publish."}
+      {"issue": 113, "title": "Main repo journal behavioral commitments are write-only — never retroactively evaluated for effectiveness", "filed": "2026-03-05", "note": "Journal 'Concrete behavior change' commitments made each cycle but never evaluated in subsequent cycles. Ritual without accountability."},
+      {"issue": 114, "title": "QC quality check rotation has selection bias toward simple types — complex types with coverage gaps are dismissed", "filed": "2026-03-05", "note": "Dataset at 50% property coverage dismissed as diminishing returns while 4-property types checked repeatedly. Needs priority weighting and minimum coverage threshold."}
     ],
     "accepted": [
       {"issue": 2, "title": "Idle cycle spinning", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
@@ -462,7 +464,9 @@
       {"issue": 102, "title": "Track review agent findings programmatically in state.json for trend detection", "filed": "2026-03-05", "accepted": "2026-03-05", "closed": "2026-03-05"},
       {"issue": 104, "title": "Field inventory freshness markers should be updated automatically by Rust tools, not manually by checklist", "filed": "2026-03-05", "accepted": "2026-03-05", "closed": "2026-03-05"},
       {"issue": 106, "title": "Review agent consumption loop lacks recurrence-based escalation — process-level fixes are perpetually deferred", "filed": "2026-03-05", "accepted": "2026-03-05", "closed": "2026-03-05"},
-      {"issue": 108, "title": "Pre-publish QC validation has no commit-freeze mechanism — validated commit can diverge from published commit", "filed": "2026-03-05", "accepted": "2026-03-05", "closed": "2026-03-05"}
+      {"issue": 108, "title": "Pre-publish QC validation has no commit-freeze mechanism — validated commit can diverge from published commit", "filed": "2026-03-05", "accepted": "2026-03-05", "closed": "2026-03-05"},
+      {"issue": 110, "title": "Pre-publish sign-off request has no timeout or escalation path for unresponsive audit agent", "filed": "2026-03-05", "accepted": "2026-03-05", "closed": "2026-03-05"},
+      {"issue": 111, "title": "Pre-publish sign-off CONFIRMED — all validation gates verified (responding to main#506)", "filed": "2026-03-05", "acknowledged": "2026-03-05", "closed": "2026-03-05"}
     ],
     "rejected": [],
     "deferred": [
@@ -471,18 +475,18 @@
     ]
   },
   "metrics": {
-    "total_filed": 56,
-    "total_accepted": 52,
+    "total_filed": 58,
+    "total_accepted": 53,
     "total_deferred": 2,
     "total_rejected": 0,
     "total_open": 2,
-    "acceptance_rate": 0.963,
+    "acceptance_rate": 0.964,
     "response_rate": 1.0,
-    "trend": "Audit #108 accepted (52nd). Filed #110 (sign-off timeout/escalation) and #111 (pre-publish sign-off CONFIRMED). Main at cycle 148 — 15 consecutive clean pipeline cycles, commit-freeze automated in cycle-status tool, 55 Copilot dispatches. QC at session 216 — quality check rotations continue (Course clean). ALL THREE ORCHESTRATORS CONCUR: package ready for npm publish at commit 73d1b1b. Cumulative: 56 filed, 52 accepted, 2 deferred, 0 rejected, 2 open."
+    "trend": "Audit #110 accepted (53rd — sign-off timeout implemented as step 5.10.7). #111 closed (informational sign-off acknowledged). Filed #113 (journal commitment tracking gap) and #114 (QC quality check rotation bias). Main at cycle 150 — state-invariants Rust tool dispatched (#523), review agent scores 3/5 for 2 consecutive cycles, 59 Copilot dispatches. QC at session 218 — quality check rotations continue (AlignmentObject clean). Both repos awaiting Eva's GitHub Release for npm publish. Cumulative: 58 filed, 53 accepted, 2 deferred, 0 rejected, 2 open."
   },
   "last_cycle": {
-    "issue": 109,
-    "timestamp": "2026-03-05T20:11:00Z",
-    "summary": "Forty-fourth audit cycle. Closed #108 (52nd acceptance — commit-freeze mechanism verified: step 5.12, publish_gate tracking, cycle-status automation). Filed #110 (sign-off timeout/escalation path) and #111 (pre-publish sign-off CONFIRMED — all 7 validation gates independently verified). Responded to main#506 pre-publish sign-off request. Main at cycle 148 — 15 consecutive clean pipeline cycles, Eva directives #499-503 all closed. QC at session 216 — quality rotations continue. Three-orchestrator consensus: package ready for npm publish at commit 73d1b1b."
+    "issue": 112,
+    "timestamp": "2026-03-05T23:45:00Z",
+    "summary": "Forty-fifth audit cycle. Closed #110 (53rd acceptance — sign-off timeout verified: step 5.10.7 with 3-cycle/24-hour timeout). Closed #111 (informational sign-off acknowledged by both repos). Filed #113 (main repo journal behavioral commitments are write-only) and #114 (QC quality check rotation has selection bias toward simple types). Main at cycle 150 — state-invariants Rust tool dispatched (#523), review agent finding state.json contradictions and driving fixes. QC at session 218 — quality rotations continue (AlignmentObject clean). Both repos awaiting Eva for npm publish."
   }
 }
