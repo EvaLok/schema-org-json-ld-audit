@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-03-06T17:15:00Z",
+  "last_updated": "2026-03-06T20:10:00Z",
   "main_repo": {
-    "last_commit_audited": "af18b40",
-    "last_orchestrator_issue_reviewed": 585,
-    "orchestrator_cycle_count": 162,
+    "last_commit_audited": "14c34a4",
+    "last_orchestrator_issue_reviewed": 601,
+    "orchestrator_cycle_count": 164,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
       "6 skills created: github-issues-comments, journal-entries, orchestrator-permissions, pr-review-workflow, schema-implementation, writing-skills",
@@ -133,7 +133,9 @@
       "Cycle 159: Audit #122 accepted (main#571) — chronic category detection step 0.5.8 added to STARTUP_CHECKLIST. First chronic category analysis performed: state-consistency (10/12), state-freshness (6/12). Tiered cadence (#574) and state-invariants extension (#572) dispatched. Cycle 159 review consumed (3/5). (2026-03-06)",
       "Cycle 160: PR #575 merged (tiered cadence staleness enforcement). PR #573 merged (state-invariants review-history + copilot rate-format checks). PR #577 merged (cycle 159 review report). PR #581 open (cycle 160 review report). 76 Copilot dispatches. All 3 audit #122 sub-recommendations now implemented. (2026-03-06)",
       "Cycle 161: PR #581 merged (cycle 160 review). PR #584 merged (cycle 161 review, score 2/5 — first break from 14-cycle plateau at 3/5). Chronic category journal-quality recalibrated as standing positive. State-invariants ordering gap identified. 77 Copilot dispatches. (2026-03-06)",
-      "Cycle 162: Eva directives #586 (pipeline write-side) and #591 (cycle-start tool) received. Cycle-complete --apply dispatched (#587, PR #588 in flight). PR #590 open (cycle 162 review report). 79 Copilot dispatches. Audit sign-off timeout #579 filed (now moot — audit responded #125). (2026-03-06)"
+      "Cycle 162: Eva directives #586 (pipeline write-side) and #591 (cycle-start tool) received. Cycle-complete --apply dispatched (#587, PR #588 in flight). PR #590 open (cycle 162 review report). 79 Copilot dispatches. Audit sign-off timeout #579 filed (now moot — audit responded #125). (2026-03-06)",
+      "Cycle 163: PR #588 merged (cycle-complete --apply — #586 step 1). PR #590 merged (cycle 162 review, score 2/5). Audit sign-off #125 received. Eva directive #591 acknowledged. 3 Copilot dispatches: #594 (cycle-start), #596 (process-review), #598 (cycle 163 review). 82 dispatches. (2026-03-06)",
+      "Cycle 164: PRs #595 (cycle-start tool), #597 (process-review tool), #599 (cycle 163 review, score 3/5) all merged. Eva directive #600 (gpt-5.4 model update) acknowledged/closed. 3 dispatches: #602 (process-merge), #603 (record-dispatch), #604 (review agent). 85 total dispatches, 80 merged. Pipeline 5/5, invariants 9/9. (2026-03-06)"
     ],
     "prompt_last_modified": "Inlined into repo (commit d0ae8fa, 2026-02-28)",
     "agents_md_last_modified": "2026-03-03T02:30:00Z",
@@ -237,9 +239,9 @@
     "directory_layout": "php/src/, php/test/, ts/src/, ts/test/ (restructured 2026-03-01, PR #263; TS port COMPLETE 2026-03-01, 14 PRs — 89/89 schema classes including SeekToAction)"
   },
   "qc_repo": {
-    "last_commit_audited": "session_234",
-    "last_orchestrator_issue_reviewed": 234,
-    "orchestrator_cycle_count": 234,
+    "last_commit_audited": "session_237",
+    "last_orchestrator_issue_reviewed": 237,
+    "orchestrator_cycle_count": 237,
     "self_improvement_actions": [
       "Journal and worklog alignment per Eva request (2026-02-27)",
       "PHP 8.5 CI support added (2026-02-27)",
@@ -321,7 +323,8 @@
       "Session 224: QC-REQUEST #535 processed — v1.0.1 validated and cleared for npm publish (QC-ACK #225). Audit #116 not applicable (qc#226). Audit #117 not applicable (qc#227). Quality check: MerchantReturnPolicy 13/19 (68%) — BACKLOGGED. Quality backlog now 3 items. (2026-03-06)",
       "Session 228: No new QC requests. Quality checks: GeoShape building_block_integration (1/1, 100% clean), ShippingConditions building_block_integration (7/9, 78% clean — above threshold). No new backlog items. Quality backlog still at 3 items. (2026-03-06)",
       "Session 232: Audit #122 processed (not applicable, qc#233). Quality check: Person minimal_data_audit 10/16 (62.5%) — BACKLOGGED. Quality backlog at 4 items (Dataset 50%, Organization 52%, Person 62.5%, MerchantReturnPolicy 68%). Stale audit-inbound #231 closed. (2026-03-06)",
-      "Session 234: Quality backlog dispatch threshold TRIGGERED — 4 items at 5+ sessions age. Copilot batch #235 dispatched (Dataset, Organization, Person, MerchantReturnPolicy property enrichment). First step 4c batch dispatch ever. Quality check: FoodEstablishment property_depth 13/18 (72.2%, clean). Quality backlog cleared to 0. (2026-03-06)"
+      "Session 234: Quality backlog dispatch threshold TRIGGERED — 4 items at 5+ sessions age. Copilot batch #235 dispatched (Dataset, Organization, Person, MerchantReturnPolicy property enrichment). First step 4c batch dispatch ever. Quality check: FoodEstablishment property_depth 13/18 (72.2%, clean). Quality backlog cleared to 0. (2026-03-06)",
+      "Session 237: PR #236 merged (backlog enrichment: Dataset +10, Organization +15, MerchantReturnPolicy +7, Person +6 props, 52 new assertions). Warning baseline 25->38 (13 Organization false positives from nested MerchantReturnPolicy). Audit #125 acknowledged (qc#238). Quality check: Recipe 22/23 (95.7%, clean). Dispatch-to-PR 26/29 (90%), merge rate 26/26 (100%). (2026-03-06)"
     ],
     "stale_issues": [],
     "prompt_last_modified": "Unknown — STARTUP_CHECKLIST exists",
@@ -330,8 +333,8 @@
     "e2e_pass": 73,
     "e2e_errors": 0,
     "e2e_error_note": "AggregateRating FIXED (session 174). All 73/73 E2E pass with 0 failures.",
-    "e2e_warnings_total": 25,
-    "e2e_warnings_false_positives": 25,
+    "e2e_warnings_total": 38,
+    "e2e_warnings_false_positives": 38,
     "ts_vitest_pass": 301,
     "ts_parity_checked": 73,
     "ts_parity_total": 73,
@@ -345,9 +348,9 @@
     "copilot_agents_failed": ["qc#151", "qc#152"],
     "copilot_agents_note": "13 batches dispatched total: 8 completed, 2 failed silently, 1 completed (#198 quality enrichment, PR #199 merged session 202). Quality enrichment dispatches active via step 4c. Constructor signatures now required in dispatch specs per audit #96.",
     "copilot_metrics": {
-      "dispatch_to_pr_rate": "25/28 (89%)",
-      "pr_merge_rate": "25/25 (100%)",
-      "total_dispatches": 28,
+      "dispatch_to_pr_rate": "26/29 (90%)",
+      "pr_merge_rate": "26/26 (100%)",
+      "total_dispatches": 29,
       "failed_dispatches": ["qc#42", "qc#151", "qc#152"],
       "note": "Metrics corrected per audit #98 (session 204): 31->28 total, 27->25 PRs. 3 phantom counts removed. dispatch_log array now tracks all dispatches individually. Invariant checks in steps 7a/14i prevent future drift."
     },
@@ -358,9 +361,9 @@
     "ts_validation_status": "COVERAGE COMPLETE. 92/92 (100%). Parity 73/73 standalone (100%). E2E 73/73 (0 failures). Built-package PASS. QC-ACK #138 body updated (session 178). QC gate SATISFIED.",
     "operational_mode": "dual_language_pre_publish (added session #132 per audit #44)",
     "warning_baselines": {
-      "e2e": 25,
-      "ts_parity": 25,
-      "note": "Updated session #171: 23->25 after additional coverage. All 25 are validator limitations."
+      "e2e": 38,
+      "ts_parity": 38,
+      "note": "Updated session #237: 25->38 after Organization property enrichment (13 new false positives from nested minimal MerchantReturnPolicy). All 38 are validator limitations."
     }
   },
   "cross_repo_health": {
@@ -433,18 +436,17 @@
       "Audit cycle 50 (milestone): Closed #122 (59th acceptance — all 3 sub-recommendations verified). Zero open recommendations. System at high maturity. No new issues filed. (2026-03-06)",
       "Main cycles 161-162: Review agent scored 2/5 in cycle 161 (first break from 14-cycle plateau at 3/5). Eva directives #586 (pipeline write-side — tools must write state.json) and #591 (cycle-start tool) received. Cycle-complete --apply dispatched (#587, PR #588 in flight). 79 Copilot dispatches. Audit sign-off timeout escalated (#579). (2026-03-06)",
       "QC session 234: Quality backlog dispatch threshold triggered for first time. 4 types dispatched as Copilot batch #235. Quality backlog cleared to 0. Step 4c mechanism validated end-to-end. (2026-03-06)",
-      "Audit cycle 51: v1.0.1 sign-off issued (#125, responding to main#562). No new recommendations filed. System healthy. Eva providing deep structural direction via #586/#591. (2026-03-06)"
+      "Audit cycle 51: v1.0.1 sign-off issued (#125, responding to main#562). No new recommendations filed. System healthy. Eva providing deep structural direction via #586/#591. (2026-03-06)",
+      "Audit cycle 52: Closed #125 (sign-off acknowledged via main#593). Write-side pipeline progressing rapidly: cycle-start (#595), process-review (#597), cycle-complete --apply (#588) all merged in 2 cycles. QC backlog batch #235 merged (PR #236, 52 assertions). Warning baseline 25->38. Main at gpt-5.4 model. No new recommendations filed. (2026-03-06)"
     ],
     "qc_outbound_reports": 4,
     "qc_inbound_requests": 12,
     "all_threads_resolved": true,
     "open_qc_request": null,
-    "open_qc_ack": "230 (v1.0.1 pre-publish sign-off confirmation)"
+    "open_qc_ack": null
   },
   "recommendations": {
-    "open": [
-      {"issue": 125, "title": "Pre-publish sign-off CONFIRMED for v1.0.1 — responding to main#562", "filed": "2026-03-06"}
-    ],
+    "open": [],
     "accepted": [
       {"issue": 2, "title": "Idle cycle spinning", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
       {"issue": 3, "title": "Non-functional tools directory", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
@@ -505,7 +507,8 @@
       {"issue": 116, "title": "Verification tools must not contain workarounds for the things they verify", "filed": "2026-03-06", "accepted": "2026-03-06", "closed": "2026-03-06"},
       {"issue": 117, "title": "Audit #104 accepted 10 cycles ago but freshness automation Copilot dispatch still not created", "filed": "2026-03-06", "accepted": "2026-03-06", "closed": "2026-03-06"},
       {"issue": 120, "title": "Main orchestrator STARTUP_CHECKLIST has no step to poll for QC-ACK responses — publish_gate stale for 4+ cycles", "filed": "2026-03-06", "accepted": "2026-03-06", "closed": "2026-03-06"},
-      {"issue": 122, "title": "Review agent complacency score plateau at 3/5 for 14 cycles — chronic category escalation needed", "filed": "2026-03-06", "accepted": "2026-03-06", "closed": "2026-03-06"}
+      {"issue": 122, "title": "Review agent complacency score plateau at 3/5 for 14 cycles — chronic category escalation needed", "filed": "2026-03-06", "accepted": "2026-03-06", "closed": "2026-03-06"},
+      {"issue": 125, "title": "Pre-publish sign-off CONFIRMED for v1.0.1 — responding to main#562", "filed": "2026-03-06", "acknowledged": "2026-03-06", "closed": "2026-03-06"}
     ],
     "rejected": [],
     "deferred": [
@@ -518,14 +521,14 @@
     "total_accepted": 59,
     "total_deferred": 2,
     "total_rejected": 0,
-    "total_open": 1,
+    "total_open": 0,
     "acceptance_rate": 0.984,
     "response_rate": 1.0,
-    "trend": "Audit cycle 51. v1.0.1 sign-off issued (#125 responding to main#562 after 5-cycle delay). Review agent plateau broken — cycle 161 scored 2/5. Eva directives #586/#591 target pipeline write-side (structural fix for state-consistency/freshness). QC quality backlog dispatch threshold triggered (session 234, first ever). No new process recommendations. Main at cycle 162, 79 Copilot dispatches. QC at session 234, in-flight batch #235. Cumulative: 63 filed, 59 accepted, 2 deferred, 0 rejected, 1 open (#125 sign-off)."
+    "trend": "Audit cycle 52. Closed #125 (sign-off acknowledged via main#593). Write-side pipeline sprint: cycle-start, process-review, cycle-complete --apply all merged in 2 cycles. Main at cycle 164, 85 Copilot dispatches, model upgraded to gpt-5.4. QC at session 237: backlog batch PR #236 merged (52 assertions), warning baseline 25->38, quality backlog cleared. Zero open recommendations. No new issues filed — system under active Eva guidance with structural root cause fixes (#586) in progress. Cumulative: 63 filed, 59 accepted, 2 deferred, 0 rejected, 0 open."
   },
   "last_cycle": {
-    "issue": 124,
-    "timestamp": "2026-03-06T17:15:00Z",
-    "summary": "Fifty-first audit cycle. Issued v1.0.1 sign-off (#125) responding to main#562 after 5-cycle delay — timeout mechanism (main#579) worked correctly. Review agent plateau broken (cycle 161 scored 2/5, first change from 3/5 in 14 cycles). Eva directives #586 (pipeline write-side) and #591 (cycle-start tool) represent major architectural direction for eliminating manual state.json editing. QC quality backlog dispatch threshold triggered organically in session 234 — 4 types dispatched as batch #235. No new process recommendations filed. System healthy and actively improving under Eva guidance."
+    "issue": 126,
+    "timestamp": "2026-03-06T20:10:00Z",
+    "summary": "Fifty-second audit cycle. Closed #125 (sign-off acknowledged via main#593). Write-side pipeline progressing rapidly under Eva #586: cycle-complete --apply (PR #588), process-review (PR #597), cycle-start (PR #595) all merged in 2 cycles. Main at cycle 164, 85 Copilot dispatches, gpt-5.4 model. process-merge (#602) and record-dispatch (#603) dispatched. QC session 237: backlog batch PR #236 merged (52 assertions across 4 types), warning baseline 25->38. Zero open recommendations. System healthy and actively building write-side pipeline."
   }
 }
