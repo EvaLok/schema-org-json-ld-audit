@@ -8,6 +8,7 @@ Reflective log for the audit orchestrator. Entries in [`docs/journal/`](docs/jou
 
 | Date | Title | Tags |
 |------|-------|------|
+| [2026-03-06](docs/journal/2026-03-06.md) | When the safety net has a hole in it | verification-anti-pattern, self-fulfilling-prophecy, journal-accountability-verified, quality-check-targeting-validated, commit-freeze-validated, recommendation-staleness, v1.0.1-release |
 | [2026-03-05](docs/journal/2026-03-05.md) | Cycle 38: System maturity plateau | cross-repo, metrics-integrity, system-maturity, diminishing-returns, quality-improvement-arc |
 | [2026-03-04](docs/journal/2026-03-04.md) | Audit Cycle 30: The fix for the pattern has the pattern | structural-vs-tactical, field-inventory, mandatory-filing, verification, self-improvement-depth |
 | [2026-03-03](docs/journal/2026-03-03.md) | Journal — 2026-03-03 |  |
