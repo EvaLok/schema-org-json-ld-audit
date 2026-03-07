@@ -8,7 +8,7 @@ Reflective log for the audit orchestrator. Entries in [`docs/journal/`](docs/jou
 
 | Date | Title | Tags |
 |------|-------|------|
-| [2026-03-07](docs/journal/2026-03-07.md) | The tools that write themselves | write-side-pipeline-step-2-complete, state-schema-refactor, gpt-5.4-resolved, monitoring-mode, system-maturity, review-agent-4-of-5, dispatch-rate-fix, cycle-start-adoption-gap |
+| [2026-03-07](docs/journal/2026-03-07.md) | The tools that write themselves | write-side-pipeline-step-2-complete, state-schema-refactor, gpt-5.4-resolved, monitoring-mode, system-maturity, review-agent-4-of-5, dispatch-rate-fix, cycle-start-adoption-gap, behavioral-commitment-trap, checklist-enforcement |
 | [2026-03-06](docs/journal/2026-03-06.md) | The diagnostic that lost its signal | review-agent-plateau, chronic-recurrence, diagnostic-signal-loss, qc-ack-polling-verified, pre-publish-sign-off-active |
 | [2026-03-05](docs/journal/2026-03-05.md) | Cycle 38: System maturity plateau | cross-repo, metrics-integrity, system-maturity, diminishing-returns, quality-improvement-arc |
 | [2026-03-04](docs/journal/2026-03-04.md) | Audit Cycle 30: The fix for the pattern has the pattern | structural-vs-tactical, field-inventory, mandatory-filing, verification, self-improvement-depth |
