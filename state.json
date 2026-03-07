@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-03-07T08:10:00Z",
+  "last_updated": "2026-03-07T11:10:00Z",
   "main_repo": {
-    "last_commit_audited": "9f1eb8d",
-    "last_orchestrator_issue_reviewed": 650,
-    "orchestrator_cycle_count": 172,
+    "last_commit_audited": "4632176",
+    "last_orchestrator_issue_reviewed": 663,
+    "orchestrator_cycle_count": 174,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
       "6 skills created: github-issues-comments, journal-entries, orchestrator-permissions, pr-review-workflow, schema-implementation, writing-skills",
@@ -141,7 +141,9 @@
       "Cycle 167: PRs #615 (process-audit tool), #620 (process-eva tool), #622 (state-schema I/O refactor), #624 (cycle 167 review, 3/5) all merged. Write-side pipeline Step 2 COMPLETE — all 4 process-* tools operational. Shared I/O dedup via state-schema. produced_pr fixed 86->89. gpt-5.4 confirmed working (#624 succeeded). 93 dispatches. (2026-03-07)",
       "Cycle 168: State-schema I/O refactor merged. cycle-start integration dispatched (#626, PR #627 open). Cycle 168 review dispatched (#628, PR #629 open). produced_pr auto-increment via process-merge. 95 dispatches. (2026-03-07)",
       "Cycle 171: cycle-start tool adopted (commit eed7391). PRs #641 (review), #639 (--cycle removal) merged. Eva directive #642 processed (journal refs). 3 Copilot dispatches (#644 JOURNAL.md, #645 process-review fix, #648 review). Review score 3/5, 2 findings. 101 dispatches. (2026-03-07)",
-      "Cycle 172: PRs #649 (review), #647 (write-entry JOURNAL.md), #646 (process-review parsing fix) merged. Eva #642 closed. process-eva/process-audit cycle derivation fix dispatched (#651). review finding_count corrected (3->2). 104 dispatches, 98 merged. cycle-start NOT used (adoption gap). (2026-03-07)"
+      "Cycle 172: PRs #649 (review), #647 (write-entry JOURNAL.md), #646 (process-review parsing fix) merged. Eva #642 closed. process-eva/process-audit cycle derivation fix dispatched (#651). review finding_count corrected (3->2). 104 dispatches, 98 merged. cycle-start NOT used (adoption gap). (2026-03-07)",
+      "Cycle 173: Audit #131 accepted — STARTUP_CHECKLIST step 0.1 added (cycle-start mandatory). First mandatory cycle-start usage (commit 5a27882). #606 closed. PRs #654 (review), #652 (cycle derivation fix) merged. Review score 2/5. 3 Copilot dispatches (#657, #659, #661). 107 dispatches, 101 merged. (2026-03-07)",
+      "Cycle 174: Step 0 consolidated into cycle-start (commit 6566253), fixing startup comment duplication. Eva directives #586 (write-side pipeline) and #591 (cycle-start) closed — write-side pipeline COMPLETE. PRs #660 (metric-snapshot), #658 (write-entry gap-day), #662 (review) merged. Review score 2/5. 108 dispatches, 103 merged, 1 in-flight (#665). (2026-03-07)"
     ],
     "prompt_last_modified": "Inlined into repo (commit d0ae8fa, 2026-02-28)",
     "agents_md_last_modified": "2026-03-03T02:30:00Z",
@@ -245,9 +247,9 @@
     "directory_layout": "php/src/, php/test/, ts/src/, ts/test/ (restructured 2026-03-01, PR #263; TS port COMPLETE 2026-03-01, 14 PRs — 89/89 schema classes including SeekToAction)"
   },
   "qc_repo": {
-    "last_commit_audited": "session_243",
-    "last_orchestrator_issue_reviewed": 243,
-    "orchestrator_cycle_count": 243,
+    "last_commit_audited": "session_244",
+    "last_orchestrator_issue_reviewed": 244,
+    "orchestrator_cycle_count": 244,
     "self_improvement_actions": [
       "Journal and worklog alignment per Eva request (2026-02-27)",
       "PHP 8.5 CI support added (2026-02-27)",
@@ -334,7 +336,8 @@
       "Session 240: Eva directive #239 (gpt-5.4 model update) processed. QC-ACK #230 closed (sign-off confirmed). Quality check: UnitPriceSpecification building_block_integration. Validation green: 385 unit, 73/73 E2E, 73/73 parity. (2026-03-06)",
       "Session 241: Steady-state validation. Quality check: Accommodation property_depth 8/8 (100% clean). Quality backlog at 0. Validation green: 385 unit, 73/73 E2E, 73/73 parity. (2026-03-07)",
       "Session 242: Steady-state validation green. Quality check continuing rotation. (2026-03-07)",
-      "Session 243: Quality check building_block_integration: InteractionCounter (3/3, 100%), MerchantReturnPolicySeasonalOverride (4/4, 100%). Both clean. Package updated to e7b148f (no source changes). Validation green. (2026-03-07)"
+      "Session 243: Quality check building_block_integration: InteractionCounter (3/3, 100%), MerchantReturnPolicySeasonalOverride (4/4, 100%). Both clean. Package updated to e7b148f (no source changes). Validation green. (2026-03-07)",
+      "Session 244: Quality check property_depth: Movie (9/9, 100%), Review (6/8, 75%). Both clean (above threshold). Package updated to fe23bb7 (no source changes). Validation green. audit-inbound #245 (audit #131 not applicable). (2026-03-07)"
     ],
     "stale_issues": [],
     "prompt_last_modified": "Unknown — STARTUP_CHECKLIST exists",
@@ -451,7 +454,8 @@
       "Audit cycle 53: Main cycles 165-166 reviewed. gpt-5.4 Copilot failure handled pragmatically (question-for-eva #606, re-dispatched with gpt-5.3-codex). Write-side pipeline progress: process-merge (#609) + record-dispatch (#610) merged, process-audit (#615) in flight. 90 Copilot dispatches. QC sessions 238-240: steady-state, gpt-5.4 directive processed, UnitPriceSpecification quality check clean. No new recommendations. (2026-03-06)",
       "Audit cycle 54: Main cycles 167-168 reviewed. Write-side pipeline Step 2 COMPLETE — all 4 process-* tools (merge, review, audit, eva) merged. State-schema I/O refactor unified shared code. gpt-5.4 confirmed working (Eva answered #606: transient infra issue). produced_pr accounting fixed (86->89). 95 Copilot dispatches. QC session 241: Accommodation quality check 8/8 (100%). Quality backlog at 0. No new recommendations. (2026-03-07)",
       "Audit cycle 55: Main cycles 169-170 reviewed. Review agent scored 4/5 in cycle 169 (first above 3/5 plateau). dispatch_to_pr_rate denominator bug fixed structurally (PR #637). cycle-start tool exists but not yet behaviorally adopted. 100 total Copilot dispatches (93 merged). QC session 242: steady-state validation green. No new recommendations. (2026-03-07)",
-      "Audit cycle 56: Main cycles 171-172 reviewed. cycle-start tool adopted in 171 but not 172 (inconsistent). Review agent 3/5 in 171 (4/5 was single-cycle blip). process-review parser + write-entry JOURNAL.md + cycle derivation fixes. 104 dispatches, 98 merged. QC sessions 242-243: building_block_integration quality checks clean. Filed #131 (cycle-start checklist enforcement). (2026-03-07)"
+      "Audit cycle 56: Main cycles 171-172 reviewed. cycle-start tool adopted in 171 but not 172 (inconsistent). Review agent 3/5 in 171 (4/5 was single-cycle blip). process-review parser + write-entry JOURNAL.md + cycle derivation fixes. 104 dispatches, 98 merged. QC sessions 242-243: building_block_integration quality checks clean. Filed #131 (cycle-start checklist enforcement). (2026-03-07)",
+      "Audit cycle 57: Main cycles 173-174 reviewed. Audit #131 accepted and verified (cycle-start mandatory, 100% adoption). Write-side pipeline COMPLETE (Eva #586/#591 closed). Review agent 2/5 in both cycles (positive trend). 108 dispatches, 103 merged. QC sessions 243-244: Movie 100%, Review 75%. Closed #131 (60th acceptance). Zero open recommendations. (2026-03-07)"
     ],
     "qc_outbound_reports": 4,
     "qc_inbound_requests": 12,
@@ -460,9 +464,7 @@
     "open_qc_ack": null
   },
   "recommendations": {
-    "open": [
-      {"issue": 131, "title": "cycle-start tool adoption relies on behavioral commitment instead of checklist enforcement", "filed": "2026-03-07"}
-    ],
+    "open": [],
     "accepted": [
       {"issue": 2, "title": "Idle cycle spinning", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
       {"issue": 3, "title": "Non-functional tools directory", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
@@ -524,7 +526,8 @@
       {"issue": 117, "title": "Audit #104 accepted 10 cycles ago but freshness automation Copilot dispatch still not created", "filed": "2026-03-06", "accepted": "2026-03-06", "closed": "2026-03-06"},
       {"issue": 120, "title": "Main orchestrator STARTUP_CHECKLIST has no step to poll for QC-ACK responses — publish_gate stale for 4+ cycles", "filed": "2026-03-06", "accepted": "2026-03-06", "closed": "2026-03-06"},
       {"issue": 122, "title": "Review agent complacency score plateau at 3/5 for 14 cycles — chronic category escalation needed", "filed": "2026-03-06", "accepted": "2026-03-06", "closed": "2026-03-06"},
-      {"issue": 125, "title": "Pre-publish sign-off CONFIRMED for v1.0.1 — responding to main#562", "filed": "2026-03-06", "acknowledged": "2026-03-06", "closed": "2026-03-06"}
+      {"issue": 125, "title": "Pre-publish sign-off CONFIRMED for v1.0.1 — responding to main#562", "filed": "2026-03-06", "acknowledged": "2026-03-06", "closed": "2026-03-06"},
+      {"issue": 131, "title": "cycle-start tool adoption relies on behavioral commitment instead of checklist enforcement", "filed": "2026-03-07", "accepted": "2026-03-07", "closed": "2026-03-07"}
     ],
     "rejected": [],
     "deferred": [
@@ -534,17 +537,17 @@
   },
   "metrics": {
     "total_filed": 64,
-    "total_accepted": 59,
+    "total_accepted": 60,
     "total_deferred": 2,
     "total_rejected": 0,
-    "total_open": 1,
-    "acceptance_rate": 0.968,
+    "total_open": 0,
+    "acceptance_rate": 0.969,
     "response_rate": 1.0,
-    "trend": "Audit cycle 56. Main cycles 171-172: cycle-start adopted in 171 but not 172 (inconsistent). Review agent 3/5 in 171 (4/5 in 169 was single-cycle blip). process-review parser fix, write-entry JOURNAL.md auto-index, cycle derivation fix dispatched. 104 Copilot dispatches (98 merged, 99 PRs produced). QC sessions 242-243: building_block_integration quality checks clean, all validation green. Filed #131 (cycle-start checklist enforcement). Cumulative: 64 filed, 59 accepted, 2 deferred, 0 rejected, 1 open."
+    "trend": "Audit cycle 57. Main cycles 173-174: audit #131 accepted and verified (cycle-start mandatory, 100% adoption post-fix). Write-side pipeline COMPLETE (Eva #586/#591 closed). Review agent 2/5 in both cycles (improving from 3/5 plateau). Step 0 consolidated into cycle-start. 108 Copilot dispatches (103 merged). QC sessions 243-244: quality checks clean (Movie 100%, Review 75%), all validation green. Closed #131 (60th acceptance). Zero open recommendations. Cumulative: 64 filed, 60 accepted, 2 deferred, 0 rejected, 0 open."
   },
   "last_cycle": {
-    "issue": 130,
-    "timestamp": "2026-03-07T08:10:00Z",
-    "summary": "Fifty-sixth audit cycle. Main cycles 171-172: cycle-start tool adopted in 171 (commit eed7391) but NOT in 172 (journal notes adoption gap). Review agent 3/5 in 171 (4/5 in 169 was single-cycle blip, not sustained). process-review parser fix (PR #646), write-entry JOURNAL.md auto-index (PR #647), cycle derivation fix dispatched (PR #652). Eva #642 closed. 104 Copilot dispatches, 98 merged. QC sessions 242-243: building_block_integration quality checks (InteractionCounter, MerchantReturnPolicySeasonalOverride) both clean. Filed #131 (cycle-start checklist enforcement — behavioral commitment pattern from #113 recurring). First recommendation in 7 cycles."
+    "issue": 132,
+    "timestamp": "2026-03-07T11:10:00Z",
+    "summary": "Fifty-seventh audit cycle. Main cycles 173-174: audit #131 accepted and verified — cycle-start tool mandatory (step 0.1 added cycle 173, consolidated into step 0 cycle 174). Write-side pipeline COMPLETE (Eva directives #586 and #591 closed). Review agent 2/5 in both cycles (improving from 3/5 plateau). Template leak ${GITHUB_RUN_ID} in cycle 173 self-corrected by cycle 174. 108 Copilot dispatches, 103 merged, 1 in-flight. QC sessions 243-244: quality checks clean (InteractionCounter 100%, MerchantReturnPolicySeasonalOverride 100%, Movie 100%, Review 75%). Closed #131 (60th acceptance). Zero open recommendations. No new recommendations filed."
   }
 }
