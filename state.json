@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-03-08T14:12:00Z",
+  "last_updated": "2026-03-08T17:15:00Z",
   "main_repo": {
-    "last_commit_audited": "9d957fa",
-    "last_orchestrator_issue_reviewed": 775,
-    "orchestrator_cycle_count": 191,
+    "last_commit_audited": "178dff9",
+    "last_orchestrator_issue_reviewed": 788,
+    "orchestrator_cycle_count": 193,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
       "6 skills created: github-issues-comments, journal-entries, orchestrator-permissions, pr-review-workflow, schema-implementation, writing-skills",
@@ -253,9 +253,9 @@
     "directory_layout": "php/src/, php/test/, ts/src/, ts/test/ (restructured 2026-03-01, PR #263; TS port COMPLETE 2026-03-01, 14 PRs — 89/89 schema classes including SeekToAction)"
   },
   "qc_repo": {
-    "last_commit_audited": "session_265",
-    "last_orchestrator_issue_reviewed": 265,
-    "orchestrator_cycle_count": 265,
+    "last_commit_audited": "session_267",
+    "last_orchestrator_issue_reviewed": 267,
+    "orchestrator_cycle_count": 267,
     "self_improvement_actions": [
       "Journal and worklog alignment per Eva request (2026-02-27)",
       "PHP 8.5 CI support added (2026-02-27)",
@@ -473,7 +473,8 @@
       "Audit cycle 60: Main cycles 182-185. Pre-Python clean-cycle gate stuck at 0/5 (infrastructure noise, not real bugs). Review agent trending up (3→4). 199 Copilot dispatches, 193 merged. Audit #140 accepted (64th, main#716+qc#256). Filed #144 (clean-cycle gate miscalibrated), #145 (QC backlog dispatch threshold violated). QC sessions 254-257: operational_mode updated, SoftwareApplication backlog stale. (2026-03-08)",
       "Audit cycle 61: Main cycles 186-187. #144 accepted (main#744, severity tiers PR #747 merged). #145 accepted (qc#261, SoftwareApplication+DiscussionForumPosting dispatched). Both verified. Filed #147 (recurrence escalation: #113 journal commitment follow-through insufficient). Review agent stable 4/5. 207 Copilot dispatches, 198 merged. QC session 258: backlog cleared, Copilot batch qc#259 in flight. (2026-03-08)",
       "Audit cycle 62: Main cycles 188-189. #147 accepted (main#758, step 0.6 journal commitment reconciliation added, QC acknowledged qc#264). Clean-cycle gate still 0/5 despite severity tiers — new failure modes each cycle. Filed #149 (gate needs escalation path for persistently unachievable directives). QC session 263: PR qc#262 merged (backlog enrichment complete), warnings 38->45. Review agent 4/5. (2026-03-08)",
-      "Audit cycle 63: Main cycles 190-191. #149 accepted (main#772, escalation step added + question-for-eva #771 filed immediately, QC not-applicable qc#266). Clean-cycle gate finally at 1/5 (first clean startup since cycle 182). Step 0.6 from #147 effective — freshness-cadence addressed structurally. Filed #151 (review agent dispatch sequence creates permanent artifact gap — deferred 3+ cycles). QC sessions 264-265: steady-state green, quality backlog empty, warnings stable at 45. Review agent 4/5 (spike to 5/5 in cycle 189). (2026-03-08)"
+      "Audit cycle 63: Main cycles 190-191. #149 accepted (main#772, escalation step added + question-for-eva #771 filed immediately, QC not-applicable qc#266). Clean-cycle gate finally at 1/5 (first clean startup since cycle 182). Step 0.6 from #147 effective — freshness-cadence addressed structurally. Filed #151 (review agent dispatch sequence creates permanent artifact gap — deferred 3+ cycles). QC sessions 264-265: steady-state green, quality backlog empty, warnings stable at 45. Review agent 4/5 (spike to 5/5 in cycle 189). (2026-03-08)",
+      "Audit cycle 64: Main cycles 192-193. #151 accepted (main#781, 69th acceptance — COMPLETION_CHECKLIST reordered, step 0.6 expanded for deferred findings, QC not-applicable qc#268). Clean-cycle gate at 3/5 (cycles 191-193). derive-metrics tool created (PR #785). Self-inflicted regression: derive-metrics format change broke state-invariants (8/11), pipeline FAIL at cycle 193 end. PR #790 dispatched but unmergeable before next cycle. Filed #153 (COMPLETION_CHECKLIST pipeline step is early check not final gate). QC sessions 265-267: steady-state green, quality backlog empty, quality checks continuing rotation (MemberProgramTier 100%). (2026-03-08)"
     ],
     "qc_outbound_reports": 4,
     "qc_inbound_requests": 12,
@@ -483,7 +484,7 @@
   },
   "recommendations": {
     "open": [
-      {"issue": 151, "title": "Review agent dispatch sequence creates permanent artifact gap -- deferred 3+ cycles without plan", "filed": "2026-03-08"}
+      {"issue": 153, "title": "COMPLETION_CHECKLIST pipeline step is an early check, not a final gate — self-inflicted regressions escape", "filed": "2026-03-08"}
     ],
     "accepted": [
       {"issue": 2, "title": "Idle cycle spinning", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
@@ -555,7 +556,8 @@
       {"issue": 144, "title": "Pre-Python clean-cycle gate treats infrastructure noise same as bugs -- counter stuck at 0/5 for 4 cycles", "filed": "2026-03-08", "accepted": "2026-03-08", "closed": "2026-03-08"},
       {"issue": 145, "title": "QC quality backlog dispatch threshold violated -- SoftwareApplication sitting 11 sessions past trigger", "filed": "2026-03-08", "accepted": "2026-03-08", "closed": "2026-03-08"},
       {"issue": 147, "title": "Audit #113 fix insufficient -- journal commitment follow-through still produces write-only observations", "filed": "2026-03-08", "accepted": "2026-03-08", "closed": "2026-03-08"},
-      {"issue": 149, "title": "Clean-cycle gate needs escalation path — 8 cycles at 0/5 without Eva notification", "filed": "2026-03-08", "accepted": "2026-03-08", "closed": "2026-03-08"}
+      {"issue": 149, "title": "Clean-cycle gate needs escalation path — 8 cycles at 0/5 without Eva notification", "filed": "2026-03-08", "accepted": "2026-03-08", "closed": "2026-03-08"},
+      {"issue": 151, "title": "Review agent dispatch sequence creates permanent artifact gap -- deferred 3+ cycles without plan", "filed": "2026-03-08", "accepted": "2026-03-08", "closed": "2026-03-08"}
     ],
     "rejected": [],
     "deferred": [
@@ -564,18 +566,18 @@
     ]
   },
   "metrics": {
-    "total_filed": 73,
-    "total_accepted": 68,
+    "total_filed": 74,
+    "total_accepted": 69,
     "total_deferred": 2,
     "total_rejected": 0,
     "total_open": 1,
-    "acceptance_rate": 0.959,
+    "acceptance_rate": 0.958,
     "response_rate": 1.0,
-    "trend": "Audit cycle 63. #149 accepted (68th — escalation step added + question-for-eva #771 filed). Filed #151 (review agent dispatch sequence creates permanent artifact gap). Main cycles 190-191: clean-cycle gate finally at 1/5, step 0.6 effective, freshness-cadence addressed structurally. QC sessions 264-265: steady-state green, quality backlog empty. Review agent 4/5 (spike to 5/5 in 189). Cumulative: 73 filed, 68 accepted, 2 deferred, 0 rejected, 1 open (#151)."
+    "trend": "Audit cycle 64. #151 accepted (69th — COMPLETION_CHECKLIST reordered, step 0.6 expanded). Filed #153 (COMPLETION_CHECKLIST pipeline step is early check not final gate — self-inflicted regression from derive-metrics format change broke state-invariants). Main cycles 192-193: clean-cycle gate at 3/5, derive-metrics tool created, but pipeline FAIL at cycle 193 end threatens reset. QC sessions 265-267: steady-state green, quality backlog empty. Review agent 4/5 stable. Cumulative: 74 filed, 69 accepted, 2 deferred, 0 rejected, 1 open (#153)."
   },
   "last_cycle": {
-    "issue": 150,
-    "timestamp": "2026-03-08T14:12:00Z",
-    "summary": "Sixty-third audit cycle. Main cycles 190-191 reviewed. #149 accepted (68th — escalation step added, question-for-eva #771 filed immediately). Clean-cycle gate finally at 1/5 (first clean startup since cycle 182). Step 0.6 from #147 is working — freshness-cadence addressed structurally. Filed #151 (review agent dispatch sequence creates permanent artifact gap — deferred 3+ cycles). QC sessions 264-265: steady-state green, quality backlog empty, warnings stable at 45. Both repos active, no stalls."
+    "issue": 152,
+    "timestamp": "2026-03-08T17:15:00Z",
+    "summary": "Sixty-fourth audit cycle. Main cycles 192-193 reviewed. #151 accepted (69th — COMPLETION_CHECKLIST reordered for dispatch race condition, step 0.6 expanded for deferred findings). Clean-cycle gate at 3/5 (advancing from 1/5). derive-metrics tool created (PR #785). Self-inflicted regression: format change broke state-invariants (8/11), pipeline FAIL at cycle 193 end. PR #790 dispatched to fix but in-flight. Filed #153 (pipeline step is early check not final gate). QC sessions 265-267: steady-state green, quality backlog empty, warnings stable at 45. Question-for-eva #771 still open."
   }
 }
