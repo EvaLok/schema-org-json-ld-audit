@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-03-08T20:10:00Z",
+  "last_updated": "2026-03-08T23:10:00Z",
   "main_repo": {
-    "last_commit_audited": "d9243cb",
-    "last_orchestrator_issue_reviewed": 801,
-    "orchestrator_cycle_count": 195,
+    "last_commit_audited": "c07557d",
+    "last_orchestrator_issue_reviewed": 816,
+    "orchestrator_cycle_count": 197,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
       "6 skills created: github-issues-comments, journal-entries, orchestrator-permissions, pr-review-workflow, schema-implementation, writing-skills",
@@ -151,7 +151,8 @@
       "Cycles 188-189: Audit #147 accepted (main#758) — step 0.6 (journal commitment reconciliation) added to STARTUP_CHECKLIST. Clean-cycle gate still at 0/5: cycle 188 failed (stale agent_sessions), cycle 189 failed (commit-freeze false positive post-publish). PRs #752, #754, #756, #760, #762, #764 all merged. PR #767 (commit-freeze non-blocking after publish) and #769 (cycle 189 review) in flight. cycle-complete --reconcile support added (PR #762). Review agent stable at 4/5 (cycle 188). (2026-03-08)",
       "Cycles 190-191: Audit #149 accepted (main#772) — escalation sub-step added + question-for-eva #771 filed immediately (gate at 0/5 for 8+ cycles). PR #767 (commit-freeze fix) and #769 (cycle 189 review) merged. Clean-cycle gate at 1/5 (first clean startup since cycle 182). Step 0.6 effective: freshness-cadence addressed structurally (auto-refresh fields extended in cycle-complete). Review agent 5/5 cycle 189, 4/5 cycle 190. PR #774 (cycle 190 review) merged. 2 in flight (#777, #779). 215 Copilot dispatches. (2026-03-08)",
       "Cycles 192-193: derive-metrics tool created (PR #785 merged). State-invariants updated (PR #790). Review artifact PR #792 merged. Self-inflicted regression: derive-metrics format change broke state-invariants (8/11). Pipeline FAIL at cycle 193 end. Audit #151 accepted (main#781, 69th). (2026-03-08)",
-      "Cycles 194-195: Audit #153 accepted (main#794) — COMPLETION_CHECKLIST step 5.5 'Final pipeline gate' added, coordination rule for format-changing tools documented. Ownership consolidation: PR #796 (record-dispatch stops writing derived fields) and PR #798 (pipeline-check Phase 6 derive-metrics drift) merged. Clean-cycle gate at 1/5 (cycle 195 clean startup). Review agent 4/5 cycle 194. Eva responded to #771: 'Shore up the infrastructure.' 3 PRs in flight (#803, #805, #807). 222+ Copilot dispatches. (2026-03-08)"
+      "Cycles 194-195: Audit #153 accepted (main#794) — COMPLETION_CHECKLIST step 5.5 'Final pipeline gate' added, coordination rule for format-changing tools documented. Ownership consolidation: PR #796 (record-dispatch stops writing derived fields) and PR #798 (pipeline-check Phase 6 derive-metrics drift) merged. Clean-cycle gate at 1/5 (cycle 195 clean startup). Review agent 4/5 cycle 194. Eva responded to #771: 'Shore up the infrastructure.' 3 PRs in flight (#803, #805, #807). 222+ Copilot dispatches. (2026-03-08)",
+      "Cycles 196-197: Audit #155 accepted (main#811, 71st) — PR #813 merged (DERIVE_METRICS_FIELDS expanded 7->9, rate field string comparison, severity promoted to Blocking). Ownership consolidation COMPLETE: PR #803 merged. PR #818 merged (process-review inline [category] parser fix). Clean-cycle gate at 3/5. Review agent 5/5 complacency in cycle 196 (first maximum). 230+ Copilot dispatches. (2026-03-08)"
     ],
     "prompt_last_modified": "Inlined into repo (commit d0ae8fa, 2026-02-28)",
     "agents_md_last_modified": "2026-03-03T02:30:00Z",
@@ -241,7 +242,9 @@
         "Review agent consumption loop lacks recurrence-based escalation — process-level fixes are perpetually deferred (audit #106 — accepted, closed)",
         "Pre-publish QC validation has no commit-freeze mechanism — validated commit can diverge from published commit (audit #108 — accepted, closed)",
         "Pre-publish sign-off request has no timeout or escalation path for unresponsive audit agent (audit #110 — open)",
-        "Pre-publish sign-off CONFIRMED — all validation gates verified (audit #111 — sign-off response, open)"
+        "Pre-publish sign-off CONFIRMED — all validation gates verified (audit #111 — sign-off response, open)",
+        "pipeline-check derive-metrics phase validates integer counters only — rate field drift escapes detection (audit #155 — accepted, closed)",
+        "Review agent dispatch spec lacks output format contract — parser breakage recurs with model drift (audit #157 — open)"
       ]
     },
     "ts_modules_on_master": 103,
@@ -255,9 +258,9 @@
     "directory_layout": "php/src/, php/test/, ts/src/, ts/test/ (restructured 2026-03-01, PR #263; TS port COMPLETE 2026-03-01, 14 PRs — 89/89 schema classes including SeekToAction)"
   },
   "qc_repo": {
-    "last_commit_audited": "session_269",
-    "last_orchestrator_issue_reviewed": 269,
-    "orchestrator_cycle_count": 269,
+    "last_commit_audited": "session_271",
+    "last_orchestrator_issue_reviewed": 271,
+    "orchestrator_cycle_count": 271,
     "self_improvement_actions": [
       "Journal and worklog alignment per Eva request (2026-02-27)",
       "PHP 8.5 CI support added (2026-02-27)",
@@ -352,7 +355,8 @@
       "Session 258: Audit #144 not applicable (qc#260). Audit #145 accepted (qc#261) — SoftwareApplication + DiscussionForumPosting dispatched as Copilot batch qc#259 (PR qc#262 in flight). Step 4c mandatory dispatch language added. last_dispatch_session tracking field added. Quality backlog cleared to 0. 30 total Copilot dispatches. (2026-03-08)",
       "Session 263: PR qc#262 merged (gpt-5.4 first use, clean). SoftwareApplication 9/9 (100%), DiscussionForumPosting 14/14 (100%). Audit #147 acknowledged (qc#264 — existing backlog mechanism suffices). Warning baseline 38->45 (7 new false positives). Copilot metrics: 31 dispatches, 27/31 PR rate (87%), 27/27 merge rate (100%). Quality backlog empty. (2026-03-08)",
       "Sessions 264-265: Steady-state validation green. Audit #149 not applicable (qc#266). Quality checks: VacationRental 81.3% (clean), Offer 70% (clean). Warning baseline stable at 45. Package updated to 2dc6ddb (no source changes). 70 audit recommendations processed. (2026-03-08)",
-      "Sessions 267-269: Steady-state validation green. Audit #151 not-applicable (qc#268), audit #153 not-applicable (qc#270). Quality check: BlogPosting property_depth 70% (at threshold, no backlog). MemberProgramTier 100% (clean). total_dispatches corrected 31->30 (phantom count removed). Package updated to 8882dcd. 387 unit tests, 73/73 E2E. 72 audit recommendations processed. (2026-03-08)"
+      "Sessions 267-269: Steady-state validation green. Audit #151 not-applicable (qc#268), audit #153 not-applicable (qc#270). Quality check: BlogPosting property_depth 70% (at threshold, no backlog). MemberProgramTier 100% (clean). total_dispatches corrected 31->30 (phantom count removed). Package updated to 8882dcd. 387 unit tests, 73/73 E2E. 72 audit recommendations processed. (2026-03-08)",
+      "Sessions 270-271: Steady-state validation green. Audit #155 not-applicable (qc#272). Quality checks continuing rotation. All validation green: 387 unit, 73/73 E2E, 73/73 parity. Quality backlog empty. 73 audit recommendations processed. (2026-03-08)"
     ],
     "stale_issues": [],
     "prompt_last_modified": "Unknown — STARTUP_CHECKLIST exists",
@@ -478,7 +482,8 @@
       "Audit cycle 62: Main cycles 188-189. #147 accepted (main#758, step 0.6 journal commitment reconciliation added, QC acknowledged qc#264). Clean-cycle gate still 0/5 despite severity tiers — new failure modes each cycle. Filed #149 (gate needs escalation path for persistently unachievable directives). QC session 263: PR qc#262 merged (backlog enrichment complete), warnings 38->45. Review agent 4/5. (2026-03-08)",
       "Audit cycle 63: Main cycles 190-191. #149 accepted (main#772, escalation step added + question-for-eva #771 filed immediately, QC not-applicable qc#266). Clean-cycle gate finally at 1/5 (first clean startup since cycle 182). Step 0.6 from #147 effective — freshness-cadence addressed structurally. Filed #151 (review agent dispatch sequence creates permanent artifact gap — deferred 3+ cycles). QC sessions 264-265: steady-state green, quality backlog empty, warnings stable at 45. Review agent 4/5 (spike to 5/5 in cycle 189). (2026-03-08)",
       "Audit cycle 64: Main cycles 192-193. #151 accepted (main#781, 69th acceptance — COMPLETION_CHECKLIST reordered, step 0.6 expanded for deferred findings, QC not-applicable qc#268). Clean-cycle gate at 3/5 (cycles 191-193). derive-metrics tool created (PR #785). Self-inflicted regression: derive-metrics format change broke state-invariants (8/11), pipeline FAIL at cycle 193 end. PR #790 dispatched but unmergeable before next cycle. Filed #153 (COMPLETION_CHECKLIST pipeline step is early check not final gate). QC sessions 265-267: steady-state green, quality backlog empty, quality checks continuing rotation (MemberProgramTier 100%). (2026-03-08)",
-      "Audit cycle 65: Main cycles 194-195. #153 accepted (main#794, 70th acceptance — COMPLETION_CHECKLIST step 5.5 final pipeline gate, format-changing tool coordination rule). Ownership consolidation: PRs #796 (record-dispatch), #798 (pipeline Phase 6) merged, #803 (process-merge) in flight. Clean-cycle gate at 1/5. Eva #771 responded: shore up infrastructure. Filed #155 (pipeline-check Phase 6 validates integers only, rate drift escapes). QC sessions 267-269: steady-state green, BlogPosting 70%, total_dispatches 31->30. (2026-03-08)"
+      "Audit cycle 65: Main cycles 194-195. #153 accepted (main#794, 70th acceptance — COMPLETION_CHECKLIST step 5.5 final pipeline gate, format-changing tool coordination rule). Ownership consolidation: PRs #796 (record-dispatch), #798 (pipeline Phase 6) merged, #803 (process-merge) in flight. Clean-cycle gate at 1/5. Eva #771 responded: shore up infrastructure. Filed #155 (pipeline-check Phase 6 validates integers only, rate drift escapes). QC sessions 267-269: steady-state green, BlogPosting 70%, total_dispatches 31->30. (2026-03-08)",
+      "Audit cycle 66: Main cycles 196-197. #155 accepted (main#811, 71st acceptance — PR #813 merged, DERIVE_METRICS_FIELDS 7->9, rate field string comparison, blocking severity). Ownership consolidation COMPLETE (PR #803 merged). process-review parser fixed (PR #818 merged, inline [category] tags). Clean-cycle gate at 3/5. Review agent complacency 5/5 in cycle 196 (first maximum). Filed #157 (review agent dispatch spec lacks output format contract — parser breakage recurs with model drift). QC sessions 270-271: steady-state green. (2026-03-08)"
     ],
     "qc_outbound_reports": 4,
     "qc_inbound_requests": 12,
@@ -488,7 +493,7 @@
   },
   "recommendations": {
     "open": [
-      {"issue": 155, "title": "pipeline-check derive-metrics phase validates integer counters only -- rate field drift escapes detection", "filed": "2026-03-08"}
+      {"issue": 157, "title": "Review agent dispatch spec lacks output format contract -- parser breakage recurs with every model or prompt drift", "filed": "2026-03-08"}
     ],
     "accepted": [
       {"issue": 2, "title": "Idle cycle spinning", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
@@ -562,7 +567,8 @@
       {"issue": 147, "title": "Audit #113 fix insufficient -- journal commitment follow-through still produces write-only observations", "filed": "2026-03-08", "accepted": "2026-03-08", "closed": "2026-03-08"},
       {"issue": 149, "title": "Clean-cycle gate needs escalation path — 8 cycles at 0/5 without Eva notification", "filed": "2026-03-08", "accepted": "2026-03-08", "closed": "2026-03-08"},
       {"issue": 151, "title": "Review agent dispatch sequence creates permanent artifact gap -- deferred 3+ cycles without plan", "filed": "2026-03-08", "accepted": "2026-03-08", "closed": "2026-03-08"},
-      {"issue": 153, "title": "COMPLETION_CHECKLIST pipeline step is an early check, not a final gate — self-inflicted regressions escape", "filed": "2026-03-08", "accepted": "2026-03-08", "closed": "2026-03-08"}
+      {"issue": 153, "title": "COMPLETION_CHECKLIST pipeline step is an early check, not a final gate — self-inflicted regressions escape", "filed": "2026-03-08", "accepted": "2026-03-08", "closed": "2026-03-08"},
+      {"issue": 155, "title": "pipeline-check derive-metrics phase validates integer counters only -- rate field drift escapes detection", "filed": "2026-03-08", "accepted": "2026-03-08", "closed": "2026-03-08"}
     ],
     "rejected": [],
     "deferred": [
@@ -571,18 +577,18 @@
     ]
   },
   "metrics": {
-    "total_filed": 75,
-    "total_accepted": 70,
+    "total_filed": 76,
+    "total_accepted": 71,
     "total_deferred": 2,
     "total_rejected": 0,
     "total_open": 1,
-    "acceptance_rate": 0.959,
+    "acceptance_rate": 0.96,
     "response_rate": 1.0,
-    "trend": "Audit cycle 65. #153 accepted (70th — COMPLETION_CHECKLIST step 5.5 final pipeline gate added, format-changing tool coordination rule). Filed #155 (pipeline-check derive-metrics phase only validates integer counters, rate field drift escapes detection). Main cycles 194-195: ownership consolidation progressing (PRs #796, #798 merged, #803 in flight), clean-cycle gate at 1/5. Eva responded to #771: 'Shore up infrastructure.' QC sessions 267-269: steady-state green, quality backlog empty, BlogPosting 70%. Cumulative: 75 filed, 70 accepted, 2 deferred, 0 rejected, 1 open (#155)."
+    "trend": "Audit cycle 66. #155 accepted (71st — PR #813 merged, DERIVE_METRICS_FIELDS 7->9, rate field string comparison, blocking severity). Filed #157 (review agent dispatch spec lacks output format contract — parser breakage recurs with model/prompt drift). Main cycles 196-197: ownership consolidation complete, clean-cycle gate at 3/5, complacency score spiked to 5/5 in cycle 196. QC sessions 270-271: steady-state green. Cumulative: 76 filed, 71 accepted, 2 deferred, 0 rejected, 1 open (#157)."
   },
   "last_cycle": {
-    "issue": 154,
-    "timestamp": "2026-03-08T20:10:00Z",
-    "summary": "Sixty-fifth audit cycle. Main cycles 194-195 reviewed. #153 accepted (70th — COMPLETION_CHECKLIST step 5.5 final pipeline gate added, format-changing tool coordination rule documented). Ownership consolidation progressing: PR #796 (record-dispatch) and PR #798 (pipeline-check Phase 6) merged, PR #803 (process-merge) in flight. Clean-cycle gate at 1/5 (cycle 195 clean startup). Eva responded to #771: continue as-is, shore up infrastructure. Review agent 4/5 cycle 194. Filed #155 (pipeline-check derive-metrics phase only validates integer counters, rate field drift escapes detection). QC sessions 267-269: steady-state green, BlogPosting 70%, total_dispatches corrected 31->30."
+    "issue": 156,
+    "timestamp": "2026-03-08T23:10:00Z",
+    "summary": "Sixty-sixth audit cycle. Main cycles 196-197 reviewed. #155 accepted (71st — PR #813 merged, DERIVE_METRICS_FIELDS expanded 7->9, rate field string comparison added, severity promoted to Blocking). Ownership consolidation COMPLETE (PR #803 merged). process-review parser fixed (PR #818, inline [category] tags). Clean-cycle gate at 3/5 (progressing well). Review agent complacency score spiked to 5/5 in cycle 196 (first maximum ever). Filed #157 (review agent dispatch spec lacks output format contract — parser breakage recurs with model/prompt drift, 3rd format-related breakage). QC sessions 270-271: steady-state green, quality backlog empty, all validation passing."
   }
 }
