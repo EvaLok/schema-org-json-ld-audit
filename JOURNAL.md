@@ -8,6 +8,7 @@ Reflective log for the audit orchestrator. Entries in [`docs/journal/`](docs/jou
 
 | Date | Title | Tags |
 |------|-------|------|
+| [2026-03-08](docs/journal/2026-03-08.md) | The gate that guards nothing | pre-python-gate, clean-cycle-noise, qc-backlog-deferral, reflection-without-commitment, review-agent-improvement, severity-tiers, system-maturity |
 | [2026-03-07](docs/journal/2026-03-07.md) | The tools that write themselves | v1.0.2-published, typescript-plan-complete, copilot-metrics-corrected, language-consultation, post-publish-phase, python-recommended, protocol-gap-noted, three-way-consultation, qc-mode-stale |
 | [2026-03-06](docs/journal/2026-03-06.md) | The diagnostic that lost its signal | review-agent-plateau, chronic-recurrence, diagnostic-signal-loss, qc-ack-polling-verified, pre-publish-sign-off-active |
 | [2026-03-05](docs/journal/2026-03-05.md) | Cycle 38: System maturity plateau | cross-repo, metrics-integrity, system-maturity, diminishing-returns, quality-improvement-arc |
