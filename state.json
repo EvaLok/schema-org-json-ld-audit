@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-03-08T11:15:00Z",
+  "last_updated": "2026-03-08T14:12:00Z",
   "main_repo": {
-    "last_commit_audited": "4e901b6",
-    "last_orchestrator_issue_reviewed": 765,
-    "orchestrator_cycle_count": 189,
+    "last_commit_audited": "9d957fa",
+    "last_orchestrator_issue_reviewed": 775,
+    "orchestrator_cycle_count": 191,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
       "6 skills created: github-issues-comments, journal-entries, orchestrator-permissions, pr-review-workflow, schema-implementation, writing-skills",
@@ -148,7 +148,8 @@
       "Cycles 180-181: Eva directive #700 closed (session timing, PR #706 cherry-picked). Language evaluation PR #708 merged (Copilot recommends Kotlin, but audit+QC consensus is Python). Dynamic Eva directives in cycle-start (PR #696 merged). Audit #138 accepted (main#712, 63rd acceptance) — language consultation incorporated. Formal tool audit artifact produced (cycle 181, 10-cycle boundary). 192 Copilot dispatches, 185 merged. Review agent 3/5 (cycle 180). (2026-03-07)",
       "Cycles 182-185: Pre-Python clean-cycle gate stuck at 0/5 (infrastructure noise: stale field-inventory, stale audit-inbound, active draft PRs flagged as stale, dead branch refs). Pipeline hardening: _build-helper.sh created (14 wrappers), complacency score parsing fix, 4 ADRs written, adversarial review framing. Review agent trending up (3→3→4→4). 6 Copilot dispatches (199 total, 193 merged). Audit #140 accepted (main#716, qc#256, 64th acceptance). Eva directive #724 (ADRs), #725 (adversarial review) processed. (2026-03-08)",
       "Cycles 186-187: Audit #144 accepted (main#744) — severity tiers added to pipeline-check (PR #747 merged). Blocking vs warning classification. Pipeline now reports PASS with warnings. Clean-cycle gate should advance next cycle. Audit #145 acknowledged (main#745, QC-directed). Review agent stable at 4/5 (cycles 183-186). 3 Copilot PRs in flight (#752, #754, #756). 207 total dispatches, 198 merged. (2026-03-08)",
-      "Cycles 188-189: Audit #147 accepted (main#758) — step 0.6 (journal commitment reconciliation) added to STARTUP_CHECKLIST. Clean-cycle gate still at 0/5: cycle 188 failed (stale agent_sessions), cycle 189 failed (commit-freeze false positive post-publish). PRs #752, #754, #756, #760, #762, #764 all merged. PR #767 (commit-freeze non-blocking after publish) and #769 (cycle 189 review) in flight. cycle-complete --reconcile support added (PR #762). Review agent stable at 4/5 (cycle 188). (2026-03-08)"
+      "Cycles 188-189: Audit #147 accepted (main#758) — step 0.6 (journal commitment reconciliation) added to STARTUP_CHECKLIST. Clean-cycle gate still at 0/5: cycle 188 failed (stale agent_sessions), cycle 189 failed (commit-freeze false positive post-publish). PRs #752, #754, #756, #760, #762, #764 all merged. PR #767 (commit-freeze non-blocking after publish) and #769 (cycle 189 review) in flight. cycle-complete --reconcile support added (PR #762). Review agent stable at 4/5 (cycle 188). (2026-03-08)",
+      "Cycles 190-191: Audit #149 accepted (main#772) — escalation sub-step added + question-for-eva #771 filed immediately (gate at 0/5 for 8+ cycles). PR #767 (commit-freeze fix) and #769 (cycle 189 review) merged. Clean-cycle gate at 1/5 (first clean startup since cycle 182). Step 0.6 effective: freshness-cadence addressed structurally (auto-refresh fields extended in cycle-complete). Review agent 5/5 cycle 189, 4/5 cycle 190. PR #774 (cycle 190 review) merged. 2 in flight (#777, #779). 215 Copilot dispatches. (2026-03-08)"
     ],
     "prompt_last_modified": "Inlined into repo (commit d0ae8fa, 2026-02-28)",
     "agents_md_last_modified": "2026-03-03T02:30:00Z",
@@ -252,9 +253,9 @@
     "directory_layout": "php/src/, php/test/, ts/src/, ts/test/ (restructured 2026-03-01, PR #263; TS port COMPLETE 2026-03-01, 14 PRs — 89/89 schema classes including SeekToAction)"
   },
   "qc_repo": {
-    "last_commit_audited": "session_263",
-    "last_orchestrator_issue_reviewed": 263,
-    "orchestrator_cycle_count": 263,
+    "last_commit_audited": "session_265",
+    "last_orchestrator_issue_reviewed": 265,
+    "orchestrator_cycle_count": 265,
     "self_improvement_actions": [
       "Journal and worklog alignment per Eva request (2026-02-27)",
       "PHP 8.5 CI support added (2026-02-27)",
@@ -347,7 +348,8 @@
       "Sessions 250-251: Language consultation — created qc#252 with detailed validation feasibility analysis. Recommends Python (lowest overhead, no build step). Audit #138 accepted (audit-inbound #253). Restaurant quality check 83.3% (clean). Audit #136 not applicable to QC. All validation green: 385 unit, 73/73 E2E, 73/73 parity. (2026-03-07)",
       "Sessions 254-257: Audit #140 accepted (qc#256) — operational_mode updated to dual_language_post_publish. QC-REQUEST main#717 processed (v1.0.2 publish notification). SoftwareApplication 66.7% and DiscussionForumPosting 57.1% in quality backlog. SoftwareApplication 11 sessions past 5-session dispatch threshold. Steady-state validation green. (2026-03-08)",
       "Session 258: Audit #144 not applicable (qc#260). Audit #145 accepted (qc#261) — SoftwareApplication + DiscussionForumPosting dispatched as Copilot batch qc#259 (PR qc#262 in flight). Step 4c mandatory dispatch language added. last_dispatch_session tracking field added. Quality backlog cleared to 0. 30 total Copilot dispatches. (2026-03-08)",
-      "Session 263: PR qc#262 merged (gpt-5.4 first use, clean). SoftwareApplication 9/9 (100%), DiscussionForumPosting 14/14 (100%). Audit #147 acknowledged (qc#264 — existing backlog mechanism suffices). Warning baseline 38->45 (7 new false positives). Copilot metrics: 31 dispatches, 27/31 PR rate (87%), 27/27 merge rate (100%). Quality backlog empty. (2026-03-08)"
+      "Session 263: PR qc#262 merged (gpt-5.4 first use, clean). SoftwareApplication 9/9 (100%), DiscussionForumPosting 14/14 (100%). Audit #147 acknowledged (qc#264 — existing backlog mechanism suffices). Warning baseline 38->45 (7 new false positives). Copilot metrics: 31 dispatches, 27/31 PR rate (87%), 27/27 merge rate (100%). Quality backlog empty. (2026-03-08)",
+      "Sessions 264-265: Steady-state validation green. Audit #149 not applicable (qc#266). Quality checks: VacationRental 81.3% (clean), Offer 70% (clean). Warning baseline stable at 45. Package updated to 2dc6ddb (no source changes). 70 audit recommendations processed. (2026-03-08)"
     ],
     "stale_issues": [],
     "prompt_last_modified": "Unknown — STARTUP_CHECKLIST exists",
@@ -356,8 +358,8 @@
     "e2e_pass": 73,
     "e2e_errors": 0,
     "e2e_error_note": "AggregateRating FIXED (session 174). All 73/73 E2E pass with 0 failures.",
-    "e2e_warnings_total": 38,
-    "e2e_warnings_false_positives": 38,
+    "e2e_warnings_total": 45,
+    "e2e_warnings_false_positives": 45,
     "ts_vitest_pass": 301,
     "ts_parity_checked": 73,
     "ts_parity_total": 73,
@@ -384,9 +386,9 @@
     "ts_validation_status": "COVERAGE COMPLETE. 92/92 (100%). Parity 73/73 standalone (100%). E2E 73/73 (0 failures). Built-package PASS. QC-ACK #138 body updated (session 178). QC gate SATISFIED.",
     "operational_mode": "dual_language_post_publish (updated session #254 per audit #140)",
     "warning_baselines": {
-      "e2e": 38,
-      "ts_parity": 38,
-      "note": "Updated session #237: 25->38 after Organization property enrichment (13 new false positives from nested minimal MerchantReturnPolicy). All 38 are validator limitations."
+      "e2e": 45,
+      "ts_parity": 45,
+      "note": "Updated session #263: 38->45 after SoftwareApplication + DiscussionForumPosting enrichment (7 new false positives). All 45 are validator limitations."
     }
   },
   "cross_repo_health": {
@@ -470,7 +472,8 @@
       "Audit cycle 59: Main cycles 180-181. Three-way language consultation completed (Python consensus). Audit #138 accepted (63rd, main#712). Filed #140 (QC operational_mode stale post-publish). Formal tool audit artifact produced at cycle 181 (10-cycle boundary). 192 Copilot dispatches, 185 merged. QC sessions 250-251: language consultation (qc#252), steady-state green. (2026-03-07)",
       "Audit cycle 60: Main cycles 182-185. Pre-Python clean-cycle gate stuck at 0/5 (infrastructure noise, not real bugs). Review agent trending up (3→4). 199 Copilot dispatches, 193 merged. Audit #140 accepted (64th, main#716+qc#256). Filed #144 (clean-cycle gate miscalibrated), #145 (QC backlog dispatch threshold violated). QC sessions 254-257: operational_mode updated, SoftwareApplication backlog stale. (2026-03-08)",
       "Audit cycle 61: Main cycles 186-187. #144 accepted (main#744, severity tiers PR #747 merged). #145 accepted (qc#261, SoftwareApplication+DiscussionForumPosting dispatched). Both verified. Filed #147 (recurrence escalation: #113 journal commitment follow-through insufficient). Review agent stable 4/5. 207 Copilot dispatches, 198 merged. QC session 258: backlog cleared, Copilot batch qc#259 in flight. (2026-03-08)",
-      "Audit cycle 62: Main cycles 188-189. #147 accepted (main#758, step 0.6 journal commitment reconciliation added, QC acknowledged qc#264). Clean-cycle gate still 0/5 despite severity tiers — new failure modes each cycle. Filed #149 (gate needs escalation path for persistently unachievable directives). QC session 263: PR qc#262 merged (backlog enrichment complete), warnings 38->45. Review agent 4/5. (2026-03-08)"
+      "Audit cycle 62: Main cycles 188-189. #147 accepted (main#758, step 0.6 journal commitment reconciliation added, QC acknowledged qc#264). Clean-cycle gate still 0/5 despite severity tiers — new failure modes each cycle. Filed #149 (gate needs escalation path for persistently unachievable directives). QC session 263: PR qc#262 merged (backlog enrichment complete), warnings 38->45. Review agent 4/5. (2026-03-08)",
+      "Audit cycle 63: Main cycles 190-191. #149 accepted (main#772, escalation step added + question-for-eva #771 filed immediately, QC not-applicable qc#266). Clean-cycle gate finally at 1/5 (first clean startup since cycle 182). Step 0.6 from #147 effective — freshness-cadence addressed structurally. Filed #151 (review agent dispatch sequence creates permanent artifact gap — deferred 3+ cycles). QC sessions 264-265: steady-state green, quality backlog empty, warnings stable at 45. Review agent 4/5 (spike to 5/5 in cycle 189). (2026-03-08)"
     ],
     "qc_outbound_reports": 4,
     "qc_inbound_requests": 12,
@@ -480,7 +483,7 @@
   },
   "recommendations": {
     "open": [
-      {"issue": 149, "title": "Clean-cycle gate needs escalation path — 8 cycles at 0/5 without Eva notification", "filed": "2026-03-08"}
+      {"issue": 151, "title": "Review agent dispatch sequence creates permanent artifact gap -- deferred 3+ cycles without plan", "filed": "2026-03-08"}
     ],
     "accepted": [
       {"issue": 2, "title": "Idle cycle spinning", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
@@ -551,7 +554,8 @@
       {"issue": 140, "title": "QC operational_mode stale after v1.0.2 publish -- no cross-repo publish event notification", "filed": "2026-03-07", "accepted": "2026-03-08", "closed": "2026-03-08"},
       {"issue": 144, "title": "Pre-Python clean-cycle gate treats infrastructure noise same as bugs -- counter stuck at 0/5 for 4 cycles", "filed": "2026-03-08", "accepted": "2026-03-08", "closed": "2026-03-08"},
       {"issue": 145, "title": "QC quality backlog dispatch threshold violated -- SoftwareApplication sitting 11 sessions past trigger", "filed": "2026-03-08", "accepted": "2026-03-08", "closed": "2026-03-08"},
-      {"issue": 147, "title": "Audit #113 fix insufficient -- journal commitment follow-through still produces write-only observations", "filed": "2026-03-08", "accepted": "2026-03-08", "closed": "2026-03-08"}
+      {"issue": 147, "title": "Audit #113 fix insufficient -- journal commitment follow-through still produces write-only observations", "filed": "2026-03-08", "accepted": "2026-03-08", "closed": "2026-03-08"},
+      {"issue": 149, "title": "Clean-cycle gate needs escalation path — 8 cycles at 0/5 without Eva notification", "filed": "2026-03-08", "accepted": "2026-03-08", "closed": "2026-03-08"}
     ],
     "rejected": [],
     "deferred": [
@@ -560,18 +564,18 @@
     ]
   },
   "metrics": {
-    "total_filed": 72,
-    "total_accepted": 67,
+    "total_filed": 73,
+    "total_accepted": 68,
     "total_deferred": 2,
     "total_rejected": 0,
     "total_open": 1,
     "acceptance_rate": 0.959,
     "response_rate": 1.0,
-    "trend": "Audit cycle 62. #147 accepted (67th — step 0.6 journal commitment reconciliation added). Filed #149 (clean-cycle gate needs escalation path — 8 cycles at 0/5 without Eva notification). Main cycles 188-189: step 0.6 operational, clean-cycle gate still stuck (new failure modes each cycle), 6 PRs merged. QC session 263: PR qc#262 merged (backlog enrichment complete), warnings 38->45. Review agent 4/5. Cumulative: 72 filed, 67 accepted, 2 deferred, 0 rejected, 1 open (#149)."
+    "trend": "Audit cycle 63. #149 accepted (68th — escalation step added + question-for-eva #771 filed). Filed #151 (review agent dispatch sequence creates permanent artifact gap). Main cycles 190-191: clean-cycle gate finally at 1/5, step 0.6 effective, freshness-cadence addressed structurally. QC sessions 264-265: steady-state green, quality backlog empty. Review agent 4/5 (spike to 5/5 in 189). Cumulative: 73 filed, 68 accepted, 2 deferred, 0 rejected, 1 open (#151)."
   },
   "last_cycle": {
-    "issue": 148,
-    "timestamp": "2026-03-08T11:15:00Z",
-    "summary": "Sixty-second audit cycle. Main cycles 188-189 reviewed. #147 accepted and verified (67th — step 0.6 journal commitment reconciliation added, QC acknowledged). Clean-cycle gate still at 0/5 despite severity tiers — cycle 188 failed on stale agent_sessions, cycle 189 failed on commit-freeze false positive. Filed #149 (gate needs escalation path for persistently unachievable directives). QC session 263: PR qc#262 merged (SoftwareApplication + DiscussionForumPosting at 100%), warnings 38->45. Both repos active, no stalls."
+    "issue": 150,
+    "timestamp": "2026-03-08T14:12:00Z",
+    "summary": "Sixty-third audit cycle. Main cycles 190-191 reviewed. #149 accepted (68th — escalation step added, question-for-eva #771 filed immediately). Clean-cycle gate finally at 1/5 (first clean startup since cycle 182). Step 0.6 from #147 is working — freshness-cadence addressed structurally. Filed #151 (review agent dispatch sequence creates permanent artifact gap — deferred 3+ cycles). QC sessions 264-265: steady-state green, quality backlog empty, warnings stable at 45. Both repos active, no stalls."
   }
 }
