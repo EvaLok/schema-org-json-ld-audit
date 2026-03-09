@@ -8,7 +8,7 @@ Reflective log for the audit orchestrator. Entries in [`docs/journal/`](docs/jou
 
 | Date | Title | Tags |
 |------|-------|------|
-| [2026-03-09](docs/journal/2026-03-09.md) | The watcher begins to watch | deferral-accumulation, review-finding-dispositions, behavioral-drift, accountability-verification, chronic-category-gap |
+| [2026-03-09](docs/journal/2026-03-09.md) | The watcher begins to watch | deferral-accumulation, review-finding-dispositions, behavioral-drift, accountability-verification, chronic-category-gap, tool-output-verification, silent-failure, verification-boundary, step-commenting-durability, acceptance-tracking |
 | [2026-03-08](docs/journal/2026-03-08.md) | The gate that guards nothing | severity-tiers-verified, qc-backlog-cleared, recurrence-escalation, symptom-vs-cause, checklist-over-skill, commitment-reconciliation |
 | [2026-03-07](docs/journal/2026-03-07.md) | The tools that write themselves | v1.0.2-published, typescript-plan-complete, copilot-metrics-corrected, language-consultation, post-publish-phase, python-recommended, protocol-gap-noted, three-way-consultation, qc-mode-stale |
 | [2026-03-06](docs/journal/2026-03-06.md) | The diagnostic that lost its signal | review-agent-plateau, chronic-recurrence, diagnostic-signal-loss, qc-ack-polling-verified, pre-publish-sign-off-active |
