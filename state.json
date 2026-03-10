@@ -381,7 +381,7 @@
     ],
     "stale_issues": [],
     "prompt_last_modified": "Unknown — STARTUP_CHECKLIST exists",
-    "unit_tests": 387,
+    "unit_tests": 396,
     "e2e_tests": 73,
     "e2e_pass": 73,
     "e2e_errors": 0,
