@@ -60,6 +60,8 @@ Read main repo state:
 gh api "repos/EvaLok/schema-org-json-ld/contents/docs/state.json" --jq '.content' -H "Accept: application/vnd.github.v3+json"
 ```
 
+**Phase awareness**: The main repo now uses a phased cycle architecture. Check `cycle_phase.phase` in the decoded state.json. Valid phases: `work`, `doc_dispatched`, `doc_review`, `close_out`, `complete`. A cycle in `doc_dispatched` or `doc_review` is waiting for a Copilot documentation agent — this is normal intermediate state, not a stall (see Step 8.5).
+
 ## 3.5. Poll for cross-repo responses
 
 Discover `audit-inbound` response issues from both repos. These are how the main and QC orchestrators communicate their responses to audit recommendations (since neither can write directly to this repo).
@@ -97,6 +99,8 @@ Read recent journal entries from both repos. Compare self-assessments against re
 - Are patterns identified but not codified into skills/tools?
 - Are there discrepancies between what the journal says and what actually happened?
 
+**Note**: Main repo journals may now be written by a Copilot documentation agent (dispatched during `doc_dispatched` phase) rather than the orchestrator itself. Agent-written entries should be more accurate (derived from committed state), but verify this claim — check whether in-flight counts, self-modification records, and commit receipts actually match reality.
+
 Use `gh api` to fetch journal file contents from both repos.
 
 ## 6. Review worklogs
@@ -108,6 +112,8 @@ Read recent worklogs from both repos. Look for:
 - Permission denials
 - Redundant steps
 - Patterns that should be codified as tools or skills
+
+**Note**: Main repo worklogs may now be agent-generated (same as journals above). Compare quality and accuracy of agent-generated worklogs against earlier orchestrator-written ones. The phased architecture was introduced specifically to fix systematic inaccuracies in self-reporting — evaluate whether it's working.
 
 Suggest concrete process improvements (checklist changes, new tools, prompt tweaks).
 
@@ -136,6 +142,17 @@ For each orchestrator (main and QC), answer these questions:
 3. **Are metrics advancing?** Compare current parity/coverage numbers against the previous cycle. If a metric has been static for >2 cycles while work remains, flag as stalled.
 4. **Is the orchestrator in a false idle state?** An orchestrator may pass its own idle check while ignoring available work. Check whether idle criteria are correctly calibrated — e.g., the QC's idle check should not trigger when 47 uncovered types exist.
 5. **Is the orchestrator dispatching work to Copilot agents when appropriate?** Both orchestrators are designed to use Copilot for implementation. If an orchestrator is performing work itself that could be dispatched, or not dispatching at all, flag it.
+
+### Main repo phased cycle calibration
+
+The main orchestrator now uses multi-phase cycles that span multiple cron invocations. When evaluating stall behavior, account for normal phase wait times:
+
+- **`doc_dispatched`** (< 2 hours): Normal. A Copilot documentation agent is working. Not a stall.
+- **`doc_dispatched`** (> 2 hours): Likely stale. The orchestrator should have fallen back to direct documentation. Flag if it hasn't.
+- **`doc_review`** (< 1 cron interval): Normal. The orchestrator is reviewing the doc PR.
+- **`doc_review`** with `review_iteration` approaching `review_max` (3): The retry loop may be churning without converging. Check whether the doc agent is actually fixing the flagged issues.
+- **`close_out`** (> 1 cron interval): Should complete quickly. Flag if lingering.
+- **Any phase persisting across 3+ cron invocations without progress**: Genuine stall. The orchestrator may be stuck in resume mode. Check `cycle_phase.phase_entered_at` age.
 
 **If stalled behavior is detected**: File an `audit-outbound` recommendation with the specific checklist/prompt change needed to prevent the stall pattern. If the issue requires system prompt or workflow file changes, file a `question-for-eva` issue.
 
