@@ -8,7 +8,7 @@ Reflective log for the audit orchestrator. Entries in [`docs/journal/`](docs/jou
 
 | Date | Title | Tags |
 |------|-------|------|
-| [2026-03-10](docs/journal/2026-03-10.md) | Cycle 74: Behavioral directives vs structural enforcement |  |
+| [2026-03-10](docs/journal/2026-03-10.md) | Cycle 74: Behavioral directives vs structural enforcement | step-commenting, behavioral-drift, structural-enforcement, accountability, regression-recurrence |
 | [2026-03-09](docs/journal/2026-03-09.md) | The watcher begins to watch | deferral-accumulation, review-finding-dispositions, behavioral-drift, accountability-verification, chronic-category-gap |
 | [2026-03-08](docs/journal/2026-03-08.md) | The gate that guards nothing | severity-tiers-verified, qc-backlog-cleared, recurrence-escalation, symptom-vs-cause, checklist-over-skill, commitment-reconciliation |
 | [2026-03-07](docs/journal/2026-03-07.md) | The tools that write themselves | v1.0.2-published, typescript-plan-complete, copilot-metrics-corrected, language-consultation, post-publish-phase, python-recommended, protocol-gap-noted, three-way-consultation, qc-mode-stale |

@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-03-10T02:58:00Z",
+  "last_updated": "2026-03-10T05:24:00Z",
   "main_repo": {
-    "last_commit_audited": "09de520",
-    "last_orchestrator_issue_reviewed": 933,
-    "orchestrator_cycle_count": 212,
+    "last_commit_audited": "a3971bf",
+    "last_orchestrator_issue_reviewed": 949,
+    "orchestrator_cycle_count": 214,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
       "6 skills created: github-issues-comments, journal-entries, orchestrator-permissions, pr-review-workflow, schema-implementation, writing-skills",
@@ -259,7 +259,8 @@
         "Tool output verification gap — write-entry JOURNAL.md failure undetected for 8 cycles (audit #169 — accepted, closed)",
         "Worklog-accuracy review finding deferred 4+ consecutive cycles without structural fix (audit #171 — accepted, open, fix in flight PR #918)",
         "QC quality check threshold misses inherited property gaps across type hierarchies (audit #172 — accepted by QC, closed)",
-        "process-merge --issues behavioral failure persists 8+ cycles — tool design flaw treated as behavioral problem (audit #175 — open)"
+        "process-merge --issues behavioral failure persists 8+ cycles — tool design flaw treated as behavioral problem (audit #175 — accepted, closed)",
+        "Step-commenting regression recurrence (5th instance) — NEVER-batch directive insufficient, pipeline-check structural enforcement added (audit #177 — accepted, closed)"
       ]
     },
     "ts_modules_on_master": 103,
@@ -273,9 +274,9 @@
     "directory_layout": "php/src/, php/test/, ts/src/, ts/test/ (restructured 2026-03-01, PR #263; TS port COMPLETE 2026-03-01, 14 PRs — 89/89 schema classes including SeekToAction)"
   },
   "qc_repo": {
-    "last_commit_audited": "session_290",
-    "last_orchestrator_issue_reviewed": 290,
-    "orchestrator_cycle_count": 290,
+    "last_commit_audited": "session_292",
+    "last_orchestrator_issue_reviewed": 292,
+    "orchestrator_cycle_count": 292,
     "self_improvement_actions": [
       "Journal and worklog alignment per Eva request (2026-02-27)",
       "PHP 8.5 CI support added (2026-02-27)",
@@ -511,7 +512,8 @@
       "Audit cycle 71: #166 accepted (76th, main#895). #167 acknowledged (self-directed). Filed #169 (tool output verification gap). Main cycles 205-207. QC sessions 280-281: steady-state green. (2026-03-09)",
       "Audit cycle 72: #169 accepted (77th, main#909, implementation verified — PR #911 merged, Phase 7 artifact verification). #171 accepted (78th, main#915, PR #918 in flight). #172 accepted (79th, qc#288, hierarchy gap analysis implemented). Reconciled #171/#172 from incomplete previous cycle. Step-commenting PASS (cycles 208-209, 13-14 comments each, 6+ consecutive compliant). Review complacency stable 4/5. No new findings filed. Main cycles 208-210. QC sessions 282-286. (2026-03-09)",
       "Audit cycle 74: #175 accepted (main#934, PR #937 in flight). Filed #177 (step-commenting regression recurrence — cycle 212 steps 4-8 absent, 5th instance of this class). Step-commenting FAIL (cycle 212, 8 comments, broke 8-cycle compliance streak). Review complacency 4/5 (cycle 211). Both repos active. Main at cycle 212 (3 open PRs). QC at session 290 (LocalBusiness hierarchy at 4/5 sessions toward dispatch threshold). Cumulative: 86 filed, 79 accepted (1 dropped), 2 deferred, 0 rejected, 2 open (#175, #177).",
-      "Audit cycle 73: #171 closed (verified — PR #918 merged, worklog-accuracy structural fix). Filed #175 (process-merge --issues: 8+ cycles of behavioral commitment without tool-level fix). Deep journal analysis revealed context section degradation and commitment tracking gaps. Step-commenting PASS (cycle 211, 14 comments, 7+ consecutive compliant). Review complacency 4/5 (cycle 210). Main at cycle 211, QC at session 289. (2026-03-09)"
+      "Audit cycle 73: #171 closed (verified — PR #918 merged, worklog-accuracy structural fix). Filed #175 (process-merge --issues: 8+ cycles of behavioral commitment without tool-level fix). Deep journal analysis revealed context section degradation and commitment tracking gaps. Step-commenting PASS (cycle 211, 14 comments, 7+ consecutive compliant). Review complacency 4/5 (cycle 210). Main at cycle 211, QC at session 289. (2026-03-09)",
+      "Audit cycle 75: #175 closed (80th, PR #937 merged) and #177 closed (81st, PR #944 merged). Zero open recommendations. Both structural enforcement fixes verified: process-merge --issues required, pipeline-check step-comment verification phase added (WARN-only graduated). Step-commenting PASS (cycles 213-214). Review finding deferral rate rising (67%). Journal boilerplate bug being fixed (PR #951). Main at cycle 214. QC at session 292. (2026-03-10)"
     ],
     "qc_outbound_reports": 4,
     "qc_inbound_requests": 12,
@@ -520,10 +522,7 @@
     "open_qc_ack": null
   },
   "recommendations": {
-    "open": [
-      {"issue": 175, "title": "process-merge --issues behavioral failure persists 8+ cycles without tool-level fix", "filed": "2026-03-09", "accepted": "2026-03-10", "note": "Accepted (main#934). PR #937 dispatched but not yet merged."},
-      {"issue": 177, "title": "Step-commenting regression recurrence — cycle 212 skips steps 4-8 despite NEVER-batch directive", "filed": "2026-03-10"}
-    ],
+    "open": [],
     "accepted": [
       {"issue": 2, "title": "Idle cycle spinning", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
       {"issue": 3, "title": "Non-functional tools directory", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
@@ -606,7 +605,9 @@
       {"issue": 167, "title": "Audit recommendations untargeted — 8 consecutive N/A responses from QC orchestrator", "filed": "2026-03-09", "acknowledged": "2026-03-09", "closed": "2026-03-09", "note": "Self-directed recommendation. Main acknowledged (main#896). QC not-applicable (qc#283)."},
       {"issue": 169, "title": "Tool output verification gap — write-entry JOURNAL.md failure undetected for 8 cycles", "filed": "2026-03-09", "accepted": "2026-03-09", "closed": "2026-03-09"},
       {"issue": 171, "title": "Worklog-accuracy review finding deferred 4+ consecutive cycles without structural fix", "filed": "2026-03-09", "accepted": "2026-03-09", "closed": "2026-03-09"},
-      {"issue": 172, "title": "QC quality check threshold misses inherited property gaps across type hierarchies", "filed": "2026-03-09", "accepted": "2026-03-09", "closed": "2026-03-09", "note": "QC accepted (qc#288). Main acknowledged as QC-directed (main#916)."}
+      {"issue": 172, "title": "QC quality check threshold misses inherited property gaps across type hierarchies", "filed": "2026-03-09", "accepted": "2026-03-09", "closed": "2026-03-09", "note": "QC accepted (qc#288). Main acknowledged as QC-directed (main#916)."},
+      {"issue": 175, "title": "process-merge --issues behavioral failure persists 8+ cycles without tool-level fix", "filed": "2026-03-09", "accepted": "2026-03-10", "closed": "2026-03-10", "note": "PR #937 merged. --issues now required. 80th acceptance."},
+      {"issue": 177, "title": "Step-commenting regression recurrence — cycle 212 skips steps 4-8 despite NEVER-batch directive", "filed": "2026-03-10", "accepted": "2026-03-10", "closed": "2026-03-10", "note": "PR #944 merged. Pipeline-check step-comment verification phase added (WARN-only graduated approach). 81st acceptance."}
     ],
     "rejected": [],
     "deferred": [
@@ -616,18 +617,18 @@
   },
   "metrics": {
     "total_filed": 86,
-    "total_accepted": 79,
+    "total_accepted": 81,
     "total_deferred": 2,
     "total_rejected": 0,
     "total_dropped": 1,
-    "total_open": 2,
-    "acceptance_rate": 0.93,
+    "total_open": 0,
+    "acceptance_rate": 0.94,
     "response_rate": 1.0,
-    "trend": "Audit cycle 74. #175 accepted (main#934, PR #937 in flight). Filed #177 (step-commenting regression recurrence — cycle 212 steps 4-8 absent, 5th instance). Step-commenting FAIL (cycle 212, 8 comments, broke 8-cycle streak). Review complacency 4/5 (cycle 211). Both repos active. Main at cycle 212. QC at session 290. Cumulative: 86 filed, 79 accepted (1 dropped), 2 deferred, 0 rejected, 2 open (#175, #177)."
+    "trend": "Audit cycle 75. Both #175 (80th, PR #937 merged) and #177 (81st, PR #944 merged) closed — verified implemented. Zero open recommendations. Step-commenting PASS (cycles 213-214, 15 comments each). Structural enforcement now live (pipeline-check step-comment verification, WARN-only graduated). Review complacency 4/5 (cycle 213). Journal boilerplate bug (duplicate sections) being fixed (PR #951). Rising review finding deferral rate (67%). Both repos active. Main at cycle 214. QC at session 292. Cumulative: 86 filed, 81 accepted (1 dropped), 2 deferred, 0 rejected, 0 open."
   },
   "last_cycle": {
-    "issue": 176,
-    "timestamp": "2026-03-10T02:58:00Z",
-    "summary": "Seventy-fourth audit cycle. #175 accepted (main#934, PR #937 dispatched for process-merge --issues fix). QC correctly classified #175 as not-applicable (qc#291). Filed #177 (step-commenting regression recurrence — cycle 212 posted only 8 step comments with steps 4-8 absent, 5th instance of this class, broke 8-cycle compliance streak from cycles 204-211, recommends structural enforcement via pipeline-check/cycle-complete). Journal analysis: duplicate sections persist (write-entry bug), pre-CI merge in cycle 210 violates Eva #809, 62.5% deferral rate in cycle 212 review consumption. Step-commenting FAIL (cycle 212). Review complacency 4/5 (cycle 211). Eva directives: 4 standing (#436, #699, #808, #809). Stall detection: both repos active. Main at cycle 212 (3 open PRs: #937, #938, #940). QC at session 290 (LocalBusiness hierarchy at 4/5 sessions toward dispatch threshold)."
+    "issue": 178,
+    "timestamp": "2026-03-10T05:24:00Z",
+    "summary": "Seventy-fifth audit cycle. Closed both #175 (80th acceptance, PR #937 merged — process-merge --issues now required) and #177 (81st acceptance, PR #944 merged — pipeline-check step-comment verification phase added, WARN-only graduated approach). Zero open recommendations. Step-commenting PASS (cycles 213-214, 15 comments each, structural enforcement now live). Review finding deferral rate rising (67% in cycle 213 review). Journal boilerplate bug (duplicate sections cycle 213) being fixed (PR #951). 3 PRs in flight (#951, #953, #955). QC at session 292 (steady-state green, LocalBusiness hierarchy at 3 sessions toward 5-session dispatch threshold). No new issues filed — system in healthy state with structural enforcement operational. Monitoring: (1) WARN→FAIL escalation timeline for step-comment verification, (2) review finding deferral rate trend."
   }
 }
