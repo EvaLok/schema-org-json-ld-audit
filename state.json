@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-03-11T17:25:00Z",
+  "last_updated": "2026-03-11T23:20:00Z",
   "main_repo": {
-    "last_commit_audited": "8896f9f",
-    "last_orchestrator_issue_reviewed": 1068,
-    "orchestrator_cycle_count": 229,
+    "last_commit_audited": "9d9ec22",
+    "last_orchestrator_issue_reviewed": 1075,
+    "orchestrator_cycle_count": 231,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
       "6 skills created: github-issues-comments, journal-entries, orchestrator-permissions, pr-review-workflow, schema-implementation, writing-skills",
@@ -90,7 +90,8 @@
       "Cycle 221: First phased cycle. PRs #988 (step-comment FAIL escalation), #989 (chronic verification deadline), #991 (cycle 220 review) merged. Eva directive #992 (phased architecture) processed. Documentation agent dispatched (#994, PR #995). Cycle 219+220 reviews consumed (scores 4/5 each). worklog-accuracy verification_cycle set to 221. 16 step comments (compliance sustained). (2026-03-10)",
       "Cycle 222: Second phased cycle. PRs #1001 (check-doc-pr state-divergence), #1003 (phased step-comments) merged. Doc PR #1005 merged (cycle 222 worklog/journal). Review #1007 dispatched (PR #1008 in flight). Pipeline FAIL on step-comments for #996 (Phase B/C false positive). First tracked tool audit (32 tools). 15 Phase A + 4 Phase B/C step comments (compliance sustained). (2026-03-11)",
       "Cycles 226-228: Audit #200 accepted (90th) — write-entry fixes (PR #1052) and validate-docs Rust tool (PR #1054) merged. Auto-derivation (PR #1046), auto phase transitions (PR #1045). Cycle 225 review 5/5 complacency (10 findings), cycles 226-227 improved to 4/5. Step 6 skipped in cycle 227 without pipeline detection. (2026-03-11)",
-      "Cycle 229: Audit #202 accepted (91st) — PR #1063 merged (pipeline-check completeness-based step verification with MANDATORY_STEP_IDS). First use of dispatch-docs path (chronic doc-agent bypass resolved). Cycle 228 review scored 2/5 (most adversarial in recent history). All 3 findings accepted. Step-commenting compliance sustained (16 comments, step 6 present). (2026-03-11)"
+      "Cycle 229: Audit #202 accepted (91st) — PR #1063 merged (pipeline-check completeness-based step verification with MANDATORY_STEP_IDS). First use of dispatch-docs path (chronic doc-agent bypass resolved). Cycle 228 review scored 2/5 (most adversarial in recent history). All 3 findings accepted. Step-commenting compliance sustained (16 comments, step 6 present). (2026-03-11)",
+      "Cycle 231: Audit #204 accepted (92nd) — PR #1078 dispatched (dispatch-docs receipt injection + check-doc-pr receipt completeness). Cycle 230 review 4/5 complacency (3 findings, all claimed actioned). First clean check-doc-pr pass. Step-commenting compliance sustained (16 comments cycle 230, 13+ cycle 231 in-progress). (2026-03-11)"
     ],
     "recurring_pr_revision_patterns": [
       "100% Copilot PR merge rate for TS port Phases 1-3g: 11/11 sessions merged without revision",
@@ -266,7 +267,9 @@
         "process-merge --issues behavioral failure persists 8+ cycles — tool design flaw treated as behavioral problem (audit #175 — accepted, closed)",
         "Step-commenting regression recurrence (5th instance) — NEVER-batch directive insufficient, pipeline-check structural enforcement added (audit #177 — accepted, closed)",
         "write-entry journal template defects — duplicated titles and broken relative links, review finding consumed but not actioned (audit #200 — accepted, closed)",
-        "pipeline-check step-comment verifier uses count threshold — skipped steps escape detection (audit #202 — open)"
+        "pipeline-check step-comment verifier uses count threshold — skipped steps escape detection (audit #202 — accepted, closed)",
+        "dispatch-docs bypasses write-entry auto-derivation — worklog receipts incomplete on first usage (audit #204 — accepted, closed)",
+        "Review finding disposition overstatement — actioned without per-finding evidence (audit #206 — open)"
       ]
     },
     "ts_modules_on_master": 103,
@@ -281,8 +284,8 @@
   },
   "qc_repo": {
     "last_commit_audited": "ab9217a",
-    "last_orchestrator_issue_reviewed": 317,
-    "orchestrator_cycle_count": 317,
+    "last_orchestrator_issue_reviewed": 319,
+    "orchestrator_cycle_count": 319,
     "self_improvement_actions": [
       "Journal and worklog alignment per Eva request (2026-02-27)",
       "PHP 8.5 CI support added (2026-02-27)",
@@ -529,7 +532,8 @@
       "Audit cycle 81 (intermediate): Filed #188 (doc agent journal ordering) and #189 (review prompt missing commit receipt verification). QC responded not-applicable (qc#305, qc#306). Main not yet responded. (2026-03-10)",
       "Audit cycle 82: Filed #191 (pipeline FAIL override undermines structural enforcement). Second phased cycle (222) complete: 19 step comments (PASS), doc PR #1005 merged, review #1007 dispatched. Pipeline FAIL on step-comments for Phase B/C issue #996 overridden by narrative. QC sessions 303-304 (steady-state green). 91 total filed, 83 accepted, 3 open. (2026-03-11)",
       "Audit cycle 83: Closed #188, #189, #191 (84th-86th acceptances, all verified implemented). Filed #193 (check-doc-pr temporal-divergence classification — gate overrides structurally inevitable). Third phased cycle (223) verified: step-commenting PASS (17 total), review dispatched (#1020) with adversarial framing, PRs #1014/#1015 merged. Cycle 222 review 5/5 complacency — gate override pattern caught. QC session 307 (steady-state green). 92 filed, 86 accepted, 1 open. (2026-03-11)",
-      "Audit cycle 84: Closed #193/#195/#198 (87th-89th acceptances). All verified implemented: #193 via PRs #1025/#1037 (temporal-divergence classification), #195 via step 0.5.9, #198 via COMPLETION_CHECKLIST scoring cap. Filed #200 (write-entry journal template bug — duplicated titles + broken relative links, review finding #7 not actioned). Main at cycle 226: PR #1046 (auto-derivation) and #1045 (auto phase transitions) are genuine structural fixes for chronic worklog-accuracy findings. Cycle 225 review 5/5 complacency, 10 findings. QC session 313 (steady-state green). 96 filed, 89 accepted, 1 open. (2026-03-11)"
+      "Audit cycle 84: Closed #193/#195/#198 (87th-89th acceptances). All verified implemented: #193 via PRs #1025/#1037 (temporal-divergence classification), #195 via step 0.5.9, #198 via COMPLETION_CHECKLIST scoring cap. Filed #200 (write-entry journal template bug — duplicated titles + broken relative links, review finding #7 not actioned). Main at cycle 226: PR #1046 (auto-derivation) and #1045 (auto phase transitions) are genuine structural fixes for chronic worklog-accuracy findings. Cycle 225 review 5/5 complacency, 10 findings. QC session 313 (steady-state green). 96 filed, 89 accepted, 1 open. (2026-03-11)",
+      "Audit cycle 87: Closed #204 (92nd acceptance — dispatch-docs receipt fix PR #1078). Filed #206 (review finding disposition overstatement — process-review claims all actioned without per-finding evidence). Main at cycle 231: dispatch-docs active, first clean check-doc-pr pass (cycle 230). Cycle 230 review 4/5 complacency. QC session 319 (steady-state green). 99 filed, 92 accepted, 1 open. (2026-03-11)"
     ],
     "qc_outbound_reports": 4,
     "qc_inbound_requests": 12,
@@ -539,7 +543,7 @@
   },
   "recommendations": {
     "open": [
-      {"issue": 204, "title": "dispatch-docs bypasses write-entry auto-derivation — worklog receipts incomplete on first usage", "filed": "2026-03-11"}
+      {"issue": 206, "title": "Review finding disposition overstatement — actioned without per-finding evidence", "filed": "2026-03-11"}
     ],
     "accepted": [
       {"issue": 2, "title": "Idle cycle spinning", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
@@ -635,7 +639,8 @@
       {"issue": 195, "title": "Review finding consumption does not gate dispatches on test-debt findings", "filed": "2026-03-11", "accepted": "2026-03-11", "closed": "2026-03-11", "note": "Accepted via main#1034. Step 0.5.9 added to STARTUP_CHECKLIST. 88th acceptance."},
       {"issue": 198, "title": "Complacency scoring rubric has no gate-override penalty", "filed": "2026-03-11", "accepted": "2026-03-11", "closed": "2026-03-11", "note": "Accepted via main#1042. Complacency scoring cap added to COMPLETION_CHECKLIST.md. 89th acceptance."},
       {"issue": 200, "title": "write-entry journal template produces duplicated titles and broken relative links", "filed": "2026-03-11", "accepted": "2026-03-11", "closed": "2026-03-11", "note": "Accepted via main#1050. PR #1052 (template fixes) and PR #1054 (validate-docs tool) merged. 90th acceptance."},
-      {"issue": 202, "title": "pipeline-check step-comment verifier uses count threshold instead of completeness check", "filed": "2026-03-11", "accepted": "2026-03-11", "closed": "2026-03-11", "note": "Accepted via main#1061. PR #1063 (completeness-based verification with MANDATORY_STEP_IDS, regression tests, fallback path). QC N/A (qc#318). 91st acceptance."}
+      {"issue": 202, "title": "pipeline-check step-comment verifier uses count threshold instead of completeness check", "filed": "2026-03-11", "accepted": "2026-03-11", "closed": "2026-03-11", "note": "Accepted via main#1061. PR #1063 (completeness-based verification with MANDATORY_STEP_IDS, regression tests, fallback path). QC N/A (qc#318). 91st acceptance."},
+      {"issue": 204, "title": "dispatch-docs bypasses write-entry auto-derivation — worklog receipts incomplete on first usage", "filed": "2026-03-11", "accepted": "2026-03-11", "closed": "2026-03-11", "note": "Accepted via main#1076. PR #1078 dispatched (dispatch-docs receipt injection + check-doc-pr receipt completeness check). QC N/A (qc#320). 92nd acceptance."}
     ],
     "rejected": [],
     "deferred": [
@@ -644,19 +649,19 @@
     ]
   },
   "metrics": {
-    "total_filed": 98,
-    "total_accepted": 91,
+    "total_filed": 99,
+    "total_accepted": 92,
     "total_deferred": 2,
     "total_rejected": 0,
     "total_dropped": 1,
     "total_open": 1,
     "acceptance_rate": 0.95,
     "response_rate": 1.0,
-    "trend": "Audit cycle 86. Closed #202 (91st acceptance — pipeline-check completeness fix PR #1063). Filed #204 (dispatch-docs bypasses write-entry auto-derivation). Main at cycle 229 (first dispatch-docs usage, complacency trending down 5/5->4/4->2/5). QC at session 317 (steady-state green). Cycle 228 review 2/5 (most adversarial recent). 4 standing Eva directives. Cumulative: 98 filed, 91 accepted (1 dropped), 2 deferred, 0 rejected, 1 open."
+    "trend": "Audit cycle 87. Closed #204 (92nd acceptance — dispatch-docs receipt fix PR #1078). Filed #206 (review finding disposition overstatement). Main at cycle 231 (dispatch-docs path active, complacency 4/5). QC at session 319 (steady-state green). 4 standing Eva directives. Cumulative: 99 filed, 92 accepted (1 dropped), 2 deferred, 0 rejected, 1 open."
   },
   "last_cycle": {
-    "issue": 203,
-    "timestamp": "2026-03-11T20:07:00Z",
-    "summary": "Eighty-sixth audit cycle. Closed #202 (91st acceptance — completeness-based step verification in pipeline-check, PR #1063 merged). Filed #204 (dispatch-docs path bypasses write-entry auto-derivation — cycle 229 worklog has 1/6 receipts). Main at cycle 229: first dispatch-docs usage resolves chronic doc-agent bypass (5/6 reviews). Cycle 228 review scored 2/5 (most adversarial in recent history, 3 findings all accepted). Step-commenting compliance sustained with new completeness verifier operational. QC session 317 (steady-state green, all green 73/73). 4 standing Eva directives (#436, #699, #808, #809)."
+    "issue": 205,
+    "timestamp": "2026-03-11T23:05:00Z",
+    "summary": "Eighty-seventh audit cycle. Closed #204 (92nd acceptance — dispatch-docs receipt injection fix, PR #1078 dispatched). Filed #206 (review finding disposition overstatement — cycle 231 claims '3 actioned, 0 deferred' but only 1 finding has concrete action). Main at cycle 231: dispatch-docs path active, cycle 230 review 4/5 complacency with first clean check-doc-pr pass. Step-commenting compliance sustained. QC session 319 (steady-state green). 4 standing Eva directives (#436, #699, #808, #809)."
   }
 }
