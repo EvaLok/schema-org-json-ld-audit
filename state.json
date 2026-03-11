@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-03-11T05:28:00Z",
+  "last_updated": "2026-03-11T14:30:00Z",
   "main_repo": {
-    "last_commit_audited": "af05238",
-    "last_orchestrator_issue_reviewed": 1018,
-    "orchestrator_cycle_count": 223,
+    "last_commit_audited": "ab9217a",
+    "last_orchestrator_issue_reviewed": 1041,
+    "orchestrator_cycle_count": 226,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
       "6 skills created: github-issues-comments, journal-entries, orchestrator-permissions, pr-review-workflow, schema-implementation, writing-skills",
@@ -276,9 +276,9 @@
     "directory_layout": "php/src/, php/test/, ts/src/, ts/test/ (restructured 2026-03-01, PR #263; TS port COMPLETE 2026-03-01, 14 PRs — 89/89 schema classes including SeekToAction)"
   },
   "qc_repo": {
-    "last_commit_audited": "071f483",
-    "last_orchestrator_issue_reviewed": 307,
-    "orchestrator_cycle_count": 307,
+    "last_commit_audited": "ab9217a",
+    "last_orchestrator_issue_reviewed": 313,
+    "orchestrator_cycle_count": 313,
     "self_improvement_actions": [
       "Journal and worklog alignment per Eva request (2026-02-27)",
       "PHP 8.5 CI support added (2026-02-27)",
@@ -524,7 +524,8 @@
       "Audit cycle 80: Monitoring cycle — zero new recommendations (5th consecutive). First phased cycle (221) verified healthy: 16 step comments, 3 PRs merged (#988, #989, #991), doc agent dispatched (#994, PR #995), cycle 222 correctly resumed in doc_dispatched phase. Doc agent output quality: accurate PRs/issues listing, honest commitment follow-through, state-derived metrics. Cycle 220 review (4/5): 3 substantive findings all addressed by cycle 221 (review ledger caught up, phased architecture adopted). QC sessions 297-302 (steady-state green, quality backlog empty, LocalBusiness hierarchy complete). 4 Eva directives open (#436, #699, #808, #809). (2026-03-10)",
       "Audit cycle 81 (intermediate): Filed #188 (doc agent journal ordering) and #189 (review prompt missing commit receipt verification). QC responded not-applicable (qc#305, qc#306). Main not yet responded. (2026-03-10)",
       "Audit cycle 82: Filed #191 (pipeline FAIL override undermines structural enforcement). Second phased cycle (222) complete: 19 step comments (PASS), doc PR #1005 merged, review #1007 dispatched. Pipeline FAIL on step-comments for Phase B/C issue #996 overridden by narrative. QC sessions 303-304 (steady-state green). 91 total filed, 83 accepted, 3 open. (2026-03-11)",
-      "Audit cycle 83: Closed #188, #189, #191 (84th-86th acceptances, all verified implemented). Filed #193 (check-doc-pr temporal-divergence classification — gate overrides structurally inevitable). Third phased cycle (223) verified: step-commenting PASS (17 total), review dispatched (#1020) with adversarial framing, PRs #1014/#1015 merged. Cycle 222 review 5/5 complacency — gate override pattern caught. QC session 307 (steady-state green). 92 filed, 86 accepted, 1 open. (2026-03-11)"
+      "Audit cycle 83: Closed #188, #189, #191 (84th-86th acceptances, all verified implemented). Filed #193 (check-doc-pr temporal-divergence classification — gate overrides structurally inevitable). Third phased cycle (223) verified: step-commenting PASS (17 total), review dispatched (#1020) with adversarial framing, PRs #1014/#1015 merged. Cycle 222 review 5/5 complacency — gate override pattern caught. QC session 307 (steady-state green). 92 filed, 86 accepted, 1 open. (2026-03-11)",
+      "Audit cycle 84: Closed #193/#195/#198 (87th-89th acceptances). All verified implemented: #193 via PRs #1025/#1037 (temporal-divergence classification), #195 via step 0.5.9, #198 via COMPLETION_CHECKLIST scoring cap. Filed #200 (write-entry journal template bug — duplicated titles + broken relative links, review finding #7 not actioned). Main at cycle 226: PR #1046 (auto-derivation) and #1045 (auto phase transitions) are genuine structural fixes for chronic worklog-accuracy findings. Cycle 225 review 5/5 complacency, 10 findings. QC session 313 (steady-state green). 96 filed, 89 accepted, 1 open. (2026-03-11)"
     ],
     "qc_outbound_reports": 4,
     "qc_inbound_requests": 12,
@@ -534,7 +535,7 @@
   },
   "recommendations": {
     "open": [
-      {"issue": 193, "title": "check-doc-pr lacks temporal-divergence classification — gate overrides are structurally inevitable", "filed": "2026-03-11"}
+      {"issue": 200, "title": "write-entry journal template produces duplicated titles and broken relative links", "filed": "2026-03-11"}
     ],
     "accepted": [
       {"issue": 2, "title": "Idle cycle spinning", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
@@ -625,7 +626,10 @@
       {"issue": 183, "title": "Chronic category verification_cycle:null persists indefinitely without escalation", "filed": "2026-03-10", "accepted": "2026-03-10", "closed": "2026-03-10", "note": "Accepted via main#985. Copilot dispatch #987, PR #989 in flight. chronic_verification_deadline invariant added. 83rd acceptance."},
       {"issue": 188, "title": "Doc agent places journal entries out of chronological order (PR #1005)", "filed": "2026-03-10", "accepted": "2026-03-11", "closed": "2026-03-11", "note": "Accepted via main#1010. PR #1014 merged (check-doc-pr field mapping + journal/worklog validation). 84th acceptance."},
       {"issue": 189, "title": "Adversarial review prompt omits commit receipt verification target", "filed": "2026-03-10", "accepted": "2026-03-11", "closed": "2026-03-11", "note": "Accepted via main#1011. Review spec hardened in cycle-complete with adversarial framing + 8 targets. 85th acceptance."},
-      {"issue": 191, "title": "Pipeline FAIL override undermines structural enforcement — cycle 222 completed despite step-comment FAIL", "filed": "2026-03-11", "accepted": "2026-03-11", "closed": "2026-03-11", "note": "Accepted via main#1019. Root cause fixed in PR #1015 (pipeline-check phased cycle detection). 86th acceptance."}
+      {"issue": 191, "title": "Pipeline FAIL override undermines structural enforcement — cycle 222 completed despite step-comment FAIL", "filed": "2026-03-11", "accepted": "2026-03-11", "closed": "2026-03-11", "note": "Accepted via main#1019. Root cause fixed in PR #1015 (pipeline-check phased cycle detection). 86th acceptance."},
+      {"issue": 193, "title": "check-doc-pr lacks temporal-divergence classification — gate overrides are structurally inevitable", "filed": "2026-03-11", "accepted": "2026-03-11", "closed": "2026-03-11", "note": "Accepted via main#1023. PRs #1025 (temporal drift downgraded to WARN) and #1037 (quality fields promoted to FAIL) merged. 87th acceptance."},
+      {"issue": 195, "title": "Review finding consumption does not gate dispatches on test-debt findings", "filed": "2026-03-11", "accepted": "2026-03-11", "closed": "2026-03-11", "note": "Accepted via main#1034. Step 0.5.9 added to STARTUP_CHECKLIST. 88th acceptance."},
+      {"issue": 198, "title": "Complacency scoring rubric has no gate-override penalty", "filed": "2026-03-11", "accepted": "2026-03-11", "closed": "2026-03-11", "note": "Accepted via main#1042. Complacency scoring cap added to COMPLETION_CHECKLIST.md. 89th acceptance."}
     ],
     "rejected": [],
     "deferred": [
@@ -634,19 +638,19 @@
     ]
   },
   "metrics": {
-    "total_filed": 92,
-    "total_accepted": 86,
+    "total_filed": 96,
+    "total_accepted": 89,
     "total_deferred": 2,
     "total_rejected": 0,
     "total_dropped": 1,
     "total_open": 1,
     "acceptance_rate": 0.95,
     "response_rate": 1.0,
-    "trend": "Audit cycle 83. All 3 previous recommendations (#188, #189, #191) accepted and verified — closed. Filed #193 (check-doc-pr temporal-divergence classification). Third phased cycle (223) verified: step-commenting PASS (13 Phase A + 4 Phase B/C), review dispatched (#1020) with adversarial framing + 8 targets. check-doc-pr gate overridden again (temporal divergences treated as failures). QC session 307 (steady-state green, quality backlog empty). 4 standing Eva directives (#436, #699, #808, #809). Cumulative: 92 filed, 86 accepted (1 dropped), 2 deferred, 0 rejected, 1 open."
+    "trend": "Audit cycle 84. Closed #193/#195/#198 (87th-89th acceptances, all verified implemented). Filed #200 (write-entry journal template duplicated titles + broken links — review finding #7 consumed but not actioned). Main at cycle 226 (phased architecture stable, auto-derivation structural fix for worklog accuracy). QC at session 313 (steady-state green). 4 standing Eva directives (#436, #699, #808, #809). Cumulative: 96 filed, 89 accepted (1 dropped), 2 deferred, 0 rejected, 1 open."
   },
   "last_cycle": {
-    "issue": 192,
-    "timestamp": "2026-03-11T05:20:00Z",
-    "summary": "Eighty-third audit cycle. Closed #188, #189, #191 (all accepted, verified — 84th-86th acceptances). Filed #193 (check-doc-pr temporal-divergence classification — gate overrides structurally inevitable). Third phased cycle (223) verified: step-commenting PASS (13 Phase A + 4 Phase B/C on separate issues), review dispatched (#1020) with adversarial framing and 8 explicit targets, all 3 audit acceptances implemented via PRs #1014/#1015 and cycle-complete tool hardening. Cycle 222 review scored 5/5 complacency — caught gate override on first use. Cycle 223 response substantive: journal explicitly commits to enforcing revision loop but tool design makes this impossible. QC session 307 (steady-state green, Quiz/ShippingService quality checks clean). 4 standing Eva directives (#436, #699, #808, #809)."
+    "issue": 199,
+    "timestamp": "2026-03-11T14:17:00Z",
+    "summary": "Eighty-fourth audit cycle. Closed #193 (87th acceptance — temporal-divergence classification via PRs #1025/#1037), #195 (88th — test-debt gating step 0.5.9), #198 (89th — complacency scoring cap). Filed #200 (write-entry journal template bug: duplicated titles and broken relative links, persisting despite review finding #7 flagging it). Main at cycle 226: auto-derivation (PR #1046) and auto phase transitions (PR #1045) address chronic worklog-accuracy and phase-state findings. Cycle 225 review scored 5/5 complacency (10 findings). QC session 313 (steady-state green, VideoObject/ItemList quality checks clean). 4 standing Eva directives (#436, #699, #808, #809)."
   }
 }
