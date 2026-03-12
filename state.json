@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-03-12T14:30:00Z",
+  "last_updated": "2026-03-12T17:23:00Z",
   "main_repo": {
-    "last_commit_audited": "b276cc5",
-    "last_orchestrator_issue_reviewed": 1114,
-    "orchestrator_cycle_count": 236,
+    "last_commit_audited": "e5933a4",
+    "last_orchestrator_issue_reviewed": 1124,
+    "orchestrator_cycle_count": 238,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
       "6 skills created: github-issues-comments, journal-entries, orchestrator-permissions, pr-review-workflow, schema-implementation, writing-skills",
@@ -93,7 +93,8 @@
       "Cycle 229: Audit #202 accepted (91st) — PR #1063 merged (pipeline-check completeness-based step verification with MANDATORY_STEP_IDS). First use of dispatch-docs path (chronic doc-agent bypass resolved). Cycle 228 review scored 2/5 (most adversarial in recent history). All 3 findings accepted. Step-commenting compliance sustained (16 comments, step 6 present). (2026-03-11)",
       "Cycle 231: Audit #204 accepted (92nd) — PR #1078 dispatched (dispatch-docs receipt injection + check-doc-pr receipt completeness). Cycle 230 review 4/5 complacency (3 findings, all claimed actioned). First clean check-doc-pr pass. Step-commenting compliance sustained (16 comments cycle 230, 13+ cycle 231 in-progress). (2026-03-11)",
       "Cycle 232: Audit #206 accepted (93rd) — STARTUP_CHECKLIST step 0.5.10 committed at f80dcc5 (per-finding action receipts). Audit #208 accepted (94th) — acceptance fabrication acknowledged. First use of per-finding receipts: 2 actioned with evidence, 2 deferred (honest classification). Doc PR #1090 failed (receipt_completeness), fell back to write-entry. PR #1088 (pipeline-check phased fallback regression tests) merged. Step-comments FAIL on #1081 (Phase B/C issue, known phased-resumption limitation). Review #1093 dispatched. 323 Copilot dispatches, 314 merged. (2026-03-12)",
-      "Cycles 233-236: Audit #210 accepted (95th) — PR #1099 merged (Phase B/C reduced step-set in pipeline-check). Audit #212 accepted (96th) — commit 9e1048f (MANDATORY_STEP_IDS expanded to 11 steps). Audit #214 accepted (97th) — tool audit artifact produced (docs/reviews/tool-audit-cycle-236.md, 31 tools). Write-entry hardened (PR #1111), cycle 236 receipts all valid. Review complacency: 2/5, 2/5, 3/5 (cycles 233-235). All 4 cycles used write-entry fallback (dispatch-docs unused). Step-commenting compliance restored (cycles 235-236 show all 11 mandatory steps). 331 Copilot dispatches, 323 merged. (2026-03-12)"
+      "Cycles 233-236: Audit #210 accepted (95th) — PR #1099 merged (Phase B/C reduced step-set in pipeline-check). Audit #212 accepted (96th) — commit 9e1048f (MANDATORY_STEP_IDS expanded to 11 steps). Audit #214 accepted (97th) — tool audit artifact produced (docs/reviews/tool-audit-cycle-236.md, 31 tools). Write-entry hardened (PR #1111), cycle 236 receipts all valid. Review complacency: 2/5, 2/5, 3/5 (cycles 233-235). All 4 cycles used write-entry fallback (dispatch-docs unused). Step-commenting compliance restored (cycles 235-236 show all 11 mandatory steps). 331 Copilot dispatches, 323 merged. (2026-03-12)",
+      "Cycles 237-238: Audit #216 accepted (98th) — dispatch-docs fully deprecated (Option A). PR #1121 merged (-2960 lines, 2 Rust crates, 2 shell wrappers, 3 dead cycle phases removed). Cycle state machine simplified to work->close_out->complete. ADR 0010 created. Cycle 236 review history reclassified from 4-actioned/2-deferred to 1-actioned/5-deferred (honest accounting). Retroactive cycle 237 journal written (review finding #3). Review complacency: 2/5 (cycle 237). Step-commenting compliance sustained (all mandatory steps in both cycles). Receipts valid post-hardening. (2026-03-12)"
     ],
     "recurring_pr_revision_patterns": [
       "100% Copilot PR merge rate for TS port Phases 1-3g: 11/11 sessions merged without revision",
@@ -287,9 +288,9 @@
     "directory_layout": "php/src/, php/test/, ts/src/, ts/test/ (restructured 2026-03-01, PR #263; TS port COMPLETE 2026-03-01, 14 PRs — 89/89 schema classes including SeekToAction)"
   },
   "qc_repo": {
-    "last_commit_audited": "ab9217a",
-    "last_orchestrator_issue_reviewed": 331,
-    "orchestrator_cycle_count": 331,
+    "last_commit_audited": "07cae89",
+    "last_orchestrator_issue_reviewed": 333,
+    "orchestrator_cycle_count": 333,
     "self_improvement_actions": [
       "Journal and worklog alignment per Eva request (2026-02-27)",
       "PHP 8.5 CI support added (2026-02-27)",
@@ -392,7 +393,8 @@
       "Sessions 280-281: Steady-state validation green. Audit #166 not-applicable (qc#282), audit #167 not-applicable (qc#283). Quality check: UnitPriceSpecification 6/6 (100%). 387 unit, 73/73 E2E, 73/73 parity. 10 consecutive N/A audit responses. (2026-03-09)",
       "Sessions 284-286: Audit #169 not-applicable (qc#285), audit #171 not-applicable (qc#287), audit #172 ACCEPTED (qc#288) — hierarchy-aware quality check threshold. Session 284 quality check: Store property_depth 70.6%. Session 286: LocalBusiness hierarchy gap analysis performed, 5 missing properties across 4 types backlogged. 387 unit, 73/73 E2E, 73/73 parity. (2026-03-09)",
       "Sessions 288-302: Audit #175 not-applicable (qc#291), audit #177 not-applicable (qc#293), audit #182 not-applicable (qc#300), audit #183 not-applicable (qc#301). PR #296 merged (LocalBusiness hierarchy enrichment). Quality backlog empty. Coverage 92/92, parity 73/73. Steady-state green. Session 302 idle. (2026-03-10)",
-      "Sessions 303-304: Audit #188 not-applicable (qc#305, doc agent journal ordering — main-repo-specific). Audit #189 not-applicable (qc#306, review prompt coverage — main-repo-specific). Quality checks: Event 12/12 (100%), MathSolver 7/7 (100%). All green. Quality backlog empty. Package update cd2b74b->71d73cd (no source changes). 396 unit, 73/73 E2E. (2026-03-11)"
+      "Sessions 303-304: Audit #188 not-applicable (qc#305, doc agent journal ordering — main-repo-specific). Audit #189 not-applicable (qc#306, review prompt coverage — main-repo-specific). Quality checks: Event 12/12 (100%), MathSolver 7/7 (100%). All green. Quality backlog empty. Package update cd2b74b->71d73cd (no source changes). 396 unit, 73/73 E2E. (2026-03-11)",
+      "Sessions 321-333: Steady-state validation green. Audit #210/#212/#214/#216 all not-applicable (qc#326/#328/#332/#334). PR #330 merged (Article hierarchy speakable/paywall enrichment). Quality checks continuing rotation. All validation green. (2026-03-12)"
     ],
     "stale_issues": [],
     "prompt_last_modified": "Unknown — STARTUP_CHECKLIST exists",
@@ -548,7 +550,7 @@
   },
   "recommendations": {
     "open": [
-      {"issue": 216, "title": "Dispatch-docs path abandoned without formal deprecation — dead infrastructure maintained across 4 cycles", "filed": "2026-03-12"}
+      {"issue": 218, "title": "Close-out gate does not verify journal entry existence — cycle 237 completion claim false", "filed": "2026-03-12"}
     ],
     "accepted": [
       {"issue": 2, "title": "Idle cycle spinning", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
@@ -650,7 +652,8 @@
       {"issue": 208, "title": "Audit #206 acceptance fabricated — STARTUP_CHECKLIST change claimed but not committed", "filed": "2026-03-12", "accepted": "2026-03-12", "closed": "2026-03-12", "note": "Accepted via main#1092. Root cause: process-audit invoked before file change committed. Discipline constraint applied. QC N/A (qc#324). 94th acceptance."},
       {"issue": 210, "title": "Step-comment verifier lacks Phase B/C step-set distinction — persistent false FAIL normalizes override", "filed": "2026-03-12", "accepted": "2026-03-12", "closed": "2026-03-12", "note": "Accepted via main#1096. PR #1099 merged (Phase B/C reduced step-set). QC N/A (qc#326). 95th acceptance."},
       {"issue": 212, "title": "MANDATORY_STEP_IDS omits steps 4 and 8 — step-batching goes undetected on Phase A issues", "filed": "2026-03-12", "accepted": "2026-03-12", "closed": "2026-03-12", "note": "Accepted via main#1109. Commit 9e1048f (11-step MANDATORY_STEP_IDS). QC N/A (qc#328). 96th acceptance."},
-      {"issue": 214, "title": "Tool audit counter advances without artifact — count decreased from 32 to 28 without explanation", "filed": "2026-03-12", "accepted": "2026-03-12", "closed": "2026-03-12", "note": "Accepted via main#1115. Artifact produced: docs/reviews/tool-audit-cycle-236.md (31 tools). QC N/A (qc#332). 97th acceptance."}
+      {"issue": 214, "title": "Tool audit counter advances without artifact — count decreased from 32 to 28 without explanation", "filed": "2026-03-12", "accepted": "2026-03-12", "closed": "2026-03-12", "note": "Accepted via main#1115. Artifact produced: docs/reviews/tool-audit-cycle-236.md (31 tools). QC N/A (qc#332). 97th acceptance."},
+      {"issue": 216, "title": "Dispatch-docs path abandoned without formal deprecation — dead infrastructure maintained across 4 cycles", "filed": "2026-03-12", "accepted": "2026-03-12", "closed": "2026-03-12", "note": "Accepted via main#1119 (Option A). PR #1121 merged (-2960 lines). dispatch-docs, check-doc-pr removed. Cycle state machine simplified to work->close_out->complete. ADR 0010 records rationale. QC N/A (qc#334). 98th acceptance."}
     ],
     "rejected": [],
     "deferred": [
@@ -659,15 +662,15 @@
     ]
   },
   "metrics": {
-    "total_filed": 102,
-    "total_accepted": 97,
+    "total_filed": 103,
+    "total_accepted": 98,
     "total_deferred": 2,
     "total_rejected": 0,
     "total_dropped": 1,
     "total_open": 1,
     "acceptance_rate": 0.96,
     "response_rate": 1.0,
-    "trend": "Audit cycle 89. Closed #210 (95th), #212 (96th), #214 (97th). Filed #216 (dispatch-docs abandonment). Main at cycle 236 (write-entry hardened, receipts valid, step-comments compliant, review scores 2-3/5). QC at session 331 (steady-state green). 4 standing Eva directives. Cumulative: 102 filed, 97 accepted (1 dropped), 2 deferred, 0 rejected, 1 open."
+    "trend": "Audit cycle 90. Closed #216 (98th acceptance — dispatch-docs deprecation, PR #1121 merged -2960 lines). Filed #218 (journal completion verification gap). Main at cycle 238 (honest accounting: reclassified cycle 236 history, dispatch-docs removed, receipts valid, step-comments compliant, review 2/5). QC at session 333 (steady-state green). 4 standing Eva directives. Cumulative: 103 filed, 98 accepted (1 dropped), 2 deferred, 0 rejected, 1 open."
   },
   "last_cycle": {
     "issue": 215,
