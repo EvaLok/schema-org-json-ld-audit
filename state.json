@@ -552,7 +552,8 @@
   },
   "recommendations": {
     "open": [
-      {"issue": 221, "title": "Worklog receipt table structurally incomplete for 8+ cycles — write-entry timing gap needs close-out reconciliation", "filed": "2026-03-12"}
+      {"issue": 221, "title": "Worklog receipt table structurally incomplete for 8+ cycles — write-entry timing gap needs close-out reconciliation", "filed": "2026-03-12"},
+      {"issue": 222, "title": "Audit-inbound acceptance promises dispatch but journal admits deferral — no reconciliation mechanism", "filed": "2026-03-12"}
     ],
     "accepted": [
       {"issue": 2, "title": "Idle cycle spinning", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
@@ -665,19 +666,19 @@
     ]
   },
   "metrics": {
-    "total_filed": 104,
+    "total_filed": 105,
     "total_accepted": 99,
     "total_deferred": 2,
     "total_rejected": 0,
     "total_dropped": 1,
-    "total_open": 1,
+    "total_open": 2,
     "acceptance_rate": 0.96,
     "response_rate": 1.0,
-    "trend": "Audit cycle 91. Closed #218 (99th acceptance — journal validation gap). Filed #221 (worklog receipt timing gap, 8+ cycles chronic). Main at cycle 240 (cycle 239: infrastructure cleanup, review 2/5, step-comments compliant, receipts valid). QC at session 335 (steady-state green). 4 standing Eva directives. Cumulative: 104 filed, 99 accepted (1 dropped), 2 deferred, 0 rejected, 1 open."
+    "trend": "Audit cycle 91. Closed #218 (99th acceptance — journal validation gap, dispatch deferred despite acceptance promise). Filed #221 (worklog receipt timing gap) and #222 (acceptance-dispatch disconnect). Main at cycle 239 (phased workflow removal, step-comments compliant, review 2/5). QC at session 335 (steady-state green). Cumulative: 105 filed, 99 accepted (1 dropped), 2 deferred, 0 rejected, 2 open."
   },
   "last_cycle": {
     "issue": 220,
-    "timestamp": "2026-03-12T20:17:00Z",
-    "summary": "Ninety-first audit cycle. Closed #218 (99th acceptance — journal validation gap, accepted via main#1128, validate-docs journal subcommand planned). Filed #221 (worklog receipt table structurally incomplete for 8+ consecutive cycles — write-entry timing gap, close-out reconciliation needed). Main at cycle 240 (cycle 239 productive: infrastructure cleanup, review 2/5, step-comments 15/15, receipts 4/4 valid). QC at session 335 (steady-state green). 4 standing Eva directives (#436, #699, #808, #809)."
+    "timestamp": "2026-03-12T20:30:00Z",
+    "summary": "Ninety-first audit cycle. Closed #218 (99th acceptance — journal validation gap, accepted via main#1128 but dispatch deferred). Filed #221 (worklog receipt timing gap) and #222 (acceptance-dispatch disconnect — audit-inbound #1128 promised dispatch 'this cycle' but journal admits deferral, third instance of acceptance-implementation gap pattern). Main at cycle 239: infrastructure cleanup, step-commenting compliant, review 2/5. QC at session 335 (steady-state green). 4 standing Eva directives (#436, #699, #808, #809)."
   }
 }
