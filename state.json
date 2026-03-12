@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-03-11T23:20:00Z",
+  "last_updated": "2026-03-12T14:30:00Z",
   "main_repo": {
-    "last_commit_audited": "ee450ea",
-    "last_orchestrator_issue_reviewed": 1091,
-    "orchestrator_cycle_count": 232,
+    "last_commit_audited": "b276cc5",
+    "last_orchestrator_issue_reviewed": 1114,
+    "orchestrator_cycle_count": 236,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
       "6 skills created: github-issues-comments, journal-entries, orchestrator-permissions, pr-review-workflow, schema-implementation, writing-skills",
@@ -92,7 +92,8 @@
       "Cycles 226-228: Audit #200 accepted (90th) — write-entry fixes (PR #1052) and validate-docs Rust tool (PR #1054) merged. Auto-derivation (PR #1046), auto phase transitions (PR #1045). Cycle 225 review 5/5 complacency (10 findings), cycles 226-227 improved to 4/5. Step 6 skipped in cycle 227 without pipeline detection. (2026-03-11)",
       "Cycle 229: Audit #202 accepted (91st) — PR #1063 merged (pipeline-check completeness-based step verification with MANDATORY_STEP_IDS). First use of dispatch-docs path (chronic doc-agent bypass resolved). Cycle 228 review scored 2/5 (most adversarial in recent history). All 3 findings accepted. Step-commenting compliance sustained (16 comments, step 6 present). (2026-03-11)",
       "Cycle 231: Audit #204 accepted (92nd) — PR #1078 dispatched (dispatch-docs receipt injection + check-doc-pr receipt completeness). Cycle 230 review 4/5 complacency (3 findings, all claimed actioned). First clean check-doc-pr pass. Step-commenting compliance sustained (16 comments cycle 230, 13+ cycle 231 in-progress). (2026-03-11)",
-      "Cycle 232: Audit #206 accepted (93rd) — STARTUP_CHECKLIST step 0.5.10 committed at f80dcc5 (per-finding action receipts). Audit #208 accepted (94th) — acceptance fabrication acknowledged. First use of per-finding receipts: 2 actioned with evidence, 2 deferred (honest classification). Doc PR #1090 failed (receipt_completeness), fell back to write-entry. PR #1088 (pipeline-check phased fallback regression tests) merged. Step-comments FAIL on #1081 (Phase B/C issue, known phased-resumption limitation). Review #1093 dispatched. 323 Copilot dispatches, 314 merged. (2026-03-12)"
+      "Cycle 232: Audit #206 accepted (93rd) — STARTUP_CHECKLIST step 0.5.10 committed at f80dcc5 (per-finding action receipts). Audit #208 accepted (94th) — acceptance fabrication acknowledged. First use of per-finding receipts: 2 actioned with evidence, 2 deferred (honest classification). Doc PR #1090 failed (receipt_completeness), fell back to write-entry. PR #1088 (pipeline-check phased fallback regression tests) merged. Step-comments FAIL on #1081 (Phase B/C issue, known phased-resumption limitation). Review #1093 dispatched. 323 Copilot dispatches, 314 merged. (2026-03-12)",
+      "Cycles 233-236: Audit #210 accepted (95th) — PR #1099 merged (Phase B/C reduced step-set in pipeline-check). Audit #212 accepted (96th) — commit 9e1048f (MANDATORY_STEP_IDS expanded to 11 steps). Audit #214 accepted (97th) — tool audit artifact produced (docs/reviews/tool-audit-cycle-236.md, 31 tools). Write-entry hardened (PR #1111), cycle 236 receipts all valid. Review complacency: 2/5, 2/5, 3/5 (cycles 233-235). All 4 cycles used write-entry fallback (dispatch-docs unused). Step-commenting compliance restored (cycles 235-236 show all 11 mandatory steps). 331 Copilot dispatches, 323 merged. (2026-03-12)"
     ],
     "recurring_pr_revision_patterns": [
       "100% Copilot PR merge rate for TS port Phases 1-3g: 11/11 sessions merged without revision",
@@ -287,8 +288,8 @@
   },
   "qc_repo": {
     "last_commit_audited": "ab9217a",
-    "last_orchestrator_issue_reviewed": 323,
-    "orchestrator_cycle_count": 323,
+    "last_orchestrator_issue_reviewed": 331,
+    "orchestrator_cycle_count": 331,
     "self_improvement_actions": [
       "Journal and worklog alignment per Eva request (2026-02-27)",
       "PHP 8.5 CI support added (2026-02-27)",
@@ -547,7 +548,7 @@
   },
   "recommendations": {
     "open": [
-      {"issue": 210, "title": "Step-comment verifier lacks Phase B/C step-set distinction — persistent false FAIL normalizes override", "filed": "2026-03-12"}
+      {"issue": 216, "title": "Dispatch-docs path abandoned without formal deprecation — dead infrastructure maintained across 4 cycles", "filed": "2026-03-12"}
     ],
     "accepted": [
       {"issue": 2, "title": "Idle cycle spinning", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
@@ -646,7 +647,10 @@
       {"issue": 202, "title": "pipeline-check step-comment verifier uses count threshold instead of completeness check", "filed": "2026-03-11", "accepted": "2026-03-11", "closed": "2026-03-11", "note": "Accepted via main#1061. PR #1063 (completeness-based verification with MANDATORY_STEP_IDS, regression tests, fallback path). QC N/A (qc#318). 91st acceptance."},
       {"issue": 204, "title": "dispatch-docs bypasses write-entry auto-derivation — worklog receipts incomplete on first usage", "filed": "2026-03-11", "accepted": "2026-03-11", "closed": "2026-03-11", "note": "Accepted via main#1076. PR #1078 dispatched (dispatch-docs receipt injection + check-doc-pr receipt completeness check). QC N/A (qc#320). 92nd acceptance."},
       {"issue": 206, "title": "Review finding disposition overstatement — actioned without per-finding evidence", "filed": "2026-03-11", "accepted": "2026-03-12", "closed": "2026-03-12", "note": "Accepted via main#1086. STARTUP_CHECKLIST step 0.5.10 committed at f80dcc5. First use in cycle 232: 2 actioned with evidence, 2 deferred. QC N/A (qc#322). 93rd acceptance."},
-      {"issue": 208, "title": "Audit #206 acceptance fabricated — STARTUP_CHECKLIST change claimed but not committed", "filed": "2026-03-12", "accepted": "2026-03-12", "closed": "2026-03-12", "note": "Accepted via main#1092. Root cause: process-audit invoked before file change committed. Discipline constraint applied. QC N/A (qc#324). 94th acceptance."}
+      {"issue": 208, "title": "Audit #206 acceptance fabricated — STARTUP_CHECKLIST change claimed but not committed", "filed": "2026-03-12", "accepted": "2026-03-12", "closed": "2026-03-12", "note": "Accepted via main#1092. Root cause: process-audit invoked before file change committed. Discipline constraint applied. QC N/A (qc#324). 94th acceptance."},
+      {"issue": 210, "title": "Step-comment verifier lacks Phase B/C step-set distinction — persistent false FAIL normalizes override", "filed": "2026-03-12", "accepted": "2026-03-12", "closed": "2026-03-12", "note": "Accepted via main#1096. PR #1099 merged (Phase B/C reduced step-set). QC N/A (qc#326). 95th acceptance."},
+      {"issue": 212, "title": "MANDATORY_STEP_IDS omits steps 4 and 8 — step-batching goes undetected on Phase A issues", "filed": "2026-03-12", "accepted": "2026-03-12", "closed": "2026-03-12", "note": "Accepted via main#1109. Commit 9e1048f (11-step MANDATORY_STEP_IDS). QC N/A (qc#328). 96th acceptance."},
+      {"issue": 214, "title": "Tool audit counter advances without artifact — count decreased from 32 to 28 without explanation", "filed": "2026-03-12", "accepted": "2026-03-12", "closed": "2026-03-12", "note": "Accepted via main#1115. Artifact produced: docs/reviews/tool-audit-cycle-236.md (31 tools). QC N/A (qc#332). 97th acceptance."}
     ],
     "rejected": [],
     "deferred": [
@@ -655,19 +659,19 @@
     ]
   },
   "metrics": {
-    "total_filed": 101,
-    "total_accepted": 94,
+    "total_filed": 102,
+    "total_accepted": 97,
     "total_deferred": 2,
     "total_rejected": 0,
     "total_dropped": 1,
     "total_open": 1,
-    "acceptance_rate": 0.95,
+    "acceptance_rate": 0.96,
     "response_rate": 1.0,
-    "trend": "Audit cycle 88. Closed #206 (93rd) and #208 (94th). Filed #210 (step-comment verifier Phase B/C gap). Main at cycle 232 (per-finding receipts working, doc PR fallback, phased FAIL persistent). QC at session 323 (steady-state green). 4 standing Eva directives. Cumulative: 101 filed, 94 accepted (1 dropped), 2 deferred, 0 rejected, 1 open."
+    "trend": "Audit cycle 89. Closed #210 (95th), #212 (96th), #214 (97th). Filed #216 (dispatch-docs abandonment). Main at cycle 236 (write-entry hardened, receipts valid, step-comments compliant, review scores 2-3/5). QC at session 331 (steady-state green). 4 standing Eva directives. Cumulative: 102 filed, 97 accepted (1 dropped), 2 deferred, 0 rejected, 1 open."
   },
   "last_cycle": {
-    "issue": 209,
-    "timestamp": "2026-03-12T05:23:00Z",
-    "summary": "Eighty-eighth audit cycle. Closed #206 (93rd — per-finding action receipts, step 0.5.10 verified), #208 (94th — acceptance fabrication acknowledged). Filed #210 (step-comment verifier lacks Phase B/C step-set distinction — persistent false FAIL normalizes override). Main at cycle 232: per-finding receipts working (2 actioned/2 deferred — first honest classification), doc PR #1090 fell back to write-entry (timing trap), PR #1088 merged (phased fallback tests), step-comments FAIL on #1081 persists. QC session 323 (steady-state green, 396 unit tests, 73/73 E2E). 4 standing Eva directives (#436, #699, #808, #809)."
+    "issue": 215,
+    "timestamp": "2026-03-12T14:17:00Z",
+    "summary": "Eighty-ninth audit cycle. Closed #210 (95th — Phase B/C step-set fix via PR #1099), #212 (96th — MANDATORY_STEP_IDS expanded to 11 via commit 9e1048f), #214 (97th — tool audit artifact produced with 31 tools inventoried). Filed #216 (dispatch-docs path abandoned without formal deprecation — 4 consecutive cycles using write-entry fallback). Main at cycle 236: write-entry hardened (PR #1111), cycle 236 receipts all valid (5/5 SHAs verified), step-commenting compliance restored, review complacency 2/5-3/5. QC session 331 (steady-state green). 4 standing Eva directives (#436, #699, #808, #809)."
   }
 }
