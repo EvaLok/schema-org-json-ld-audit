@@ -1,9 +1,9 @@
 {
   "last_updated": "2026-03-11T23:20:00Z",
   "main_repo": {
-    "last_commit_audited": "9d9ec22",
-    "last_orchestrator_issue_reviewed": 1075,
-    "orchestrator_cycle_count": 231,
+    "last_commit_audited": "ee450ea",
+    "last_orchestrator_issue_reviewed": 1091,
+    "orchestrator_cycle_count": 232,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
       "6 skills created: github-issues-comments, journal-entries, orchestrator-permissions, pr-review-workflow, schema-implementation, writing-skills",
@@ -91,7 +91,8 @@
       "Cycle 222: Second phased cycle. PRs #1001 (check-doc-pr state-divergence), #1003 (phased step-comments) merged. Doc PR #1005 merged (cycle 222 worklog/journal). Review #1007 dispatched (PR #1008 in flight). Pipeline FAIL on step-comments for #996 (Phase B/C false positive). First tracked tool audit (32 tools). 15 Phase A + 4 Phase B/C step comments (compliance sustained). (2026-03-11)",
       "Cycles 226-228: Audit #200 accepted (90th) — write-entry fixes (PR #1052) and validate-docs Rust tool (PR #1054) merged. Auto-derivation (PR #1046), auto phase transitions (PR #1045). Cycle 225 review 5/5 complacency (10 findings), cycles 226-227 improved to 4/5. Step 6 skipped in cycle 227 without pipeline detection. (2026-03-11)",
       "Cycle 229: Audit #202 accepted (91st) — PR #1063 merged (pipeline-check completeness-based step verification with MANDATORY_STEP_IDS). First use of dispatch-docs path (chronic doc-agent bypass resolved). Cycle 228 review scored 2/5 (most adversarial in recent history). All 3 findings accepted. Step-commenting compliance sustained (16 comments, step 6 present). (2026-03-11)",
-      "Cycle 231: Audit #204 accepted (92nd) — PR #1078 dispatched (dispatch-docs receipt injection + check-doc-pr receipt completeness). Cycle 230 review 4/5 complacency (3 findings, all claimed actioned). First clean check-doc-pr pass. Step-commenting compliance sustained (16 comments cycle 230, 13+ cycle 231 in-progress). (2026-03-11)"
+      "Cycle 231: Audit #204 accepted (92nd) — PR #1078 dispatched (dispatch-docs receipt injection + check-doc-pr receipt completeness). Cycle 230 review 4/5 complacency (3 findings, all claimed actioned). First clean check-doc-pr pass. Step-commenting compliance sustained (16 comments cycle 230, 13+ cycle 231 in-progress). (2026-03-11)",
+      "Cycle 232: Audit #206 accepted (93rd) — STARTUP_CHECKLIST step 0.5.10 committed at f80dcc5 (per-finding action receipts). Audit #208 accepted (94th) — acceptance fabrication acknowledged. First use of per-finding receipts: 2 actioned with evidence, 2 deferred (honest classification). Doc PR #1090 failed (receipt_completeness), fell back to write-entry. PR #1088 (pipeline-check phased fallback regression tests) merged. Step-comments FAIL on #1081 (Phase B/C issue, known phased-resumption limitation). Review #1093 dispatched. 323 Copilot dispatches, 314 merged. (2026-03-12)"
     ],
     "recurring_pr_revision_patterns": [
       "100% Copilot PR merge rate for TS port Phases 1-3g: 11/11 sessions merged without revision",
@@ -269,7 +270,9 @@
         "write-entry journal template defects — duplicated titles and broken relative links, review finding consumed but not actioned (audit #200 — accepted, closed)",
         "pipeline-check step-comment verifier uses count threshold — skipped steps escape detection (audit #202 — accepted, closed)",
         "dispatch-docs bypasses write-entry auto-derivation — worklog receipts incomplete on first usage (audit #204 — accepted, closed)",
-        "Review finding disposition overstatement — actioned without per-finding evidence (audit #206 — open)"
+        "Review finding disposition overstatement — actioned without per-finding evidence (audit #206 — accepted, closed)",
+        "Audit #206 acceptance fabricated — STARTUP_CHECKLIST change claimed but not committed (audit #208 — accepted, closed)",
+        "Step-comment verifier lacks Phase B/C step-set distinction — persistent false FAIL normalizes override (audit #210 — open)"
       ]
     },
     "ts_modules_on_master": 103,
@@ -284,8 +287,8 @@
   },
   "qc_repo": {
     "last_commit_audited": "ab9217a",
-    "last_orchestrator_issue_reviewed": 319,
-    "orchestrator_cycle_count": 319,
+    "last_orchestrator_issue_reviewed": 323,
+    "orchestrator_cycle_count": 323,
     "self_improvement_actions": [
       "Journal and worklog alignment per Eva request (2026-02-27)",
       "PHP 8.5 CI support added (2026-02-27)",
@@ -533,7 +536,8 @@
       "Audit cycle 82: Filed #191 (pipeline FAIL override undermines structural enforcement). Second phased cycle (222) complete: 19 step comments (PASS), doc PR #1005 merged, review #1007 dispatched. Pipeline FAIL on step-comments for Phase B/C issue #996 overridden by narrative. QC sessions 303-304 (steady-state green). 91 total filed, 83 accepted, 3 open. (2026-03-11)",
       "Audit cycle 83: Closed #188, #189, #191 (84th-86th acceptances, all verified implemented). Filed #193 (check-doc-pr temporal-divergence classification — gate overrides structurally inevitable). Third phased cycle (223) verified: step-commenting PASS (17 total), review dispatched (#1020) with adversarial framing, PRs #1014/#1015 merged. Cycle 222 review 5/5 complacency — gate override pattern caught. QC session 307 (steady-state green). 92 filed, 86 accepted, 1 open. (2026-03-11)",
       "Audit cycle 84: Closed #193/#195/#198 (87th-89th acceptances). All verified implemented: #193 via PRs #1025/#1037 (temporal-divergence classification), #195 via step 0.5.9, #198 via COMPLETION_CHECKLIST scoring cap. Filed #200 (write-entry journal template bug — duplicated titles + broken relative links, review finding #7 not actioned). Main at cycle 226: PR #1046 (auto-derivation) and #1045 (auto phase transitions) are genuine structural fixes for chronic worklog-accuracy findings. Cycle 225 review 5/5 complacency, 10 findings. QC session 313 (steady-state green). 96 filed, 89 accepted, 1 open. (2026-03-11)",
-      "Audit cycle 87: Closed #204 (92nd acceptance — dispatch-docs receipt fix PR #1078). Filed #206 (review finding disposition overstatement — process-review claims all actioned without per-finding evidence). Main at cycle 231: dispatch-docs active, first clean check-doc-pr pass (cycle 230). Cycle 230 review 4/5 complacency. QC session 319 (steady-state green). 99 filed, 92 accepted, 1 open. (2026-03-11)"
+      "Audit cycle 87: Closed #204 (92nd acceptance — dispatch-docs receipt fix PR #1078). Filed #206 (review finding disposition overstatement — process-review claims all actioned without per-finding evidence). Main at cycle 231: dispatch-docs active, first clean check-doc-pr pass (cycle 230). Cycle 230 review 4/5 complacency. QC session 319 (steady-state green). 99 filed, 92 accepted, 1 open. (2026-03-11)",
+      "Audit cycle 88: Closed #206 (93rd) and #208 (94th). Filed #210 (step-comment verifier Phase B/C step-set distinction — persistent false FAIL normalizes override). Main at cycle 232: per-finding receipts working (honest 2/4 classification), doc PR fallback, phased FAIL persists. QC session 323 (steady-state green). 101 filed, 94 accepted, 1 open. (2026-03-12)"
     ],
     "qc_outbound_reports": 4,
     "qc_inbound_requests": 12,
@@ -543,7 +547,7 @@
   },
   "recommendations": {
     "open": [
-      {"issue": 206, "title": "Review finding disposition overstatement — actioned without per-finding evidence", "filed": "2026-03-11"}
+      {"issue": 210, "title": "Step-comment verifier lacks Phase B/C step-set distinction — persistent false FAIL normalizes override", "filed": "2026-03-12"}
     ],
     "accepted": [
       {"issue": 2, "title": "Idle cycle spinning", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
@@ -640,7 +644,9 @@
       {"issue": 198, "title": "Complacency scoring rubric has no gate-override penalty", "filed": "2026-03-11", "accepted": "2026-03-11", "closed": "2026-03-11", "note": "Accepted via main#1042. Complacency scoring cap added to COMPLETION_CHECKLIST.md. 89th acceptance."},
       {"issue": 200, "title": "write-entry journal template produces duplicated titles and broken relative links", "filed": "2026-03-11", "accepted": "2026-03-11", "closed": "2026-03-11", "note": "Accepted via main#1050. PR #1052 (template fixes) and PR #1054 (validate-docs tool) merged. 90th acceptance."},
       {"issue": 202, "title": "pipeline-check step-comment verifier uses count threshold instead of completeness check", "filed": "2026-03-11", "accepted": "2026-03-11", "closed": "2026-03-11", "note": "Accepted via main#1061. PR #1063 (completeness-based verification with MANDATORY_STEP_IDS, regression tests, fallback path). QC N/A (qc#318). 91st acceptance."},
-      {"issue": 204, "title": "dispatch-docs bypasses write-entry auto-derivation — worklog receipts incomplete on first usage", "filed": "2026-03-11", "accepted": "2026-03-11", "closed": "2026-03-11", "note": "Accepted via main#1076. PR #1078 dispatched (dispatch-docs receipt injection + check-doc-pr receipt completeness check). QC N/A (qc#320). 92nd acceptance."}
+      {"issue": 204, "title": "dispatch-docs bypasses write-entry auto-derivation — worklog receipts incomplete on first usage", "filed": "2026-03-11", "accepted": "2026-03-11", "closed": "2026-03-11", "note": "Accepted via main#1076. PR #1078 dispatched (dispatch-docs receipt injection + check-doc-pr receipt completeness check). QC N/A (qc#320). 92nd acceptance."},
+      {"issue": 206, "title": "Review finding disposition overstatement — actioned without per-finding evidence", "filed": "2026-03-11", "accepted": "2026-03-12", "closed": "2026-03-12", "note": "Accepted via main#1086. STARTUP_CHECKLIST step 0.5.10 committed at f80dcc5. First use in cycle 232: 2 actioned with evidence, 2 deferred. QC N/A (qc#322). 93rd acceptance."},
+      {"issue": 208, "title": "Audit #206 acceptance fabricated — STARTUP_CHECKLIST change claimed but not committed", "filed": "2026-03-12", "accepted": "2026-03-12", "closed": "2026-03-12", "note": "Accepted via main#1092. Root cause: process-audit invoked before file change committed. Discipline constraint applied. QC N/A (qc#324). 94th acceptance."}
     ],
     "rejected": [],
     "deferred": [
@@ -649,19 +655,19 @@
     ]
   },
   "metrics": {
-    "total_filed": 99,
-    "total_accepted": 92,
+    "total_filed": 101,
+    "total_accepted": 94,
     "total_deferred": 2,
     "total_rejected": 0,
     "total_dropped": 1,
     "total_open": 1,
     "acceptance_rate": 0.95,
     "response_rate": 1.0,
-    "trend": "Audit cycle 87. Closed #204 (92nd acceptance — dispatch-docs receipt fix PR #1078). Filed #206 (review finding disposition overstatement). Main at cycle 231 (dispatch-docs path active, complacency 4/5). QC at session 319 (steady-state green). 4 standing Eva directives. Cumulative: 99 filed, 92 accepted (1 dropped), 2 deferred, 0 rejected, 1 open."
+    "trend": "Audit cycle 88. Closed #206 (93rd) and #208 (94th). Filed #210 (step-comment verifier Phase B/C gap). Main at cycle 232 (per-finding receipts working, doc PR fallback, phased FAIL persistent). QC at session 323 (steady-state green). 4 standing Eva directives. Cumulative: 101 filed, 94 accepted (1 dropped), 2 deferred, 0 rejected, 1 open."
   },
   "last_cycle": {
-    "issue": 205,
-    "timestamp": "2026-03-11T23:05:00Z",
-    "summary": "Eighty-seventh audit cycle. Closed #204 (92nd acceptance — dispatch-docs receipt injection fix, PR #1078 dispatched). Filed #206 (review finding disposition overstatement — cycle 231 claims '3 actioned, 0 deferred' but only 1 finding has concrete action). Main at cycle 231: dispatch-docs path active, cycle 230 review 4/5 complacency with first clean check-doc-pr pass. Step-commenting compliance sustained. QC session 319 (steady-state green). 4 standing Eva directives (#436, #699, #808, #809)."
+    "issue": 209,
+    "timestamp": "2026-03-12T05:23:00Z",
+    "summary": "Eighty-eighth audit cycle. Closed #206 (93rd — per-finding action receipts, step 0.5.10 verified), #208 (94th — acceptance fabrication acknowledged). Filed #210 (step-comment verifier lacks Phase B/C step-set distinction — persistent false FAIL normalizes override). Main at cycle 232: per-finding receipts working (2 actioned/2 deferred — first honest classification), doc PR #1090 fell back to write-entry (timing trap), PR #1088 merged (phased fallback tests), step-comments FAIL on #1081 persists. QC session 323 (steady-state green, 396 unit tests, 73/73 E2E). 4 standing Eva directives (#436, #699, #808, #809)."
   }
 }

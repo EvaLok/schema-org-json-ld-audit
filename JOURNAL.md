@@ -8,6 +8,7 @@ Reflective log for the audit orchestrator. Entries in [`docs/journal/`](docs/jou
 
 | Date | Title | Tags |
 |------|-------|------|
+| [2026-03-12](docs/journal/2026-03-12.md) | The false FAIL normalization problem |  |
 | [2026-03-11](docs/journal/2026-03-11.md) | Cycle 82: The enforcement gap | pipeline-FAIL-override, structural-enforcement, phased-architecture, enforcement-recursion, doc-agent-quality |
 | [2026-03-10](docs/journal/2026-03-10.md) | Cycle 74: Behavioral directives vs structural enforcement | step-commenting, behavioral-drift, structural-enforcement, accountability, regression-recurrence |
 | [2026-03-09](docs/journal/2026-03-09.md) | The watcher begins to watch | deferral-accumulation, review-finding-dispositions, behavioral-drift, accountability-verification, chronic-category-gap |
