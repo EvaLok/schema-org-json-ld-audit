@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-03-13T11:10:00Z",
+  "last_updated": "2026-03-13T14:25:00Z",
   "main_repo": {
-    "last_commit_audited": "e2364f3",
-    "last_orchestrator_issue_reviewed": 1159,
-    "orchestrator_cycle_count": 243,
+    "last_commit_audited": "1a90849",
+    "last_orchestrator_issue_reviewed": 1166,
+    "orchestrator_cycle_count": 244,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
       "6 skills created: github-issues-comments, journal-entries, orchestrator-permissions, pr-review-workflow, schema-implementation, writing-skills",
@@ -290,9 +290,9 @@
     "directory_layout": "php/src/, php/test/, ts/src/, ts/test/ (restructured 2026-03-01, PR #263; TS port COMPLETE 2026-03-01, 14 PRs — 89/89 schema classes including SeekToAction)"
   },
   "qc_repo": {
-    "last_commit_audited": "b5fea53",
-    "last_orchestrator_issue_reviewed": 346,
-    "orchestrator_cycle_count": 346,
+    "last_commit_audited": "0fbc572",
+    "last_orchestrator_issue_reviewed": 347,
+    "orchestrator_cycle_count": 347,
     "self_improvement_actions": [
       "Journal and worklog alignment per Eva request (2026-02-27)",
       "PHP 8.5 CI support added (2026-02-27)",
@@ -556,7 +556,9 @@
     "open_qc_ack": null
   },
   "recommendations": {
-    "open": [],
+    "open": [
+      {"issue": 233, "title": "COMPLETION_CHECKLIST omits record-dispatch for work-phase Copilot dispatches — session tracking drift", "filed": "2026-03-13"}
+    ],
     "accepted": [
       {"issue": 2, "title": "Idle cycle spinning", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
       {"issue": 3, "title": "Non-functional tools directory", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
@@ -673,19 +675,19 @@
     ]
   },
   "metrics": {
-    "total_filed": 108,
+    "total_filed": 109,
     "total_accepted": 104,
     "total_deferred": 2,
     "total_rejected": 0,
     "total_dropped": 1,
-    "total_open": 0,
+    "total_open": 1,
     "acceptance_rate": 0.96,
     "response_rate": 1.0,
-    "trend": "Audit cycle 96. Monitoring cycle — system healthy post-stall-recovery. Main at cycle 243 (complete). Review agent adversarial (2/5 complacency, 7 findings). State-integrity chronic category response filed; structural fixes dispatched (#1160 close-out recovery reorder, #1162 field_inventory conditionality, #1165 review artifact). Zero open recommendations. Previous acceptances verified. QC at session 346 (steady-state green). Cumulative: 108 filed, 104 accepted (1 dropped), 2 deferred, 0 rejected, 0 open."
+    "trend": "Audit cycle 97. Filed #233 (record-dispatch gap for work-phase dispatches). Main at cycle 244 (complete). Cycle 243 review 2/5 (6 findings, 3 actioned/3 deferred). State-integrity and worklog-accuracy chronic categories being addressed via structural fixes (#1161, #1163, #1167). Step-commenting PASS (14 comments). QC at session 347 (steady-state green). Cumulative: 109 filed, 104 accepted (1 dropped), 2 deferred, 0 rejected, 1 open."
   },
   "last_cycle": {
-    "issue": 231,
-    "timestamp": "2026-03-13T11:10:00Z",
-    "summary": "Ninety-sixth audit cycle. Monitoring cycle — system healthy post-stall-recovery. Main at cycle 243 (complete, phase entered 10:29 UTC). Review agent adversarial (cycle 242: 2/5 complacency, 7 findings, 3 actioned/4 deferred). State-integrity chronic category response filed; structural fixes: PR #1161 (close-out recovery reorder), PR #1163 (field_inventory conditionality), PR #1165 (review artifact). Step-commenting PASS (12+ individual comments, all mandatory steps). Zero open recommendations. All 4 previous acceptances verified (#221 PR merged, #224 partial but review catching residual, #226/#229 PRs merged). Audit-inbound #1139 now closed. QC at session 346 (steady-state green, 399 unit, 73/73 E2E, 73/73 parity). 4 standing Eva directives (#436, #699, #808, #809). No new issues filed."
+    "issue": 232,
+    "timestamp": "2026-03-13T14:25:00Z",
+    "summary": "Ninety-seventh audit cycle. Filed #233 (record-dispatch gap — COMPLETION_CHECKLIST omits record-dispatch for work-phase Copilot dispatches, causing session tracking drift). Concrete evidence: dispatch #1167 absent from agent_sessions, in-flight count wrong, copilot_metrics undercounted. Main at cycle 244 (complete). Cycle 243 review 2/5 (6 findings, 3 actioned/3 deferred). Chronic categories being addressed: state-integrity (#1163 merged), worklog-accuracy (#1167 dispatched). Step-commenting PASS (14 comments cycle 244). Previous acceptances verified (cycles 93-95 all closed). QC at session 347 (steady-state green, 399 unit, 73/73 E2E, 73/73 parity). 4 standing Eva directives (#436, #699, #808, #809)."
   }
 }
