@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-03-13T05:30:00Z",
+  "last_updated": "2026-03-13T08:25:00Z",
   "main_repo": {
-    "last_commit_audited": "a30dbd9",
-    "last_orchestrator_issue_reviewed": 1145,
-    "orchestrator_cycle_count": 241,
+    "last_commit_audited": "3a5dd9f",
+    "last_orchestrator_issue_reviewed": 1154,
+    "orchestrator_cycle_count": 242,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
       "6 skills created: github-issues-comments, journal-entries, orchestrator-permissions, pr-review-workflow, schema-implementation, writing-skills",
@@ -291,8 +291,8 @@
   },
   "qc_repo": {
     "last_commit_audited": "07cae89",
-    "last_orchestrator_issue_reviewed": 342,
-    "orchestrator_cycle_count": 342,
+    "last_orchestrator_issue_reviewed": 344,
+    "orchestrator_cycle_count": 344,
     "self_improvement_actions": [
       "Journal and worklog alignment per Eva request (2026-02-27)",
       "PHP 8.5 CI support added (2026-02-27)",
@@ -546,7 +546,8 @@
       "Audit cycle 91: Closed #218 (99th acceptance — journal validation gap, accepted via main#1128). Filed #221 (worklog receipt table structurally incomplete for 8+ cycles). Main at cycle 240: cycle 239 productive (infrastructure cleanup, review 2/5), step-commenting compliant (15 comments), receipts valid. QC at session 335 (steady-state green). 4 standing Eva directives. 104 filed, 99 accepted, 1 open. (2026-03-12)",
       "Audit cycle 92: MILESTONE: 100th acceptance (#222). Closed #222 (acceptance-dispatch disconnect). Filed #224 (validate-docs self-modification completeness gap). Main at cycle 241: #221 accepted (PR #1142 in flight), #222 accepted (behavioral), review 2/5 (cycle 240). QC at session 337 (steady-state green). 106 filed, 100 accepted, 2 open. (2026-03-12)",
       "Audit cycle 93: CRITICAL STALL DETECTED. Main orchestrator stuck at close_out phase since 2026-03-12T22:23Z. Cycle 241 issue #1138 never closed. 2 cron triggers (#1143, #1144) got zero response. PR #1142 orphaned. Filed #226 (close-out atomicity) and #227 (question-for-eva for manual intervention). QC at session 340 (steady-state green). 107 filed, 100 accepted, 3 open. (2026-03-13)",
-      "Audit cycle 94: STALL ONGOING (7+ hours). Recovery partial — orchestrator wrote docs (a30dbd9) on 4th trigger (#1145) but phase still close_out, issues still open. Each recovery session crashes after 1-2 actions. Recovery priority inverted. Filed #229 (recovery priority ordering). Updated #227 with stall timeline. QC at session 342 (steady-state green). 108 filed, 100 accepted, 4 open. (2026-03-13)"
+      "Audit cycle 94: STALL ONGOING (7+ hours). Recovery partial — orchestrator wrote docs (a30dbd9) on 4th trigger (#1145) but phase still close_out, issues still open. Each recovery session crashes after 1-2 actions. Recovery priority inverted. Filed #229 (recovery priority ordering). Updated #227 with stall timeline. QC at session 342 (steady-state green). 108 filed, 100 accepted, 4 open. (2026-03-13)",
+      "Audit cycle 95: STALL RESOLVED after 8+ hours (5 cron triggers). Cycle 242 active. Four acceptances: #221 (PR #1142 merged), #224 (partial), #226 (PR #1153), #229 (with #226). Zero open recommendations. Updated #227. QC at session 344 (steady-state green). 108 filed, 104 accepted, 0 open. (2026-03-13)"
     ],
     "qc_outbound_reports": 4,
     "qc_inbound_requests": 12,
@@ -555,12 +556,7 @@
     "open_qc_ack": null
   },
   "recommendations": {
-    "open": [
-      {"issue": 221, "title": "Worklog receipt table structurally incomplete for 8+ cycles — write-entry timing gap needs close-out reconciliation", "filed": "2026-03-12", "accepted": "2026-03-12", "note": "Accepted via main#1139. PR #1142 in flight. 100th acceptance. Implementation pending merge."},
-      {"issue": 224, "title": "validate-docs self-modification section accepts partial omissions — under-reporting escapes all gates", "filed": "2026-03-12"},
-      {"issue": 226, "title": "Cycle close-out to complete transition is non-atomic — session termination creates unrecoverable stall", "filed": "2026-03-13"},
-      {"issue": 229, "title": "Close-out recovery priority inverted — docs written before issue closure and phase advancement, stall persists 7+ hours", "filed": "2026-03-13"}
-    ],
+    "open": [],
     "accepted": [
       {"issue": 2, "title": "Idle cycle spinning", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
       {"issue": 3, "title": "Non-functional tools directory", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
@@ -664,7 +660,11 @@
       {"issue": 214, "title": "Tool audit counter advances without artifact — count decreased from 32 to 28 without explanation", "filed": "2026-03-12", "accepted": "2026-03-12", "closed": "2026-03-12", "note": "Accepted via main#1115. Artifact produced: docs/reviews/tool-audit-cycle-236.md (31 tools). QC N/A (qc#332). 97th acceptance."},
       {"issue": 216, "title": "Dispatch-docs path abandoned without formal deprecation — dead infrastructure maintained across 4 cycles", "filed": "2026-03-12", "accepted": "2026-03-12", "closed": "2026-03-12", "note": "Accepted via main#1119 (Option A). PR #1121 merged (-2960 lines). dispatch-docs, check-doc-pr removed. Cycle state machine simplified to work->close_out->complete. ADR 0010 records rationale. QC N/A (qc#334). 98th acceptance."},
       {"issue": 218, "title": "Close-out gate does not verify journal entry existence — cycle 237 completion claim false", "filed": "2026-03-12", "accepted": "2026-03-12", "closed": "2026-03-12", "note": "Accepted via main#1128. validate-docs journal subcommand planned, deferred to cycle 240. Implementation depends on PR #1130. QC N/A (qc#336). 99th acceptance."},
-      {"issue": 222, "title": "Audit-inbound acceptance promises dispatch but journal admits deferral — no reconciliation mechanism", "filed": "2026-03-12", "accepted": "2026-03-12", "closed": "2026-03-12", "note": "Accepted via main#1140. Language convention change (Planned instead of Dispatching). QC N/A (qc#339). 100th acceptance."}
+      {"issue": 222, "title": "Audit-inbound acceptance promises dispatch but journal admits deferral — no reconciliation mechanism", "filed": "2026-03-12", "accepted": "2026-03-12", "closed": "2026-03-12", "note": "Accepted via main#1140. Language convention change (Planned instead of Dispatching). QC N/A (qc#339). 100th acceptance."},
+      {"issue": 221, "title": "Worklog receipt table structurally incomplete for 8+ cycles — write-entry timing gap needs close-out reconciliation", "filed": "2026-03-12", "accepted": "2026-03-12", "closed": "2026-03-13", "note": "Accepted via main#1139. PR #1142 merged 2026-03-13. QC N/A (qc#338). 101st acceptance."},
+      {"issue": 224, "title": "validate-docs self-modification section accepts partial omissions — under-reporting escapes all gates", "filed": "2026-03-12", "accepted": "2026-03-13", "closed": "2026-03-13", "note": "Accepted via main#1149 (partially implemented). Warning-level detection added via PR #1142. Full fail-level cross-referencing deferred. QC N/A (qc#341). 102nd acceptance."},
+      {"issue": 226, "title": "Cycle close-out to complete transition is non-atomic — session termination creates unrecoverable stall", "filed": "2026-03-13", "accepted": "2026-03-13", "closed": "2026-03-13", "note": "Accepted via main#1150. Structural fix: PR #1153 (stale close-out recovery in cycle-start). QC N/A (qc#343). 103rd acceptance."},
+      {"issue": 229, "title": "Close-out recovery priority inverted — docs written before issue closure and phase advancement, stall persists 7+ hours", "filed": "2026-03-13", "accepted": "2026-03-13", "closed": "2026-03-13", "note": "Accepted via main#1151. Addressed with #226 via PR #1153. QC N/A (qc#345). 104th acceptance."}
     ],
     "rejected": [],
     "deferred": [
@@ -674,18 +674,18 @@
   },
   "metrics": {
     "total_filed": 108,
-    "total_accepted": 100,
+    "total_accepted": 104,
     "total_deferred": 2,
     "total_rejected": 0,
     "total_dropped": 1,
-    "total_open": 4,
+    "total_open": 0,
     "acceptance_rate": 0.96,
     "response_rate": 1.0,
-    "trend": "Audit cycle 94. STALL ONGOING: Main orchestrator cycle 241 close_out phase persisting 7+ hours across 4 cron triggers (#1138, #1143, #1144, #1145). Partial recovery — docs written (commit a30dbd9) but phase still close_out, issues still open. Recovery sessions crash after 1-2 actions. Filed #229 (recovery priority ordering). Updated #227 (question-for-eva). QC at session 342 (steady-state green). Cumulative: 108 filed, 100 accepted (1 dropped), 2 deferred, 0 rejected, 4 open."
+    "trend": "Audit cycle 95. STALL RESOLVED. Main orchestrator recovered after 8+ hours (5 cron triggers). Cycle 242 active (work phase). Four recommendations accepted (#221, #224, #226, #229 — 101st-104th). PR #1142 merged (worklog-accuracy fix). PR #1153 in flight (stale close-out recovery). Zero open recommendations. QC at session 344 (steady-state green). Cumulative: 108 filed, 104 accepted (1 dropped), 2 deferred, 0 rejected, 0 open."
   },
   "last_cycle": {
-    "issue": 228,
-    "timestamp": "2026-03-13T05:30:00Z",
-    "summary": "Ninety-fourth audit cycle. STALL ONGOING: Main orchestrator cycle 241 close_out persisting 7+ hours across 4 cron triggers. Recovery IS happening (docs written on 4th trigger, commit a30dbd9) but fragile — each session crashes after 1-2 actions, phase never advances to complete, issues never closed. Recovery priority inverted: docs written before issue closure/phase advancement. Filed #229 (recovery priority ordering). Updated #227 with stall timeline. PR #1142 still orphaned. QC at session 342 (steady-state green). 4 standing Eva directives (#436, #699, #808, #809)."
+    "issue": 230,
+    "timestamp": "2026-03-13T08:25:00Z",
+    "summary": "Ninety-fifth audit cycle. STALL RESOLVED after 8+ hours (5 cron triggers). Cycle 241 close-out completed on #1146 at 06:16 UTC. Cycle 242 active (work phase). Four recommendations accepted: #221 (PR #1142 merged), #224 (partial — warning-level detection), #226 (PR #1153 in flight), #229 (addressed with #226). All 4 audit-outbound issues closed. Zero open recommendations. Updated #227 (question-for-eva) with resolution status. QC at session 344 (steady-state green). 4 standing Eva directives (#436, #699, #808, #809). Audit-inbound #1139 still open on main repo (minor lifecycle gap)."
   }
 }
