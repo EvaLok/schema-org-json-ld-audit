@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-03-13T17:25:00Z",
+  "last_updated": "2026-03-13T20:15:00Z",
   "main_repo": {
-    "last_commit_audited": "928483f",
-    "last_orchestrator_issue_reviewed": 1175,
-    "orchestrator_cycle_count": 246,
+    "last_commit_audited": "0a314d9",
+    "last_orchestrator_issue_reviewed": 1184,
+    "orchestrator_cycle_count": 248,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
       "6 skills created: github-issues-comments, journal-entries, orchestrator-permissions, pr-review-workflow, schema-implementation, writing-skills",
@@ -291,8 +291,8 @@
   },
   "qc_repo": {
     "last_commit_audited": "0fbc572",
-    "last_orchestrator_issue_reviewed": 348,
-    "orchestrator_cycle_count": 348,
+    "last_orchestrator_issue_reviewed": 350,
+    "orchestrator_cycle_count": 350,
     "self_improvement_actions": [
       "Journal and worklog alignment per Eva request (2026-02-27)",
       "PHP 8.5 CI support added (2026-02-27)",
@@ -548,7 +548,8 @@
       "Audit cycle 93: CRITICAL STALL DETECTED. Main orchestrator stuck at close_out phase since 2026-03-12T22:23Z. Cycle 241 issue #1138 never closed. 2 cron triggers (#1143, #1144) got zero response. PR #1142 orphaned. Filed #226 (close-out atomicity) and #227 (question-for-eva for manual intervention). QC at session 340 (steady-state green). 107 filed, 100 accepted, 3 open. (2026-03-13)",
       "Audit cycle 94: STALL ONGOING (7+ hours). Recovery partial — orchestrator wrote docs (a30dbd9) on 4th trigger (#1145) but phase still close_out, issues still open. Each recovery session crashes after 1-2 actions. Recovery priority inverted. Filed #229 (recovery priority ordering). Updated #227 with stall timeline. QC at session 342 (steady-state green). 108 filed, 100 accepted, 4 open. (2026-03-13)",
       "Audit cycle 95: STALL RESOLVED after 8+ hours (5 cron triggers). Cycle 242 active. Four acceptances: #221 (PR #1142 merged), #224 (partial), #226 (PR #1153), #229 (with #226). Zero open recommendations. Updated #227. QC at session 344 (steady-state green). 108 filed, 104 accepted, 0 open. (2026-03-13)",
-      "Audit cycle 98: Closed #233 (105th acceptance). Filed #235 (review disposition loop — regression verification gate). Review scores flat at 2-3/5 for 10+ cycles — chronic finding categories (worklog-accuracy, receipt-integrity, journal-quality, test-coverage) recurring without verified resolution. Step-commenting PASS (cycles 243-246). QC at session 348 (steady-state green, 92/92 coverage). 110 filed, 105 accepted, 1 open. (2026-03-13)"
+      "Audit cycle 98: Closed #233 (105th acceptance). Filed #235 (review disposition loop — regression verification gate). Review scores flat at 2-3/5 for 10+ cycles — chronic finding categories (worklog-accuracy, receipt-integrity, journal-quality, test-coverage) recurring without verified resolution. Step-commenting PASS (cycles 243-246). QC at session 348 (steady-state green, 92/92 coverage). 110 filed, 105 accepted, 1 open. (2026-03-13)",
+      "Audit cycle 99: Closed #235 (106th acceptance — step 0.5.11 regression verification, 5-status disposition taxonomy). Filed #237 (close-out step comments lack structural enforcement — MANDATORY_STEP_IDS covers startup only). Cycle 247 review 2/5 (over-crediting verified_resolved before production test). Main at cycle 248 (353 dispatches). QC at session 350 (steady-state green). 111 filed, 106 accepted, 1 open. (2026-03-13)"
     ],
     "qc_outbound_reports": 4,
     "qc_inbound_requests": 12,
@@ -558,7 +559,7 @@
   },
   "recommendations": {
     "open": [
-      {"issue": 235, "title": "Review finding disposition loop broken — actioned findings not verified for regression, 10+ cycle score plateau", "filed": "2026-03-13"}
+      {"issue": 237, "title": "Close-out step comments have no structural enforcement — startup compliance PASS masks close-out omissions", "filed": "2026-03-13"}
     ],
     "accepted": [
       {"issue": 2, "title": "Idle cycle spinning", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
@@ -668,7 +669,8 @@
       {"issue": 224, "title": "validate-docs self-modification section accepts partial omissions — under-reporting escapes all gates", "filed": "2026-03-12", "accepted": "2026-03-13", "closed": "2026-03-13", "note": "Accepted via main#1149 (partially implemented). Warning-level detection added via PR #1142. Full fail-level cross-referencing deferred. QC N/A (qc#341). 102nd acceptance."},
       {"issue": 226, "title": "Cycle close-out to complete transition is non-atomic — session termination creates unrecoverable stall", "filed": "2026-03-13", "accepted": "2026-03-13", "closed": "2026-03-13", "note": "Accepted via main#1150. Structural fix: PR #1153 (stale close-out recovery in cycle-start). QC N/A (qc#343). 103rd acceptance."},
       {"issue": 229, "title": "Close-out recovery priority inverted — docs written before issue closure and phase advancement, stall persists 7+ hours", "filed": "2026-03-13", "accepted": "2026-03-13", "closed": "2026-03-13", "note": "Accepted via main#1151. Addressed with #226 via PR #1153. QC N/A (qc#345). 104th acceptance."},
-      {"issue": 233, "title": "COMPLETION_CHECKLIST omits record-dispatch for work-phase Copilot dispatches — session tracking drift", "filed": "2026-03-13", "accepted": "2026-03-13", "closed": "2026-03-13", "note": "Accepted via main#1172. COMPLETION_CHECKLIST Step 2 updated, retroactive fix for #1167 applied (receipt 7e201f8). QC N/A (qc#349). 105th acceptance."}
+      {"issue": 233, "title": "COMPLETION_CHECKLIST omits record-dispatch for work-phase Copilot dispatches — session tracking drift", "filed": "2026-03-13", "accepted": "2026-03-13", "closed": "2026-03-13", "note": "Accepted via main#1172. COMPLETION_CHECKLIST Step 2 updated, retroactive fix for #1167 applied (receipt 7e201f8). QC N/A (qc#349). 105th acceptance."},
+      {"issue": 235, "title": "Review finding disposition loop broken — actioned findings not verified for regression, 10+ cycle score plateau", "filed": "2026-03-13", "accepted": "2026-03-13", "closed": "2026-03-13", "note": "Accepted via main#1181. Step 0.5.11 added (regression verification). 5-status disposition taxonomy (actioned/dispatch_created/deferred/actioned_failed/verified_resolved). QC N/A (qc#351). 106th acceptance."}
     ],
     "rejected": [],
     "deferred": [
@@ -677,19 +679,19 @@
     ]
   },
   "metrics": {
-    "total_filed": 110,
-    "total_accepted": 105,
+    "total_filed": 111,
+    "total_accepted": 106,
     "total_deferred": 2,
     "total_rejected": 0,
     "total_dropped": 1,
     "total_open": 1,
     "acceptance_rate": 0.96,
     "response_rate": 1.0,
-    "trend": "Audit cycle 98. Closed #233 (105th acceptance). Filed #235 (review disposition loop — regression verification gate). Main at cycle 246 (complete). Review scores flat at 2-3/5 for 10+ cycles — same chronic categories recurring without verified resolution. Step-commenting PASS (cycles 243-246). QC at session 348 (steady-state green). Cumulative: 110 filed, 105 accepted (1 dropped), 2 deferred, 0 rejected, 1 open."
+    "trend": "Audit cycle 99. Closed #235 (106th acceptance — regression verification step 0.5.11 verified). Filed #237 (close-out step comments lack structural enforcement — startup PASS masks close-out omissions). Main at cycle 248 (starting). Review scores: cycle 246 3/5, cycle 247 2/5 — disposition taxonomy working but first application over-credited. Close-out step comments deficient (0 in cycle 246, partial in 247). Step-commenting startup PASS sustained. QC at session 350 (steady-state green, 399 unit, 73/73 E2E, 73/73 parity, 92/92 coverage). Cumulative: 111 filed, 106 accepted (1 dropped), 2 deferred, 0 rejected, 1 open."
   },
   "last_cycle": {
-    "issue": 234,
-    "timestamp": "2026-03-13T17:25:00Z",
-    "summary": "Ninety-eighth audit cycle. Closed #233 (105th acceptance — record-dispatch gap verified implemented). Filed #235 (review finding disposition loop broken — actioned findings not verified for regression, 10+ cycle score plateau at 2-3/5). Same chronic categories recurring: worklog-accuracy, receipt-integrity, journal-quality, test-coverage. Disposition inflation: findings marked actioned on dispatch, not on verified behavior change. Recommended regression verification sub-step for STARTUP_CHECKLIST step 0.5. Main at cycle 246 (complete, 351 Copilot dispatches). Step-commenting PASS (cycles 243-246). Stall from cycles 93-95 fully resolved. QC at session 348 (steady-state green, 399 unit, 73/73 E2E, 73/73 parity, 92/92 coverage). 4 standing Eva directives (#436, #699, #808, #809)."
+    "issue": 236,
+    "timestamp": "2026-03-13T20:15:00Z",
+    "summary": "Ninety-ninth audit cycle. Closed #235 (106th acceptance — regression verification step 0.5.11 with 5-status disposition taxonomy verified in commit 6948b61). Filed #237 (close-out step comments lack structural enforcement — pipeline-check MANDATORY_STEP_IDS covers startup only, close-out steps omitted/bundled in cycles 246-247 without pipeline detection). Cycle 247 review scored 2/5 (drop from 3/5), immediately caught over-crediting of new verified_resolved status. Main at cycle 248 (starting, 353 Copilot dispatches). Step-commenting startup PASS (cycles 245-247). QC at session 350 (steady-state green, 399 unit, 73/73 E2E, 73/73 parity, 92/92 coverage). 4 standing Eva directives (#436, #699, #808, #809)."
   }
 }
