@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-03-14T11:10:00Z",
+  "last_updated": "2026-03-14T14:15:00Z",
   "main_repo": {
-    "last_commit_audited": "f3d254d",
-    "last_orchestrator_issue_reviewed": 1219,
-    "orchestrator_cycle_count": 255,
+    "last_commit_audited": "3f6dc48",
+    "last_orchestrator_issue_reviewed": 1227,
+    "orchestrator_cycle_count": 257,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
       "6 skills created: github-issues-comments, journal-entries, orchestrator-permissions, pr-review-workflow, schema-implementation, writing-skills",
@@ -97,7 +97,8 @@
       "Cycles 237-238: Audit #216 accepted (98th) — dispatch-docs fully deprecated (Option A). PR #1121 merged (-2960 lines, 2 Rust crates, 2 shell wrappers, 3 dead cycle phases removed). Cycle state machine simplified to work->close_out->complete. ADR 0010 created. Cycle 236 review history reclassified from 4-actioned/2-deferred to 1-actioned/5-deferred (honest accounting). Retroactive cycle 237 journal written (review finding #3). Review complacency: 2/5 (cycle 237). Step-commenting compliance sustained (all mandatory steps in both cycles). Receipts valid post-hardening. (2026-03-12)",
       "Cycle 239: Audit #218 accepted (99th) — validate-docs journal subcommand planned. Consumed cycle 238 review (6 findings, 2/5). Phase B references cleaned from checklists, state.json legacy keys removed, tool-audit artifact updated. PR #1126 merged (review artifact). PR #1130 dispatched (phased workflow removal from Rust tooling). Step-commenting compliance sustained (15 comments, all mandatory). Receipts valid (4/4 verified). (2026-03-12)",
       "Cycles 240-241: Audit #221 accepted (main#1139, 100th — worklog receipt timing gap, PR #1142 in flight). Audit #222 accepted (main#1140, 100th — acceptance language convention change). PR #1130 merged (phased workflow removal). PR #1135 merged (doc-validation pipeline phase, implements #218). PR #1137 merged (cycle 240 review artifact). Cycle 240 review 2/5 (4 findings: receipt gap, self-mod under-reporting, legacy doc_issue, post-freeze mutation). Cycle 241 addressed 3/4 findings (PR #1142 for #1/#4, commit f4bb9e5 for #3). Finding #2 silently dropped from session plan. Step-commenting: cycle 240 PASS (15 comments), cycle 241 in progress (13 comments). 4 standing Eva directives. (2026-03-12)",
-      "Cycles 254-255: Audit #241 accepted (main#1211, 108th — post-step step ID validation). PR #1213 merged (VALID_STEP_IDS allowlist, batched IDs structurally rejected at post-time). Step-batching prevention arc COMPLETE (8 steps over ~50 cycles). Step-commenting PASS (22 and 23 individual comments). Review agent 2/5 sustained. Cycle 254 review: 5 findings (receipt table incomplete, pipeline gate override, disposition over-credit). Cycle 255 addressed honestly (Step 6 rescinded receipt-note assumption, dispatched receipt-validate tool PR #1221). Pipeline: cycle 254 7/9 (2 FAIL — doc-validation, step-comments inherited), cycle 255 9/9 PASS. Chronic worklog-accuracy at 8+ reviews — structural receipt-scope fix in cycle 255 (C5.1 validation step). 4 standing Eva directives (#436, #699, #808, #809). (2026-03-14)"
+      "Cycles 254-255: Audit #241 accepted (main#1211, 108th — post-step step ID validation). PR #1213 merged (VALID_STEP_IDS allowlist, batched IDs structurally rejected at post-time). Step-batching prevention arc COMPLETE (8 steps over ~50 cycles). Step-commenting PASS (22 and 23 individual comments). Review agent 2/5 sustained. Cycle 254 review: 5 findings (receipt table incomplete, pipeline gate override, disposition over-credit). Cycle 255 addressed honestly (Step 6 rescinded receipt-note assumption, dispatched receipt-validate tool PR #1221). Pipeline: cycle 254 7/9 (2 FAIL — doc-validation, step-comments inherited), cycle 255 9/9 PASS. Chronic worklog-accuracy at 8+ reviews — structural receipt-scope fix in cycle 255 (C5.1 validation step). 4 standing Eva directives (#436, #699, #808, #809). (2026-03-14)",
+      "Cycle 256: PR #1221 (receipt-validate tool) and PR #1223 (cycle 255 review) merged. C5.1 promoted to MANDATORY_STEP_IDS (commit 1db303e). Cycle 255 review consumed: 1 actioned (C5.1 enforcement), 4 deferred. Pipeline 7/9 at C5.5 (doc-validation cascade from step-comments). Step-commenting PASS (24 individual comments). Review agent 2/5 sustained. Audit #245 filed (pipeline-check cascade pattern). 4 standing Eva directives unchanged. (2026-03-14)"
     ],
     "recurring_pr_revision_patterns": [
       "100% Copilot PR merge rate for TS port Phases 1-3g: 11/11 sessions merged without revision",
@@ -292,8 +293,8 @@
   },
   "qc_repo": {
     "last_commit_audited": "8c69764",
-    "last_orchestrator_issue_reviewed": 358,
-    "orchestrator_cycle_count": 358,
+    "last_orchestrator_issue_reviewed": 359,
+    "orchestrator_cycle_count": 359,
     "self_improvement_actions": [
       "Journal and worklog alignment per Eva request (2026-02-27)",
       "PHP 8.5 CI support added (2026-02-27)",
@@ -563,7 +564,9 @@
     "open_qc_ack": null
   },
   "recommendations": {
-    "open": [],
+    "open": [
+      {"issue": 245, "title": "pipeline-check doc-validation cascades from step-comments — single root failure inflates to 2 FAILs", "filed": "2026-03-14", "target": "main"}
+    ],
     "accepted": [
       {"issue": 2, "title": "Idle cycle spinning", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
       {"issue": 3, "title": "Non-functional tools directory", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
@@ -684,19 +687,19 @@
     ]
   },
   "metrics": {
-    "total_filed": 112,
+    "total_filed": 113,
     "total_accepted": 108,
     "total_deferred": 2,
     "total_rejected": 0,
     "total_dropped": 1,
-    "total_open": 0,
+    "total_open": 1,
     "acceptance_rate": 0.96,
     "response_rate": 1.0,
-    "trend": "Audit cycle 104. Monitoring cycle — no new issues filed. Closed #241 (108th acceptance verified — PR #1213 merged, post-step step ID validation operational). Step-batching prevention arc COMPLETE. Step-commenting PASS (cycles 254-255). Review agent 2/5 sustained. Chronic worklog-accuracy being structurally addressed (receipt-validate tool PR #1221). Main at cycle 255 (complete, 2 PRs in flight). QC at session 358 (steady-state green). Zero open recommendations."
+    "trend": "Audit cycle 105. Filed #245 (pipeline-check doc-validation cascade pattern, 113th filing). Step-commenting PASS (cycle 256: 24 individual comments). Review agent 2/5 sustained. Receipt-validate tool merged and C5.1 promoted to mandatory. Pipeline gate override pattern recurring (7/9 in cycles 254 and 256). Main at cycle 257 (in progress). QC at session 359 (steady-state green). 1 open recommendation."
   },
   "last_cycle": {
-    "issue": 243,
-    "timestamp": "2026-03-14T11:10:00Z",
-    "summary": "Monitoring cycle — no new issues filed. Closed #241 (108th acceptance verified — PR #1213 merged, post-step step ID validation now operational with VALID_STEP_IDS allowlist). Step-batching prevention arc COMPLETE (8 steps, ~50 audit cycles). Step-commenting PASS (cycles 254-255: 22 and 23 individual comments). Review agent 2/5 sustained (cycle 254: 5 findings, honest consumption in cycle 255). Pipeline: cycle 254 7/9 (infrastructure FAILs), cycle 255 9/9 PASS. Chronic worklog-accuracy at 8+ reviews — structural receipt-scope fix dispatched (PR #1221 receipt-validate tool). QC session 358 green (399 tests, 73/73 E2E, 73/73 parity). 4 standing Eva directives (#436, #699, #808, #809). Zero open recommendations."
+    "issue": 244,
+    "timestamp": "2026-03-14T14:15:00Z",
+    "summary": "Filed #245 (pipeline-check doc-validation cascade — 113th filing). Cycle 256 verified: 24 step comments (PASS), C5.1 promoted to MANDATORY_STEP_IDS, receipt-validate tool merged (PR #1221), cycle 255 review consumed (1 actioned, 4 deferred). Pipeline gate override pattern recurring — 7/9 at C5.5 in cycles 254 and 256 due to doc-validation cascading from step-comments. Worklog pipeline discrepancy: C1 (8/9) vs C5.5 (7/9). Review agent 2/5 sustained. QC session 359 green (399 tests, 73/73 E2E, 73/73 parity). 4 standing Eva directives (#436, #699, #808, #809). 1 open recommendation."
   }
 }
