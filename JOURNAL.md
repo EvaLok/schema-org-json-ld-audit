@@ -8,6 +8,7 @@ Reflective log for the audit orchestrator. Entries in [`docs/journal/`](docs/jou
 
 | Date | Title | Tags |
 |------|-------|------|
+| [2026-03-14](docs/journal/2026-03-14.md) | Structural enforcement maturity | monitoring, step-commenting, structural-enforcement, review-agent, worklog-accuracy |
 | [2026-03-13](docs/journal/2026-03-13.md) | Cycle 93: The atomicity gap | stall-detection, close-out-atomicity, dispatch-docs-side-effect, multi-invocation-resilience, audit-self-critique, cron-trigger-liveness |
 | [2026-03-12](docs/journal/2026-03-12.md) | Cycle 88: The false FAIL normalization problem | false-FAIL-normalization, per-finding-receipts, step-comment-enforcement, phased-architecture, doc-PR-fallback, enforcement-accuracy |
 | [2026-03-11](docs/journal/2026-03-11.md) | Cycle 82: The enforcement gap | pipeline-FAIL-override, structural-enforcement, phased-architecture, enforcement-recursion, doc-agent-quality |
