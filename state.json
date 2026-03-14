@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-03-14T02:54:00Z",
+  "last_updated": "2026-03-14T05:20:00Z",
   "main_repo": {
-    "last_commit_audited": "bf640eb",
-    "last_orchestrator_issue_reviewed": 1200,
-    "orchestrator_cycle_count": 250,
+    "last_commit_audited": "dac5828",
+    "last_orchestrator_issue_reviewed": 1203,
+    "orchestrator_cycle_count": 252,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
       "6 skills created: github-issues-comments, journal-entries, orchestrator-permissions, pr-review-workflow, schema-implementation, writing-skills",
@@ -291,8 +291,8 @@
   },
   "qc_repo": {
     "last_commit_audited": "8c69764",
-    "last_orchestrator_issue_reviewed": 354,
-    "orchestrator_cycle_count": 354,
+    "last_orchestrator_issue_reviewed": 355,
+    "orchestrator_cycle_count": 355,
     "self_improvement_actions": [
       "Journal and worklog alignment per Eva request (2026-02-27)",
       "PHP 8.5 CI support added (2026-02-27)",
@@ -550,7 +550,8 @@
       "Audit cycle 95: STALL RESOLVED after 8+ hours (5 cron triggers). Cycle 242 active. Four acceptances: #221 (PR #1142 merged), #224 (partial), #226 (PR #1153), #229 (with #226). Zero open recommendations. Updated #227. QC at session 344 (steady-state green). 108 filed, 104 accepted, 0 open. (2026-03-13)",
       "Audit cycle 98: Closed #233 (105th acceptance). Filed #235 (review disposition loop — regression verification gate). Review scores flat at 2-3/5 for 10+ cycles — chronic finding categories (worklog-accuracy, receipt-integrity, journal-quality, test-coverage) recurring without verified resolution. Step-commenting PASS (cycles 243-246). QC at session 348 (steady-state green, 92/92 coverage). 110 filed, 105 accepted, 1 open. (2026-03-13)",
       "Audit cycle 99: Closed #235 (106th acceptance — step 0.5.11 regression verification, 5-status disposition taxonomy). Filed #237 (close-out step comments lack structural enforcement — MANDATORY_STEP_IDS covers startup only). Cycle 247 review 2/5 (over-crediting verified_resolved before production test). Main at cycle 248 (353 dispatches). QC at session 350 (steady-state green). 111 filed, 106 accepted, 1 open. (2026-03-13)",
-      "Audit cycle 100 (milestone): Closed #237 (107th acceptance — close-out step-comment enforcement: PR #1186, MANDATORY_STEP_IDS 11->19, threshold 10->17). No new issues filed. Cycles 248-249 fully compliant (startup + close-out). Review agent adversarial 2/5. Main at cycle 249 (358 dispatches, 348 merged). QC at session 352 (steady-state green). Zero open recommendations. 111 filed, 107 accepted, 0 open. (2026-03-13)"
+      "Audit cycle 100 (milestone): Closed #237 (107th acceptance — close-out step-comment enforcement: PR #1186, MANDATORY_STEP_IDS 11->19, threshold 10->17). No new issues filed. Cycles 248-249 fully compliant (startup + close-out). Review agent adversarial 2/5. Main at cycle 249 (358 dispatches, 348 merged). QC at session 352 (steady-state green). Zero open recommendations. 111 filed, 107 accepted, 0 open. (2026-03-13)",
+      "Audit cycle 102: Filed #241 (post-step step ID validation — 7th step-batching recurrence). Cycle 252 combined steps 4-5 and 6-8 despite 21-step MANDATORY_STEP_IDS. Pipeline-check parser correctly rejects combined IDs but only checks previous cycle. Recommendation: prevent at post-time via step ID validation. Main at cycle 252 (363 dispatches, 352 merged). Review agent 2/5 sustained. Commit receipts verified. QC at session 355 (steady-state green). 112 filed, 107 accepted, 1 open. (2026-03-14)"
     ],
     "qc_outbound_reports": 4,
     "qc_inbound_requests": 12,
@@ -559,7 +560,9 @@
     "open_qc_ack": null
   },
   "recommendations": {
-    "open": [],
+    "open": [
+      {"issue": 241, "title": "post-step tool accepts invalid step IDs — 7th step-batching recurrence escapes prevention", "filed": "2026-03-14"}
+    ],
     "accepted": [
       {"issue": 2, "title": "Idle cycle spinning", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
       {"issue": 3, "title": "Non-functional tools directory", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
@@ -679,19 +682,19 @@
     ]
   },
   "metrics": {
-    "total_filed": 111,
+    "total_filed": 112,
     "total_accepted": 107,
     "total_deferred": 2,
     "total_rejected": 0,
     "total_dropped": 1,
-    "total_open": 0,
+    "total_open": 1,
     "acceptance_rate": 0.96,
     "response_rate": 1.0,
-    "trend": "Audit cycle 101 (monitoring). No new issues filed. System healthy. Main at cycle 250 (complete, 359 Copilot dispatches, 349 merged, 2 in flight). Cycle 250 consumed cycle 249 review (2/5, 4 findings: 2 actioned, 2 deferred). C2/C4.5 added to MANDATORY_STEP_IDS (d05c58a). PR #1197 in flight targeting chronic worklog-accuracy/journal-quality. Step-commenting PASS (24 comments on cycle 250). Review agent consistently adversarial (2/5 for 3 cycles). QC at session 354 (steady-state green, 399 unit, 73/73 E2E, 73/73 parity). Zero open recommendations. Cumulative: 111 filed, 107 accepted (1 dropped), 2 deferred, 0 rejected, 0 open."
+    "trend": "Audit cycle 102. Filed #241 (post-step step ID validation — 7th step-batching recurrence in cycle 252, steps 4-5 and 6-8 combined). Main at cycle 252 (complete, 363 Copilot dispatches, 352 merged, 3 in flight). PR #1197 merged (write-entry auto-derive), PR #1202 merged (review artifact). 2 fixes dispatched (#1204, #1205). Review agent consistently adversarial (2/5 for cycles 249-251). QC at session 355 (steady-state green). Cumulative: 112 filed, 107 accepted (1 dropped), 2 deferred, 0 rejected, 1 open."
   },
   "last_cycle": {
-    "issue": 239,
-    "timestamp": "2026-03-14T02:54:00Z",
-    "summary": "Monitoring cycle. No new issues filed. Verified cycle 250 consumed cycle 249 review (2/5, 4 findings: 2 actioned including C2/C4.5 mandatory step fix at d05c58a, 2 deferred — worklog-accuracy/journal-quality targeted by PR #1197). Step-commenting PASS (24 comments). Review agent consistently adversarial (2/5 for cycles 247-249). Cycle 248 all-deferred pattern (5/5) did not repeat. QC steady-state green (session 354, 399 unit, 73/73 E2E). 4 standing Eva directives (#436, #699, #808, #809). No stale threads. Zero open recommendations."
+    "issue": 240,
+    "timestamp": "2026-03-14T05:20:00Z",
+    "summary": "Filed #241 (post-step step ID validation gap — 7th step-batching recurrence). Cycle 252 posted Steps 4-5 and 6-8 as combined comments despite MANDATORY_STEP_IDS requiring individual steps. Pipeline-check parser correctly rejects combined IDs but only checks previous cycle — regression won't be caught until cycle 253. Recommendation: add step ID validation to post-step tool for prevention at post-time. Main at cycle 252 (363 dispatches, 352 merged, 3 in flight — PRs #1206, #1207, #1209). Review agent sustained 2/5. Commit receipts verified (6 valid SHAs). QC at session 355 (steady-state green). 4 standing Eva directives (#436, #699, #808, #809)."
   }
 }
