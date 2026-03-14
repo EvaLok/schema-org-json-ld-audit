@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-03-14T20:04:00Z",
+  "last_updated": "2026-03-14T23:10:00Z",
   "main_repo": {
-    "last_commit_audited": "ea93c2e",
-    "last_orchestrator_issue_reviewed": 1242,
-    "orchestrator_cycle_count": 259,
+    "last_commit_audited": "7162c2d",
+    "last_orchestrator_issue_reviewed": 1255,
+    "orchestrator_cycle_count": 261,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
       "6 skills created: github-issues-comments, journal-entries, orchestrator-permissions, pr-review-workflow, schema-implementation, writing-skills",
@@ -294,9 +294,9 @@
     "directory_layout": "php/src/, php/test/, ts/src/, ts/test/ (restructured 2026-03-01, PR #263; TS port COMPLETE 2026-03-01, 14 PRs — 89/89 schema classes including SeekToAction)"
   },
   "qc_repo": {
-    "last_commit_audited": "417c86d",
-    "last_orchestrator_issue_reviewed": 362,
-    "orchestrator_cycle_count": 362,
+    "last_commit_audited": "2768409",
+    "last_orchestrator_issue_reviewed": 364,
+    "orchestrator_cycle_count": 364,
     "self_improvement_actions": [
       "Journal and worklog alignment per Eva request (2026-02-27)",
       "PHP 8.5 CI support added (2026-02-27)",
@@ -558,7 +558,9 @@
       "Audit cycle 102: Filed #241 (post-step step ID validation — 7th step-batching recurrence). Cycle 252 combined steps 4-5 and 6-8 despite 21-step MANDATORY_STEP_IDS. Pipeline-check parser correctly rejects combined IDs but only checks previous cycle. Recommendation: prevent at post-time via step ID validation. Main at cycle 252 (363 dispatches, 352 merged). Review agent 2/5 sustained. Commit receipts verified. QC at session 355 (steady-state green). 112 filed, 107 accepted, 1 open. (2026-03-14)",
       "Audit cycle 103: Monitoring cycle. #241 accepted (108th, main#1211, PR #1213 in flight). Cycle 253 step-commenting PASS (24 individual comments, all mandatory IDs). Pipeline-check caught cycle 252 batching retroactively (FAIL in step 2.5). PRs #1206 (write-entry plural PRs), #1207 (dedup guard narrowing), #1209 (review artifact) all merged. Review agent 2/5 sustained. Receipts verified (7 entries). QC session 356 green (399 tests, 73/73 E2E, 73/73 parity). Zero open recommendations. 112 filed, 108 accepted, 0 open. (2026-03-14)",
       "Audit cycle 104: Monitoring cycle. Closed #241 (108th acceptance verified — PR #1213 merged, post-step step ID validation operational). Step-batching prevention arc COMPLETE (8 steps, ~50 audit cycles). Step-commenting PASS (cycles 254-255: 22 and 23 individual comments). Review agent 2/5 sustained (cycle 254: 5 findings including pipeline-gate-override and receipt-table incompleteness). Cycle 255 honest self-correction: rescinded receipt-note assumption, dispatched receipt-validate tool PR #1221. Pipeline: cycle 254 7/9 (infrastructure artifacts), cycle 255 9/9 PASS. QC session 358 green (399 tests, 73/73 E2E, 73/73 parity). Zero open recommendations. 112 filed, 108 accepted, 0 open. (2026-03-14)",
-      "Audit cycle 106: Filed #247 (post-step duplicate step ID posting — 114th filing). Closed #245 (109th acceptance — PRs #1237/#1239 dispatched for cascade detection and pipeline status timing). Step-commenting PASS (cycles 256-258: 24-25 individual comments). New gap: duplicate Step 5 comment in cycle 258 — VALID_STEP_IDS prevents invalid/batched IDs but not duplicate valid IDs. Review agent 3/5 in cycle 257 (slight softening from sustained 2/5). Cycle 258 review pending (PR #1241). Main at cycle 258 (3 PRs in flight). QC at session 360 (steady-state green). 114 filed, 109 accepted, 1 open. (2026-03-14)"
+      "Audit cycle 106: Filed #247 (post-step duplicate step ID posting — 114th filing). Closed #245 (109th acceptance — PRs #1237/#1239 dispatched for cascade detection and pipeline status timing). Step-commenting PASS (cycles 256-258: 24-25 individual comments). New gap: duplicate Step 5 comment in cycle 258 — VALID_STEP_IDS prevents invalid/batched IDs but not duplicate valid IDs. Review agent 3/5 in cycle 257 (slight softening from sustained 2/5). Cycle 258 review pending (PR #1241). Main at cycle 258 (3 PRs in flight). QC at session 360 (steady-state green). 114 filed, 109 accepted, 1 open. (2026-03-14)",
+      "Audit cycle 107: Monitoring cycle. Verified #247 acceptance (110th). PRs #1237/#1239 merged cycle 259. Cycle 259 step-commenting PASS. C5.5 7/9 FAIL (infrastructure). QC steady-state green. 1 open recommendation. (2026-03-14)",
+      "Audit cycle 108: Monitoring cycle. Closed #247 (110th acceptance verified — PRs #1245/#1247 merged cycle 260). Cascade fix PR #1252 merged cycle 261 — doc-validation PASS. Pipeline trending PASS. Step-commenting PASS (cycles 259-261: 23-25 comments). Review agent adversarial (c259 3/5, c260 2/5). Cycle 260 review: 5 findings, 2 actioned (#1256 post-step parsing, #1258 cycle_phase consistency), 3 deferred. 3 PRs in flight (#1257, #1259, #1261). QC steady-state green (sessions 358-364). Zero open recommendations. 114 filed, 110 accepted, 0 open. (2026-03-14)"
     ],
     "qc_outbound_reports": 4,
     "qc_inbound_requests": 12,
@@ -567,9 +569,7 @@
     "open_qc_ack": null
   },
   "recommendations": {
-    "open": [
-      {"issue": 247, "title": "post-step tool allows duplicate step ID posting — inflates comment count", "filed": "2026-03-14", "accepted": "2026-03-14", "target": "main", "implementation": "main#1243 audit-inbound, PR #1245 dispatched (not yet merged)"}
-    ],
+    "open": [],
     "accepted": [
       {"issue": 2, "title": "Idle cycle spinning", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
       {"issue": 3, "title": "Non-functional tools directory", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
@@ -682,7 +682,8 @@
       {"issue": 235, "title": "Review finding disposition loop broken — actioned findings not verified for regression, 10+ cycle score plateau", "filed": "2026-03-13", "accepted": "2026-03-13", "closed": "2026-03-13", "note": "Accepted via main#1181. Step 0.5.11 added (regression verification). 5-status disposition taxonomy (actioned/dispatch_created/deferred/actioned_failed/verified_resolved). QC N/A (qc#351). 106th acceptance."},
       {"issue": 237, "title": "Close-out step comments have no structural enforcement — startup compliance PASS masks close-out omissions", "filed": "2026-03-13", "accepted": "2026-03-13", "closed": "2026-03-13", "note": "Accepted via main#1189. PR #1186 merged: MANDATORY_STEP_IDS expanded 11->19, STEP_COMMENT_THRESHOLD raised 10->17, COMPLETION_CHECKLIST renumbered to C-prefixed IDs, 6 tests updated. Cycles 248-249 both fully compliant (startup + close-out). QC N/A (qc#353). 107th acceptance."},
       {"issue": 241, "title": "post-step tool accepts invalid step IDs — 7th step-batching recurrence escapes prevention", "filed": "2026-03-14", "accepted": "2026-03-14", "closed": "2026-03-14", "note": "Accepted via main#1211. PR #1213 merged 2026-03-14 (VALID_STEP_IDS allowlist, post-time validation). QC N/A (qc#357). 108th acceptance. Verified: cycles 254-255 both fully compliant with prevention active."},
-      {"issue": 245, "title": "pipeline-check doc-validation cascades from step-comments — single root failure inflates to 2 FAILs", "filed": "2026-03-14", "accepted": "2026-03-14", "closed": "2026-03-14", "note": "Accepted via main#1235 (cycle 258). PRs #1237 (CASCADE status) and #1239 (write-entry patch-pipeline) dispatched. 109th acceptance."}
+      {"issue": 245, "title": "pipeline-check doc-validation cascades from step-comments — single root failure inflates to 2 FAILs", "filed": "2026-03-14", "accepted": "2026-03-14", "closed": "2026-03-14", "note": "Accepted via main#1235 (cycle 258). PRs #1237 (CASCADE status) and #1239 (write-entry patch-pipeline) dispatched. 109th acceptance."},
+      {"issue": 247, "title": "post-step tool allows duplicate step ID posting — inflates comment count", "filed": "2026-03-14", "accepted": "2026-03-14", "closed": "2026-03-14", "note": "Accepted via main#1243 (cycle 259). PR #1245 (duplicate rejection) and #1247 (pipeline-check --cycle threading) both merged cycle 260. 110th acceptance. Verified cycle 261: no duplicates, C5.5 PASS."}
     ],
     "rejected": [],
     "deferred": [
@@ -696,14 +697,14 @@
     "total_deferred": 2,
     "total_rejected": 0,
     "total_dropped": 1,
-    "total_open": 1,
+    "total_open": 0,
     "acceptance_rate": 0.96,
     "response_rate": 1.0,
-    "trend": "Audit cycle 107. Monitoring cycle. Verified #247 acceptance (110th — main#1243, PR #1245 dispatched). PRs #1237 (cascade) and #1239 (patch-pipeline) merged in cycle 259. Cycle 259 step-commenting PASS (23 individual comments, all mandatory IDs correct). Cycle 258 review consumed (2/5, 4 findings all deferred, but related work dispatched: #1244 duplicate detection, #1246 pipeline-check threading). C5.5 still 7/9 FAIL (legacy c258 step ID shift, should resolve cycle 260). QC steady-state green (sessions 358-362). 1 open recommendation (#247)."
+    "trend": "Audit cycle 108. Monitoring cycle. Closed #247 (110th acceptance verified — PRs #1245 and #1247 both merged cycle 260). Cascade fix PR #1252 merged cycle 261 — doc-validation now PASS. Pipeline trending: c259 FAIL (7/9), c260 FAIL, c261 PASS (1 warning). Step-commenting PASS across all 3 cycles (23-25 individual comments). Review agent sustained at 2-3/5 (adversarial). Cycle 260 review: 5 findings, 2 actioned (#1256 post-step parsing, #1258 cycle_phase consistency), 3 deferred. QC steady-state green (sessions 358-364). Zero open recommendations."
   },
   "last_cycle": {
-    "issue": 248,
-    "timestamp": "2026-03-14T20:04:00Z",
-    "summary": "Monitoring cycle. Verified #247 acceptance (110th — main#1243, PR #1245 dispatched but not merged). PRs #1237 (CASCADE status) and #1239 (write-entry patch-pipeline) merged in cycle 259. Cycle 259 step-commenting PASS (23 individual comments, all mandatory IDs correct including C8). Cycle 258 review consumed: 2/5 complacency, 4 findings all deferred (pipeline-check --cycle override, fake PR-review evidence, non-resolving SHAs, step ID shift). Related work dispatched: #1244 (duplicate detection), #1246 (pipeline-check threading). C5.5 still 7/9 FAIL (legacy c258 issues — should resolve cycle 260). QC steady-state green (sessions 358-362). 4 standing Eva directives (#436, #699, #808, #809). No new recommendations filed."
+    "issue": 249,
+    "timestamp": "2026-03-14T23:10:00Z",
+    "summary": "Monitoring cycle. Closed #247 (110th acceptance verified — PRs #1245 duplicate rejection + #1247 pipeline-check --cycle threading, both merged cycle 260). Cascade fix PR #1252 merged cycle 261 — doc-validation cascade no longer inflates pipeline FAILs. Pipeline trend: c259 FAIL (7/9), c260 FAIL (doc-validation), c261 PASS (1 warning). Step-commenting PASS across cycles 259-261 (23, 25, 25 individual comments). Review agent adversarial: c259 3/5, c260 2/5. Cycle 260 review consumed cycle 261: 5 findings, 2 actioned (dispatched #1256 post-step paginated parsing, #1258 cycle_phase monotonic invariant), 3 deferred (gate-override, receipt self-certification, chronic response mischaracterization). 3 PRs in flight (#1257, #1259, #1261). QC steady-state green (sessions 358-364, 399 tests, 73/73 E2E, 73/73 parity). 4 standing Eva directives (#436, #699, #808, #809). Zero open recommendations."
   }
 }
