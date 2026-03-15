@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-03-14T23:10:00Z",
+  "last_updated": "2026-03-15T03:07:00Z",
   "main_repo": {
-    "last_commit_audited": "7162c2d",
-    "last_orchestrator_issue_reviewed": 1255,
-    "orchestrator_cycle_count": 261,
+    "last_commit_audited": "f763ab9",
+    "last_orchestrator_issue_reviewed": 1262,
+    "orchestrator_cycle_count": 262,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
       "6 skills created: github-issues-comments, journal-entries, orchestrator-permissions, pr-review-workflow, schema-implementation, writing-skills",
@@ -294,9 +294,9 @@
     "directory_layout": "php/src/, php/test/, ts/src/, ts/test/ (restructured 2026-03-01, PR #263; TS port COMPLETE 2026-03-01, 14 PRs — 89/89 schema classes including SeekToAction)"
   },
   "qc_repo": {
-    "last_commit_audited": "2768409",
-    "last_orchestrator_issue_reviewed": 364,
-    "orchestrator_cycle_count": 364,
+    "last_commit_audited": "460861e",
+    "last_orchestrator_issue_reviewed": 365,
+    "orchestrator_cycle_count": 365,
     "self_improvement_actions": [
       "Journal and worklog alignment per Eva request (2026-02-27)",
       "PHP 8.5 CI support added (2026-02-27)",
@@ -569,7 +569,9 @@
     "open_qc_ack": null
   },
   "recommendations": {
-    "open": [],
+    "open": [
+      {"issue": 251, "title": "Review finding disposition misclassifies dispatched fixes as 'deferred' — 5-status taxonomy unused", "filed": "2026-03-15"}
+    ],
     "accepted": [
       {"issue": 2, "title": "Idle cycle spinning", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
       {"issue": 3, "title": "Non-functional tools directory", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
@@ -692,19 +694,19 @@
     ]
   },
   "metrics": {
-    "total_filed": 114,
+    "total_filed": 115,
     "total_accepted": 110,
     "total_deferred": 2,
     "total_rejected": 0,
     "total_dropped": 1,
-    "total_open": 0,
+    "total_open": 1,
     "acceptance_rate": 0.96,
     "response_rate": 1.0,
-    "trend": "Audit cycle 108. Monitoring cycle. Closed #247 (110th acceptance verified — PRs #1245 and #1247 both merged cycle 260). Cascade fix PR #1252 merged cycle 261 — doc-validation now PASS. Pipeline trending: c259 FAIL (7/9), c260 FAIL, c261 PASS (1 warning). Step-commenting PASS across all 3 cycles (23-25 individual comments). Review agent sustained at 2-3/5 (adversarial). Cycle 260 review: 5 findings, 2 actioned (#1256 post-step parsing, #1258 cycle_phase consistency), 3 deferred. QC steady-state green (sessions 358-364). Zero open recommendations."
+    "trend": "Audit cycle 109. Filed #251 (disposition misclassification — 5-status taxonomy unused in cycle 262 review consumption). Cycle 262: 3 PRs merged (#1257, #1259, #1261), 2 dispatched (#1263 record-dispatch phase gate, #1265 review-event invariant), phase rewind bug reproduced and self-corrected. Review c261: 2/5 complacency, 3 findings — all classified deferred despite concrete actions. Step-commenting PASS (25 comments c261, 25 comments c262). Pipeline PASS (1 warning). QC steady-state green (sessions 364-365 idle). 4 standing Eva directives (#436, #699, #808, #809)."
   },
   "last_cycle": {
-    "issue": 249,
-    "timestamp": "2026-03-14T23:10:00Z",
-    "summary": "Monitoring cycle. Closed #247 (110th acceptance verified — PRs #1245 duplicate rejection + #1247 pipeline-check --cycle threading, both merged cycle 260). Cascade fix PR #1252 merged cycle 261 — doc-validation cascade no longer inflates pipeline FAILs. Pipeline trend: c259 FAIL (7/9), c260 FAIL (doc-validation), c261 PASS (1 warning). Step-commenting PASS across cycles 259-261 (23, 25, 25 individual comments). Review agent adversarial: c259 3/5, c260 2/5. Cycle 260 review consumed cycle 261: 5 findings, 2 actioned (dispatched #1256 post-step paginated parsing, #1258 cycle_phase monotonic invariant), 3 deferred (gate-override, receipt self-certification, chronic response mischaracterization). 3 PRs in flight (#1257, #1259, #1261). QC steady-state green (sessions 358-364, 399 tests, 73/73 E2E, 73/73 parity). 4 standing Eva directives (#436, #699, #808, #809). Zero open recommendations."
+    "issue": 250,
+    "timestamp": "2026-03-15T03:07:00Z",
+    "summary": "Filed #251 (review finding disposition misclassification — orchestrator classifies dispatched fixes as deferred, 5-status taxonomy from audit #235 unused). Cycle 262: 3 PRs merged (#1257 post-step parsing, #1259 phase invariant, #1261 review artifact), 2 dispatched (#1263 record-dispatch phase gate, #1265 review-event invariant). Phase rewind bug reproduced (record-dispatch advanced close_out->complete for non-review dispatches) and self-corrected with 3 repair commits. Review c261: 2/5 complacency, 3 findings all classified deferred despite concrete actions taken. Step-commenting PASS (c261: 25 comments, c262: 25 comments). Pipeline PASS (1 warning). QC sessions 364-365 idle (justified — no source changes). 4 standing Eva directives (#436, #699, #808, #809). 3 open Copilot PRs (#1264, #1266, #1268)."
   }
 }
