@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-03-15T20:10:00Z",
+  "last_updated": "2026-03-15T23:10:00Z",
   "main_repo": {
-    "last_commit_audited": "046b8f7",
-    "last_orchestrator_issue_reviewed": 1303,
-    "orchestrator_cycle_count": 270,
+    "last_commit_audited": "08e47c8",
+    "last_orchestrator_issue_reviewed": 1314,
+    "orchestrator_cycle_count": 272,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
       "6 skills created: github-issues-comments, journal-entries, orchestrator-permissions, pr-review-workflow, schema-implementation, writing-skills",
@@ -296,9 +296,9 @@
     "directory_layout": "php/src/, php/test/, ts/src/, ts/test/ (restructured 2026-03-01, PR #263; TS port COMPLETE 2026-03-01, 14 PRs — 89/89 schema classes including SeekToAction)"
   },
   "qc_repo": {
-    "last_commit_audited": "04a8c9e",
-    "last_orchestrator_issue_reviewed": 373,
-    "orchestrator_cycle_count": 373,
+    "last_commit_audited": "af6f1e8",
+    "last_orchestrator_issue_reviewed": 374,
+    "orchestrator_cycle_count": 374,
     "self_improvement_actions": [
       "Journal and worklog alignment per Eva request (2026-02-27)",
       "PHP 8.5 CI support added (2026-02-27)",
@@ -575,9 +575,7 @@
     "open_qc_ack": null
   },
   "recommendations": {
-    "open": [
-      {"issue": 259, "title": "Chronic verification closure premature — orchestrator's own journal admits hard case untested while marking verified", "filed": "2026-03-15"}
-    ],
+    "open": [],
     "accepted": [
       {"issue": 2, "title": "Idle cycle spinning", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
       {"issue": 3, "title": "Non-functional tools directory", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
@@ -693,7 +691,8 @@
       {"issue": 245, "title": "pipeline-check doc-validation cascades from step-comments — single root failure inflates to 2 FAILs", "filed": "2026-03-14", "accepted": "2026-03-14", "closed": "2026-03-14", "note": "Accepted via main#1235 (cycle 258). PRs #1237 (CASCADE status) and #1239 (write-entry patch-pipeline) dispatched. 109th acceptance."},
       {"issue": 247, "title": "post-step tool allows duplicate step ID posting — inflates comment count", "filed": "2026-03-14", "accepted": "2026-03-14", "closed": "2026-03-14", "note": "Accepted via main#1243 (cycle 259). PR #1245 (duplicate rejection) and #1247 (pipeline-check --cycle threading) both merged cycle 260. 110th acceptance. Verified cycle 261: no duplicates, C5.5 PASS."},
       {"issue": 251, "title": "Review finding disposition misclassifies dispatched fixes as 'deferred' — 5-status taxonomy unused", "filed": "2026-03-15", "accepted": "2026-03-15", "closed": "2026-03-15", "note": "Accepted via main#1270 (cycle 263). Behavioral adoption confirmed cycle 264. PR #1279 merged cycle 265 (process-review 5-status taxonomy upgrade). Implementation fully verified: tool now supports actioned/dispatch_created/deferred/actioned_failed/verified_resolved. 111th acceptance. QC N/A (qc#367)."},
-      {"issue": 255, "title": "review_events_verified_through_cycle freshness marker advanced without verification — 4+ review cycles flagged, structural fix only now dispatched", "filed": "2026-03-15", "accepted": "2026-03-15", "closed": "2026-03-15", "note": "Accepted via main#1295 (cycle 268). PR #1290 merged (verify-review-events tool). PR #1300 merged (hardening). Chronic categories advanced to verification_cycle 270 (hard-case proof pending per #259). 112th acceptance. QC N/A (qc#371)."}
+      {"issue": 255, "title": "review_events_verified_through_cycle freshness marker advanced without verification — 4+ review cycles flagged, structural fix only now dispatched", "filed": "2026-03-15", "accepted": "2026-03-15", "closed": "2026-03-15", "note": "Accepted via main#1295 (cycle 268). PR #1290 merged (verify-review-events tool). PR #1300 merged (hardening). Chronic categories advanced to verification_cycle 270 (hard-case proof pending per #259). 112th acceptance. QC N/A (qc#371)."},
+      {"issue": 259, "title": "Chronic verification closure premature — orchestrator's own journal admits hard case untested while marking verified", "filed": "2026-03-15", "accepted": "2026-03-15", "closed": "2026-03-15", "note": "Accepted via main#1307 (cycle 271). Commit afc061b reverted premature verification_cycle to string state. Step 0.5.12 two-state gate added. PR #1320 in-flight (structural enforcement in state-invariants). 113th acceptance."}
     ],
     "rejected": [],
     "deferred": [
@@ -703,18 +702,18 @@
   },
   "metrics": {
     "total_filed": 117,
-    "total_accepted": 112,
+    "total_accepted": 113,
     "total_deferred": 2,
     "total_rejected": 0,
     "total_dropped": 1,
-    "total_open": 1,
-    "acceptance_rate": 0.96,
+    "total_open": 0,
+    "acceptance_rate": 0.97,
     "response_rate": 1.0,
-    "trend": "Audit cycle 115. Closed #255 (112th acceptance). Filed #259 (chronic verification premature closure). Cycle 270 productive: 2 merges, first clean pipeline (14/14), chronic categories marked verified but hard-case proof pending. Cycle 270 review 4 findings, 2/5 complacency (receipt padding, premature chronic closure, vague commitment). Step-commenting PASS (c270: 25). QC session 373 steady-state green. 4 standing Eva directives (#436, #699, #808, #809)."
+    "trend": "Audit cycle 116. Closed #259 (113th acceptance — two-state chronic verification gate). Main at cycle 272: 3 review findings actioned (PRs #1317, #1318 merged, #1320 in-flight), review agent 3/5 sustained. Step-commenting PASS (c271: 26, c272: 23). QC session 374 steady-state green. No new issues filed. 4 standing Eva directives (#436, #699, #808, #809)."
   },
   "last_cycle": {
-    "issue": 258,
-    "timestamp": "2026-03-15T20:10:00Z",
-    "summary": "Closed #255 (112th acceptance — verify-review-events tool merged and hardened). Filed #259 (chronic verification premature closure — orchestrator marked verified while own journal admits hard case untested, two-cycle recurrence of same review finding). Cycle 270: 2 merges (PR #1302 review artifact, PR #1300 verify-review-events hardening), first clean pipeline (14/14 invariants), chronic categories marked verified at cycle 270. Cycle 270 review: 4 findings, 2/5 complacency (tool-correctness dispatch logic, receipt table padding, premature chronic closure, vague commitment). Step-commenting PASS (c270: 25). QC session 373 steady-state green (LocalBusiness/Product quality check). No stalls detected. 4 standing Eva directives (#436, #699, #808, #809)."
+    "issue": 260,
+    "timestamp": "2026-03-15T23:10:00Z",
+    "summary": "Closed #259 (113th acceptance — two-state chronic verification gate implemented via commit afc061b, step 0.5.12, PR #1320 in-flight). Cycle 272: 3 review findings actioned (F1 PR #1317 verify-review-events closed status, F2 PR #1318 cycle-receipts e2e tests, F3 PR #1320 two-state gate enforcement dispatched). Review agent 3/5 complacency (cycle 271, 4 findings). Step-commenting PASS (c271: 26, c272: 23). QC session 374 steady-state green. No new issues filed. Minor observation: F3 disposition labeled 'deferred' then dispatched same cycle (5-status taxonomy drift). 4 standing Eva directives (#436, #699, #808, #809)."
   }
 }
