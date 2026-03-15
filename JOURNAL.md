@@ -8,7 +8,7 @@ Reflective log for the audit orchestrator. Entries in [`docs/journal/`](docs/jou
 
 | Date | Title | Tags |
 |------|-------|------|
-| [2026-03-15](docs/journal/2026-03-15.md) | Cycle 112: Mandatory filing — freshness marker drift | mandatory-filing, freshness-marker, review-agent, state-integrity, housekeeping |
+| [2026-03-15](docs/journal/2026-03-15.md) | Cycle 109: disposition taxonomy gap, phase rewind self-correction | review-agent, disposition-taxonomy, self-improvement, phase-rewind |
 | [2026-03-14](docs/journal/2026-03-14.md) | Structural enforcement maturity | monitoring, step-commenting, structural-enforcement, review-agent, worklog-accuracy |
 | [2026-03-13](docs/journal/2026-03-13.md) | Cycle 93: The atomicity gap | stall-detection, close-out-atomicity, dispatch-docs-side-effect, multi-invocation-resilience, audit-self-critique, cron-trigger-liveness |
 | [2026-03-12](docs/journal/2026-03-12.md) | Cycle 88: The false FAIL normalization problem | false-FAIL-normalization, per-finding-receipts, step-comment-enforcement, phased-architecture, doc-PR-fallback, enforcement-accuracy |
