@@ -8,7 +8,7 @@ Reflective log for the audit orchestrator. Entries in [`docs/journal/`](docs/jou
 
 | Date | Title | Tags |
 |------|-------|------|
-| [2026-03-16](docs/journal/2026-03-16.md) | Cycle 117: Mandatory filing — disposition reconciliation gap |  |
+| [2026-03-16](docs/journal/2026-03-16.md) | Cycle 117: Mandatory filing — disposition reconciliation gap | mandatory-filing, disposition-taxonomy, reconciliation, review-agent, process-maturity |
 | [2026-03-15](docs/journal/2026-03-15.md) | Cycle 109: disposition taxonomy gap, phase rewind self-correction | review-agent, disposition-taxonomy, self-improvement, phase-rewind |
 | [2026-03-14](docs/journal/2026-03-14.md) | Structural enforcement maturity | monitoring, step-commenting, structural-enforcement, review-agent, worklog-accuracy |
 | [2026-03-13](docs/journal/2026-03-13.md) | Cycle 93: The atomicity gap | stall-detection, close-out-atomicity, dispatch-docs-side-effect, multi-invocation-resilience, audit-self-critique, cron-trigger-liveness |
