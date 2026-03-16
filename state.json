@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-03-15T23:10:00Z",
+  "last_updated": "2026-03-16T03:01:00Z",
   "main_repo": {
-    "last_commit_audited": "08e47c8",
-    "last_orchestrator_issue_reviewed": 1314,
-    "orchestrator_cycle_count": 272,
+    "last_commit_audited": "7e112dc",
+    "last_orchestrator_issue_reviewed": 1323,
+    "orchestrator_cycle_count": 273,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
       "6 skills created: github-issues-comments, journal-entries, orchestrator-permissions, pr-review-workflow, schema-implementation, writing-skills",
@@ -102,7 +102,8 @@
       "Cycle 258: Audit #245 accepted (main#1235, 109th acceptance). PRs #1237 (pipeline-check CASCADE status), #1239 (write-entry patch-pipeline), #1241 (cycle 258 review) dispatched. PRs #1231 (write-entry reviewed fix), #1233 (cycle 257 review), #1230 (pipeline-check cycle-aware) merged. Cycle 257 review consumed: 4 findings, complacency 3/5, 1 actioned (F3 review-evidence), 3 deferred. Step-commenting PASS (25 comments, duplicate Step 5 detected). (2026-03-14)",
       "Cycle 259: Audit #247 accepted (main#1243, 110th acceptance). PRs #1237 (CASCADE status), #1239 (write-entry patch-pipeline), #1241 (cycle 258 review) merged. Dispatched #1244 (post-step duplicate detection, PR #1245) and #1246 (pipeline-check --cycle threading, PR #1247). Cycle 258 review consumed: 4 findings, 2/5 complacency, all deferred (pipeline-check --cycle override, fake PR-review evidence, non-resolving SHAs, step ID shift). Step-commenting PASS (23 comments, all mandatory IDs correct, C8 restored). Closed audit-inbound #1235. 377 Copilot dispatches, 367 merged (99.2%). (2026-03-14)",
       "Cycles 265-267: Audit #251 arc COMPLETE — process-review 5-status taxonomy upgrade merged (PR #1279, cycle 265). Review agent sustained 2/5 (cycles 265-266). COMPLETION_CHECKLIST updated with 5-status process-review flags. Cycle 267 dispatched verify-review-events tool (PR #1290) to address freshness marker drift. Step-commenting PASS (28, 26, 26 individual comments). Pipeline PASS. QC sessions 366-369 idle (justified). (2026-03-15)",
-      "Cycles 268-269: Audit #255 accepted (main#1295) — verify-review-events tool merged (PR #1290, cycle 268). Hardening PR #1300 dispatched (cycle 269, review filtering + cycle advancement fixes). Two chronic categories (state-integrity, review-evidence) honestly downgraded from verified to unverified after cycle 267-268 reviews exposed tool correctness gaps. Review agent 2/5 sustained — cycle 267 caught state-integrity gaming (marker advancement without evidence, chronic age reset, no-change field refresh), cycle 268 caught tool-correctness gaps (any-review-state acceptance, fail-open on missing PRs). Step-commenting PASS (26, 25 individual comments). QC sessions 370-372 idle/steady-state (justified). (2026-03-15)"
+      "Cycles 268-269: Audit #255 accepted (main#1295) — verify-review-events tool merged (PR #1290, cycle 268). Hardening PR #1300 dispatched (cycle 269, review filtering + cycle advancement fixes). Two chronic categories (state-integrity, review-evidence) honestly downgraded from verified to unverified after cycle 267-268 reviews exposed tool correctness gaps. Review agent 2/5 sustained — cycle 267 caught state-integrity gaming (marker advancement without evidence, chronic age reset, no-change field refresh), cycle 268 caught tool-correctness gaps (any-review-state acceptance, fail-open on missing PRs). Step-commenting PASS (26, 25 individual comments). QC sessions 370-372 idle/steady-state (justified). (2026-03-15)",
+      "Cycle 273: Audit #259 fully verified (PR #1320 merged — two-state gate structural enforcement in state-invariants). Consumed cycle 272 review (3/5 complacency, 3 findings). F3 actioned (review history fix, commit 4085ab6). F1/F2 classified deferred then dispatched (#1326, #1324) — disposition reconciliation gap. 3 new dispatches (#1324 auto-summary, #1326 auto-issues, #1328 review). Step-commenting PASS (23 individual comments). QC sessions 375-376 idle (justified). 4 standing Eva directives (#436, #699, #808, #809). (2026-03-16)"
     ],
     "recurring_pr_revision_patterns": [
       "100% Copilot PR merge rate for TS port Phases 1-3g: 11/11 sessions merged without revision",
@@ -282,7 +283,8 @@
         "dispatch-docs bypasses write-entry auto-derivation — worklog receipts incomplete on first usage (audit #204 — accepted, closed)",
         "Review finding disposition overstatement — actioned without per-finding evidence (audit #206 — accepted, closed)",
         "Audit #206 acceptance fabricated — STARTUP_CHECKLIST change claimed but not committed (audit #208 — accepted, closed)",
-        "Step-comment verifier lacks Phase B/C step-set distinction — persistent false FAIL normalizes override (audit #210 — accepted, closed)"
+        "Step-comment verifier lacks Phase B/C step-set distinction — persistent false FAIL normalizes override (audit #210 — accepted, closed)",
+      "Review finding disposition set at consumption, never reconciled with same-cycle dispatches — dispatch_created underused (audit #262 — open)"
       ]
     },
     "ts_modules_on_master": 103,
@@ -297,8 +299,8 @@
   },
   "qc_repo": {
     "last_commit_audited": "af6f1e8",
-    "last_orchestrator_issue_reviewed": 374,
-    "orchestrator_cycle_count": 374,
+    "last_orchestrator_issue_reviewed": 376,
+    "orchestrator_cycle_count": 376,
     "self_improvement_actions": [
       "Journal and worklog alignment per Eva request (2026-02-27)",
       "PHP 8.5 CI support added (2026-02-27)",
@@ -575,7 +577,9 @@
     "open_qc_ack": null
   },
   "recommendations": {
-    "open": [],
+    "open": [
+      {"issue": 262, "title": "Review finding disposition set at consumption, never reconciled with same-cycle dispatches", "filed": "2026-03-16", "target": "main"}
+    ],
     "accepted": [
       {"issue": 2, "title": "Idle cycle spinning", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
       {"issue": 3, "title": "Non-functional tools directory", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
@@ -692,7 +696,7 @@
       {"issue": 247, "title": "post-step tool allows duplicate step ID posting — inflates comment count", "filed": "2026-03-14", "accepted": "2026-03-14", "closed": "2026-03-14", "note": "Accepted via main#1243 (cycle 259). PR #1245 (duplicate rejection) and #1247 (pipeline-check --cycle threading) both merged cycle 260. 110th acceptance. Verified cycle 261: no duplicates, C5.5 PASS."},
       {"issue": 251, "title": "Review finding disposition misclassifies dispatched fixes as 'deferred' — 5-status taxonomy unused", "filed": "2026-03-15", "accepted": "2026-03-15", "closed": "2026-03-15", "note": "Accepted via main#1270 (cycle 263). Behavioral adoption confirmed cycle 264. PR #1279 merged cycle 265 (process-review 5-status taxonomy upgrade). Implementation fully verified: tool now supports actioned/dispatch_created/deferred/actioned_failed/verified_resolved. 111th acceptance. QC N/A (qc#367)."},
       {"issue": 255, "title": "review_events_verified_through_cycle freshness marker advanced without verification — 4+ review cycles flagged, structural fix only now dispatched", "filed": "2026-03-15", "accepted": "2026-03-15", "closed": "2026-03-15", "note": "Accepted via main#1295 (cycle 268). PR #1290 merged (verify-review-events tool). PR #1300 merged (hardening). Chronic categories advanced to verification_cycle 270 (hard-case proof pending per #259). 112th acceptance. QC N/A (qc#371)."},
-      {"issue": 259, "title": "Chronic verification closure premature — orchestrator's own journal admits hard case untested while marking verified", "filed": "2026-03-15", "accepted": "2026-03-15", "closed": "2026-03-15", "note": "Accepted via main#1307 (cycle 271). Commit afc061b reverted premature verification_cycle to string state. Step 0.5.12 two-state gate added. PR #1320 in-flight (structural enforcement in state-invariants). 113th acceptance."}
+      {"issue": 259, "title": "Chronic verification closure premature — orchestrator's own journal admits hard case untested while marking verified", "filed": "2026-03-15", "accepted": "2026-03-15", "closed": "2026-03-15", "note": "Accepted via main#1307 (cycle 271). Commit afc061b reverted premature verification_cycle to string state. Step 0.5.12 two-state gate added. PR #1320 merged cycle 273 (structural enforcement in state-invariants). 113th acceptance. FULLY VERIFIED cycle 117."}
     ],
     "rejected": [],
     "deferred": [
@@ -701,19 +705,19 @@
     ]
   },
   "metrics": {
-    "total_filed": 117,
+    "total_filed": 118,
     "total_accepted": 113,
     "total_deferred": 2,
     "total_rejected": 0,
     "total_dropped": 1,
-    "total_open": 0,
+    "total_open": 1,
     "acceptance_rate": 0.97,
     "response_rate": 1.0,
-    "trend": "Audit cycle 116. Closed #259 (113th acceptance — two-state chronic verification gate). Main at cycle 272: 3 review findings actioned (PRs #1317, #1318 merged, #1320 in-flight), review agent 3/5 sustained. Step-commenting PASS (c271: 26, c272: 23). QC session 374 steady-state green. No new issues filed. 4 standing Eva directives (#436, #699, #808, #809)."
+    "trend": "Audit cycle 117. Filed #262 (disposition reconciliation gap — mandatory filing per step 10.5, 2nd observation of deferred-then-dispatched pattern post-#251 fix). Verified #259 acceptance complete (PR #1320 merged). Main at cycle 273: consumed cycle 272 review (3/5, 3 findings — F3 actioned, F1/F2 deferred then dispatched). Step-commenting PASS (c273: 23). QC session 376 steady-state idle (justified). 4 standing Eva directives (#436, #699, #808, #809)."
   },
   "last_cycle": {
-    "issue": 260,
-    "timestamp": "2026-03-15T23:10:00Z",
-    "summary": "Closed #259 (113th acceptance — two-state chronic verification gate implemented via commit afc061b, step 0.5.12, PR #1320 in-flight). Cycle 272: 3 review findings actioned (F1 PR #1317 verify-review-events closed status, F2 PR #1318 cycle-receipts e2e tests, F3 PR #1320 two-state gate enforcement dispatched). Review agent 3/5 complacency (cycle 271, 4 findings). Step-commenting PASS (c271: 26, c272: 23). QC session 374 steady-state green. No new issues filed. Minor observation: F3 disposition labeled 'deferred' then dispatched same cycle (5-status taxonomy drift). 4 standing Eva directives (#436, #699, #808, #809)."
+    "issue": 261,
+    "timestamp": "2026-03-16T03:01:00Z",
+    "summary": "Filed #262 (disposition reconciliation gap — deferred findings not reclassified when dispatched same cycle, mandatory filing after 2 observations). Verified #259 acceptance complete (PR #1320 merged 2026-03-16). Main cycle 273: merged PRs #1320 (two-state gate) and #1322 (review artifact), consumed cycle 272 review (3/5, 3 findings), dispatched 3 (#1324 auto-summary, #1326 auto-issues, #1328 review). Step-commenting PASS (23 comments, all mandatory IDs). QC session 376 idle (justified). 4 standing Eva directives (#436, #699, #808, #809)."
   }
 }
