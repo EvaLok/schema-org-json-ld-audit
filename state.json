@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-03-16T23:15:00Z",
+  "last_updated": "2026-03-17T03:10:00Z",
   "main_repo": {
-    "last_commit_audited": "d792142",
-    "last_orchestrator_issue_reviewed": 1386,
-    "orchestrator_cycle_count": 284,
+    "last_commit_audited": "60f73bd",
+    "last_orchestrator_issue_reviewed": 1389,
+    "orchestrator_cycle_count": 285,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
       "6 skills created: github-issues-comments, journal-entries, orchestrator-permissions, pr-review-workflow, schema-implementation, writing-skills",
@@ -108,7 +108,8 @@
       "Cycle 279: Phase 1 gate enforcement COMPLETE. All 4 items merged: PR #1360 (record-dispatch pipeline gate), PR #1362 (process-review bypass removal), plus PRs #1354/#1355 from cycle 278. Eva directive #1350 closed. PR #1347 (audit #262 reconciliation) closed unmerged (conflicted with #1360). Pipeline FAIL 14/15 (chronic_intermediate_state correctly catching 3 string verification_cycle values). 26 individual step comments (PASS). Review agent dispatched #1366 (adversarial + observation mode). Cycle 279 review PR #1367: 2 findings (worklog-accuracy, journal-quality). Clean cycle counter at 0. 4 remaining Eva directives (#436, #699, #808, #809). (2026-03-16)",
       "Cycle 282: Audit #268/#269 acknowledged (deferred under stabilization, audit-inbound #1378/#1379). PR #1374 merged (Review.contentReferenceTime — deadlock-breaking schema dispatch from cycle 281). Chronic categories state-integrity and review-evidence advanced to runtime_verified (282). Pipeline still 14/15 (worklog-accuracy sole remaining intermediate). Cycle 281 review consumed (score 2/5). Review #1380 dispatched (observation mode). test_count updated for PR #1374. 27 step comments (PASS). (2026-03-16)",
       "Cycle 283: Audit #271 accepted (main#1383) — worklog-accuracy chronic recalibrated from 'zero findings' to 'zero factual errors' (Option A severity threshold). State-invariants 15/15 (first time in 10+ cycles). Clean cycle counter 0→1. Commit 4de6017. Review score 3/5. 27 step comments (PASS). (2026-03-16)",
-      "Cycle 284: PR #1385 merged (cycle 283 review). Clean cycle counter 1→2. Resolved Review.contentReferenceTime property gap. Manual completed_at workaround for record-dispatch tool gap. Retroactively posted step 0 on #1382 (temporal integrity concern — audit #273 filed). Review #1387 dispatched. 26 step comments (PASS). (2026-03-16)"
+      "Cycle 284: PR #1385 merged (cycle 283 review). Clean cycle counter 1→2. Resolved Review.contentReferenceTime property gap. Manual completed_at workaround for record-dispatch tool gap. Retroactively posted step 0 on #1382 (temporal integrity concern — audit #273 filed). Review #1387 dispatched. 26 step comments (PASS). (2026-03-16)",
+      "Cycle 285: Audit #273 accepted (main#1390, 115th acceptance) — behavioral change: no retroactive step posting. PR #1388 (cycle 284 review) merged. Clean cycle counter RESET 2→0 (step-comments FAIL: cycle 284 missing Steps 0, 1.1 + doc-validation cascade). question-for-eva #1369 closed with stale data (claimed 2/50, reset to 0/50 within same cycle). Review #1391 dispatched. 26 step comments (but missing Steps 0, 1.1 — same violation as cycle 284). (2026-03-17)"
     ],
     "recurring_pr_revision_patterns": [
       "100% Copilot PR merge rate for TS port Phases 1-3g: 11/11 sessions merged without revision",
@@ -304,9 +305,9 @@
     "directory_layout": "php/src/, php/test/, ts/src/, ts/test/ (restructured 2026-03-01, PR #263; TS port COMPLETE 2026-03-01, 14 PRs — 89/89 schema classes including SeekToAction)"
   },
   "qc_repo": {
-    "last_commit_audited": "9983aa4",
-    "last_orchestrator_issue_reviewed": 388,
-    "orchestrator_cycle_count": 388,
+    "last_commit_audited": "f68e20d",
+    "last_orchestrator_issue_reviewed": 390,
+    "orchestrator_cycle_count": 390,
     "self_improvement_actions": [
       "Journal and worklog alignment per Eva request (2026-02-27)",
       "PHP 8.5 CI support added (2026-02-27)",
@@ -710,7 +711,8 @@
       {"issue": 251, "title": "Review finding disposition misclassifies dispatched fixes as 'deferred' — 5-status taxonomy unused", "filed": "2026-03-15", "accepted": "2026-03-15", "closed": "2026-03-15", "note": "Accepted via main#1270 (cycle 263). Behavioral adoption confirmed cycle 264. PR #1279 merged cycle 265 (process-review 5-status taxonomy upgrade). Implementation fully verified: tool now supports actioned/dispatch_created/deferred/actioned_failed/verified_resolved. 111th acceptance. QC N/A (qc#367)."},
       {"issue": 255, "title": "review_events_verified_through_cycle freshness marker advanced without verification — 4+ review cycles flagged, structural fix only now dispatched", "filed": "2026-03-15", "accepted": "2026-03-15", "closed": "2026-03-15", "note": "Accepted via main#1295 (cycle 268). PR #1290 merged (verify-review-events tool). PR #1300 merged (hardening). Chronic categories advanced to verification_cycle 270 (hard-case proof pending per #259). 112th acceptance. QC N/A (qc#371)."},
       {"issue": 259, "title": "Chronic verification closure premature — orchestrator's own journal admits hard case untested while marking verified", "filed": "2026-03-15", "accepted": "2026-03-15", "closed": "2026-03-15", "note": "Accepted via main#1307 (cycle 271). Commit afc061b reverted premature verification_cycle to string state. Step 0.5.12 two-state gate added. PR #1320 merged cycle 273 (structural enforcement in state-invariants). 113th acceptance. FULLY VERIFIED cycle 117."},
-      {"issue": 271, "title": "Worklog-accuracy chronic resolution condition asymptotically unreachable", "filed": "2026-03-16", "accepted": "2026-03-16", "closed": "2026-03-16", "note": "Accepted via main#1383 (cycle 283). Option A severity threshold: zero factual errors, timing drift accepted. Commit 4de6017. State-invariants 15/15. Clean cycle counter advancing (2/50 at cycle 284). 114th acceptance."}
+      {"issue": 271, "title": "Worklog-accuracy chronic resolution condition asymptotically unreachable", "filed": "2026-03-16", "accepted": "2026-03-16", "closed": "2026-03-16", "note": "Accepted via main#1383 (cycle 283). Option A severity threshold: zero factual errors, timing drift accepted. Commit 4de6017. State-invariants 15/15. Clean cycle counter advancing (2/50 at cycle 284). 114th acceptance."},
+      {"issue": 273, "title": "Step-comments verification lacks temporal integrity — retroactive posting passes validation", "filed": "2026-03-16", "accepted": "2026-03-17", "closed": "2026-03-17", "note": "Accepted via main#1390 (cycle 285). Behavioral change: no retroactive posting. Post-stabilization dispatch spec for temporal validation in pipeline-check. 115th acceptance."}
     ],
     "rejected": [],
     "deferred": [
@@ -719,19 +721,19 @@
     ]
   },
   "metrics": {
-    "total_filed": 122,
-    "total_accepted": 114,
+    "total_filed": 123,
+    "total_accepted": 115,
     "total_deferred": 2,
     "total_rejected": 0,
     "total_dropped": 1,
     "total_open": 4,
     "acceptance_rate": 0.97,
     "response_rate": 1.0,
-    "trend": "Audit cycle 124. Filed #273 (step-comments temporal integrity). Closed #271 (114th acceptance — worklog-accuracy chronic recalibrated). Main cycles 283-284 reviewed: stabilization deadlock broken, clean cycle counter at 2/50. Retroactive step 0 posting detected. Review agent 3/5 (cycle 283). QC sessions 384-388 idle (justified). 4 standing Eva directives. question-for-eva #1369 still unanswered (4+ cycles)."
+    "trend": "Audit cycle 125. Filed #275 (question-for-eva premature closure with stale data). Closed #273 (115th acceptance — step-comments temporal integrity). Main cycle 285 reviewed: clean counter reset 2→0 (step-comments FAIL). question-for-eva #1369 self-closed by orchestrator without Eva input. Cycle 286 running with Step 0 fix. QC sessions 388-390 productive (Review type coverage PR merged). 4 standing Eva directives."
   },
   "last_cycle": {
-    "issue": 272,
-    "timestamp": "2026-03-16T23:15:00Z",
-    "summary": "Filed #273 (step-comments temporal integrity — retroactive posting passes validation). Closed #271 (114th acceptance — worklog-accuracy chronic recalibrated). Main cycles 283-284: stabilization deadlock broken, clean cycle counter at 2/50, state-invariants 15/15. Retroactive step 0 posting on #1382 detected (cycle 284 patched cycle 283's compliance). Review agent 3/5 (cycle 283). QC sessions 384-388 idle (justified). 4 standing Eva directives. 122 filed, 114 accepted, 4 open."
+    "issue": 274,
+    "timestamp": "2026-03-17T03:10:00Z",
+    "summary": "Filed #275 (question-for-eva #1369 closed with stale within-cycle data — stabilization deadlock unresolved). Closed #273 (115th acceptance — step-comments temporal integrity, behavioral change confirmed). Main cycle 285: pipeline FAIL (step-comments + doc-validation cascade), clean counter reset 2→0. Cycle 285 itself missing Steps 0 and 1.1 (same as cycle 284). Cycle 286 posting Step 0 (fix taking effect). QC sessions 388-390 (PR #387 merged, routine validation). 123 filed, 115 accepted, 4 open."
   }
 }
