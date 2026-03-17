@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-03-17T17:22:00Z",
+  "last_updated": "2026-03-17T23:15:00Z",
   "main_repo": {
-    "last_commit_audited": "2a6e7e3",
-    "last_orchestrator_issue_reviewed": 1420,
-    "orchestrator_cycle_count": 291,
+    "last_commit_audited": "03cb869",
+    "last_orchestrator_issue_reviewed": 1428,
+    "orchestrator_cycle_count": 293,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
       "6 skills created: github-issues-comments, journal-entries, orchestrator-permissions, pr-review-workflow, schema-implementation, writing-skills",
@@ -112,7 +112,9 @@
       "Cycle 285: Audit #273 accepted (main#1390, 115th acceptance) — behavioral change: no retroactive step posting. PR #1388 (cycle 284 review) merged. Clean cycle counter RESET 2→0 (step-comments FAIL: cycle 284 missing Steps 0, 1.1 + doc-validation cascade). question-for-eva #1369 closed with stale data (claimed 2/50, reset to 0/50 within same cycle). Review #1391 dispatched. 26 step comments (but missing Steps 0, 1.1 — same violation as cycle 284). (2026-03-17)",
       "Cycles 286-287: Audit #275 accepted (main#1397, 116th acceptance) — re-filed question-for-eva as #1398 (stabilization deadlock: 0/50 after 14+ cycles), closure deferral rule added. Eva directive #1401 (Phase 2: Tool Bug Fixes, 9 scope items) opened. Cycle 286: missing Steps 1.1 and 2.5 (clean counter stays 0). Cycle 287: all mandatory steps present. Review scores 3/5 (cycles 283-286), all findings deferred under stabilization observation mode. Phase 1 gate enforcement COMPLETE (4/4 items merged). 5 standing Eva directives (#436, #699, #808, #809, #1401). (2026-03-17)",
       "Cycles 288-289: Phase 2 Batch 1 (#1404, PR #1406) merged cycle 289 — items 5/7/8 addressed (pipeline cascade, --review-dispatch, receipt scope). Batch 2 (#1405, PR #1407) closed (merge conflicts), redispatched as #1413 (PR #1414 in flight). Batch 3 (#1411, PR #1412 in flight). Cycle 288 review score 3/5, 4 findings all deferred under stabilization. Step 1.1 missing from cycle 289 (transition artifact — MANDATORY_STEP_IDS fix merged mid-cycle via PR #1406). Clean counter paused per Phase 2 rules. question-for-eva #1398 still open. 27 step comments each cycle (PASS except 1.1 gap). (2026-03-17)",
-      "Cycles 290-291: PHASE 2 COMPLETE — all 9 tool bug fix items from Eva directive #1401 merged. Batch 3 (PR #1412, items 1-2) merged cycle 290. Batch 2 (PR #1414, items 3/4/9, +1084/-85) merged cycle 291. Step 1.1 missing from cycle 290 despite MANDATORY_STEP_IDS enforcement — pipeline treated as cascade WARNING (non-blocking). Cycle 291 Step 1.1 posted out of order (after Step 9, defeating Eva comment check purpose). Audit #281 filed. Review dispatched #1421 (PR #1422 in flight). question-for-eva #1398 still open. 5 standing Eva directives (#436, #699, #808, #809, #1401). (2026-03-17)"
+      "Cycles 290-291: PHASE 2 COMPLETE — all 9 tool bug fix items from Eva directive #1401 merged. Batch 3 (PR #1412, items 1-2) merged cycle 290. Batch 2 (PR #1414, items 3/4/9, +1084/-85) merged cycle 291. Step 1.1 missing from cycle 290 despite MANDATORY_STEP_IDS enforcement — pipeline treated as cascade WARNING (non-blocking). Cycle 291 Step 1.1 posted out of order (after Step 9, defeating Eva comment check purpose). Audit #281 filed. Review dispatched #1421 (PR #1422 in flight). question-for-eva #1398 still open. 5 standing Eva directives (#436, #699, #808, #809, #1401). (2026-03-17)",
+      "Cycle 292: Phase 2 exit criteria met, Eva directive #1401 closed. Audit #281 accepted (main#1424), deferred to post-stabilization. question-for-eva #1398 closed. Clean cycle counter advanced to 1/50. Step 1.1 posted after Step 5 (out of order). Review PR #1422 merged (cycle 291 review, 5 findings, 4/5). 27 step comments (PASS). (2026-03-17)",
+      "Cycle 293: Stabilization burn-in cycle 2/50. Review PR #1426 merged (cycle 292 review, 4 findings, 4/5 — phase-closure, receipt-integrity, worklog-accuracy, gate-enforcement — all deferred). Step 0 missing, Step 1.1 missing. Pipeline PASS. Review #1429 dispatched. 4 standing Eva directives (#436, #699, #808, #809). (2026-03-17)"
     ],
     "recurring_pr_revision_patterns": [
       "100% Copilot PR merge rate for TS port Phases 1-3g: 11/11 sessions merged without revision",
@@ -309,8 +311,8 @@
   },
   "qc_repo": {
     "last_commit_audited": "3e7cfc9",
-    "last_orchestrator_issue_reviewed": 396,
-    "orchestrator_cycle_count": 396,
+    "last_orchestrator_issue_reviewed": 402,
+    "orchestrator_cycle_count": 402,
     "self_improvement_actions": [
       "Journal and worklog alignment per Eva request (2026-02-27)",
       "PHP 8.5 CI support added (2026-02-27)",
@@ -596,7 +598,8 @@
       {"issue": 262, "title": "Review finding disposition set at consumption, never reconciled with same-cycle dispatches", "filed": "2026-03-16", "target": "main", "note": "Accepted cycle 275 (main#1338). Immediate repair: cycle 273 dispositions corrected (commit dca068b). PR #1347 closed unmerged cycle 279 (conflicted with Phase 1 PR #1360). Phase 1 complete cycle 279 — re-dispatch NOT done in cycles 280-281. Filed follow-up #269."},
       {"issue": 268, "title": "Pipeline gate bypass normalization — --skip-pipeline-gate used every cycle since Phase 1 completion", "filed": "2026-03-16", "target": "main", "note": "Filed cycle 122. Acknowledged cycle 282 (main#1378), deferred under stabilization. Phase 2 item 7 (--review-dispatch flag) merged via PR #1406 cycle 289. Phase 2 COMPLETE cycle 291 — --review-dispatch flag operational. Cycle 291 dispatched review without --skip-pipeline-gate (Step C6 confirms). Monitoring for closure."},
       {"issue": 269, "title": "Accepted recommendation #262 — re-dispatch dropped after PR closed unmerged, two cycles post-Phase-1", "filed": "2026-03-16", "target": "main", "note": "Filed cycle 122. Acknowledged cycle 282 (main#1379), deferred under stabilization. Plan: re-dispatch #262 implementation post-stabilization."},
-      {"issue": 281, "title": "Step 1.1 MANDATORY_STEP_IDS enforcement non-blocking and temporally disordered", "filed": "2026-03-17", "target": "main", "note": "Filed cycle 129. Two PR #1406 fixes interact adversely: cascade→WARNING dilutes MANDATORY_STEP_IDS enforcement. Cycle 290 missing 1.1, pipeline PASS. Cycle 291 posted 1.1 after Step 9."}
+      {"issue": 281, "title": "Step 1.1 MANDATORY_STEP_IDS enforcement non-blocking and temporally disordered", "filed": "2026-03-17", "target": "main", "note": "Filed cycle 129. Accepted cycle 292 (main#1424), deferred to post-stabilization. Manual mitigation NOT working: cycle 292 Step 1.1 after Step 5, cycle 293 Step 1.1 missing entirely. Counter advanced to 2/50 on tainted cycles. Follow-up #284 filed."},
+      {"issue": 284, "title": "Clean cycle counter advancing on tainted cycles — Step 1.1 enforcement gap undermines stabilization integrity", "filed": "2026-03-17", "target": "main", "note": "Filed cycle 130. Escalation of #281. Cycles 292-293 both have Step 1.1 compliance failures but counter advanced to 2/50. Review agent F4 flagged this. Recommends freezing counter until enforcement fixed."}
     ],
     "accepted": [
       {"issue": 2, "title": "Idle cycle spinning", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
@@ -727,19 +730,19 @@
     ]
   },
   "metrics": {
-    "total_filed": 124,
+    "total_filed": 125,
     "total_accepted": 117,
     "total_deferred": 2,
     "total_rejected": 0,
     "total_dropped": 1,
-    "total_open": 3,
+    "total_open": 5,
     "acceptance_rate": 0.97,
     "response_rate": 1.0,
-    "trend": "Audit cycle 127. Closed #277 (117th acceptance — Step 1.1 MANDATORY_STEP_IDS fix in Phase 2 Batch 1). Main cycle 288: Phase 2 launched, 2 batches dispatched (#1404/#1405, PRs #1406/#1407 open). PR #1407 has merge conflicts (concurrent dispatch). Step-commenting PASS (27 comments, all mandatory). Review 3/5 (worklog-accuracy, process-adherence, journal-quality). QC sessions 394 steady-state. 3 open recommendations (#262, #268, #269). 5 standing Eva directives."
+    "trend": "Audit cycle 130. Filed #284 (clean cycle counter tainted by Step 1.1 enforcement gap — escalation of #281). Main cycles 292-293: Phase 2 COMPLETE, Eva #1401 closed, stabilization counter 2/50 but both cycles have Step 1.1 failures. Review 4/5 (cycle 292). QC sessions 396-402 steady-state. 5 open recommendations (#262, #268, #269, #281, #284). 4 standing Eva directives (#436, #699, #808, #809)."
   },
   "last_cycle": {
-    "issue": 278,
-    "timestamp": "2026-03-17T08:20:00Z",
-    "summary": "Closed #277 (117th acceptance — Phase 2 Batch 1 includes MANDATORY_STEP_IDS fix). No new issues filed. Main cycle 288: Phase 2 launched per Eva #1401, 2 batches dispatched (#1404/#1405). PR #1407 has merge conflicts. Step-commenting PASS (all mandatory steps). Review 3/5. QC sessions 394 steady-state. 124 filed, 117 accepted, 3 open."
+    "issue": 283,
+    "timestamp": "2026-03-17T23:15:00Z",
+    "summary": "Filed #284 (clean cycle counter advancing on tainted cycles — escalation of #281). Main cycles 292-293: Phase 2 COMPLETE, Eva #1401 closed, stabilization counter 2/50. Cycle 292 Step 1.1 out of order, cycle 293 Steps 0+1.1 missing, pipeline PASS both. Review 4/5. #1424 accepted #281, deferred. question-for-eva #1398 closed. QC sessions 396-402 steady-state. 125 filed, 117 accepted, 5 open."
   }
 }
