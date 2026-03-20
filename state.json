@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-03-20T06:30:00Z",
+  "last_updated": "2026-03-20T12:40:00Z",
   "main_repo": {
-    "last_commit_audited": "5eb445e",
-    "last_orchestrator_issue_reviewed": 1525,
-    "orchestrator_cycle_count": 316,
+    "last_commit_audited": "453049f",
+    "last_orchestrator_issue_reviewed": 1535,
+    "orchestrator_cycle_count": 318,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
       "6 skills created: github-issues-comments, journal-entries, orchestrator-permissions, pr-review-workflow, schema-implementation, writing-skills",
@@ -317,9 +317,9 @@
     "directory_layout": "php/src/, php/test/, ts/src/, ts/test/ (restructured 2026-03-01, PR #263; TS port COMPLETE 2026-03-01, 14 PRs — 89/89 schema classes including SeekToAction)"
   },
   "qc_repo": {
-    "last_commit_audited": "3e7cfc9",
-    "last_orchestrator_issue_reviewed": 428,
-    "orchestrator_cycle_count": 428,
+    "last_commit_audited": "7966c8c",
+    "last_orchestrator_issue_reviewed": 431,
+    "orchestrator_cycle_count": 431,
     "self_improvement_actions": [
       "Journal and worklog alignment per Eva request (2026-02-27)",
       "PHP 8.5 CI support added (2026-02-27)",
@@ -599,7 +599,8 @@
       "Audit cycle 135: filed #292 (pipeline-check step-comments passes despite missing Steps 1.1 and 3 in cycle 299), closed #288 (121st acceptance, state.json cleanup). Step 1.1 regression: cycle 299 missing Steps 1.1 and 3 despite enforcement fix. Root cause: pipeline checks previous cycle, not current — counter advances on tainted cycle. Cycle 298 review scored 2/5 (4 findings all deferred). QC sessions 408-409 steady-state. (2026-03-18)",
       "Audit cycle 137: Closed #269 (123rd acceptance — unmerged-PR re-dispatch tracking verified in STARTUP_CHECKLIST step 5) and #294 (124th acceptance — post-stabilization triage verified in step 0.1). Filed #297 (close-out sequence timing: worklog committed at C4 before C5.6/C6 mutations, flagged by review agent 4 consecutive cycles 302-305, deferred under ADR 0011). Step 1.1 compliance RESTORED: 5/5 complete cycles (302-305) have Step 1.1. Stabilization counter at 5/12. Eva directives #1461/#1462 closed. input-from-eva #295 processed (reasoning max, cron 2x/day). Review agent complacency: 2/5, 3/5, 4/5, 3/5 (cycles 302-305). QC sessions 410-416 idle. 4 standing Eva directives (#436, #699, #808, #809). (2026-03-19)",
       "Audit cycle 138 (monitoring): #297 accepted (125th, main#1485 — Option A post-C6 worklog correction, post-stabilization, scope narrowing concern noted). Eva directive #1488 (ADR 0012) properly processed: dispatch-review enforcement gap fixed, counter reset 7→0/6. Step 1.1 PASS (cycles 306-308, 8+ consecutive compliant). Review agent 2/5 (cycle 307 — 3 findings: traceability mislink, scope narrowing, artifact timing, all deferred ADR 0011). Stabilization 1/6. QC sessions 420-422 idle (justified). No new recommendations. 4 standing Eva directives (#436, #699, #808, #809). (2026-03-19)",
-      "Audit cycle 139: STABILIZATION COMPLETED (cycle 313, 6/6 clean cycles 308-313). Closed #297 (126th acceptance — C6.5 worklog-patch PR #1509 verified). Filed #300 (audit repo check §5 step ID collision — staleness enforcement + unmerged-PR tracking never executes, #262 orphaned 3+ post-stabilization cycles). Step 1.1 PASS (cycles 312-316, 27-28 comments). Review agent: 1/5 c313, 2/5 c314, 4/5 c315, 2/5 c316. Post-stabilization infrastructure fixes: C6.5, doc-validation circular dependency (PR #1514). Copilot: 470 dispatches, 98.7%/97.8% rates. QC sessions 424-428 idle. 4 standing Eva directives (#436, #699, #808, #809). (2026-03-20)"
+      "Audit cycle 139: STABILIZATION COMPLETED (cycle 313, 6/6 clean cycles 308-313). Closed #297 (126th acceptance — C6.5 worklog-patch PR #1509 verified). Filed #300 (audit repo check §5 step ID collision — staleness enforcement + unmerged-PR tracking never executes, #262 orphaned 3+ post-stabilization cycles). Step 1.1 PASS (cycles 312-316, 27-28 comments). Review agent: 1/5 c313, 2/5 c314, 4/5 c315, 2/5 c316. Post-stabilization infrastructure fixes: C6.5, doc-validation circular dependency (PR #1514). Copilot: 470 dispatches, 98.7%/97.8% rates. QC sessions 424-428 idle. 4 standing Eva directives (#436, #699, #808, #809). (2026-03-20)",
+      "Audit cycle 140: Closed #300 (127th acceptance — step ID collision PR #1529 verified, cycle 318 confirmed step 7/8 IDs). #262 implementation merged (PR #1530, --addresses-finding flag). Filed #302 (record-dispatch pipeline gate temporal ordering — blocks during early close-out, forces manual state.json editing). Cycle 317 review 2/5 (4 findings: C5.5 gate override, worklog-accuracy, state-integrity, journal-quality). Review artifact PR conflict pattern: 2/4 post-stabilization review PRs closed unmerged. Step-commenting PASS (cycles 316-318). Copilot: 473 dispatches, 459 merged, 97.9% rate. QC sessions 429-431 idle (justified). 4 standing Eva directives (#436, #699, #808, #809). (2026-03-20)"
     ],
     "qc_outbound_reports": 4,
     "qc_inbound_requests": 12,
@@ -609,8 +610,8 @@
   },
   "recommendations": {
     "open": [
-      {"issue": 262, "title": "Review finding disposition set at consumption, never reconciled with same-cycle dispatches", "filed": "2026-03-16", "target": "main", "note": "Accepted cycle 275 (main#1338). PR #1347 closed unmerged cycle 279. Unmerged-PR re-dispatch tracking now active per #269. Re-dispatch expected post-stabilization."},
-      {"issue": 300, "title": "Audit repo check step (§5) never executes — cycle-runner step ID collision with housekeeping (§7)", "filed": "2026-03-20", "target": "main", "note": "Filed cycle 139. Step ID 5 used by both cycle-runner (housekeeping) and checklist §5 (audit repo check with staleness enforcement + unmerged-PR tracking). Result: #262 unmerged-PR orphaned for 3+ post-stabilization cycles."}
+      {"issue": 262, "title": "Review finding disposition set at consumption, never reconciled with same-cycle dispatches", "filed": "2026-03-16", "target": "main", "note": "Re-dispatched as main#1528. PR #1530 merged cycle 317 (--addresses-finding flag for record-dispatch). Implementation done, pending usage verification."},
+      {"issue": 302, "title": "record-dispatch pipeline gate blocks during early close-out — temporal ordering forces manual state.json editing", "filed": "2026-03-20", "target": "main", "note": "Filed cycle 140. Pipeline phase 10 (current-cycle-step-comments) blocks record-dispatch at C2 because completion steps C5+ not yet posted. Orchestrator falls back to manual state.json editing."}
     ],
     "accepted": [
       {"issue": 2, "title": "Idle cycle spinning", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
@@ -740,7 +741,8 @@
       {"issue": 292, "title": "pipeline-check step-comments phase passes despite missing mandatory steps 1.1 and 3 in cycle 299", "filed": "2026-03-18", "accepted": "2026-03-18", "closed": "2026-03-18", "note": "Eva-direct fix: commit 52723dd (current-cycle step verification). Eva directive main#1461 authorizes fix. ADR 0011 burn-in reduced 50→12 (Eva directive main#1462, commit 8c47f33). 122nd acceptance."},
       {"issue": 269, "title": "Accepted recommendation #262 — re-dispatch dropped after PR closed unmerged, two cycles post-Phase-1", "filed": "2026-03-16", "accepted": "2026-03-19", "closed": "2026-03-19", "note": "Accepted via main#1466 (cycle 302). Unmerged-PR re-dispatch tracking added to STARTUP_CHECKLIST step 5. Verified cycle 137. 123rd acceptance."},
       {"issue": 294, "title": "Stabilization exit has no deferred-finding triage step — review backlog will be silently dropped", "filed": "2026-03-18", "accepted": "2026-03-19", "closed": "2026-03-19", "note": "Accepted via main#1467 (cycle 302). Post-stabilization triage sub-section added to STARTUP_CHECKLIST step 0.1. Verified cycle 137. 124th acceptance."},
-      {"issue": 297, "title": "Close-out sequence commits documentation before finalization — worklog systematically inaccurate", "filed": "2026-03-19", "accepted": "2026-03-19", "closed": "2026-03-20", "note": "Accepted via main#1485 (cycle 306). Option A: C6.5 post-dispatch worklog patching. PR #1509 merged. Verified operational in cycles 315-316. Scope narrows to worklog only; journal limitation mitigated by resumed-entry pattern. 126th acceptance."}
+      {"issue": 297, "title": "Close-out sequence commits documentation before finalization — worklog systematically inaccurate", "filed": "2026-03-19", "accepted": "2026-03-19", "closed": "2026-03-20", "note": "Accepted via main#1485 (cycle 306). Option A: C6.5 post-dispatch worklog patching. PR #1509 merged. Verified operational in cycles 315-316. Scope narrows to worklog only; journal limitation mitigated by resumed-entry pattern. 126th acceptance."},
+      {"issue": 300, "title": "Audit repo check step (§5) never executes — cycle-runner step ID collision with housekeeping (§7)", "filed": "2026-03-20", "accepted": "2026-03-20", "closed": "2026-03-20", "note": "Accepted via main#1531 (cycle 317). Option A: step IDs renumbered (5->7 housekeeping, 6->8 concurrency). PR #1529 merged. Verified in cycle 318 (step 7/8 confirmed). 127th acceptance."}
     ],
     "rejected": [],
     "deferred": [
@@ -749,19 +751,19 @@
     ]
   },
   "metrics": {
-    "total_filed": 130,
-    "total_accepted": 126,
+    "total_filed": 131,
+    "total_accepted": 127,
     "total_deferred": 2,
     "total_rejected": 0,
     "total_dropped": 1,
     "total_open": 2,
     "acceptance_rate": 0.97,
     "response_rate": 1.0,
-    "trend": "Audit cycle 139. STABILIZATION COMPLETED (cycle 313, 6/6 clean). Mode normal. Closed #297 (126th acceptance — C6.5 worklog-patch verified). Filed #300 (audit repo check step ID collision — §5 never executes). Step 1.1 PASS (cycles 312-316). Review agent adversarial (1/5-4/5 range). QC sessions 424-428 idle (justified). 2 open recommendations (#262, #300). 4 standing Eva directives (#436, #699, #808, #809)."
+    "trend": "Audit cycle 140. Post-stabilization infrastructure fixes. Closed #300 (127th acceptance — step ID collision fixed, PR #1529 verified in cycle 318). Filed #302 (record-dispatch pipeline gate blocks during early close-out). #262 implementation merged (PR #1530, --addresses-finding). Step-commenting PASS (cycles 316-318). Review agent adversarial (2/5 cycles 316-317). QC sessions 429-431 idle (justified). 2 open recommendations (#262, #302). 4 standing Eva directives (#436, #699, #808, #809)."
   },
   "last_cycle": {
-    "issue": 299,
-    "timestamp": "2026-03-20T06:30:00Z",
-    "summary": "STABILIZATION COMPLETED (cycle 313, 6/6 clean). Closed #297 (126th acceptance — C6.5 worklog-patch PR #1509 verified). Filed #300 (audit repo check §5 step ID collision with housekeeping §7 — staleness enforcement + unmerged-PR tracking never executes). Step 1.1 PASS (cycles 312-316, 27-28 comments each). Review agent adversarial (1/5 c313, 2/5 c314, 4/5 c315, 2/5 c316). QC idle (sessions 424-428, justified). 130 filed, 126 accepted, 2 open (#262, #300)."
+    "issue": 301,
+    "timestamp": "2026-03-20T12:40:00Z",
+    "summary": "Closed #300 (127th acceptance — step ID collision fix PR #1529 verified in cycle 318). #262 implementation merged (PR #1530 --addresses-finding). Filed #302 (record-dispatch pipeline gate blocks during early close-out). Cycle 317 review 2/5 (4 findings: C5.5 gate override, worklog-accuracy, state-integrity, journal-quality). Step-commenting PASS (cycles 316-318). QC sessions 429-431 idle (justified). 131 filed, 127 accepted, 2 open (#262, #302)."
   }
 }
