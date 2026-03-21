@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-03-21T06:20:00Z",
+  "last_updated": "2026-03-21T12:12:00Z",
   "main_repo": {
-    "last_commit_audited": "64379c3",
-    "last_orchestrator_issue_reviewed": 1564,
-    "orchestrator_cycle_count": 325,
+    "last_commit_audited": "8a6ecd3",
+    "last_orchestrator_issue_reviewed": 1575,
+    "orchestrator_cycle_count": 328,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
       "6 skills created: github-issues-comments, journal-entries, orchestrator-permissions, pr-review-workflow, schema-implementation, writing-skills",
@@ -121,7 +121,8 @@
       "Cycle 298: Clean stabilization cycle 1/50. Merged review PR #1447 (cycle 297, 5 findings deferred per ADR 0011). 28 step comments with Step 1.1 (PASS). Pipeline PASS. Review #1449 dispatched (PR #1450 in flight). audit-inbound #1445 closed. 4 standing Eva directives (#436, #699, #808, #809). (2026-03-18)",
       "Cycle 299: Claimed clean stabilization cycle 2/50. Merged review PR #1450 (cycle 298, 4 findings deferred). Step 1.1 and Step 3 MISSING from issue #1451 (regression from cycle 298). Pipeline PASS despite missing mandatory steps — pipeline checks previous cycle not current. Counter tainted. Review #1452 dispatched (PR #1453 in flight). 4 standing Eva directives (#436, #699, #808, #809). (2026-03-18)",
       "Cycle 300: Counter reset to 0/50 (step-comments cascade FAIL detected from cycle 299). All mandatory steps present (Step 1.1 RESTORED). Review PR #1453 merged. Audit #292 accepted. Eva directives #1461 (current-cycle step verification fix, commit 52723dd) and #1462 (burn-in target 50→12, counter reset exemption, audit #269 resolution) opened. Review #1455 dispatched. 26 step comments (PASS). (2026-03-18)",
-      "Cycle 301: Stabilization claimed clean cycle 1/50. Accepted audit #292 (process-audit). Step 1.1 MISSING again. Pipeline PASS (fix committed at 52723dd AFTER pipeline ran). Review PR #1456 merged (cycle 300, 2/5). Eva reduced burn-in to 12 cycles (commit 8c47f33). Review #1459 dispatched (PR #1460 in flight). ADR 0011 updated. 6 standing Eva directives (#436, #699, #808, #809, #1461, #1462). (2026-03-18)"
+      "Cycle 301: Stabilization claimed clean cycle 1/50. Accepted audit #292 (process-audit). Step 1.1 MISSING again. Pipeline PASS (fix committed at 52723dd AFTER pipeline ran). Review PR #1456 merged (cycle 300, 2/5). Eva reduced burn-in to 12 cycles (commit 8c47f33). Review #1459 dispatched (PR #1460 in flight). ADR 0011 updated. 6 standing Eva directives (#436, #699, #808, #809, #1461, #1462). (2026-03-18)",
+      "Cycles 326-327: Audit #304 accepted (129th — C4.5 ordering fix, commit 174410f). Audit #305 accepted (130th — C6.1 self-review fallback, commits 174410f + f2c468b). C4.5 now prerequisite for close-out; pipeline PASS at C5.5 in cycle 327 (first time). Self-review exercised in cycle 327 during 6-consecutive Copilot failure outage. question-for-eva #1567 filed. Copilot escalation at cycle 326. Step-commenting PASS (cycles 326-327). 4 standing Eva directives (#436, #699, #808, #809). (2026-03-21)"
     ],
     "recurring_pr_revision_patterns": [
       "100% Copilot PR merge rate for TS port Phases 1-3g: 11/11 sessions merged without revision",
@@ -317,9 +318,9 @@
     "directory_layout": "php/src/, php/test/, ts/src/, ts/test/ (restructured 2026-03-01, PR #263; TS port COMPLETE 2026-03-01, 14 PRs — 89/89 schema classes including SeekToAction)"
   },
   "qc_repo": {
-    "last_commit_audited": "b24d9f9",
-    "last_orchestrator_issue_reviewed": 442,
-    "orchestrator_cycle_count": 442,
+    "last_commit_audited": "8998944",
+    "last_orchestrator_issue_reviewed": 448,
+    "orchestrator_cycle_count": 448,
     "self_improvement_actions": [
       "Journal and worklog alignment per Eva request (2026-02-27)",
       "PHP 8.5 CI support added (2026-02-27)",
@@ -612,8 +613,7 @@
   "recommendations": {
     "open": [
       {"issue": 262, "title": "Review finding disposition set at consumption, never reconciled with same-cycle dispatches", "filed": "2026-03-16", "target": "main", "note": "PR #1530 merged cycle 317 (--addresses-finding flag). Implementation done. No finding-addressing dispatches in cycles 319-325 to exercise the feature — all were review dispatches or maintenance. Pending first real-world usage verification."},
-      {"issue": 304, "title": "Close-out step C4.5 runs after C5.5 pipeline gate — structural FAIL normalized", "filed": "2026-03-21", "target": "main", "note": "Filed cycle 141. COMPLETION_CHECKLIST step ordering has C4.5 (metric snapshot) after C5.5 (final pipeline gate), guaranteeing blocking FAIL. Verified in cycle 325."},
-      {"issue": 305, "title": "No fallback review mechanism during sustained Copilot agent unavailability", "filed": "2026-03-21", "target": "main", "note": "Filed cycle 141. 3 consecutive Copilot review failures (#1561, #1563, #1565). No self-review fallback during outage. Escalation threshold too high (3 vs recommended 2)."}
+      {"issue": 307, "title": "Self-review fallback (C6.1) lacks structured output format — process-review tool cannot consume it", "filed": "2026-03-21", "target": "main", "note": "Filed cycle 142. Self-review exercised in cycle 327 lacks complacency score, structured finding format, and summary counts. process-review tool (Step 0.5) cannot consume it. Data pipeline gap during outages."}
     ],
     "accepted": [
       {"issue": 2, "title": "Idle cycle spinning", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
@@ -745,7 +745,9 @@
       {"issue": 294, "title": "Stabilization exit has no deferred-finding triage step — review backlog will be silently dropped", "filed": "2026-03-18", "accepted": "2026-03-19", "closed": "2026-03-19", "note": "Accepted via main#1467 (cycle 302). Post-stabilization triage sub-section added to STARTUP_CHECKLIST step 0.1. Verified cycle 137. 124th acceptance."},
       {"issue": 297, "title": "Close-out sequence commits documentation before finalization — worklog systematically inaccurate", "filed": "2026-03-19", "accepted": "2026-03-19", "closed": "2026-03-20", "note": "Accepted via main#1485 (cycle 306). Option A: C6.5 post-dispatch worklog patching. PR #1509 merged. Verified operational in cycles 315-316. Scope narrows to worklog only; journal limitation mitigated by resumed-entry pattern. 126th acceptance."},
       {"issue": 300, "title": "Audit repo check step (§5) never executes — cycle-runner step ID collision with housekeeping (§7)", "filed": "2026-03-20", "accepted": "2026-03-20", "closed": "2026-03-20", "note": "Accepted via main#1531 (cycle 317). Option A: step IDs renumbered (5->7 housekeeping, 6->8 concurrency). PR #1529 merged. Verified in cycle 318 (step 7/8 confirmed). 127th acceptance."},
-      {"issue": 302, "title": "record-dispatch pipeline gate blocks during early close-out — temporal ordering forces manual state.json editing", "filed": "2026-03-20", "accepted": "2026-03-20", "closed": "2026-03-21", "note": "Accepted via main#1543. Option A: record-dispatch pipeline gate excludes step-audit phases. PR #1539 merged. Verified in cycle 318 (review dispatch #1540 ran without manual editing). 128th acceptance."}
+      {"issue": 302, "title": "record-dispatch pipeline gate blocks during early close-out — temporal ordering forces manual state.json editing", "filed": "2026-03-20", "accepted": "2026-03-20", "closed": "2026-03-21", "note": "Accepted via main#1543. Option A: record-dispatch pipeline gate excludes step-audit phases. PR #1539 merged. Verified in cycle 318 (review dispatch #1540 ran without manual editing). 128th acceptance."},
+      {"issue": 304, "title": "Close-out step C4.5 runs after C5.5 pipeline gate — structural FAIL normalized", "filed": "2026-03-21", "accepted": "2026-03-21", "closed": "2026-03-21", "note": "Accepted via main#1570 (cycle 327). C4.5 made prerequisite for close-out in COMPLETION_CHECKLIST.md. Commit 174410f. Pipeline PASS at C5.5 in cycle 327 (first time). 129th acceptance."},
+      {"issue": 305, "title": "No fallback review mechanism during sustained Copilot agent unavailability", "filed": "2026-03-21", "accepted": "2026-03-21", "closed": "2026-03-21", "note": "Accepted via main#1571 (cycle 327). C6.1 self-review fallback added to COMPLETION_CHECKLIST.md. Commits 174410f + f2c468b. Exercised in cycle 327 (6 consecutive Copilot failures). 130th acceptance."}
     ],
     "rejected": [],
     "deferred": [
@@ -754,19 +756,19 @@
     ]
   },
   "metrics": {
-    "total_filed": 133,
-    "total_accepted": 128,
+    "total_filed": 134,
+    "total_accepted": 130,
     "total_deferred": 2,
     "total_rejected": 0,
     "total_dropped": 1,
-    "total_open": 3,
-    "acceptance_rate": 0.96,
+    "total_open": 2,
+    "acceptance_rate": 0.97,
     "response_rate": 1.0,
-    "trend": "Audit cycle 141. Closed #302 (128th acceptance — record-dispatch pipeline gate fix PR #1539 verified). Filed #304 (close-out step C4.5/C5.5 temporal ordering — structural pipeline FAIL normalized) and #305 (no review fallback during sustained Copilot unavailability — 3 consecutive failures). Step-commenting PASS (cycles 319-325, 28 comments each). 3 consecutive Copilot review failures (#1561, #1563, #1565). QC sessions 434-442 idle (justified). 3 open recommendations (#262, #304, #305). 4 standing Eva directives (#436, #699, #808, #809)."
+    "trend": "Audit cycle 142. Closed #304 (129th acceptance — C4.5 ordering fix, pipeline PASS verified) and #305 (130th acceptance — C6.1 self-review fallback exercised). Filed #307 (self-review lacks structured output format). Step-commenting PASS (cycles 326-327). Copilot review outage persists (6 consecutive failures, question-for-eva #1567 open). Self-review fallback working. QC sessions 442-448 idle (justified). 2 open recommendations (#262, #307). 4 standing Eva directives (#436, #699, #808, #809)."
   },
   "last_cycle": {
-    "issue": 303,
-    "timestamp": "2026-03-21T06:20:00Z",
-    "summary": "Closed #302 (128th acceptance — record-dispatch pipeline gate fix PR #1539 verified). Filed #304 (close-out C4.5/C5.5 step ordering creates structural FAIL) and #305 (no review fallback during 3 consecutive Copilot failures). Step-commenting PASS (cycles 319-325). Copilot review agent unavailable 3 cycles (#1561, #1563, #1565 — repository ruleset violations). QC sessions 434-442 idle (justified). 133 filed, 128 accepted, 3 open (#262, #304, #305)."
+    "issue": 306,
+    "timestamp": "2026-03-21T12:12:00Z",
+    "summary": "Closed #304 (129th — C4.5 ordering fix, pipeline PASS) and #305 (130th — C6.1 self-review fallback, exercised cycle 327). Filed #307 (self-review structured output format gap). Step-commenting PASS (cycles 326-327). Copilot review outage at 6 consecutive failures (question-for-eva #1567 open). Main cycles 326-328. QC sessions 442-448 idle (justified). 134 filed, 130 accepted, 2 open (#262, #307)."
   }
 }
