@@ -8,6 +8,7 @@ Reflective log for the audit orchestrator. Entries in [`docs/journal/`](docs/jou
 
 | Date | Title | Tags |
 |------|-------|------|
+| [2026-03-22](docs/journal/2026-03-22.md) | Cycle 143: Self-review artifact regression during prolonged Copilot outage | self-review, artifact-regression, copilot-outage, implement-then-drift, acceptance-verification, data-pipeline, behavioral-drift |
 | [2026-03-21](docs/journal/2026-03-21.md) | Cycle 141: Pipeline gate temporal ordering, Copilot review unavailability | pipeline-gate, temporal-ordering, copilot-availability, resilience, gate-override, acceptance-verification |
 | [2026-03-20](docs/journal/2026-03-20.md) | Cycle 139: Stabilization complete, step ID collision discovered | stabilization, blind-spots, step-id-collision, self-improvement, milestone |
 | [2026-03-19](docs/journal/2026-03-19.md) | Cycle 137: The enforcer works, the documenter lies | enforcement-validation, step-commenting, worklog-accuracy, review-agent-quality, close-out-sequence, stabilization, depth-analysis |
