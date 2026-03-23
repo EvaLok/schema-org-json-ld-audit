@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-03-23T06:30:00Z",
+  "last_updated": "2026-03-23T12:24:00Z",
   "main_repo": {
-    "last_commit_audited": "b878034",
-    "last_orchestrator_issue_reviewed": 1629,
-    "orchestrator_cycle_count": 340,
+    "last_commit_audited": "0f7c0b1",
+    "last_orchestrator_issue_reviewed": 1637,
+    "orchestrator_cycle_count": 342,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
       "6 skills created: github-issues-comments, journal-entries, orchestrator-permissions, pr-review-workflow, schema-implementation, writing-skills",
@@ -320,9 +320,9 @@
     "directory_layout": "php/src/, php/test/, ts/src/, ts/test/ (restructured 2026-03-01, PR #263; TS port COMPLETE 2026-03-01, 14 PRs — 89/89 schema classes including SeekToAction)"
   },
   "qc_repo": {
-    "last_commit_audited": "2fb0116",
-    "last_orchestrator_issue_reviewed": 469,
-    "orchestrator_cycle_count": 469,
+    "last_commit_audited": "36576bd",
+    "last_orchestrator_issue_reviewed": 472,
+    "orchestrator_cycle_count": 472,
     "self_improvement_actions": [
       "Journal and worklog alignment per Eva request (2026-02-27)",
       "PHP 8.5 CI support added (2026-02-27)",
@@ -615,7 +615,8 @@
   "recommendations": {
     "open": [
       {"issue": 262, "title": "Review finding disposition set at consumption, never reconciled with same-cycle dispatches", "filed": "2026-03-16", "target": "main", "note": "PR #1530 merged cycle 317 (--addresses-finding flag). Implementation done. No finding-addressing dispatches in cycles 319-340 to exercise — all Copilot outage maintenance. Pending first real-world usage verification."},
-      {"issue": 313, "title": "question-for-eva escalation has no timeout — 2 issues unanswered for 48+ hours during 30-failure Copilot outage", "filed": "2026-03-23", "target": "main+eva", "note": "Filed cycle 145. question-for-eva #1567 and #1583 both unanswered for 48+ hours. No secondary escalation mechanism."}
+      {"issue": 315, "title": "C6.1 self-review fallback regressed AGAIN — 7-cycle artifact gap after #309 acceptance (3rd occurrence)", "filed": "2026-03-23", "target": "main", "note": "Filed cycle 146. Third filing of same fundamental issue. Behavioral fixes insufficient; structural enforcement (pipeline-check) required."},
+      {"issue": 316, "title": "Copilot ruleset violation — zero diagnostic depth after 33 consecutive failures", "filed": "2026-03-23", "target": "main", "note": "Filed cycle 146. Noted in cycle 145 journal, filed per proactive mandate. Orchestrator should read repo rulesets to identify specific blocking rule."}
     ],
     "accepted": [
       {"issue": 2, "title": "Idle cycle spinning", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
@@ -752,7 +753,8 @@
       {"issue": 305, "title": "No fallback review mechanism during sustained Copilot agent unavailability", "filed": "2026-03-21", "accepted": "2026-03-21", "closed": "2026-03-21", "note": "Accepted via main#1571 (cycle 327). C6.1 self-review fallback added to COMPLETION_CHECKLIST.md. Commits 174410f + f2c468b. Exercised in cycle 327 (6 consecutive Copilot failures). 130th acceptance."},
       {"issue": 307, "title": "Self-review fallback (C6.1) lacks structured output format — process-review tool cannot consume it", "filed": "2026-03-21", "accepted": "2026-03-21", "closed": "2026-03-22", "note": "Accepted via main#1577 (cycle 328). C6.1 updated with structured output spec at commit 578e19b. Cycle 328 self-review artifact correctly follows format. Regression observed cycles 329-332 (tracked in #309). 131st acceptance."},
       {"issue": 309, "title": "C6.1 self-review artifacts not committed for cycles 329-332 despite mandate — 4-cycle review data pipeline gap", "filed": "2026-03-22", "accepted": "2026-03-22", "closed": "2026-03-22", "note": "Accepted via main#1602 (cycle 333). Self-review artifact committed at 6dc34b2. Three tool improvements deferred pending Copilot return. Honest root cause: close-out automation handles C6 but not C6.1 fallback. 132nd acceptance."},
-      {"issue": 311, "title": "current-cycle-steps validator 2-issue window causes infinite resume loop during multi-issue cycles", "filed": "2026-03-22", "accepted": "2026-03-23", "closed": "2026-03-23", "note": "Accepted via main#1607 (cycle 334+). All 3 suggestions accepted, deferred until Copilot returns. Workaround applied (stale-threshold broke resume loop). 133rd acceptance."}
+      {"issue": 311, "title": "current-cycle-steps validator 2-issue window causes infinite resume loop during multi-issue cycles", "filed": "2026-03-22", "accepted": "2026-03-23", "closed": "2026-03-23", "note": "Accepted via main#1607 (cycle 334+). All 3 suggestions accepted, deferred until Copilot returns. Workaround applied (stale-threshold broke resume loop). 133rd acceptance."},
+      {"issue": 313, "title": "question-for-eva escalation has no timeout — 2 issues unanswered for 48+ hours during 30-failure Copilot outage", "filed": "2026-03-23", "accepted": "2026-03-23", "closed": "2026-03-23", "note": "Accepted via main#1632 (cycle 341). All 3 orchestrator-side actions deferred until Copilot returns. Eva-side recommendations flagged but not actionable by orchestrator. 134th acceptance."}
     ],
     "rejected": [],
     "deferred": [
@@ -761,19 +763,19 @@
     ]
   },
   "metrics": {
-    "total_filed": 137,
-    "total_accepted": 133,
+    "total_filed": 139,
+    "total_accepted": 134,
     "total_deferred": 2,
     "total_rejected": 0,
     "total_dropped": 1,
-    "total_open": 2,
-    "acceptance_rate": 0.97,
+    "total_open": 3,
+    "acceptance_rate": 0.96,
     "response_rate": 1.0,
-    "trend": "Audit cycle 145. Closed #311 (133rd acceptance — current-cycle-steps resume loop fix accepted, workaround applied). Filed #313 (question-for-eva escalation timeout gap — 2 issues unanswered for 48+ hours). Copilot outage at 30 consecutive failures (~100+ hours). Resume loop broken (cycles 334-340 are separate). Step-commenting PASS (27+ per cycle). Documentation quality HIGH. Main cycles 334-340 (maintenance probing). QC sessions 463-469 idle (justified). 2 open recommendations (#262, #313). 4 standing Eva directives (#436, #699, #808, #809)."
+    "trend": "Audit cycle 146. Closed #313 (134th acceptance — question-for-eva timeout, deferred until Copilot returns). Filed #315 (C6.1 self-review regression, 3rd occurrence — 7-cycle artifact gap) and #316 (Copilot ruleset violation diagnostic gap — 33 failures with zero diagnostic depth). Copilot outage at 33 consecutive failures (~110+ hours). Main cycles 341-342 (probe-only maintenance). QC sessions 470-472 idle (justified). Step-commenting PASS. #309 acceptance REGRESSED (self-review fix lasted 2 cycles then reverted). 3 open recommendations (#262, #315, #316). 4 standing Eva directives (#436, #699, #808, #809)."
   },
   "last_cycle": {
-    "issue": 312,
-    "timestamp": "2026-03-23T06:30:00Z",
-    "summary": "Closed #311 (133rd acceptance). Filed #313 (question-for-eva timeout gap). Copilot outage at 30 failures (~100h). Main cycles 334-340 (probe-only maintenance). QC sessions 463-469 idle (justified). 137 filed, 133 accepted, 2 open (#262, #313)."
+    "issue": 314,
+    "timestamp": "2026-03-23T12:24:00Z",
+    "summary": "Closed #313 (134th acceptance). Filed #315 (C6.1 self-review regression 3rd occurrence) and #316 (Copilot ruleset diagnostic gap). Copilot outage at 33 failures (~110h). Main cycles 341-342 (probe-only). QC sessions 470-472 idle (justified). 139 filed, 134 accepted, 3 open (#262, #315, #316)."
   }
 }
