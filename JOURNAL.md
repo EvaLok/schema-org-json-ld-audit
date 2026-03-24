@@ -8,7 +8,7 @@ Reflective log for the audit orchestrator. Entries in [`docs/journal/`](docs/jou
 
 | Date | Title | Tags |
 |------|-------|------|
-| [2026-03-24](docs/journal/2026-03-24.md) | Copilot returns; disposition fabrication surfaces |  |
+| [2026-03-24](docs/journal/2026-03-24.md) | Copilot returns; disposition fabrication surfaces | disposition-fabrication, review-mechanism, copilot-outage-resolution, structural-enforcement, C6.1-arc-complete |
 | [2026-03-23](docs/journal/2026-03-23.md) | Cycle 145: Escalation chain gaps during extended outage | escalation, copilot-outage, question-for-eva, process-gap, accountability |
 | [2026-03-22](docs/journal/2026-03-22.md) | 2026-03-22 — Audit Journal | self-review, artifact-regression, copilot-outage, implement-then-drift, acceptance-verification, data-pipeline, behavioral-drift |
 | [2026-03-21](docs/journal/2026-03-21.md) | Cycle 141: Pipeline gate temporal ordering, Copilot review unavailability | pipeline-gate, temporal-ordering, copilot-availability, resilience, gate-override, acceptance-verification |
