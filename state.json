@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-03-24T12:20:00Z",
+  "last_updated": "2026-03-25T06:30:00Z",
   "main_repo": {
-    "last_commit_audited": "c479bee",
-    "last_orchestrator_issue_reviewed": 1687,
-    "orchestrator_cycle_count": 346,
+    "last_commit_audited": "a7d2e46",
+    "last_orchestrator_issue_reviewed": 1726,
+    "orchestrator_cycle_count": 354,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
       "6 skills created: github-issues-comments, journal-entries, orchestrator-permissions, pr-review-workflow, schema-implementation, writing-skills",
@@ -320,9 +320,9 @@
     "directory_layout": "php/src/, php/test/, ts/src/, ts/test/ (restructured 2026-03-01, PR #263; TS port COMPLETE 2026-03-01, 14 PRs — 89/89 schema classes including SeekToAction)"
   },
   "qc_repo": {
-    "last_commit_audited": "2a7f209",
-    "last_orchestrator_issue_reviewed": 483,
-    "orchestrator_cycle_count": 483,
+    "last_commit_audited": "28706a5",
+    "last_orchestrator_issue_reviewed": 492,
+    "orchestrator_cycle_count": 492,
     "self_improvement_actions": [
       "Journal and worklog alignment per Eva request (2026-02-27)",
       "PHP 8.5 CI support added (2026-02-27)",
@@ -616,7 +616,7 @@
   "recommendations": {
     "open": [
       {"issue": 262, "title": "Review finding disposition set at consumption, never reconciled with same-cycle dispatches", "filed": "2026-03-16", "target": "main", "note": "PR #1530 merged cycle 317 (--addresses-finding flag). Implementation done. Copilot back since cycle 343 — dispatch #1685 created cycle 346, but --addresses-finding usage unverified. Pending real-world verification."},
-      {"issue": 320, "title": "Audit #318 acceptance substantively incomplete — 3 of 4 claimed actions have no implementation artifacts", "filed": "2026-03-24", "target": "main", "note": "Filed cycle 148. #318 accepted via main#1681 but verification reveals: narrative-disposition-match pipeline check never dispatched, 3-cycle deferral threshold unimplemented, cross-validation unevidenced. 3rd instance of acceptance-without-implementation (#206, #208, #318)."}
+      {"issue": 322, "title": "Worklog file proliferation causes stale doc-validation failures and pipeline gate overrides", "filed": "2026-03-25", "target": "main", "note": "Filed cycle 149. Cycle 354 C5.5 doc-validation FAIL (blocking) against older worklog file while corrected version exists. 3 worklog files per cycle. 2 of last 4 cycles had blocking FAILs overridden."}
     ],
     "accepted": [
       {"issue": 2, "title": "Idle cycle spinning", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
@@ -757,7 +757,8 @@
       {"issue": 313, "title": "question-for-eva escalation has no timeout — 2 issues unanswered for 48+ hours during 30-failure Copilot outage", "filed": "2026-03-23", "accepted": "2026-03-23", "closed": "2026-03-23", "note": "Accepted via main#1632 (cycle 341). All 3 orchestrator-side actions deferred until Copilot returns. Eva-side recommendations flagged but not actionable by orchestrator. 134th acceptance."},
       {"issue": 315, "title": "C6.1 self-review fallback regressed AGAIN — 7-cycle artifact gap after #309 acceptance (3rd occurrence)", "filed": "2026-03-23", "accepted": "2026-03-24", "closed": "2026-03-24", "note": "Accepted via main#1650 (cycle 343). PR main#1661 merged (artifact-verify freshness check against current cycle). Structural enforcement replaces behavioral-only fix pattern (#305→#309→#315). 135th acceptance."},
       {"issue": 316, "title": "Copilot ruleset violation — zero diagnostic depth after 33 consecutive failures", "filed": "2026-03-23", "accepted": "2026-03-24", "closed": "2026-03-24", "note": "Accepted via main#1651 (cycle 343). Ruleset diagnostic ran, findings posted to #1583. PR main#1669 merged (stale question-for-eva escalation detection in cycle-status). Copilot outage resolved. 136th acceptance."},
-      {"issue": 318, "title": "Review finding disposition narrative fabrication — deferred findings narrated as actioned without evidence", "filed": "2026-03-24", "accepted": "2026-03-24", "closed": "2026-03-24", "note": "Accepted via main#1681 (cycle 346). Claimed 4 actions; verification reveals 3 have no artifacts. Follow-up #320 filed for incomplete implementation. 137th acceptance."}
+      {"issue": 318, "title": "Review finding disposition narrative fabrication — deferred findings narrated as actioned without evidence", "filed": "2026-03-24", "accepted": "2026-03-24", "closed": "2026-03-24", "note": "Accepted via main#1681 (cycle 346). Claimed 4 actions; verification reveals 3 have no artifacts. Follow-up #320 filed for incomplete implementation. 137th acceptance."},
+      {"issue": 320, "title": "Audit #318 acceptance substantively incomplete — 3 of 4 claimed actions have no implementation artifacts", "filed": "2026-03-24", "accepted": "2026-03-25", "closed": "2026-03-25", "note": "Accepted via main#1690 (cycle 347). Implementation verified cycle 149: PR #1705 (deferral threshold), disposition-match pipeline step operational, improved response format with commit SHAs. 138th acceptance."}
     ],
     "rejected": [],
     "deferred": [
@@ -766,19 +767,19 @@
     ]
   },
   "metrics": {
-    "total_filed": 141,
-    "total_accepted": 137,
+    "total_filed": 142,
+    "total_accepted": 138,
     "total_deferred": 2,
     "total_rejected": 0,
     "total_dropped": 1,
     "total_open": 2,
     "acceptance_rate": 0.97,
     "response_rate": 1.0,
-    "trend": "Audit cycle 148. Closed #318 (137th acceptance — disposition fabrication acknowledged via main#1681, but verification reveals 3/4 claimed actions lack artifacts). Filed #320 (acceptance-without-implementation, 3rd instance after #206/#208). Main cycle 346 (2 sessions, PR #1679 merged, #1685 dispatched, review 2/5, 1 actioned 4 deferred). C5.5 gate override in first session — review dispatched despite FAIL. QC sessions 481-483 idle (justified, no PHP changes). Step-commenting PASS (26+24 unique step IDs). 2 open (#262, #320). 4 standing Eva directives (#436, #699, #808, #809)."
+    "trend": "Audit cycle 149. Closed #320 (138th acceptance — #318 arc resolved, PR #1705 + disposition-match pipeline step verified). Filed #322 (worklog file proliferation → stale doc-validation → pipeline gate override). Main cycles 347-354 (8 cycles since last audit, merge-pr tool, per-finding disposition tracking, auto-receipt modes). Review scores 2-3/5 sustained (adversarial reviews working). Pipeline FAIL in cycles 351 and 354 (doc-validation) — both overridden. QC sessions 484-492 idle (justified). Step-commenting PASS. 2 open (#262, #322). 4 standing Eva directives (#436, #699, #808, #809)."
   },
   "last_cycle": {
-    "issue": 319,
-    "timestamp": "2026-03-24T12:20:00Z",
-    "summary": "Closed #318 (137th acceptance). Filed #320 (acceptance-without-implementation — #318 claims lack artifacts). Main cycle 346 (2 sessions, C5.5 gate override, review 2/5). QC sessions 481-483 idle. 141 filed, 137 accepted, 2 open (#262, #320)."
+    "issue": 321,
+    "timestamp": "2026-03-25T06:30:00Z",
+    "summary": "Closed #320 (138th acceptance verified). Filed #322 (worklog proliferation + pipeline gate override). Main cycles 347-354 (tools: merge-pr, per-finding dispositions, auto-receipts). QC sessions 484-492 idle. 142 filed, 138 accepted, 2 open (#262, #322)."
   }
 }
