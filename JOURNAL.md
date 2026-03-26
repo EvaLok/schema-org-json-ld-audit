@@ -8,7 +8,7 @@ Reflective log for the audit orchestrator. Entries in [`docs/journal/`](docs/jou
 
 | Date | Title | Tags |
 |------|-------|------|
-| [2026-03-26](docs/journal/2026-03-26.md) | Cycle 151: The adoption gap that won't close |  |
+| [2026-03-26](docs/journal/2026-03-26.md) | Cycle 151: The adoption gap that won't close | tool-adoption-gap-complete, auto-inject, acceptance-verification, step-id-collision, pipeline-improving |
 | [2026-03-25](docs/journal/2026-03-25.md) | Cycle 149: Acceptance verification yields first substantive follow-through | acceptance-verification, pipeline-gate, worklog-lifecycle, self-improvement, tooling |
 | [2026-03-24](docs/journal/2026-03-24.md) | Copilot returns; disposition fabrication surfaces | disposition-fabrication, review-mechanism, copilot-outage-resolution, structural-enforcement, C6.1-arc-complete |
 | [2026-03-23](docs/journal/2026-03-23.md) | Cycle 145: Escalation chain gaps during extended outage | escalation, copilot-outage, question-for-eva, process-gap, accountability |

@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-03-26T06:35:00Z",
+  "last_updated": "2026-03-26T12:15:00Z",
   "main_repo": {
-    "last_commit_audited": "26061d8",
-    "last_orchestrator_issue_reviewed": 1792,
-    "orchestrator_cycle_count": 366,
+    "last_commit_audited": "8d12ff2",
+    "last_orchestrator_issue_reviewed": 1810,
+    "orchestrator_cycle_count": 369,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
       "6 skills created: github-issues-comments, journal-entries, orchestrator-permissions, pr-review-workflow, schema-implementation, writing-skills",
@@ -125,7 +125,8 @@
       "Cycles 326-327: Audit #304 accepted (129th — C4.5 ordering fix, commit 174410f). Audit #305 accepted (130th — C6.1 self-review fallback, commits 174410f + f2c468b). C4.5 now prerequisite for close-out; pipeline PASS at C5.5 in cycle 327 (first time). Self-review exercised in cycle 327 during 6-consecutive Copilot failure outage. question-for-eva #1567 filed. Copilot escalation at cycle 326. Step-commenting PASS (cycles 326-327). 4 standing Eva directives (#436, #699, #808, #809). (2026-03-21)",
       "Cycles 328-332: Audit #307 accepted (131st — C6.1 structured output format, commit 578e19b). Copilot outage continues (17 consecutive failures, ~60+ hours). Self-review artifacts committed for cycles 327-328 but NOT for 329-332 (regression). Audit #309 filed about self-review artifact gap. 500th total dispatch reached. Step-commenting PASS (cycles 329-332, 26-30 comments each). question-for-eva #1567/#1583 still open. (2026-03-22)",
       "Cycle 333: Audit #309 accepted (132nd — self-review artifact gap addressed, commit 6dc34b2). audit-inbound #1602 filed with honest root cause analysis. 20th consecutive Copilot failure. Cycle 333 spans 5+ cron invocations (#1598, #1601, #1604, #1606) due to current-cycle-steps pipeline bug — infinite resume loop. Audit #311 filed (current-cycle-steps 2-issue window causes permanent C5.5 FAIL during multi-issue cycles). Step-commenting PASS (26+ comments per invocation). question-for-eva #1567/#1583 unanswered for ~84 hours. (2026-03-22)",
-      "Cycles 358-366: Audit #324 accepted (main#1754, --addresses-finding adoption gap). PRs merged: #1777 (cycle 363 review), #1780 (journal dedup guard), #1782 (validate-docs journal), #1784 (cycle 364 review), #1787 (review_body timestamp), #1789 (disposition reconciliation), #1791 (cycle 365 review). Step-commenting PASS (26-28 comments, all mandatory steps present). Review complacency 2/5 sustained. Cycle 365 Step 1 temporal displacement (posted after C5.1) — self-corrected in cycle 366. Flag still never used in dispatches despite acceptance. (2026-03-26)"
+      "Cycles 358-366: Audit #324 accepted (main#1754, --addresses-finding adoption gap). PRs merged: #1777 (cycle 363 review), #1780 (journal dedup guard), #1782 (validate-docs journal), #1784 (cycle 364 review), #1787 (review_body timestamp), #1789 (disposition reconciliation), #1791 (cycle 365 review). Step-commenting PASS (26-28 comments, all mandatory steps present). Review complacency 2/5 sustained. Cycle 365 Step 1 temporal displacement (posted after C5.1) — self-corrected in cycle 366. Flag still never used in dispatches despite acceptance. (2026-03-26)",
+      "Cycles 367-369: Audit #326 accepted (main#1803, Option C auto-inject --addresses-finding). PR #1807 merged (auto-detect review-finding references, +204/-121 lines). Tool-adoption-gap arc COMPLETE (6 instances, 50+ cycles). PRs merged: #1794 (write-entry receipt simplification), #1796 (worklog refresh), #1798 (cycle 366 review), #1801 (cycle 367 review), #1806 (C6.5 pipeline summary), #1807 (auto-detect finding refs), #1809 (cycle 368 review). 3 in flight (#1812, #1814, #1816). Pipeline: 2 FAIL then PASS. Duplicate Step 7 in cycle 369 (auto vs manual collision). Review 2/5 sustained. (2026-03-26)"
     ],
     "recurring_pr_revision_patterns": [
       "100% Copilot PR merge rate for TS port Phases 1-3g: 11/11 sessions merged without revision",
@@ -322,8 +323,8 @@
   },
   "qc_repo": {
     "last_commit_audited": "f2a8e8b",
-    "last_orchestrator_issue_reviewed": 503,
-    "orchestrator_cycle_count": 503,
+    "last_orchestrator_issue_reviewed": 506,
+    "orchestrator_cycle_count": 506,
     "self_improvement_actions": [
       "Journal and worklog alignment per Eva request (2026-02-27)",
       "PHP 8.5 CI support added (2026-02-27)",
@@ -607,7 +608,8 @@
       "Audit cycle 140: Closed #300 (127th acceptance — step ID collision PR #1529 verified, cycle 318 confirmed step 7/8 IDs). #262 implementation merged (PR #1530, --addresses-finding flag). Filed #302 (record-dispatch pipeline gate temporal ordering — blocks during early close-out, forces manual state.json editing). Cycle 317 review 2/5 (4 findings: C5.5 gate override, worklog-accuracy, state-integrity, journal-quality). Review artifact PR conflict pattern: 2/4 post-stabilization review PRs closed unmerged. Step-commenting PASS (cycles 316-318). Copilot: 473 dispatches, 459 merged, 97.9% rate. QC sessions 429-431 idle (justified). 4 standing Eva directives (#436, #699, #808, #809). (2026-03-20)",
       "Audit cycle 141: Closed #302 (128th acceptance — record-dispatch pipeline gate fix PR #1539 verified). Filed #304 (close-out step C4.5/C5.5 temporal ordering — C4.5 runs after C5.5 in close-out, guaranteeing pipeline FAIL, normalized gate override) and #305 (no review fallback during sustained Copilot unavailability — 3 consecutive failures #1561/#1563/#1565, repository ruleset violations, 3 cycles without quality review). Step-commenting PASS (cycles 319-325, 28 comments each). Cycle 325 C5.5 pipeline FAIL (current-cycle-steps blocking: C4.5 missing at gate time). Main repo at cycle 325 (maintenance mode, no dispatches). QC sessions 434-442 idle (justified). Cycle 326 in progress, acknowledged 3rd failure, committed to Eva escalation. 4 standing Eva directives (#436, #699, #808, #809). (2026-03-21)",
       "Audit cycle 148: Closed #318 (137th acceptance — disposition fabrication acknowledged via main#1681). Verification reveals 3/4 claimed actions lack implementation artifacts (pipeline check never dispatched, deferral threshold unimplemented, cross-validation unevidenced). Filed #320 (acceptance-without-implementation, 3rd instance after #206/#208). Main cycle 346 (2 sessions on #1680/#1684: PR #1679 merged, #1685 dispatched, review 2/5 with 1 actioned 4 deferred, C5.5 gate override in first session). Step-commenting PASS (26+24 unique step IDs). QC sessions 481-483 idle (justified, no PHP changes since session 480). 141 filed, 137 accepted, 2 open (#262, #320). 4 standing Eva directives (#436, #699, #808, #809). (2026-03-24)",
-      "Audit cycle 151: Closed #262 (140th acceptance — genuine tool implementation, zero behavioral adoption) and #324 (141st acceptance — checklist+WARN infrastructure, still zero flag usage). Filed #326 (6th tool-adoption-gap instance, WARN→FAIL escalation, recommends Option C automatic injection). Main cycles 358-366 (7 PRs merged: journal dedup guards, review artifacts, disposition reconciliation). Step-commenting PASS (26-28 comments cycles 362-366, all mandatory IDs). Cycle 365 Step 1 posted after C5.1 (temporal displacement, self-corrected cycle 366). Worklogs verified accurate (commit receipts valid, self-correction of disposition counting bug). Review 2/5 sustained. QC sessions 496-503 idle (justified, no PHP changes). 144 filed, 141 accepted, 1 open (#326). 4 standing Eva directives (#436, #699, #808, #809). (2026-03-26)"
+      "Audit cycle 151: Closed #262 (140th acceptance — genuine tool implementation, zero behavioral adoption) and #324 (141st acceptance — checklist+WARN infrastructure, still zero flag usage). Filed #326 (6th tool-adoption-gap instance, WARN→FAIL escalation, recommends Option C automatic injection). Main cycles 358-366 (7 PRs merged: journal dedup guards, review artifacts, disposition reconciliation). Step-commenting PASS (26-28 comments cycles 362-366, all mandatory IDs). Cycle 365 Step 1 posted after C5.1 (temporal displacement, self-corrected cycle 366). Worklogs verified accurate (commit receipts valid, self-correction of disposition counting bug). Review 2/5 sustained. QC sessions 496-503 idle (justified, no PHP changes). 144 filed, 141 accepted, 1 open (#326). 4 standing Eva directives (#436, #699, #808, #809). (2026-03-26)",
+      "Audit cycle 152: Closed #326 (142nd acceptance — main#1803 Option C auto-inject, PR #1807 merged). Tool-adoption-gap arc COMPLETE (6 instances, 50+ cycles for this specific flag). No new issues filed. Main cycles 367-369 (7 PRs merged: write-entry simplification, worklog refresh, review artifacts, C6.5 structural fix, auto-detect finding refs). 3 in flight (#1812, #1814, #1816). Pipeline: cycles 367-368 FAIL, cycle 369 PASS (3 warnings). Step-commenting PASS — duplicate Step 7 in cycle 369 (auto housekeeping + manual PR review under same ID, one-off labeling error). Review 2/5 sustained. QC sessions 503-506 idle (justified). Zero open recommendations. 4 standing Eva directives (#436, #699, #808, #809). (2026-03-26)"
     ],
     "qc_outbound_reports": 4,
     "qc_inbound_requests": 12,
@@ -616,9 +618,7 @@
     "open_qc_ack": null
   },
   "recommendations": {
-    "open": [
-      {"issue": 326, "title": "record-dispatch --addresses-finding accepted twice but still zero real-world usage — WARN insufficient, needs FAIL enforcement", "filed": "2026-03-26", "target": "main", "note": "Filed cycle 151. 6th tool-adoption-gap pattern. Both #262 and #324 accepted, infrastructure in place (checklist reminder, pipeline WARN, disposition reconciliation), but flag has NEVER been used. Recommends Option C: automatic flag injection to eliminate behavioral dependency."}
-    ],
+    "open": [],
     "accepted": [
       {"issue": 2, "title": "Idle cycle spinning", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
       {"issue": 3, "title": "Non-functional tools directory", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
@@ -762,7 +762,8 @@
       {"issue": 320, "title": "Audit #318 acceptance substantively incomplete — 3 of 4 claimed actions have no implementation artifacts", "filed": "2026-03-24", "accepted": "2026-03-25", "closed": "2026-03-25", "note": "Accepted via main#1690 (cycle 347). Implementation verified cycle 149: PR #1705 (deferral threshold), disposition-match pipeline step operational, improved response format with commit SHAs. 138th acceptance."},
       {"issue": 322, "title": "Worklog file proliferation causes stale doc-validation failures and pipeline gate overrides", "filed": "2026-03-25", "accepted": "2026-03-25", "closed": "2026-03-25", "note": "Accepted via main#1731 (cycle 355). PR #1730 (worklog file reuse) + PR #1743 (worklog-dedup pipeline check) both merged. 6 cycles with 1 file each. Cycle 357 C5.5 PASS. Root cause and detection both addressed. 139th acceptance."},
       {"issue": 262, "title": "Review finding disposition set at consumption, never reconciled with same-cycle dispatches", "filed": "2026-03-16", "accepted": "2026-03-16", "closed": "2026-03-26", "note": "Accepted via main#1338 (cycle 274). PR #1530 merged (--addresses-finding flag). Implementation genuine but behavioral adoption never followed. Subsumed by #324 then #326 (50+ cycle adoption gap). 140th acceptance."},
-      {"issue": 324, "title": "record-dispatch --addresses-finding flag exists but never used — 40-cycle adoption gap", "filed": "2026-03-25", "accepted": "2026-03-25", "closed": "2026-03-26", "note": "Accepted via main#1754 (cycle 358). STARTUP_CHECKLIST reminder, pipeline WARN, disposition reconciliation (PR #1789). Infrastructure genuine but flag still unused. Escalated to #326. 141st acceptance."}
+      {"issue": 324, "title": "record-dispatch --addresses-finding flag exists but never used — 40-cycle adoption gap", "filed": "2026-03-25", "accepted": "2026-03-25", "closed": "2026-03-26", "note": "Accepted via main#1754 (cycle 358). STARTUP_CHECKLIST reminder, pipeline WARN, disposition reconciliation (PR #1789). Infrastructure genuine but flag still unused. Escalated to #326. 141st acceptance."},
+      {"issue": 326, "title": "record-dispatch --addresses-finding accepted twice but still zero real-world usage — WARN insufficient, needs FAIL enforcement", "filed": "2026-03-26", "accepted": "2026-03-26", "closed": "2026-03-26", "note": "Accepted via main#1803 (cycle 368). Option C auto-inject: PR #1807 merged (+204/-121 lines, auto-detects review-finding references from dispatch issue body). Tool-adoption-gap arc COMPLETE (6 instances over 50+ cycles). Meta-lesson: WARN/reminders insufficient, only structural automation achieves durable adoption. 142nd acceptance."}
     ],
     "rejected": [],
     "deferred": [
@@ -772,18 +773,18 @@
   },
   "metrics": {
     "total_filed": 144,
-    "total_accepted": 141,
+    "total_accepted": 142,
     "total_deferred": 2,
     "total_rejected": 0,
     "total_dropped": 1,
-    "total_open": 1,
-    "acceptance_rate": 0.98,
+    "total_open": 0,
+    "acceptance_rate": 0.99,
     "response_rate": 1.0,
-    "trend": "Audit cycle 151. Closed #262 (140th acceptance) and #324 (141st acceptance — both genuine infrastructure but zero behavioral adoption). Filed #326 (--addresses-finding 50+ cycle adoption gap, 6th tool-adoption-gap instance, WARN→FAIL escalation). Main cycles 358-366 (7 PRs merged, tool fixes, review artifacts). Step-commenting PASS (26-28 comments, all mandatory). Cycle 365 Step 1 temporal displacement (self-corrected cycle 366). Review 2/5 sustained. QC sessions 496-503 idle (justified). 1 open (#326). 4 standing Eva directives (#436, #699, #808, #809)."
+    "trend": "Audit cycle 152. Closed #326 (142nd acceptance — Option C auto-inject, PR #1807 merged, tool-adoption-gap arc COMPLETE). Main cycles 367-369 (7 PRs merged: structural fixes, auto-detect finding refs, review artifacts). Step-commenting PASS (duplicate Step 7 ID in cycle 369 — minor auto-vs-manual collision). Pipeline: 2 FAIL then PASS. Review 2/5 sustained. QC sessions 503-506 idle (justified). Zero open recommendations. 4 standing Eva directives (#436, #699, #808, #809)."
   },
   "last_cycle": {
-    "issue": 325,
-    "timestamp": "2026-03-26T06:35:00Z",
-    "summary": "Closed #262 (140th acceptance) and #324 (141st acceptance). Filed #326 (--addresses-finding WARN→FAIL escalation, 50+ cycle gap, 6th tool-adoption pattern). Main cycles 358-366 (7 PRs merged, tool fixes). Step-commenting PASS. QC sessions 496-503 idle. 144 filed, 141 accepted, 1 open (#326)."
+    "issue": 327,
+    "timestamp": "2026-03-26T12:15:00Z",
+    "summary": "Closed #326 (142nd acceptance — Option C auto-inject PR #1807, tool-adoption-gap arc COMPLETE). No new issues filed. Main cycles 367-369 (7 PRs merged). Step-commenting PASS. QC sessions 503-506 idle. 144 filed, 142 accepted, 0 open."
   }
 }
