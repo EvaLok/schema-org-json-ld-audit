@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-03-26T12:15:00Z",
+  "last_updated": "2026-03-27T06:35:00Z",
   "main_repo": {
-    "last_commit_audited": "8d12ff2",
-    "last_orchestrator_issue_reviewed": 1810,
-    "orchestrator_cycle_count": 369,
+    "last_commit_audited": "5cd01d1",
+    "last_orchestrator_issue_reviewed": 1849,
+    "orchestrator_cycle_count": 378,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
       "6 skills created: github-issues-comments, journal-entries, orchestrator-permissions, pr-review-workflow, schema-implementation, writing-skills",
@@ -126,7 +126,8 @@
       "Cycles 328-332: Audit #307 accepted (131st — C6.1 structured output format, commit 578e19b). Copilot outage continues (17 consecutive failures, ~60+ hours). Self-review artifacts committed for cycles 327-328 but NOT for 329-332 (regression). Audit #309 filed about self-review artifact gap. 500th total dispatch reached. Step-commenting PASS (cycles 329-332, 26-30 comments each). question-for-eva #1567/#1583 still open. (2026-03-22)",
       "Cycle 333: Audit #309 accepted (132nd — self-review artifact gap addressed, commit 6dc34b2). audit-inbound #1602 filed with honest root cause analysis. 20th consecutive Copilot failure. Cycle 333 spans 5+ cron invocations (#1598, #1601, #1604, #1606) due to current-cycle-steps pipeline bug — infinite resume loop. Audit #311 filed (current-cycle-steps 2-issue window causes permanent C5.5 FAIL during multi-issue cycles). Step-commenting PASS (26+ comments per invocation). question-for-eva #1567/#1583 unanswered for ~84 hours. (2026-03-22)",
       "Cycles 358-366: Audit #324 accepted (main#1754, --addresses-finding adoption gap). PRs merged: #1777 (cycle 363 review), #1780 (journal dedup guard), #1782 (validate-docs journal), #1784 (cycle 364 review), #1787 (review_body timestamp), #1789 (disposition reconciliation), #1791 (cycle 365 review). Step-commenting PASS (26-28 comments, all mandatory steps present). Review complacency 2/5 sustained. Cycle 365 Step 1 temporal displacement (posted after C5.1) — self-corrected in cycle 366. Flag still never used in dispatches despite acceptance. (2026-03-26)",
-      "Cycles 367-369: Audit #326 accepted (main#1803, Option C auto-inject --addresses-finding). PR #1807 merged (auto-detect review-finding references, +204/-121 lines). Tool-adoption-gap arc COMPLETE (6 instances, 50+ cycles). PRs merged: #1794 (write-entry receipt simplification), #1796 (worklog refresh), #1798 (cycle 366 review), #1801 (cycle 367 review), #1806 (C6.5 pipeline summary), #1807 (auto-detect finding refs), #1809 (cycle 368 review). 3 in flight (#1812, #1814, #1816). Pipeline: 2 FAIL then PASS. Duplicate Step 7 in cycle 369 (auto vs manual collision). Review 2/5 sustained. (2026-03-26)"
+      "Cycles 367-369: Audit #326 accepted (main#1803, Option C auto-inject --addresses-finding). PR #1807 merged (auto-detect review-finding references, +204/-121 lines). Tool-adoption-gap arc COMPLETE (6 instances, 50+ cycles). PRs merged: #1794 (write-entry receipt simplification), #1796 (worklog refresh), #1798 (cycle 366 review), #1801 (cycle 367 review), #1806 (C6.5 pipeline summary), #1807 (auto-detect finding refs), #1809 (cycle 368 review). 3 in flight (#1812, #1814, #1816). Pipeline: 2 FAIL then PASS. Duplicate Step 7 in cycle 369 (auto vs manual collision). Review 2/5 sustained. (2026-03-26)",
+      "Cycles 370-378: Productive cycles 370-373 (10 PRs merged: cycle boundary derivation, blocking-severity warnings, auto-pipeline flag, auto-next flag, write-entry fixes, review artifacts). Copilot outage started cycle 373 (~18:31 UTC 2026-03-26) — repository ruleset violation. 10 consecutive failures across cycles 373-378 (~14+ hours). question-for-eva #1839 filed cycle 374 with running tallies. State maintenance continued (field inventory refreshes, tool audit cycle 376). Review dispatches continued during outage (all failed). Step-commenting PASS across all cycles (28-29 comments). (2026-03-27)"
     ],
     "recurring_pr_revision_patterns": [
       "100% Copilot PR merge rate for TS port Phases 1-3g: 11/11 sessions merged without revision",
@@ -323,8 +324,8 @@
   },
   "qc_repo": {
     "last_commit_audited": "f2a8e8b",
-    "last_orchestrator_issue_reviewed": 506,
-    "orchestrator_cycle_count": 506,
+    "last_orchestrator_issue_reviewed": 512,
+    "orchestrator_cycle_count": 512,
     "self_improvement_actions": [
       "Journal and worklog alignment per Eva request (2026-02-27)",
       "PHP 8.5 CI support added (2026-02-27)",
@@ -618,7 +619,9 @@
     "open_qc_ack": null
   },
   "recommendations": {
-    "open": [],
+    "open": [
+      {"issue": 329, "title": "Review dispatch during known Copilot outage wastes issue namespace", "filed": "2026-03-27"}
+    ],
     "accepted": [
       {"issue": 2, "title": "Idle cycle spinning", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
       {"issue": 3, "title": "Non-functional tools directory", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
@@ -772,19 +775,19 @@
     ]
   },
   "metrics": {
-    "total_filed": 144,
+    "total_filed": 145,
     "total_accepted": 142,
     "total_deferred": 2,
     "total_rejected": 0,
     "total_dropped": 1,
-    "total_open": 0,
-    "acceptance_rate": 0.99,
+    "total_open": 1,
+    "acceptance_rate": 0.98,
     "response_rate": 1.0,
-    "trend": "Audit cycle 152. Closed #326 (142nd acceptance — Option C auto-inject, PR #1807 merged, tool-adoption-gap arc COMPLETE). Main cycles 367-369 (7 PRs merged: structural fixes, auto-detect finding refs, review artifacts). Step-commenting PASS (duplicate Step 7 ID in cycle 369 — minor auto-vs-manual collision). Pipeline: 2 FAIL then PASS. Review 2/5 sustained. QC sessions 503-506 idle (justified). Zero open recommendations. 4 standing Eva directives (#436, #699, #808, #809)."
+    "trend": "Audit cycle 153. Filed #329 (Copilot outage review dispatch waste). Main cycles 370-378 (10 PRs merged cycles 370-373, then 10 consecutive Copilot failures cycles 373-378 — repository ruleset violation, question-for-eva #1839 open). Step-commenting PASS (28-29 comments per cycle, all mandatory IDs). QC sessions 507-512 idle (justified). 4 standing Eva directives (#436, #699, #808, #809)."
   },
   "last_cycle": {
-    "issue": 327,
-    "timestamp": "2026-03-26T12:15:00Z",
-    "summary": "Closed #326 (142nd acceptance — Option C auto-inject PR #1807, tool-adoption-gap arc COMPLETE). No new issues filed. Main cycles 367-369 (7 PRs merged). Step-commenting PASS. QC sessions 503-506 idle. 144 filed, 142 accepted, 0 open."
+    "issue": 328,
+    "timestamp": "2026-03-27T06:35:00Z",
+    "summary": "Filed #329 (Copilot outage review dispatch waste). Main cycles 370-378 (productive 370-373, then 10 consecutive Copilot failures 373-378). Step-commenting PASS. QC sessions 507-512 idle. 145 filed, 142 accepted, 1 open."
   }
 }
