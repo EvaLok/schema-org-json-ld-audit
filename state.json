@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-03-27T06:35:00Z",
+  "last_updated": "2026-03-27T12:35:00Z",
   "main_repo": {
-    "last_commit_audited": "5cd01d1",
-    "last_orchestrator_issue_reviewed": 1849,
-    "orchestrator_cycle_count": 378,
+    "last_commit_audited": "81ee309",
+    "last_orchestrator_issue_reviewed": 1860,
+    "orchestrator_cycle_count": 380,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
       "6 skills created: github-issues-comments, journal-entries, orchestrator-permissions, pr-review-workflow, schema-implementation, writing-skills",
@@ -324,8 +324,8 @@
   },
   "qc_repo": {
     "last_commit_audited": "f2a8e8b",
-    "last_orchestrator_issue_reviewed": 512,
-    "orchestrator_cycle_count": 512,
+    "last_orchestrator_issue_reviewed": 515,
+    "orchestrator_cycle_count": 515,
     "self_improvement_actions": [
       "Journal and worklog alignment per Eva request (2026-02-27)",
       "PHP 8.5 CI support added (2026-02-27)",
@@ -620,7 +620,8 @@
   },
   "recommendations": {
     "open": [
-      {"issue": 329, "title": "Review dispatch during known Copilot outage wastes issue namespace", "filed": "2026-03-27"}
+      {"issue": 333, "title": "Vanity metrics consume cycle budget while actual quality indicators show zero convergence", "filed": "2026-03-27"},
+      {"issue": 334, "title": "Add convergence tracking to pipeline — review scores and finding recurrence must be structurally tracked", "filed": "2026-03-27"}
     ],
     "accepted": [
       {"issue": 2, "title": "Idle cycle spinning", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
@@ -766,7 +767,8 @@
       {"issue": 322, "title": "Worklog file proliferation causes stale doc-validation failures and pipeline gate overrides", "filed": "2026-03-25", "accepted": "2026-03-25", "closed": "2026-03-25", "note": "Accepted via main#1731 (cycle 355). PR #1730 (worklog file reuse) + PR #1743 (worklog-dedup pipeline check) both merged. 6 cycles with 1 file each. Cycle 357 C5.5 PASS. Root cause and detection both addressed. 139th acceptance."},
       {"issue": 262, "title": "Review finding disposition set at consumption, never reconciled with same-cycle dispatches", "filed": "2026-03-16", "accepted": "2026-03-16", "closed": "2026-03-26", "note": "Accepted via main#1338 (cycle 274). PR #1530 merged (--addresses-finding flag). Implementation genuine but behavioral adoption never followed. Subsumed by #324 then #326 (50+ cycle adoption gap). 140th acceptance."},
       {"issue": 324, "title": "record-dispatch --addresses-finding flag exists but never used — 40-cycle adoption gap", "filed": "2026-03-25", "accepted": "2026-03-25", "closed": "2026-03-26", "note": "Accepted via main#1754 (cycle 358). STARTUP_CHECKLIST reminder, pipeline WARN, disposition reconciliation (PR #1789). Infrastructure genuine but flag still unused. Escalated to #326. 141st acceptance."},
-      {"issue": 326, "title": "record-dispatch --addresses-finding accepted twice but still zero real-world usage — WARN insufficient, needs FAIL enforcement", "filed": "2026-03-26", "accepted": "2026-03-26", "closed": "2026-03-26", "note": "Accepted via main#1803 (cycle 368). Option C auto-inject: PR #1807 merged (+204/-121 lines, auto-detects review-finding references from dispatch issue body). Tool-adoption-gap arc COMPLETE (6 instances over 50+ cycles). Meta-lesson: WARN/reminders insufficient, only structural automation achieves durable adoption. 142nd acceptance."}
+      {"issue": 326, "title": "record-dispatch --addresses-finding accepted twice but still zero real-world usage — WARN insufficient, needs FAIL enforcement", "filed": "2026-03-26", "accepted": "2026-03-26", "closed": "2026-03-26", "note": "Accepted via main#1803 (cycle 368). Option C auto-inject: PR #1807 merged (+204/-121 lines, auto-detects review-finding references from dispatch issue body). Tool-adoption-gap arc COMPLETE (6 instances over 50+ cycles). Meta-lesson: WARN/reminders insufficient, only structural automation achieves durable adoption. 142nd acceptance."},
+      {"issue": 329, "title": "Review dispatch during known Copilot outage wastes issue namespace and masks failure duration", "filed": "2026-03-27", "accepted": "2026-03-27", "closed": "2026-03-27", "note": "Accepted via main#1857 (cycle 380). Commit 1790004 adds Copilot availability gate at C6. Verified working: cycle 380 Step C6 deferred review. 143rd acceptance."}
     ],
     "rejected": [],
     "deferred": [
@@ -775,19 +777,46 @@
     ]
   },
   "metrics": {
-    "total_filed": 145,
-    "total_accepted": 142,
+    "total_filed": 147,
+    "total_accepted": 143,
     "total_deferred": 2,
     "total_rejected": 0,
     "total_dropped": 1,
-    "total_open": 1,
-    "acceptance_rate": 0.98,
+    "total_open": 2,
+    "acceptance_rate": 0.97,
     "response_rate": 1.0,
-    "trend": "Audit cycle 153. Filed #329 (Copilot outage review dispatch waste). Main cycles 370-378 (10 PRs merged cycles 370-373, then 10 consecutive Copilot failures cycles 373-378 — repository ruleset violation, question-for-eva #1839 open). Step-commenting PASS (28-29 comments per cycle, all mandatory IDs). QC sessions 507-512 idle (justified). 4 standing Eva directives (#436, #699, #808, #809)."
+    "trend": "Audit cycle 154. Eva directive #331 processed (assertive recommendations mandate). #329 accepted (143rd, Copilot availability gate at C6). Filed #333 (vanity metrics deletion) and #334 (convergence tracking with FAIL gate). Main cycles 379-380 (Copilot outage continues, 13th consecutive failure). Step-commenting PASS (26-28 comments). QC sessions 512-515 idle (justified). 4 standing Eva directives (#436, #699, #808, #809)."
   },
   "last_cycle": {
-    "issue": 328,
-    "timestamp": "2026-03-27T06:35:00Z",
-    "summary": "Filed #329 (Copilot outage review dispatch waste). Main cycles 370-378 (productive 370-373, then 10 consecutive Copilot failures 373-378). Step-commenting PASS. QC sessions 507-512 idle. 145 filed, 142 accepted, 1 open."
-  }
+    "issue": 332,
+    "timestamp": "2026-03-27T12:35:00Z",
+    "summary": "Eva directive #331 processed (6 mandated audit behavior changes). #329 accepted (143rd). Filed #333 (vanity metrics) and #334 (convergence tracking FAIL gate). First convergence baseline published. New finding classes: performative-acceptance."
+  },
+  "finding_classes": [
+    "tool-adoption-gap",
+    "narrative-fabrication",
+    "performative-acceptance"
+  ],
+  "convergence_tracking": {
+    "baseline_cycle": 154,
+    "assessment_interval": 5,
+    "next_assessment_cycle": 159,
+    "review_score_distribution": {
+      "sample_size": 38,
+      "score_2": 0.55,
+      "score_3": 0.37,
+      "score_4": 0.08,
+      "score_5": 0.0
+    },
+    "chronic_recurrence_last_4_reviews": {
+      "worklog-accuracy": 4,
+      "journal-quality": 3,
+      "process-adherence": 2,
+      "state-integrity": 1
+    },
+    "trend": "stable (not improving)"
+  },
+  "eva_directives_processed": [
+    {"issue": 331, "title": "Assertive recommendations mandate", "processed_cycle": 154, "changes": ["Default FAIL gates", "No behavioral options", "Track time-to-real-adoption", "Convergence assessments every 5 cycles", "Performative acceptance finding class", "Flag vanity metrics"]}
+  ]
 }
