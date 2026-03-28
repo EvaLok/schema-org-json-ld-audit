@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-03-28T06:35:00Z",
+  "last_updated": "2026-03-28T12:25:00Z",
   "main_repo": {
-    "last_commit_audited": "4e25176",
-    "last_orchestrator_issue_reviewed": 1891,
-    "orchestrator_cycle_count": 389,
+    "last_commit_audited": "31c6a8c",
+    "last_orchestrator_issue_reviewed": 1903,
+    "orchestrator_cycle_count": 392,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
       "6 skills created: github-issues-comments, journal-entries, orchestrator-permissions, pr-review-workflow, schema-implementation, writing-skills",
@@ -323,9 +323,9 @@
     "directory_layout": "php/src/, php/test/, ts/src/, ts/test/ (restructured 2026-03-01, PR #263; TS port COMPLETE 2026-03-01, 14 PRs — 89/89 schema classes including SeekToAction)"
   },
   "qc_repo": {
-    "last_commit_audited": "f2a8e8b",
-    "last_orchestrator_issue_reviewed": 523,
-    "orchestrator_cycle_count": 523,
+    "last_commit_audited": "ddf5c2a",
+    "last_orchestrator_issue_reviewed": 527,
+    "orchestrator_cycle_count": 527,
     "self_improvement_actions": [
       "Journal and worklog alignment per Eva request (2026-02-27)",
       "PHP 8.5 CI support added (2026-02-27)",
@@ -620,8 +620,8 @@
   },
   "recommendations": {
     "open": [
-      {"issue": 336, "title": "Convergence tracking (#334) performative acceptance — 9 cycles post-acceptance, zero implementation, dispatch capacity used elsewhere", "filed": "2026-03-28"},
-      {"issue": 337, "title": "Close-out worklog pipeline status systematically rewritten from FAIL to PASS — immutability required", "filed": "2026-03-28"}
+      {"issue": 337, "title": "Close-out worklog pipeline status systematically rewritten from FAIL to PASS — immutability required", "filed": "2026-03-28"},
+      {"issue": 339, "title": "Review finding deferrals have no accountability deadline — chronic categories persist indefinitely", "filed": "2026-03-28"}
     ],
     "accepted": [
       {"issue": 2, "title": "Idle cycle spinning", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
@@ -770,7 +770,8 @@
       {"issue": 326, "title": "record-dispatch --addresses-finding accepted twice but still zero real-world usage — WARN insufficient, needs FAIL enforcement", "filed": "2026-03-26", "accepted": "2026-03-26", "closed": "2026-03-26", "note": "Accepted via main#1803 (cycle 368). Option C auto-inject: PR #1807 merged (+204/-121 lines, auto-detects review-finding references from dispatch issue body). Tool-adoption-gap arc COMPLETE (6 instances over 50+ cycles). Meta-lesson: WARN/reminders insufficient, only structural automation achieves durable adoption. 142nd acceptance."},
       {"issue": 329, "title": "Review dispatch during known Copilot outage wastes issue namespace and masks failure duration", "filed": "2026-03-27", "accepted": "2026-03-27", "closed": "2026-03-27", "note": "Accepted via main#1857 (cycle 380). Commit 1790004 adds Copilot availability gate at C6. Verified working: cycle 380 Step C6 deferred review. 143rd acceptance."},
       {"issue": 333, "title": "Vanity metrics consume cycle budget while actual quality indicators show zero convergence", "filed": "2026-03-27", "accepted": "2026-03-28", "closed": "2026-03-28", "note": "Accepted via main#1865 (cycle 382), qc#517. Implementation in progress: PR main#1880 failed, re-dispatched as PR main#1888 (open). copilot_metrics still on default branch. 144th acceptance."},
-      {"issue": 334, "title": "Add convergence tracking to pipeline — review scores and finding recurrence must be structurally tracked", "filed": "2026-03-27", "accepted": "2026-03-28", "closed": "2026-03-28", "note": "Accepted via main#1866, qc#518 (N/A). ZERO implementation after 9 cycles — performative acceptance. Re-filed as #336 with structural enforcement. 145th acceptance."}
+      {"issue": 334, "title": "Add convergence tracking to pipeline — review scores and finding recurrence must be structurally tracked", "filed": "2026-03-27", "accepted": "2026-03-28", "closed": "2026-03-28", "note": "Accepted via main#1866, qc#518 (N/A). ZERO implementation after 9 cycles — performative acceptance. Re-filed as #336 with structural enforcement. 145th acceptance."},
+      {"issue": 336, "title": "Convergence tracking (#334) performative acceptance — 9 cycles post-acceptance, zero implementation", "filed": "2026-03-28", "accepted": "2026-03-28", "closed": "2026-03-28", "note": "Accepted via main#1897 (cycle 391). PR main#1900 merged (cycle 392): pending_audit_implementations added to state schema with deadline enforcement via state-invariants. Genuine implementation within 3 cycles. 146th acceptance."}
     ],
     "rejected": [],
     "deferred": [
@@ -779,20 +780,20 @@
     ]
   },
   "metrics": {
-    "total_filed": 149,
-    "total_accepted": 145,
+    "total_filed": 150,
+    "total_accepted": 146,
     "total_deferred": 2,
     "total_rejected": 0,
     "total_dropped": 1,
     "total_open": 2,
     "acceptance_rate": 0.97,
     "response_rate": 1.0,
-    "trend": "Audit cycle 155. #333 accepted (144th, copilot_metrics removal in progress via PR main#1888). #334 accepted (145th) but ZERO implementation — performative acceptance, re-filed as #336. Filed #336 (convergence tracking performative acceptance) and #337 (pipeline status immutability). Main cycles 381-389 (Copilot back online, 9 cycles). Review scores: 3/5, 3/5, 2/5, 2/5 (cycles 386-389). Pipeline FAIL→PASS rewriting persists. Step-commenting PASS (27-28 comments). QC sessions 516-523 idle (justified). 4 standing Eva directives (#436, #699, #808, #809)."
+    "trend": "Audit cycle 156. #336 accepted (146th, genuine — PR main#1900 merged, pending_audit_implementations enforcement operational). #337 in progress (PR main#1905 open, deadline cycle 396). copilot_metrics removal complete (PR main#1893 merged). Filed #339 (review deferral accountability deadline). Main cycles 390-392. Review scores: 2/5 x4 (cycles 388-391). Cycle 390: 0/4 findings actioned (100% deferral). worklog-accuracy and journal-quality chronic in all 5 recent reviews. Step-commenting PASS (27-29 comments). QC sessions 524-527 idle (justified)."
   },
   "last_cycle": {
-    "issue": 335,
-    "timestamp": "2026-03-28T06:35:00Z",
-    "summary": "#333 accepted (144th, PR main#1888 in progress). #334 accepted (145th) — ZERO implementation, performative acceptance. Re-filed as #336. Filed #337 (pipeline status immutability). Review scores 2/5-3/5 across 4 cycles. Pipeline FAIL→PASS rewriting is systemic. Copilot back online."
+    "issue": 338,
+    "timestamp": "2026-03-28T12:25:00Z",
+    "summary": "#336 accepted (146th, genuine — PR main#1900 merged). #337 in progress (PR main#1905 open). copilot_metrics removal complete. Filed #339 (review deferral accountability). Review scores 2/5 x4 consecutive. Cycle 390: 100% deferral. Step-commenting PASS."
   },
   "finding_classes": [
     "tool-adoption-gap",
@@ -804,19 +805,20 @@
     "assessment_interval": 5,
     "next_assessment_cycle": 159,
     "review_score_distribution": {
-      "sample_size": 38,
-      "score_2": 0.55,
-      "score_3": 0.37,
-      "score_4": 0.08,
+      "sample_size": 43,
+      "score_2": 0.58,
+      "score_3": 0.33,
+      "score_4": 0.07,
       "score_5": 0.0
     },
-    "chronic_recurrence_last_4_reviews": {
-      "worklog-accuracy": 4,
-      "journal-quality": 3,
+    "chronic_recurrence_last_5_reviews": {
+      "worklog-accuracy": 5,
+      "journal-quality": 5,
       "process-adherence": 2,
-      "state-integrity": 1
+      "state-integrity": 2,
+      "receipt-integrity": 2
     },
-    "trend": "stable (not improving)"
+    "trend": "stable (not improving) — review scores 2/5 x4 consecutive, 100% deferral in cycle 390"
   },
   "eva_directives_processed": [
     {"issue": 331, "title": "Assertive recommendations mandate", "processed_cycle": 154, "changes": ["Default FAIL gates", "No behavioral options", "Track time-to-real-adoption", "Convergence assessments every 5 cycles", "Performative acceptance finding class", "Flag vanity metrics"]}
