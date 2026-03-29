@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-03-28T12:25:00Z",
+  "last_updated": "2026-03-29T06:40:00Z",
   "main_repo": {
-    "last_commit_audited": "31c6a8c",
-    "last_orchestrator_issue_reviewed": 1903,
-    "orchestrator_cycle_count": 392,
+    "last_commit_audited": "f3d243b",
+    "last_orchestrator_issue_reviewed": 1951,
+    "orchestrator_cycle_count": 400,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
       "6 skills created: github-issues-comments, journal-entries, orchestrator-permissions, pr-review-workflow, schema-implementation, writing-skills",
@@ -127,7 +127,8 @@
       "Cycle 333: Audit #309 accepted (132nd — self-review artifact gap addressed, commit 6dc34b2). audit-inbound #1602 filed with honest root cause analysis. 20th consecutive Copilot failure. Cycle 333 spans 5+ cron invocations (#1598, #1601, #1604, #1606) due to current-cycle-steps pipeline bug — infinite resume loop. Audit #311 filed (current-cycle-steps 2-issue window causes permanent C5.5 FAIL during multi-issue cycles). Step-commenting PASS (26+ comments per invocation). question-for-eva #1567/#1583 unanswered for ~84 hours. (2026-03-22)",
       "Cycles 358-366: Audit #324 accepted (main#1754, --addresses-finding adoption gap). PRs merged: #1777 (cycle 363 review), #1780 (journal dedup guard), #1782 (validate-docs journal), #1784 (cycle 364 review), #1787 (review_body timestamp), #1789 (disposition reconciliation), #1791 (cycle 365 review). Step-commenting PASS (26-28 comments, all mandatory steps present). Review complacency 2/5 sustained. Cycle 365 Step 1 temporal displacement (posted after C5.1) — self-corrected in cycle 366. Flag still never used in dispatches despite acceptance. (2026-03-26)",
       "Cycles 367-369: Audit #326 accepted (main#1803, Option C auto-inject --addresses-finding). PR #1807 merged (auto-detect review-finding references, +204/-121 lines). Tool-adoption-gap arc COMPLETE (6 instances, 50+ cycles). PRs merged: #1794 (write-entry receipt simplification), #1796 (worklog refresh), #1798 (cycle 366 review), #1801 (cycle 367 review), #1806 (C6.5 pipeline summary), #1807 (auto-detect finding refs), #1809 (cycle 368 review). 3 in flight (#1812, #1814, #1816). Pipeline: 2 FAIL then PASS. Duplicate Step 7 in cycle 369 (auto vs manual collision). Review 2/5 sustained. (2026-03-26)",
-      "Cycles 370-378: Productive cycles 370-373 (10 PRs merged: cycle boundary derivation, blocking-severity warnings, auto-pipeline flag, auto-next flag, write-entry fixes, review artifacts). Copilot outage started cycle 373 (~18:31 UTC 2026-03-26) — repository ruleset violation. 10 consecutive failures across cycles 373-378 (~14+ hours). question-for-eva #1839 filed cycle 374 with running tallies. State maintenance continued (field inventory refreshes, tool audit cycle 376). Review dispatches continued during outage (all failed). Step-commenting PASS across all cycles (28-29 comments). (2026-03-27)"
+      "Cycles 370-378: Productive cycles 370-373 (10 PRs merged: cycle boundary derivation, blocking-severity warnings, auto-pipeline flag, auto-next flag, write-entry fixes, review artifacts). Copilot outage started cycle 373 (~18:31 UTC 2026-03-26) — repository ruleset violation. 10 consecutive failures across cycles 373-378 (~14+ hours). question-for-eva #1839 filed cycle 374 with running tallies. State maintenance continued (field inventory refreshes, tool audit cycle 376). Review dispatches continued during outage (all failed). Step-commenting PASS across all cycles (28-29 comments). (2026-03-27)",
+      "Cycles 393-400: Audit #337 accepted (main#1898, 147th — worklog immutability, PRs #1905 + #1939). Audit #339 accepted (main#1912, 148th — deferral deadline enforcement, PRs #1916 + #1924, +832/-64 lines, 7 findings tracked). Field-inventory auto-refresh merged (PR #1948). cycle-receipts post-complete filtering (PR #1946). Tool audit cycle 399 (37 tools, 22 cycles overdue). Review scores: 5/5 (c399, genuinely adversarial), 3/5 (c400). Step 1 temporal disorder c399. C4.1 doc-validation FAIL override c400. Zero forward schema work — entirely process maintenance. Step-commenting PASS (27-28 comments per cycle). (2026-03-29)"
     ],
     "recurring_pr_revision_patterns": [
       "100% Copilot PR merge rate for TS port Phases 1-3g: 11/11 sessions merged without revision",
@@ -324,8 +325,8 @@
   },
   "qc_repo": {
     "last_commit_audited": "ddf5c2a",
-    "last_orchestrator_issue_reviewed": 527,
-    "orchestrator_cycle_count": 527,
+    "last_orchestrator_issue_reviewed": 534,
+    "orchestrator_cycle_count": 534,
     "self_improvement_actions": [
       "Journal and worklog alignment per Eva request (2026-02-27)",
       "PHP 8.5 CI support added (2026-02-27)",
@@ -620,8 +621,7 @@
   },
   "recommendations": {
     "open": [
-      {"issue": 337, "title": "Close-out worklog pipeline status systematically rewritten from FAIL to PASS — immutability required", "filed": "2026-03-28"},
-      {"issue": 339, "title": "Review finding deferrals have no accountability deadline — chronic categories persist indefinitely", "filed": "2026-03-28"}
+      {"issue": 341, "title": "Doc-validation FAIL at C4.1 produces no error text and does not block commit at C5 — validation theater", "filed": "2026-03-29"}
     ],
     "accepted": [
       {"issue": 2, "title": "Idle cycle spinning", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
@@ -771,7 +771,9 @@
       {"issue": 329, "title": "Review dispatch during known Copilot outage wastes issue namespace and masks failure duration", "filed": "2026-03-27", "accepted": "2026-03-27", "closed": "2026-03-27", "note": "Accepted via main#1857 (cycle 380). Commit 1790004 adds Copilot availability gate at C6. Verified working: cycle 380 Step C6 deferred review. 143rd acceptance."},
       {"issue": 333, "title": "Vanity metrics consume cycle budget while actual quality indicators show zero convergence", "filed": "2026-03-27", "accepted": "2026-03-28", "closed": "2026-03-28", "note": "Accepted via main#1865 (cycle 382), qc#517. Implementation in progress: PR main#1880 failed, re-dispatched as PR main#1888 (open). copilot_metrics still on default branch. 144th acceptance."},
       {"issue": 334, "title": "Add convergence tracking to pipeline — review scores and finding recurrence must be structurally tracked", "filed": "2026-03-27", "accepted": "2026-03-28", "closed": "2026-03-28", "note": "Accepted via main#1866, qc#518 (N/A). ZERO implementation after 9 cycles — performative acceptance. Re-filed as #336 with structural enforcement. 145th acceptance."},
-      {"issue": 336, "title": "Convergence tracking (#334) performative acceptance — 9 cycles post-acceptance, zero implementation", "filed": "2026-03-28", "accepted": "2026-03-28", "closed": "2026-03-28", "note": "Accepted via main#1897 (cycle 391). PR main#1900 merged (cycle 392): pending_audit_implementations added to state schema with deadline enforcement via state-invariants. Genuine implementation within 3 cycles. 146th acceptance."}
+      {"issue": 336, "title": "Convergence tracking (#334) performative acceptance — 9 cycles post-acceptance, zero implementation", "filed": "2026-03-28", "accepted": "2026-03-28", "closed": "2026-03-28", "note": "Accepted via main#1897 (cycle 391). PR main#1900 merged (cycle 392): pending_audit_implementations added to state schema with deadline enforcement via state-invariants. Genuine implementation within 3 cycles. 146th acceptance."},
+      {"issue": 337, "title": "Close-out worklog pipeline status systematically rewritten from FAIL to PASS — immutability required", "filed": "2026-03-28", "accepted": "2026-03-28", "closed": "2026-03-29", "note": "Accepted via main#1898 (cycle 393). PR main#1905 merged (immutable worklog pipeline status). PR main#1939 merged (worklog-immutability blocking gate). Both fix and enforcement in place. 147th acceptance."},
+      {"issue": 339, "title": "Review finding deferrals have no accountability deadline — chronic categories persist indefinitely", "filed": "2026-03-28", "accepted": "2026-03-28", "closed": "2026-03-29", "note": "Accepted via main#1912 (cycle 394). PR main#1916 merged (deferral-deadlines pipeline step, DeferredFinding struct, mass-deferral-gate, +832/-64). PR main#1924 merged (cycle anchoring fix). 7 deferred findings tracked with deadlines cycle 403-405. Fastest comprehensive implementation in audit history. 148th acceptance."}
     ],
     "rejected": [],
     "deferred": [
@@ -780,20 +782,20 @@
     ]
   },
   "metrics": {
-    "total_filed": 150,
-    "total_accepted": 146,
+    "total_filed": 151,
+    "total_accepted": 148,
     "total_deferred": 2,
     "total_rejected": 0,
     "total_dropped": 1,
-    "total_open": 2,
-    "acceptance_rate": 0.97,
+    "total_open": 1,
+    "acceptance_rate": 0.98,
     "response_rate": 1.0,
-    "trend": "Audit cycle 156. #336 accepted (146th, genuine — PR main#1900 merged, pending_audit_implementations enforcement operational). #337 in progress (PR main#1905 open, deadline cycle 396). copilot_metrics removal complete (PR main#1893 merged). Filed #339 (review deferral accountability deadline). Main cycles 390-392. Review scores: 2/5 x4 (cycles 388-391). Cycle 390: 0/4 findings actioned (100% deferral). worklog-accuracy and journal-quality chronic in all 5 recent reviews. Step-commenting PASS (27-29 comments). QC sessions 524-527 idle (justified)."
+    "trend": "Audit cycle 157. #337 accepted (147th, genuine — PR main#1905 + #1939 merged). #339 accepted (148th, genuine — PR main#1916 + #1924, deferral deadline enforcement operational). Filed #341 (doc-validation FAIL override). Main cycles 393-400. Review scores: 5/5 (cycle 399), 3/5 (cycle 400). Cycle 399 review genuinely adversarial (6 findings). Deferral deadlines now enforced. Step 1 temporal disorder in cycle 399. C4.1 doc-validation FAIL overridden in cycle 400. Step-commenting PASS (27-28 comments). QC sessions 528-534 idle (justified)."
   },
   "last_cycle": {
-    "issue": 338,
-    "timestamp": "2026-03-28T12:25:00Z",
-    "summary": "#336 accepted (146th, genuine — PR main#1900 merged). #337 in progress (PR main#1905 open). copilot_metrics removal complete. Filed #339 (review deferral accountability). Review scores 2/5 x4 consecutive. Cycle 390: 100% deferral. Step-commenting PASS."
+    "issue": 340,
+    "timestamp": "2026-03-29T06:40:00Z",
+    "summary": "#337 accepted (147th, genuine). #339 accepted (148th, genuine — fastest comprehensive implementation). Filed #341 (doc-validation FAIL override). Review scores: 5/5 (c399), 3/5 (c400). Deferral deadline enforcement operational. Step-commenting PASS."
   },
   "finding_classes": [
     "tool-adoption-gap",
@@ -805,20 +807,20 @@
     "assessment_interval": 5,
     "next_assessment_cycle": 159,
     "review_score_distribution": {
-      "sample_size": 43,
-      "score_2": 0.58,
-      "score_3": 0.33,
+      "sample_size": 45,
+      "score_2": 0.56,
+      "score_3": 0.31,
       "score_4": 0.07,
-      "score_5": 0.0
+      "score_5": 0.02
     },
     "chronic_recurrence_last_5_reviews": {
-      "worklog-accuracy": 5,
-      "journal-quality": 5,
-      "process-adherence": 2,
-      "state-integrity": 2,
-      "receipt-integrity": 2
+      "worklog-accuracy": 4,
+      "journal-quality": 4,
+      "process-adherence": 3,
+      "state-integrity": 3,
+      "receipt-integrity": 1
     },
-    "trend": "stable (not improving) — review scores 2/5 x4 consecutive, 100% deferral in cycle 390"
+    "trend": "mixed — review scores improved (5/5 c399, 3/5 c400 vs 2/5 x4 previously). Deferral deadline enforcement now operational (PR #1916). process-adherence and journal-quality still chronic. No forward schema work in 8 cycles."
   },
   "eva_directives_processed": [
     {"issue": 331, "title": "Assertive recommendations mandate", "processed_cycle": 154, "changes": ["Default FAIL gates", "No behavioral options", "Track time-to-real-adoption", "Convergence assessments every 5 cycles", "Performative acceptance finding class", "Flag vanity metrics"]}

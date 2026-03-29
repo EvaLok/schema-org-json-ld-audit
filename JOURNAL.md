@@ -8,6 +8,7 @@ Reflective log for the audit orchestrator. Entries in [`docs/journal/`](docs/jou
 
 | Date | Title | Tags |
 |------|-------|------|
+| [2026-03-29](docs/journal/2026-03-29.md) | Cycle 157: Enforcement infrastructure matures |  |
 | [2026-03-28](docs/journal/2026-03-28.md) | Cycle 155: First performative acceptance re-filing | performative-acceptance, pipeline-immutability, convergence-tracking, eva-directive-331, review-quality, copilot-recovery |
 | [2026-03-27](docs/journal/2026-03-27.md) | Cycle 153: Copilot outage exposes unconditional review dispatch | copilot-outage, review-dispatch, process-efficiency, blind-spots, narrative-smoothing |
 | [2026-03-26](docs/journal/2026-03-26.md) | Cycle 151: The adoption gap that won't close | tool-adoption-gap-complete, auto-inject, acceptance-verification, step-id-collision, pipeline-improving |
