@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-03-29T06:40:00Z",
+  "last_updated": "2026-03-29T12:25:00Z",
   "main_repo": {
-    "last_commit_audited": "f3d243b",
-    "last_orchestrator_issue_reviewed": 1951,
-    "orchestrator_cycle_count": 400,
+    "last_commit_audited": "e5628c3",
+    "last_orchestrator_issue_reviewed": 1965,
+    "orchestrator_cycle_count": 403,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
       "6 skills created: github-issues-comments, journal-entries, orchestrator-permissions, pr-review-workflow, schema-implementation, writing-skills",
@@ -128,7 +128,8 @@
       "Cycles 358-366: Audit #324 accepted (main#1754, --addresses-finding adoption gap). PRs merged: #1777 (cycle 363 review), #1780 (journal dedup guard), #1782 (validate-docs journal), #1784 (cycle 364 review), #1787 (review_body timestamp), #1789 (disposition reconciliation), #1791 (cycle 365 review). Step-commenting PASS (26-28 comments, all mandatory steps present). Review complacency 2/5 sustained. Cycle 365 Step 1 temporal displacement (posted after C5.1) — self-corrected in cycle 366. Flag still never used in dispatches despite acceptance. (2026-03-26)",
       "Cycles 367-369: Audit #326 accepted (main#1803, Option C auto-inject --addresses-finding). PR #1807 merged (auto-detect review-finding references, +204/-121 lines). Tool-adoption-gap arc COMPLETE (6 instances, 50+ cycles). PRs merged: #1794 (write-entry receipt simplification), #1796 (worklog refresh), #1798 (cycle 366 review), #1801 (cycle 367 review), #1806 (C6.5 pipeline summary), #1807 (auto-detect finding refs), #1809 (cycle 368 review). 3 in flight (#1812, #1814, #1816). Pipeline: 2 FAIL then PASS. Duplicate Step 7 in cycle 369 (auto vs manual collision). Review 2/5 sustained. (2026-03-26)",
       "Cycles 370-378: Productive cycles 370-373 (10 PRs merged: cycle boundary derivation, blocking-severity warnings, auto-pipeline flag, auto-next flag, write-entry fixes, review artifacts). Copilot outage started cycle 373 (~18:31 UTC 2026-03-26) — repository ruleset violation. 10 consecutive failures across cycles 373-378 (~14+ hours). question-for-eva #1839 filed cycle 374 with running tallies. State maintenance continued (field inventory refreshes, tool audit cycle 376). Review dispatches continued during outage (all failed). Step-commenting PASS across all cycles (28-29 comments). (2026-03-27)",
-      "Cycles 393-400: Audit #337 accepted (main#1898, 147th — worklog immutability, PRs #1905 + #1939). Audit #339 accepted (main#1912, 148th — deferral deadline enforcement, PRs #1916 + #1924, +832/-64 lines, 7 findings tracked). Field-inventory auto-refresh merged (PR #1948). cycle-receipts post-complete filtering (PR #1946). Tool audit cycle 399 (37 tools, 22 cycles overdue). Review scores: 5/5 (c399, genuinely adversarial), 3/5 (c400). Step 1 temporal disorder c399. C4.1 doc-validation FAIL override c400. Zero forward schema work — entirely process maintenance. Step-commenting PASS (27-28 comments per cycle). (2026-03-29)"
+      "Cycles 393-400: Audit #337 accepted (main#1898, 147th — worklog immutability, PRs #1905 + #1939). Audit #339 accepted (main#1912, 148th — deferral deadline enforcement, PRs #1916 + #1924, +832/-64 lines, 7 findings tracked). Field-inventory auto-refresh merged (PR #1948). cycle-receipts post-complete filtering (PR #1946). Tool audit cycle 399 (37 tools, 22 cycles overdue). Review scores: 5/5 (c399, genuinely adversarial), 3/5 (c400). Step 1 temporal disorder c399. C4.1 doc-validation FAIL override c400. Zero forward schema work — entirely process maintenance. Step-commenting PASS (27-28 comments per cycle). (2026-03-29)",
+      "Cycles 401-403: Audit #341 partially addressed (main#1958, PR main#1960 merged — C4.1 error text fix, stdout/stderr mismatch). C4.1 still not blocking gate (items 2-3 of plan pending). Worklog immutability promoted to FAIL (PR #1954). Tool audit cycle 403 (29 Rust crates). Review scores: 3/5 (c401, c402). Step 1 temporal disorder cycle 402 (posted 8 min after C4.1 — retroactive posting recurrence). Filed #343 (temporal ordering + review blind spot). Step-commenting: c401 PASS, c402 temporal violation, c403 PASS. QC sessions 535-537 idle (justified). (2026-03-29)"
     ],
     "recurring_pr_revision_patterns": [
       "100% Copilot PR merge rate for TS port Phases 1-3g: 11/11 sessions merged without revision",
@@ -325,8 +326,8 @@
   },
   "qc_repo": {
     "last_commit_audited": "ddf5c2a",
-    "last_orchestrator_issue_reviewed": 534,
-    "orchestrator_cycle_count": 534,
+    "last_orchestrator_issue_reviewed": 537,
+    "orchestrator_cycle_count": 537,
     "self_improvement_actions": [
       "Journal and worklog alignment per Eva request (2026-02-27)",
       "PHP 8.5 CI support added (2026-02-27)",
@@ -621,7 +622,8 @@
   },
   "recommendations": {
     "open": [
-      {"issue": 341, "title": "Doc-validation FAIL at C4.1 produces no error text and does not block commit at C5 — validation theater", "filed": "2026-03-29"}
+      {"issue": 341, "title": "Doc-validation FAIL at C4.1 produces no error text and does not block commit at C5 — validation theater", "filed": "2026-03-29", "note": "Partial: PR main#1960 merged (error text fix). C4.1 still not a blocking gate. audit-inbound main#1958 open."},
+      {"issue": 343, "title": "Step 1 retroactive posting recurrence (cycle 402) + review agent temporal-ordering blind spot", "filed": "2026-03-29"}
     ],
     "accepted": [
       {"issue": 2, "title": "Idle cycle spinning", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
@@ -782,20 +784,20 @@
     ]
   },
   "metrics": {
-    "total_filed": 151,
+    "total_filed": 152,
     "total_accepted": 148,
     "total_deferred": 2,
     "total_rejected": 0,
     "total_dropped": 1,
-    "total_open": 1,
-    "acceptance_rate": 0.98,
+    "total_open": 2,
+    "acceptance_rate": 0.97,
     "response_rate": 1.0,
-    "trend": "Audit cycle 157. #337 accepted (147th, genuine — PR main#1905 + #1939 merged). #339 accepted (148th, genuine — PR main#1916 + #1924, deferral deadline enforcement operational). Filed #341 (doc-validation FAIL override). Main cycles 393-400. Review scores: 5/5 (cycle 399), 3/5 (cycle 400). Cycle 399 review genuinely adversarial (6 findings). Deferral deadlines now enforced. Step 1 temporal disorder in cycle 399. C4.1 doc-validation FAIL overridden in cycle 400. Step-commenting PASS (27-28 comments). QC sessions 528-534 idle (justified)."
+    "trend": "Audit cycle 158. #341 partially addressed (PR main#1960 fixes error text but C4.1 still not blocking gate). Filed #343 (Step 1 retroactive posting recurrence + review agent temporal-ordering blind spot). Main cycles 401-403: C4.1 error text fixed, worklog immutability blocking, tool audit. Review scores: 3/5 (c401), 3/5 (c402). Step 1 temporal disorder cycle 402. QC sessions 535-537 idle (justified)."
   },
   "last_cycle": {
-    "issue": 340,
-    "timestamp": "2026-03-29T06:40:00Z",
-    "summary": "#337 accepted (147th, genuine). #339 accepted (148th, genuine — fastest comprehensive implementation). Filed #341 (doc-validation FAIL override). Review scores: 5/5 (c399), 3/5 (c400). Deferral deadline enforcement operational. Step-commenting PASS."
+    "issue": 342,
+    "timestamp": "2026-03-29T12:25:00Z",
+    "summary": "#341 partially addressed (error text fixed, gate behavior pending). Filed #343 (Step 1 retroactive posting + review blind spot). Main cycles 401-403. Review scores: 3/5 (c401, c402). Step-commenting: c401 PASS, c402 temporal disorder (Step 1 retroactive), c403 PASS. QC idle (justified)."
   },
   "finding_classes": [
     "tool-adoption-gap",
@@ -820,7 +822,7 @@
       "state-integrity": 3,
       "receipt-integrity": 1
     },
-    "trend": "mixed — review scores improved (5/5 c399, 3/5 c400 vs 2/5 x4 previously). Deferral deadline enforcement now operational (PR #1916). process-adherence and journal-quality still chronic. No forward schema work in 8 cycles."
+    "trend": "mixed — review scores stabilized at 3/5 (c401, c402). C4.1 error text fixed (PR #1960) but gate behavior unchanged. Step 1 temporal disorder recurred cycle 402. process-adherence and journal-quality still chronic. No forward schema work in 11+ cycles."
   },
   "eva_directives_processed": [
     {"issue": 331, "title": "Assertive recommendations mandate", "processed_cycle": 154, "changes": ["Default FAIL gates", "No behavioral options", "Track time-to-real-adoption", "Convergence assessments every 5 cycles", "Performative acceptance finding class", "Flag vanity metrics"]}
