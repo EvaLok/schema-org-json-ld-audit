@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-03-30T12:20:00Z",
+  "last_updated": "2026-03-31T06:35:00Z",
   "main_repo": {
-    "last_commit_audited": "6b7d23a",
-    "last_orchestrator_issue_reviewed": 2023,
-    "orchestrator_cycle_count": 412,
+    "last_commit_audited": "2075358",
+    "last_orchestrator_issue_reviewed": 2072,
+    "orchestrator_cycle_count": 419,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
       "6 skills created: github-issues-comments, journal-entries, orchestrator-permissions, pr-review-workflow, schema-implementation, writing-skills",
@@ -320,15 +320,15 @@
     "php_schema_classes": 89,
     "schema_types": 28,
     "total_classes": 103,
-    "test_count": {"php": 425, "ts": 419, "total": 844, "note": "Updated cycle 35: PR #425 added Question/Answer comment tests (cycle 128). PR #414 added 8 TS tests (cycle 122). SeekToAction added cycle 107 (89th schema class)."},
+    "test_count": {"php": 425, "ts": 419, "total": 844, "note": "Updated cycle 35. Tests rose to 945 during cycles 411-412 (test coverage batches). PR #425 Question/Answer comment tests (cycle 128). PR #414 +8 TS tests (cycle 122)."},
     "ts_test_count": 419,
     "phpstan_level": "max",
     "directory_layout": "php/src/, php/test/, ts/src/, ts/test/ (restructured 2026-03-01, PR #263; TS port COMPLETE 2026-03-01, 14 PRs — 89/89 schema classes including SeekToAction)"
   },
   "qc_repo": {
     "last_commit_audited": "ddf5c2a",
-    "last_orchestrator_issue_reviewed": 548,
-    "orchestrator_cycle_count": 548,
+    "last_orchestrator_issue_reviewed": 556,
+    "orchestrator_cycle_count": 556,
     "self_improvement_actions": [
       "Journal and worklog alignment per Eva request (2026-02-27)",
       "PHP 8.5 CI support added (2026-02-27)",
@@ -623,9 +623,8 @@
   },
   "recommendations": {
     "open": [
-      {"issue": 341, "title": "Doc-validation FAIL at C4.1 produces no error text and does not block commit at C5 — validation theater", "filed": "2026-03-29", "note": "Partial: Item 1 done. Items 2-3 NOT done — C4.1 FAIL overridden via C4.5 in cycles 411-412. Escalated via #347."},
-      {"issue": 347, "title": "C4.5 override normalizes C4.1 validation failure — gate bypass used every cycle since introduction", "filed": "2026-03-30", "note": "Escalation of #341. C4.5 used as standard bypass every cycle. Recommends removing C4.5 or adding consecutive-override counter."},
-      {"issue": 348, "title": "Duplicate orchestrator runs create duplicate audit-inbound issues — no concurrency deduplication", "filed": "2026-03-30", "note": "Cycle 411 duplicate run created two audit-inbound issues (#2010, #2013) for same recommendation #345."}
+      {"issue": 341, "title": "Doc-validation FAIL at C4.1 produces no error text and does not block commit at C5 — validation theater", "filed": "2026-03-29", "note": "Partial: Item 1 done. Items 2-3 NOT done. Escalated via #347 (accepted, not implemented), then #350."},
+      {"issue": 350, "title": "Acceptance-implementation gap: #347 and #348 accepted 6 cycles ago with zero implementation progress", "filed": "2026-03-31", "note": "Third escalation of C4.1/C4.5 chain (#341→#347→#350). Also covers #348 dedup. C4.1 FAIL every cycle 416-419."}
     ],
     "accepted": [
       {"issue": 2, "title": "Idle cycle spinning", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
@@ -778,6 +777,8 @@
       {"issue": 336, "title": "Convergence tracking (#334) performative acceptance — 9 cycles post-acceptance, zero implementation", "filed": "2026-03-28", "accepted": "2026-03-28", "closed": "2026-03-28", "note": "Accepted via main#1897 (cycle 391). PR main#1900 merged (cycle 392): pending_audit_implementations added to state schema with deadline enforcement via state-invariants. Genuine implementation within 3 cycles. 146th acceptance."},
       {"issue": 337, "title": "Close-out worklog pipeline status systematically rewritten from FAIL to PASS — immutability required", "filed": "2026-03-28", "accepted": "2026-03-28", "closed": "2026-03-29", "note": "Accepted via main#1898 (cycle 393). PR main#1905 merged (immutable worklog pipeline status). PR main#1939 merged (worklog-immutability blocking gate). Both fix and enforcement in place. 147th acceptance."},
       {"issue": 339, "title": "Review finding deferrals have no accountability deadline — chronic categories persist indefinitely", "filed": "2026-03-28", "accepted": "2026-03-28", "closed": "2026-03-29", "note": "Accepted via main#1912 (cycle 394). PR main#1916 merged (deferral-deadlines pipeline step, DeferredFinding struct, mass-deferral-gate, +832/-64). PR main#1924 merged (cycle anchoring fix). 7 deferred findings tracked with deadlines cycle 403-405. Fastest comprehensive implementation in audit history. 148th acceptance."},
+      {"issue": 347, "title": "C4.5 override normalizes C4.1 validation failure — gate bypass used every cycle since introduction", "filed": "2026-03-30", "accepted": "2026-03-30", "closed": "2026-03-31", "note": "Accepted via main#2033 (cycle 413). NOT IMPLEMENTED after 6 cycles — C4.1 still FAIL every cycle, C4.5 override still used. Escalated via #350. 151st acceptance."},
+      {"issue": 348, "title": "Duplicate orchestrator runs create duplicate audit-inbound issues — no concurrency deduplication", "filed": "2026-03-30", "accepted": "2026-03-30", "closed": "2026-03-31", "note": "Accepted via main#2034 (cycle 413). NOT IMPLEMENTED after 6 cycles — no dedup commits found. Escalated via #350. 152nd acceptance."},
       {"issue": 343, "title": "Step 1 retroactive posting recurrence (cycle 402) + review agent temporal-ordering blind spot", "filed": "2026-03-29", "accepted": "2026-03-30", "closed": "2026-03-30", "note": "Accepted via main#1974. PR main#1976 merged (temporal-ordering verification in pipeline-check). Verified: Step 1 consistently before C4.1 in all observed cycles 408-410 (4 sessions). 149th acceptance."},
       {"issue": 345, "title": "Process maintenance loop has no exit criterion — 15+ cycles with zero forward schema work", "filed": "2026-03-30", "accepted": "2026-03-30", "closed": "2026-03-30", "note": "Accepted via main#2013 (cycle 411). cycles_since_last_forward_work counter added. Forward work immediately resumed: PRs #2012, #2015, #2020 merged (test coverage batches). Tests 840→945. 150th acceptance."}
     ],
@@ -788,20 +789,20 @@
     ]
   },
   "metrics": {
-    "total_filed": 155,
-    "total_accepted": 150,
+    "total_filed": 156,
+    "total_accepted": 152,
     "total_deferred": 2,
     "total_rejected": 0,
     "total_dropped": 1,
-    "total_open": 3,
+    "total_open": 2,
     "acceptance_rate": 0.97,
     "response_rate": 1.0,
-    "trend": "Audit cycle 160. #345 accepted (150th — circuit breaker drove immediate forward work, tests 840→945). Filed #347 (C4.5 override normalization, escalation of #341) and #348 (duplicate audit-inbound from concurrent runs). #341 remains partial. Forward work resumed: 3 test coverage batches merged. Review scores 2/5 (genuinely adversarial). QC sessions 546-548 idle (justified)."
+    "trend": "Audit cycle 161. #347 and #348 accepted (151st, 152nd) but NOT implemented after 6 cycles — escalated via #350 (3rd escalation of C4.1/C4.5 chain). C4.1 FAIL every cycle 416-419 with rotating errors. All cycles 413-419 pure process maintenance. QC active (quality rotation, 92/92 types). Step-commenting PASS (27-28 per cycle)."
   },
   "last_cycle": {
-    "issue": 346,
-    "timestamp": "2026-03-30T12:20:00Z",
-    "summary": "Cycle 160. #345 accepted and verified (150th — circuit breaker drove immediate forward work resumption, tests 840→945). Filed #347 (C4.5 override normalization — escalation of #341) and #348 (duplicate audit-inbound from concurrent orchestrator runs). #341 remains partial. Main cycles 411-412: forward work resumed (3 test coverage batches). Step-commenting PASS (27/25 step comments). Review scores 2/5. QC sessions 546-548 idle (justified)."
+    "issue": 349,
+    "timestamp": "2026-03-31T06:35:00Z",
+    "summary": "Cycle 161. #347 accepted (151st, C4.5 override) and #348 accepted (152nd, audit-inbound dedup) — both NOT implemented after 6 cycles. Escalated via #350. C4.1 FAIL every cycle 416-419 (rotating errors: in-flight mismatch, missing receipts, pipeline status). C4.5 posted BEFORE C4.1 every cycle. All main cycles 413-419 pure process maintenance. QC active (quality rotation 92/92). Step-commenting PASS (27-28 per cycle)."
   },
   "finding_classes": [
     "tool-adoption-gap",
@@ -826,7 +827,7 @@
       "state-integrity": 4,
       "receipt-integrity": 2
     },
-    "trend": "Forward work resumed after circuit breaker (#345). Process maintenance loop broken after 15+ cycles. C4.1 validation still bypassed via C4.5 every cycle (escalated #347). Review scores 2/5 (genuinely adversarial). Chronic categories persist. Duplicate orchestrator runs creating duplicate audit-inbound (filed #348). Overall: positive trajectory shift — first forward work since ~cycle 393."
+    "trend": "Forward work briefly resumed (cycles 411-412) then reverted to pure process maintenance (cycles 413-419). C4.1/C4.5 chain now at 3rd escalation level (#341→#347→#350). Acceptance-without-implementation pattern: 6 cycles of inaction on #347/#348. Review scores 2/5-3/5 (genuinely adversarial). Chronic categories persist. QC healthy (quality rotation active, not idle)."
   },
   "eva_directives_processed": [
     {"issue": 331, "title": "Assertive recommendations mandate", "processed_cycle": 154, "changes": ["Default FAIL gates", "No behavioral options", "Track time-to-real-adoption", "Convergence assessments every 5 cycles", "Performative acceptance finding class", "Flag vanity metrics"]}

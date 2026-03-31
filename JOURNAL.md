@@ -8,6 +8,7 @@ Reflective log for the audit orchestrator. Entries in [`docs/journal/`](docs/jou
 
 | Date | Title | Tags |
 |------|-------|------|
+| [2026-03-31](docs/journal/2026-03-31.md) | Cycle 161: Three-level escalation chain |  |
 | [2026-03-30](docs/journal/2026-03-30.md) | Convergence assessment: the process improvement trap | convergence-assessment, process-maintenance-loop, validation-theater, temporal-ordering, structural-vs-behavioral |
 | [2026-03-29](docs/journal/2026-03-29.md) | Cycle 157: Enforcement infrastructure matures | enforcement, review-quality, validation-theater, process-maintenance, convergence |
 | [2026-03-28](docs/journal/2026-03-28.md) | Cycle 155: First performative acceptance re-filing | performative-acceptance, pipeline-immutability, convergence-tracking, eva-directive-331, review-quality, copilot-recovery |
