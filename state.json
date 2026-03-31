@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-03-31T06:35:00Z",
+  "last_updated": "2026-03-31T12:25:00Z",
   "main_repo": {
-    "last_commit_audited": "2075358",
-    "last_orchestrator_issue_reviewed": 2072,
-    "orchestrator_cycle_count": 419,
+    "last_commit_audited": "f60eef9",
+    "last_orchestrator_issue_reviewed": 2092,
+    "orchestrator_cycle_count": 423,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
       "6 skills created: github-issues-comments, journal-entries, orchestrator-permissions, pr-review-workflow, schema-implementation, writing-skills",
@@ -327,8 +327,8 @@
   },
   "qc_repo": {
     "last_commit_audited": "ddf5c2a",
-    "last_orchestrator_issue_reviewed": 556,
-    "orchestrator_cycle_count": 556,
+    "last_orchestrator_issue_reviewed": 559,
+    "orchestrator_cycle_count": 559,
     "self_improvement_actions": [
       "Journal and worklog alignment per Eva request (2026-02-27)",
       "PHP 8.5 CI support added (2026-02-27)",
@@ -623,8 +623,8 @@
   },
   "recommendations": {
     "open": [
-      {"issue": 341, "title": "Doc-validation FAIL at C4.1 produces no error text and does not block commit at C5 — validation theater", "filed": "2026-03-29", "note": "Partial: Item 1 done. Items 2-3 NOT done. Escalated via #347 (accepted, not implemented), then #350."},
-      {"issue": 350, "title": "Acceptance-implementation gap: #347 and #348 accepted 6 cycles ago with zero implementation progress", "filed": "2026-03-31", "note": "Third escalation of C4.1/C4.5 chain (#341→#347→#350). Also covers #348 dedup. C4.1 FAIL every cycle 416-419."}
+      {"issue": 341, "title": "Doc-validation FAIL at C4.1 produces no error text and does not block commit at C5 — validation theater", "filed": "2026-03-29", "note": "Partial: Item 1 done. Items 2-3 NOT done. C4.1 PASSED in cycle 422 (first time since 415). Root cause fix PR #2088 dispatched. Items 2-3 may become moot if C4.1 stays PASS."},
+      {"issue": 350, "title": "Acceptance-implementation gap: #347 and #348 accepted 6 cycles ago with zero implementation progress", "filed": "2026-03-31", "note": "Accepted via main#2080 (cycle 421). C4.1 root cause fix partially implemented (PR #2088 dispatched, C4.1 PASSED cycle 422). Dedup (#348) NOT implemented — 3rd acceptance without action. Dedup escalated to question-for-eva #352."}
     ],
     "accepted": [
       {"issue": 2, "title": "Idle cycle spinning", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
@@ -795,14 +795,15 @@
     "total_rejected": 0,
     "total_dropped": 1,
     "total_open": 2,
+    "questions_for_eva": 1,
     "acceptance_rate": 0.97,
     "response_rate": 1.0,
-    "trend": "Audit cycle 161. #347 and #348 accepted (151st, 152nd) but NOT implemented after 6 cycles — escalated via #350 (3rd escalation of C4.1/C4.5 chain). C4.1 FAIL every cycle 416-419 with rotating errors. All cycles 413-419 pure process maintenance. QC active (quality rotation, 92/92 types). Step-commenting PASS (27-28 per cycle)."
+    "trend": "Audit cycle 162. #350 accepted (cycle 421) — C4.1 root cause fix dispatched (PR #2088), C4.1 PASSED cycle 422 (first time since 415). Dedup (#348) NOT implemented for 3rd time — escalated to question-for-eva #352. All cycles 419-422 process maintenance. C4.5 still posted before C4.1 every cycle. QC healthy (quality rotation, 92/92). Step-commenting PASS (27-28 per cycle)."
   },
   "last_cycle": {
-    "issue": 349,
-    "timestamp": "2026-03-31T06:35:00Z",
-    "summary": "Cycle 161. #347 accepted (151st, C4.5 override) and #348 accepted (152nd, audit-inbound dedup) — both NOT implemented after 6 cycles. Escalated via #350. C4.1 FAIL every cycle 416-419 (rotating errors: in-flight mismatch, missing receipts, pipeline status). C4.5 posted BEFORE C4.1 every cycle. All main cycles 413-419 pure process maintenance. QC active (quality rotation 92/92). Step-commenting PASS (27-28 per cycle)."
+    "issue": 351,
+    "timestamp": "2026-03-31T12:25:00Z",
+    "summary": "Cycle 162. #350 accepted (cycle 421) — partially implemented. C4.1 PASSED cycle 422 (first time since 415), root cause fix PR #2088 in flight. Dedup (#348) dropped 3rd time — escalated to question-for-eva #352. C4.5 still before C4.1. Cycles 419-422 all process maintenance (review consumption, tool fixes). QC healthy (quality rotation, sessions 557-559). Step-commenting PASS."
   },
   "finding_classes": [
     "tool-adoption-gap",
@@ -827,7 +828,7 @@
       "state-integrity": 4,
       "receipt-integrity": 2
     },
-    "trend": "Forward work briefly resumed (cycles 411-412) then reverted to pure process maintenance (cycles 413-419). C4.1/C4.5 chain now at 3rd escalation level (#341→#347→#350). Acceptance-without-implementation pattern: 6 cycles of inaction on #347/#348. Review scores 2/5-3/5 (genuinely adversarial). Chronic categories persist. QC healthy (quality rotation active, not idle)."
+    "trend": "Process maintenance loop continues (cycles 413-422, 10+ consecutive). C4.1 root cause fix in progress — first PASS in cycle 422. Dedup (#348) accepted 3x without implementation, escalated to question-for-eva. Review scores 3/5 (genuine). Chronic categories persist but tool fixes addressing root causes. QC healthy (quality rotation active). C4.5 ordering unchanged."
   },
   "eva_directives_processed": [
     {"issue": 331, "title": "Assertive recommendations mandate", "processed_cycle": 154, "changes": ["Default FAIL gates", "No behavioral options", "Track time-to-real-adoption", "Convergence assessments every 5 cycles", "Performative acceptance finding class", "Flag vanity metrics"]}
