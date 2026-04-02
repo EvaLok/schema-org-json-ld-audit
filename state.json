@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-04-01T12:25:00Z",
+  "last_updated": "2026-04-02T06:35:00Z",
   "main_repo": {
-    "last_commit_audited": "12f04fd",
-    "last_orchestrator_issue_reviewed": 2125,
-    "orchestrator_cycle_count": 429,
+    "last_commit_audited": "b993b9f",
+    "last_orchestrator_issue_reviewed": 2149,
+    "orchestrator_cycle_count": 433,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
       "6 skills created: github-issues-comments, journal-entries, orchestrator-permissions, pr-review-workflow, schema-implementation, writing-skills",
@@ -327,8 +327,8 @@
   },
   "qc_repo": {
     "last_commit_audited": "eebe889",
-    "last_orchestrator_issue_reviewed": 562,
-    "orchestrator_cycle_count": 562,
+    "last_orchestrator_issue_reviewed": 568,
+    "orchestrator_cycle_count": 568,
     "self_improvement_actions": [
       "Journal and worklog alignment per Eva request (2026-02-27)",
       "PHP 8.5 CI support added (2026-02-27)",
@@ -623,8 +623,8 @@
   },
   "recommendations": {
     "open": [
-      {"issue": 357, "title": "C4.1 chronic FAIL — write-entry injects wrong pipeline status into worklog every cycle", "filed": "2026-04-01", "note": "Filed cycle 164. C4.1 FAIL in cycles 425-428 with identical error. write-entry pipeline status bug. Root cause of chronic worklog-accuracy findings."},
-      {"issue": 358, "title": "Re-file #347: C4.5 ordering accepted 18+ main cycles ago — never implemented", "filed": "2026-04-01", "note": "Filed cycle 164. Re-filing per step 10.5. Original #347 accepted cycle 413, never implemented. C4.5 still executes before C4.1."}
+      {"issue": 360, "title": "C4.1 fix (PR #2132) regressed after 1 clean cycle — write-entry pipeline status still diverges from pipeline-check", "filed": "2026-04-02", "note": "Filed cycle 165. Follow-up to #357. PR #2132 produced 1 clean cycle (432) then regressed in cycle 433. write-entry still classifies warnings as blocking while pipeline-check says non-blocking."},
+      {"issue": 361, "title": "Duplicate Copilot dispatch — dispatch-task feature dispatched twice in 35 seconds, producing competing PRs", "filed": "2026-04-02", "note": "Filed cycle 165. Issues main#2150 and main#2152 identical. PRs main#2151 and main#2153 both open. First dispatch not recorded, causing re-dispatch."}
     ],
     "accepted": [
       {"issue": 2, "title": "Idle cycle spinning", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
@@ -784,7 +784,9 @@
       {"issue": 341, "title": "Doc-validation FAIL at C4.1 produces no error text and does not block commit at C5 — validation theater", "filed": "2026-03-29", "accepted": "2026-03-29", "closed": "2026-04-01", "note": "Partially resolved. Item 1 (error text) fixed. Items 2-3 superseded by #354 (C5.5 gate non-blocking). PR #2088 merged. 153rd acceptance."},
       {"issue": 350, "title": "Acceptance-implementation gap: #347 and #348 accepted 6 cycles ago with zero implementation progress", "filed": "2026-03-31", "accepted": "2026-03-31", "closed": "2026-04-01", "note": "#348 dedup IMPLEMENTED via PR #2099. #347 C4.5 ordering still not fixed but lower priority — structural issue tracked in #354. Escalation to question-for-eva #352 prompted action. 154th acceptance."},
       {"issue": 354, "title": "C5.5 pipeline gate is non-blocking — FAIL results silently overwritten by close-out", "filed": "2026-04-01", "accepted": "2026-04-01", "closed": "2026-04-01", "note": "Accepted via main#2120 (cycle 428). Copilot dispatch #2123 for dual-result recording FAILED (service unavailable). Pending re-dispatch. 155th acceptance."},
-      {"issue": 355, "title": "Review-maintenance feedback loop generates self-sustaining work — no external value for 10+ cycles", "filed": "2026-04-01", "accepted": "2026-04-01", "closed": "2026-04-01", "note": "Accepted via main#2121 (cycle 428). question-for-eva #2122 filed. Commitment to non-maintenance dispatch broken — cycle 428 was 12th consecutive maintenance cycle. 156th acceptance."}
+      {"issue": 355, "title": "Review-maintenance feedback loop generates self-sustaining work — no external value for 10+ cycles", "filed": "2026-04-01", "accepted": "2026-04-01", "closed": "2026-04-01", "note": "Accepted via main#2121 (cycle 428). question-for-eva #2122 filed. Commitment to non-maintenance dispatch broken — cycle 428 was 12th consecutive maintenance cycle. 156th acceptance."},
+      {"issue": 357, "title": "C4.1 chronic FAIL — write-entry injects wrong pipeline status into worklog every cycle", "filed": "2026-04-01", "accepted": "2026-04-01", "closed": "2026-04-02", "note": "Accepted via main#2133 (cycle 430). PR main#2132 merged. Fix regressed in cycle 433 — follow-up filed as #360. 157th acceptance."},
+      {"issue": 358, "title": "Re-file #347: C4.5 ordering accepted 18+ main cycles ago — never implemented", "filed": "2026-04-01", "accepted": "2026-04-01", "closed": "2026-04-02", "note": "Accepted via main#2134 (cycle 430). COMPLETION_CHECKLIST.xml updated (commit bc3772d). Verified: C4.1 at 05:05:43Z, C4.5 at 05:07:12Z in cycle 433. 158th acceptance."}
     ],
     "rejected": [],
     "deferred": [
@@ -793,8 +795,8 @@
     ]
   },
   "metrics": {
-    "total_filed": 160,
-    "total_accepted": 156,
+    "total_filed": 162,
+    "total_accepted": 158,
     "total_deferred": 2,
     "total_rejected": 0,
     "total_dropped": 1,
@@ -802,12 +804,12 @@
     "questions_for_eva": 1,
     "acceptance_rate": 0.975,
     "response_rate": 1.0,
-    "trend": "Audit cycle 164. #354/#355 accepted (main#2120/#2121) but implementation incomplete — #2123 Copilot dispatch failed (service unavailable), maintenance loop unbroken (12th consecutive cycle). Filed #357 (C4.1 write-entry pipeline status root cause) and #358 (re-file #347 C4.5 ordering, 18+ cycles unimplemented). C4.1 still FAIL. Step-commenting PASS (28 comments). QC healthy (92/92, quality rotation session 562). Review scores 3/5."
+    "trend": "Audit cycle 165. #357/#358 accepted (main#2133/#2134). #357 fix (PR #2132) regressed in cycle 433 — 1 clean cycle then same error returned. Filed #360 (C4.1 regression) and #361 (duplicate dispatch-task). Maintenance loop at 16+ cycles (418-433), question-for-eva #2122 unanswered 46+ hours. C5.5 now PASS (PR #2141). Step-commenting PASS (26-29 comments). QC healthy (session 568, quality rotation). Review scores 2/5."
   },
   "last_cycle": {
-    "issue": 356,
-    "timestamp": "2026-04-01T12:25:00Z",
-    "summary": "Cycle 164. #354 and #355 accepted (audit-inbound #2120, #2121). #354 Copilot dispatch #2123 FAILED (service unavailable). #355 question-for-eva #2122 filed but maintenance loop unbroken (cycle 428 = 12th consecutive maintenance cycle). Filed #357 (C4.1 chronic FAIL root cause — write-entry pipeline status bug) and #358 (re-file #347 C4.5 ordering, 18+ cycles unimplemented). C4.1 still FAIL. Step-commenting PASS (28 comments). QC healthy (92/92, quality rotation). #352 question-for-eva unanswered."
+    "issue": 359,
+    "timestamp": "2026-04-02T06:35:00Z",
+    "summary": "Cycle 165. #357 and #358 accepted (audit-inbound main#2133, main#2134). #357 fix (PR main#2132) REGRESSED in cycle 433 after 1 clean cycle (432). #358 verified implemented (COMPLETION_CHECKLIST.xml updated, commit bc3772d). Filed #360 (C4.1 fix regression — 4th iteration of write-entry pipeline divergence) and #361 (duplicate Copilot dispatch — dispatch-task dispatched twice in 35s, PRs main#2151 and main#2153). Maintenance loop continues at 16+ cycles (418-433). question-for-eva #2122 unanswered 46+ hours. C5.5 now PASS via PR main#2141. Step-commenting PASS (26-29 comments all cycles). QC healthy (session 568, quality rotation, 73/73)."
   },
   "finding_classes": [
     "tool-adoption-gap",
@@ -832,7 +834,7 @@
       "state-integrity": 4,
       "receipt-integrity": 2
     },
-    "trend": "Process maintenance loop persists (cycles 413-428, 12+ consecutive). C4.1 FAIL every cycle (425-428) — root cause identified: write-entry pipeline status bug. #354/#355 accepted but #2123 Copilot dispatch failed, loop unbroken. Review scores 3/5 steady. worklog-accuracy chronic persists. C4.5 ordering (#347) accepted 18+ cycles ago, never implemented. QC healthy (quality rotation, 92/92). Assessment cycle 164 — next assessment 169."
+    "trend": "Process maintenance loop persists (cycles 413-433, 16+ consecutive). C4.1 fix (PR #2132) regressed after 1 clean cycle. C5.5 now PASS (PR #2141 reclassified warnings as non-blocking). Duplicate Copilot dispatch observed (dispatch-task). Review scores steady at 2/5 (cycles 432-433). question-for-eva #2122 unanswered. QC healthy (quality rotation, 73/73 E2E). Assessment cycle 165 — next assessment 169."
   },
   "eva_directives_processed": [
     {"issue": 331, "title": "Assertive recommendations mandate", "processed_cycle": 154, "changes": ["Default FAIL gates", "No behavioral options", "Track time-to-real-adoption", "Convergence assessments every 5 cycles", "Performative acceptance finding class", "Flag vanity metrics"]}

@@ -8,6 +8,7 @@ Reflective log for the audit orchestrator. Entries in [`docs/journal/`](docs/jou
 
 | Date | Title | Tags |
 |------|-------|------|
+| [2026-04-02](docs/journal/2026-04-02.md) | Cycle 165: Fixes that don't fix and tools that fix themselves | c4.1-regression, duplicate-dispatch, maintenance-loop, gate-reclassification, acceptance-verification, convergence-assessment |
 | [2026-04-01](docs/journal/2026-04-01.md) | Cycle 163: Gates that don't gate and loops that won't break | pipeline-gate, validation-theater, process-maintenance-loop, review-loop, self-improvement, blind-spots |
 
 ## 2026-03
