@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-04-03T06:45:00Z",
+  "last_updated": "2026-04-03T12:30:00Z",
   "main_repo": {
-    "last_commit_audited": "41beda6",
-    "last_orchestrator_issue_reviewed": 2182,
-    "orchestrator_cycle_count": 439,
+    "last_commit_audited": "ac5a18c",
+    "last_orchestrator_issue_reviewed": 2187,
+    "orchestrator_cycle_count": 440,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
       "6 skills created: github-issues-comments, journal-entries, orchestrator-permissions, pr-review-workflow, schema-implementation, writing-skills",
@@ -326,9 +326,9 @@
     "directory_layout": "php/src/, php/test/, ts/src/, ts/test/ (restructured 2026-03-01, PR #263; TS port COMPLETE 2026-03-01, 14 PRs — 89/89 schema classes including SeekToAction)"
   },
   "qc_repo": {
-    "last_commit_audited": "fdd5371",
-    "last_orchestrator_issue_reviewed": 575,
-    "orchestrator_cycle_count": 575,
+    "last_commit_audited": "ac5a18c",
+    "last_orchestrator_issue_reviewed": 578,
+    "orchestrator_cycle_count": 578,
     "self_improvement_actions": [
       "Journal and worklog alignment per Eva request (2026-02-27)",
       "PHP 8.5 CI support added (2026-02-27)",
@@ -613,7 +613,8 @@
       "Audit cycle 141: Closed #302 (128th acceptance — record-dispatch pipeline gate fix PR #1539 verified). Filed #304 (close-out step C4.5/C5.5 temporal ordering — C4.5 runs after C5.5 in close-out, guaranteeing pipeline FAIL, normalized gate override) and #305 (no review fallback during sustained Copilot unavailability — 3 consecutive failures #1561/#1563/#1565, repository ruleset violations, 3 cycles without quality review). Step-commenting PASS (cycles 319-325, 28 comments each). Cycle 325 C5.5 pipeline FAIL (current-cycle-steps blocking: C4.5 missing at gate time). Main repo at cycle 325 (maintenance mode, no dispatches). QC sessions 434-442 idle (justified). Cycle 326 in progress, acknowledged 3rd failure, committed to Eva escalation. 4 standing Eva directives (#436, #699, #808, #809). (2026-03-21)",
       "Audit cycle 148: Closed #318 (137th acceptance — disposition fabrication acknowledged via main#1681). Verification reveals 3/4 claimed actions lack implementation artifacts (pipeline check never dispatched, deferral threshold unimplemented, cross-validation unevidenced). Filed #320 (acceptance-without-implementation, 3rd instance after #206/#208). Main cycle 346 (2 sessions on #1680/#1684: PR #1679 merged, #1685 dispatched, review 2/5 with 1 actioned 4 deferred, C5.5 gate override in first session). Step-commenting PASS (26+24 unique step IDs). QC sessions 481-483 idle (justified, no PHP changes since session 480). 141 filed, 137 accepted, 2 open (#262, #320). 4 standing Eva directives (#436, #699, #808, #809). (2026-03-24)",
       "Audit cycle 151: Closed #262 (140th acceptance — genuine tool implementation, zero behavioral adoption) and #324 (141st acceptance — checklist+WARN infrastructure, still zero flag usage). Filed #326 (6th tool-adoption-gap instance, WARN→FAIL escalation, recommends Option C automatic injection). Main cycles 358-366 (7 PRs merged: journal dedup guards, review artifacts, disposition reconciliation). Step-commenting PASS (26-28 comments cycles 362-366, all mandatory IDs). Cycle 365 Step 1 posted after C5.1 (temporal displacement, self-corrected cycle 366). Worklogs verified accurate (commit receipts valid, self-correction of disposition counting bug). Review 2/5 sustained. QC sessions 496-503 idle (justified, no PHP changes). 144 filed, 141 accepted, 1 open (#326). 4 standing Eva directives (#436, #699, #808, #809). (2026-03-26)",
-      "Audit cycle 152: Closed #326 (142nd acceptance — main#1803 Option C auto-inject, PR #1807 merged). Tool-adoption-gap arc COMPLETE (6 instances, 50+ cycles for this specific flag). No new issues filed. Main cycles 367-369 (7 PRs merged: write-entry simplification, worklog refresh, review artifacts, C6.5 structural fix, auto-detect finding refs). 3 in flight (#1812, #1814, #1816). Pipeline: cycles 367-368 FAIL, cycle 369 PASS (3 warnings). Step-commenting PASS — duplicate Step 7 in cycle 369 (auto housekeeping + manual PR review under same ID, one-off labeling error). Review 2/5 sustained. QC sessions 503-506 idle (justified). Zero open recommendations. 4 standing Eva directives (#436, #699, #808, #809). (2026-03-26)"
+      "Audit cycle 152: Closed #326 (142nd acceptance — main#1803 Option C auto-inject, PR #1807 merged). Tool-adoption-gap arc COMPLETE (6 instances, 50+ cycles for this specific flag). No new issues filed. Main cycles 367-369 (7 PRs merged: write-entry simplification, worklog refresh, review artifacts, C6.5 structural fix, auto-detect finding refs). 3 in flight (#1812, #1814, #1816). Pipeline: cycles 367-368 FAIL, cycle 369 PASS (3 warnings). Step-commenting PASS — duplicate Step 7 in cycle 369 (auto housekeeping + manual PR review under same ID, one-off labeling error). Review 2/5 sustained. QC sessions 503-506 idle (justified). Zero open recommendations. 4 standing Eva directives (#436, #699, #808, #809). (2026-03-26)",
+      "Audit cycle 168: Monitoring cycle. #365/#366 both accepted (main#2188/#2189, cycle 440, 162nd/163rd acceptance). Combined PR main#2191 dispatched (+483/-35, C4.1 scoping + C5.5 re-verification enforcement, not yet merged). Eva responded on main#2122: self-improvement is the primary objective, maintenance loop is intended behavior. question-for-eva #352 closed (dedup implemented + structural enforcement). Forward-work counter auto-increment via direct push (591fc8b3, breaking Copilot dependency). 2 stale Copilot dispatches closed (sessions 726-727). Step-commenting PASS (27 comments, all mandatory IDs). C4.1 still FAIL (fix pending). C5.5 PASS. QC healthy (sessions 575-578, 92/92 coverage, quality rotations). Zero open recommendations. 165 filed, 163 accepted, 0 open. Convergence assessment due cycle 169. (2026-04-03)"
     ],
     "qc_outbound_reports": 4,
     "qc_inbound_requests": 12,
@@ -622,10 +623,7 @@
     "open_qc_ack": null
   },
   "recommendations": {
-    "open": [
-      {"issue": 365, "title": "C4.1 doc-validation structurally broken — write-entry snapshots pre-completion state, fails 3/5 cycles for different causes", "filed": "2026-04-03", "note": "Filed cycle 167. 5th iteration of C4.1 arc (#341->#354->#357->#360->this). Root cause: structural timing gap — worklog written at C3, state changes through C7. Recommend either moving C4.1 after C6.5 or scoping validation to pre-dispatch fields only."},
-      {"issue": 366, "title": "C5.5 FAIL-then-proceed pattern — orchestrator bypasses blocking pipeline gate without re-verification", "filed": "2026-04-03", "note": "Filed cycle 167. Cycle 439 C5.5 blocking FAIL (state-invariants), orchestrator patched state then proceeded to C6 without re-running pipeline-check. C8 claims PASS unverified. Recommend mandatory re-run after C5.5 FAIL remediation."}
-    ],
+    "open": [],
     "accepted": [
       {"issue": 2, "title": "Idle cycle spinning", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
       {"issue": 3, "title": "Non-functional tools directory", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
@@ -789,7 +787,9 @@
       {"issue": 358, "title": "Re-file #347: C4.5 ordering accepted 18+ main cycles ago — never implemented", "filed": "2026-04-01", "accepted": "2026-04-01", "closed": "2026-04-02", "note": "Accepted via main#2134 (cycle 430). COMPLETION_CHECKLIST.xml updated (commit bc3772d). Verified: C4.1 at 05:05:43Z, C4.5 at 05:07:12Z in cycle 433. 158th acceptance."},
       {"issue": 360, "title": "C4.1 fix (PR #2132) regressed after 1 clean cycle — write-entry pipeline status still diverges from pipeline-check", "filed": "2026-04-02", "accepted": "2026-04-02", "closed": "2026-04-03", "note": "Accepted via main#2157 (cycle 435). PR main#2160 merged. Pipeline prefix mismatch resolved but C4.1 still fails for different causes. Superseded by #365. 159th acceptance."},
       {"issue": 361, "title": "Duplicate Copilot dispatch — dispatch-task feature dispatched twice in 35 seconds, producing competing PRs", "filed": "2026-04-02", "accepted": "2026-04-02", "closed": "2026-04-02", "note": "Accepted via main#2158 (cycle 435). PR main#2151 (dispatch-task) merged, duplicate main#2153 closed. Verified resolved cycle 166. 160th acceptance."},
-      {"issue": 363, "title": "Forward-work counter broken — maintenance loop exit mechanism non-functional (re-filing #345)", "filed": "2026-04-02", "accepted": "2026-04-02", "closed": "2026-04-03", "note": "Accepted via main#2167 (cycle 436). PR main#2169 merged. Counter now correctly reports 28 (threshold 10). PR main#2184 (startup refresh) in flight. 161st acceptance."}
+      {"issue": 363, "title": "Forward-work counter broken — maintenance loop exit mechanism non-functional (re-filing #345)", "filed": "2026-04-02", "accepted": "2026-04-02", "closed": "2026-04-03", "note": "Accepted via main#2167 (cycle 436). PR main#2169 merged. Counter now correctly reports 28 (threshold 10). PR main#2184 (startup refresh) in flight. 161st acceptance."},
+      {"issue": 365, "title": "C4.1 doc-validation structurally broken — write-entry snapshots pre-completion state, fails 3/5 cycles for different causes", "filed": "2026-04-03", "accepted": "2026-04-03", "closed": "2026-04-03", "note": "Accepted via main#2188 (cycle 440). Option B: scope C4.1 to pre-dispatch fields only. PR main#2191 dispatched (+483/-35, 2 files, tests included). Implementation correct but PR not yet merged. 162nd acceptance."},
+      {"issue": 366, "title": "C5.5 FAIL-then-proceed pattern — orchestrator bypasses blocking pipeline gate without re-verification", "filed": "2026-04-03", "accepted": "2026-04-03", "closed": "2026-04-03", "note": "Accepted via main#2189 (cycle 440). C5.5-retry enforcement added to close-out. PR main#2191 (same PR as #365) implements c5_5_gate state tracking + ensure_c5_5_allows_c6 gate function. Not yet merged. 163rd acceptance."}
     ],
     "rejected": [],
     "deferred": [
@@ -799,20 +799,20 @@
   },
   "metrics": {
     "total_filed": 165,
-    "total_accepted": 161,
+    "total_accepted": 163,
     "total_deferred": 2,
     "total_rejected": 0,
     "total_dropped": 1,
-    "total_open": 2,
-    "questions_for_eva": 1,
-    "acceptance_rate": 0.976,
+    "total_open": 0,
+    "questions_for_eva": 0,
+    "acceptance_rate": 0.988,
     "response_rate": 1.0,
-    "trend": "Audit cycle 167. #360/#361/#363 accepted and closed (verified implementations). Filed #365 (C4.1 structural timing — 5th iteration, root cause identified) and #366 (C5.5 FAIL bypass without re-verification). Main repo cycles 435-439: 28 cycles in maintenance loop, forward-work counter fixed (PR #2169) but no exit mechanism. C4.1 FAIL 3/5 cycles (structural). Step-commenting PASS across all 5 cycles (26-28 comments each). Review scores 2-3/5. QC healthy (sessions 568-575, quality check rotations, 0 uncovered types)."
+    "trend": "Audit cycle 168 (monitoring). #365/#366 accepted (main#2188/#2189, cycle 440). PR main#2191 dispatched (both fixes combined, +483/-35, not yet merged). Eva responded on main#2122: self-improvement IS the priority, schema work can wait. Maintenance loop (29 cycles) reframed as intended behavior. question-for-eva #352 closed (dedup implemented, structural enforcement prevents recurrence). Step-commenting PASS (27 comments, all mandatory IDs). C4.1 still FAIL (structural, fix pending in PR #2191). C5.5 PASS (no bypass this cycle). Direct-push self-improvement pattern emerging (cycle 440 auto-increment). QC healthy (sessions 575-578, quality check rotations, 92/92 covered)."
   },
   "last_cycle": {
-    "issue": 364,
-    "timestamp": "2026-04-03T06:45:00Z",
-    "summary": "Cycle 167. Closed #360 (fix implemented — PR main#2160 merged), #363 (counter fixed — PR main#2169 merged), #361 (already closed cycle 166). Filed #365 (C4.1 structural timing gap — 5th iteration, write-entry snapshots pre-completion state, fails 3/5 cycles for different causes, recommend moving C4.1 after C6.5 or scoping validation) and #366 (C5.5 FAIL-then-proceed without re-verification — cycle 439 bypassed blocking gate after manual state patch). Main repo cycles 435-439: 28-cycle maintenance loop (forward-work counter=28, threshold=10, question-for-eva main#2122 still unanswered). Step-commenting PASS all 5 cycles (26-28 comments, correct ordering in 438-439, intermittent disorder 436-437 self-corrected). Review scores 2-3/5. C4.1 FAIL 3/5 cycles, C5.5 PASS 4/5. QC healthy (sessions 568-575, quality check rotations on 92/92 covered types, 0 gaps)."
+    "issue": 367,
+    "timestamp": "2026-04-03T12:30:00Z",
+    "summary": "Cycle 168 (monitoring). #365/#366 both accepted (main#2188/#2189, cycle 440). Combined implementation PR main#2191 dispatched but not yet merged (+483/-35). Eva responded on main#2122: self-improvement is the primary objective, schema work can wait — maintenance loop (29 cycles) is intended behavior. question-for-eva #352 closed (dedup implemented + structural enforcement). Forward-work counter auto-increment implemented via direct push (591fc8b3) — novel self-improvement pattern breaking Copilot dependency. Step-commenting PASS (27 comments, all mandatory IDs). C4.1 still FAIL (fix pending). C5.5 PASS. No new issues filed. QC healthy (sessions 575-578, quality check rotations, 92/92 covered). Convergence assessment due cycle 169."
   },
   "finding_classes": [
     "tool-adoption-gap",
@@ -837,7 +837,7 @@
       "state-integrity": 4,
       "receipt-integrity": 2
     },
-    "trend": "Process maintenance loop persists (cycles 412-439, 28 consecutive). Forward-work counter fixed (28, threshold 10) but no exit mechanism. C4.1 FAIL 3/5 cycles (structural timing gap identified — 5th iteration arc). C5.5 FAIL cycle 439 (bypassed without re-verification). Review scores 2-3/5 (cycles 435-439). Same 3 chronic categories (worklog-accuracy, state-integrity, journal-quality) in every review. question-for-eva main#2122 unanswered 2+ days. QC healthy (sessions 568-575, quality rotations, 92/92 covered). Assessment cycle 167 — next assessment 169."
+    "trend": "Eva directive reframes maintenance loop (29 cycles) as intended: self-improvement is the primary objective, schema work can wait. C4.1 structural fix dispatched (PR #2191, not merged). C5.5 re-verification enforcement dispatched (same PR). Review scores 2-3/5 (cycle 440). Same 3 chronic categories persist. Direct-push self-improvement pattern emerging (breaking Copilot dependency for simple fixes). QC healthy (sessions 575-578, quality rotations, 92/92 covered). Assessment cycle 168 — convergence assessment due cycle 169."
   },
   "eva_directives_processed": [
     {"issue": 331, "title": "Assertive recommendations mandate", "processed_cycle": 154, "changes": ["Default FAIL gates", "No behavioral options", "Track time-to-real-adoption", "Convergence assessments every 5 cycles", "Performative acceptance finding class", "Flag vanity metrics"]}
