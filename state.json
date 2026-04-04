@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-04-03T12:30:00Z",
+  "last_updated": "2026-04-04T06:25:00Z",
   "main_repo": {
-    "last_commit_audited": "ac5a18c",
-    "last_orchestrator_issue_reviewed": 2187,
-    "orchestrator_cycle_count": 440,
+    "last_commit_audited": "7a86461",
+    "last_orchestrator_issue_reviewed": 2206,
+    "orchestrator_cycle_count": 445,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
       "6 skills created: github-issues-comments, journal-entries, orchestrator-permissions, pr-review-workflow, schema-implementation, writing-skills",
@@ -130,7 +130,8 @@
       "Cycles 370-378: Productive cycles 370-373 (10 PRs merged: cycle boundary derivation, blocking-severity warnings, auto-pipeline flag, auto-next flag, write-entry fixes, review artifacts). Copilot outage started cycle 373 (~18:31 UTC 2026-03-26) — repository ruleset violation. 10 consecutive failures across cycles 373-378 (~14+ hours). question-for-eva #1839 filed cycle 374 with running tallies. State maintenance continued (field inventory refreshes, tool audit cycle 376). Review dispatches continued during outage (all failed). Step-commenting PASS across all cycles (28-29 comments). (2026-03-27)",
       "Cycles 393-400: Audit #337 accepted (main#1898, 147th — worklog immutability, PRs #1905 + #1939). Audit #339 accepted (main#1912, 148th — deferral deadline enforcement, PRs #1916 + #1924, +832/-64 lines, 7 findings tracked). Field-inventory auto-refresh merged (PR #1948). cycle-receipts post-complete filtering (PR #1946). Tool audit cycle 399 (37 tools, 22 cycles overdue). Review scores: 5/5 (c399, genuinely adversarial), 3/5 (c400). Step 1 temporal disorder c399. C4.1 doc-validation FAIL override c400. Zero forward schema work — entirely process maintenance. Step-commenting PASS (27-28 comments per cycle). (2026-03-29)",
       "Cycles 401-403: Audit #341 partially addressed (main#1958, PR main#1960 merged — C4.1 error text fix, stdout/stderr mismatch). C4.1 still not blocking gate (items 2-3 of plan pending). Worklog immutability promoted to FAIL (PR #1954). Tool audit cycle 403 (29 Rust crates). Review scores: 3/5 (c401, c402). Step 1 temporal disorder cycle 402 (posted 8 min after C4.1 — retroactive posting recurrence). Filed #343 (temporal ordering + review blind spot). Step-commenting: c401 PASS, c402 temporal violation, c403 PASS. QC sessions 535-537 idle (justified). (2026-03-29)",
-      "Cycles 404-410: Audit #343 accepted (main#1974, 149th — PR #1976 merged, temporal ordering verification in pipeline-check). Verified working: no Step 1 retroactive posting in any observed cycle. C4.1 FAIL still not blocking C5 — all 4 sessions (408, 409, 410 x2) show C4.1 FAIL then C5 proceeds. audit-inbound main#1958 closed with incorrect gate claim. PRs merged: #1976 (temporal ordering), #1982 (body-only timestamp fallback), #1989 (receipt timestamp bounding), #1994 (worklog immutability baseline), #1999 (frozen-commit verification), #2004 (field-inventory cadence). Review scores: 2/5 (c409, c410). All process maintenance, zero forward schema work. Filed #345 (process maintenance loop exit criterion). QC sessions 538-545 idle (justified). (2026-03-30)"
+      "Cycles 404-410: Audit #343 accepted (main#1974, 149th — PR #1976 merged, temporal ordering verification in pipeline-check). Verified working: no Step 1 retroactive posting in any observed cycle. C4.1 FAIL still not blocking C5 — all 4 sessions (408, 409, 410 x2) show C4.1 FAIL then C5 proceeds. audit-inbound main#1958 closed with incorrect gate claim. PRs merged: #1976 (temporal ordering), #1982 (body-only timestamp fallback), #1989 (receipt timestamp bounding), #1994 (worklog immutability baseline), #1999 (frozen-commit verification), #2004 (field-inventory cadence). Review scores: 2/5 (c409, c410). All process maintenance, zero forward schema work. Filed #345 (process maintenance loop exit criterion). QC sessions 538-545 idle (justified). (2026-03-30)",
+      "Cycles 441-445: PR main#2191 merged (C4.1 scoping + C5.5 gate enforcement from #365/#366). Both fixes ineffective: C5.5 gate bypass in cycles 443-444 (review caught it, orchestrator repeated), C4.1 pipeline mismatch 3/5 cycles. Filed #369 (C5.5 structural enforcement, 3rd iteration) and #370 (C4.1 scoping, 6th iteration). New pattern class: acceptance-effectiveness gap (merge ≠ fix). Step-commenting PASS, temporal disorder cycles 441/444. QC healthy (sessions 579-582, steady state). Convergence assessment: no convergence on C4.1/C5.5, review scores flat at 2/5, chronic categories unchanged. (2026-04-04)"
     ],
     "recurring_pr_revision_patterns": [
       "100% Copilot PR merge rate for TS port Phases 1-3g: 11/11 sessions merged without revision",
@@ -327,8 +328,8 @@
   },
   "qc_repo": {
     "last_commit_audited": "ac5a18c",
-    "last_orchestrator_issue_reviewed": 578,
-    "orchestrator_cycle_count": 578,
+    "last_orchestrator_issue_reviewed": 582,
+    "orchestrator_cycle_count": 582,
     "self_improvement_actions": [
       "Journal and worklog alignment per Eva request (2026-02-27)",
       "PHP 8.5 CI support added (2026-02-27)",
@@ -623,7 +624,10 @@
     "open_qc_ack": null
   },
   "recommendations": {
-    "open": [],
+    "open": [
+      {"issue": 369, "title": "C5.5 gate enforcement (PR #2191) ineffective — FAIL-then-proceed continues", "filed": "2026-04-04"},
+      {"issue": 370, "title": "C4.1 Option B scoping fix incomplete — pipeline status mismatch persists", "filed": "2026-04-04"}
+    ],
     "accepted": [
       {"issue": 2, "title": "Idle cycle spinning", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
       {"issue": 3, "title": "Non-functional tools directory", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
@@ -798,21 +802,21 @@
     ]
   },
   "metrics": {
-    "total_filed": 165,
+    "total_filed": 167,
     "total_accepted": 163,
     "total_deferred": 2,
     "total_rejected": 0,
     "total_dropped": 1,
-    "total_open": 0,
+    "total_open": 2,
     "questions_for_eva": 0,
     "acceptance_rate": 0.988,
     "response_rate": 1.0,
-    "trend": "Audit cycle 168 (monitoring). #365/#366 accepted (main#2188/#2189, cycle 440). PR main#2191 dispatched (both fixes combined, +483/-35, not yet merged). Eva responded on main#2122: self-improvement IS the priority, schema work can wait. Maintenance loop (29 cycles) reframed as intended behavior. question-for-eva #352 closed (dedup implemented, structural enforcement prevents recurrence). Step-commenting PASS (27 comments, all mandatory IDs). C4.1 still FAIL (structural, fix pending in PR #2191). C5.5 PASS (no bypass this cycle). Direct-push self-improvement pattern emerging (cycle 440 auto-increment). QC healthy (sessions 575-578, quality check rotations, 92/92 covered)."
+    "trend": "Audit cycle 169 (convergence assessment). PR main#2191 merged but both fixes ineffective: C5.5 gate bypass continues in 2/5 cycles (#369 filed), C4.1 pipeline mismatch in 3/5 cycles (#370 filed). Review agent caught C5.5 violation (cycle 443) but orchestrator repeated it (cycle 444). Step temporal disorder (cycle 444: Step 3 after C5.5). QC healthy (sessions 579-582, steady state). 5 standing Eva directives."
   },
   "last_cycle": {
-    "issue": 367,
-    "timestamp": "2026-04-03T12:30:00Z",
-    "summary": "Cycle 168 (monitoring). #365/#366 both accepted (main#2188/#2189, cycle 440). Combined implementation PR main#2191 dispatched but not yet merged (+483/-35). Eva responded on main#2122: self-improvement is the primary objective, schema work can wait — maintenance loop (29 cycles) is intended behavior. question-for-eva #352 closed (dedup implemented + structural enforcement). Forward-work counter auto-increment implemented via direct push (591fc8b3) — novel self-improvement pattern breaking Copilot dependency. Step-commenting PASS (27 comments, all mandatory IDs). C4.1 still FAIL (fix pending). C5.5 PASS. No new issues filed. QC healthy (sessions 575-578, quality check rotations, 92/92 covered). Convergence assessment due cycle 169."
+    "issue": 368,
+    "timestamp": "2026-04-04T06:25:00Z",
+    "summary": "Cycle 169 (convergence assessment). PR main#2191 merged 2026-04-03T12:16:54Z but both fixes ineffective. C5.5 gate enforcement: FAIL-then-C6-proceed in cycles 443, 444 (review agent caught it, orchestrator repeated). C4.1 scoping: pipeline status mismatch in 3/5 cycles (441, 442, 445). Filed #369 (C5.5 re-file, structural enforcement needed) and #370 (C4.1 re-file, 6th iteration). Step temporal disorder: cycle 444 Step 3 posted after C5.5. #365/#366 closed on GitHub (were open despite state.json claiming closed). QC healthy (sessions 579-582, steady state). Maintenance loop continues per Eva directive (self-improvement is primary objective). 5 standing Eva directives."
   },
   "finding_classes": [
     "tool-adoption-gap",
@@ -822,7 +826,7 @@
   "convergence_tracking": {
     "baseline_cycle": 154,
     "assessment_interval": 5,
-    "next_assessment_cycle": 169,
+    "next_assessment_cycle": 174,
     "review_score_distribution": {
       "sample_size": 49,
       "score_2": 0.59,
@@ -837,7 +841,7 @@
       "state-integrity": 4,
       "receipt-integrity": 2
     },
-    "trend": "Eva directive reframes maintenance loop (29 cycles) as intended: self-improvement is the primary objective, schema work can wait. C4.1 structural fix dispatched (PR #2191, not merged). C5.5 re-verification enforcement dispatched (same PR). Review scores 2-3/5 (cycle 440). Same 3 chronic categories persist. Direct-push self-improvement pattern emerging (breaking Copilot dependency for simple fixes). QC healthy (sessions 575-578, quality rotations, 92/92 covered). Assessment cycle 168 — convergence assessment due cycle 169."
+    "trend": "Cycle 169 convergence assessment: PR #2191 merged but C5.5 gate and C4.1 scoping both ineffective — behavioral fixes proven insufficient for structural problems. Review agent adversarial (2/5 sustained) and correctly identifies violations, but findings don't drive behavioral change. Same chronic categories (worklog-accuracy 4/5, journal-quality 4/5, state-integrity 4/5). Pattern: accepted fixes that don't fix the problem — the acceptance workflow treats merge as success rather than verifying behavioral change. QC healthy (steady-state). Next assessment cycle 174."
   },
   "eva_directives_processed": [
     {"issue": 331, "title": "Assertive recommendations mandate", "processed_cycle": 154, "changes": ["Default FAIL gates", "No behavioral options", "Track time-to-real-adoption", "Convergence assessments every 5 cycles", "Performative acceptance finding class", "Flag vanity metrics"]}
