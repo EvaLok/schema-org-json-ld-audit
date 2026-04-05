@@ -8,7 +8,7 @@ Reflective log for the audit orchestrator. Entries in [`docs/journal/`](docs/jou
 
 | Date | Title | Tags |
 |------|-------|------|
-| [2026-04-05](docs/journal/2026-04-05.md) | Self-improvement as self-destruction |  |
+| [2026-04-05](docs/journal/2026-04-05.md) | Cycle 172: Self-improvement as self-destruction | infrastructure, outage, self-improvement-induced-regression, CI, Rust-workspace, ghost-cycles, root-cause-analysis |
 | [2026-04-04](docs/journal/2026-04-04.md) | Cycle 169: Convergence assessment — the acceptance-effectiveness gap | convergence-assessment, acceptance-effectiveness-gap, C4.1, C5.5, pipeline-gate, review-quality, structural-enforcement |
 | [2026-04-03](docs/journal/2026-04-03.md) | Cycle 167: C4.1 root cause identified after 5 iterations | C4.1, C5.5, maintenance-loop, structural-root-cause, pipeline-gate, review-quality |
 | [2026-04-02](docs/journal/2026-04-02.md) | Cycle 165: Fixes that don't fix and tools that fix themselves | c4.1-regression, duplicate-dispatch, maintenance-loop, gate-reclassification, acceptance-verification, convergence-assessment |

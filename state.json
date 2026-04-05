@@ -1,8 +1,8 @@
 {
-  "last_updated": "2026-04-05T05:45:00Z",
+  "last_updated": "2026-04-05T22:10:00Z",
   "main_repo": {
     "last_commit_audited": "748f7bb",
-    "last_orchestrator_issue_reviewed": 2227,
+    "last_orchestrator_issue_reviewed": 2230,
     "orchestrator_cycle_count": 447,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
@@ -331,8 +331,8 @@
   },
   "qc_repo": {
     "last_commit_audited": "748f7bb",
-    "last_orchestrator_issue_reviewed": 588,
-    "orchestrator_cycle_count": 588,
+    "last_orchestrator_issue_reviewed": 592,
+    "orchestrator_cycle_count": 592,
     "self_improvement_actions": [
       "Journal and worklog alignment per Eva request (2026-02-27)",
       "PHP 8.5 CI support added (2026-02-27)",
@@ -817,12 +817,12 @@
     "questions_for_eva": 1,
     "acceptance_rate": 0.988,
     "response_rate": 1.0,
-    "trend": "Audit cycle 172. Main orchestrator DOWN — 5 consecutive ghost cycles (#2223-#2227, 17+ hours). Root cause: PR #2212 (C5.5 gate) introduced unhandled PipelineGateError::ReviewDispatchBlocked in dispatch-task, failing Rust workspace build. Eva shifted cron (748f7bb) but didn't fix compilation. Diagnosed root cause on #374. Filed #377 (CI workspace build gap). #370 still open (C4.1). #375 validated (5 ghosts confirms detection gap). QC healthy (session 588, all green). No new main cycles to audit."
+    "trend": "Audit cycle 173. Main orchestrator DOWN — 30+ hour outage, 8 consecutive ghost cycles (#2223-#2230). Root cause unchanged: dispatch-task Rust build failure (unhandled PipelineGateError::ReviewDispatchBlocked from PR #2212). Eva shifted cron (748f7bb) but no build fix pushed. Escalated #374 with 30-hour update. Open: #370 (C4.1), #375 (ghost detection), #377 (CI workspace build). Convergence assessment: DIVERGING — C4.1/C5.5 arc has 6+ failed iterations, acceptance #369 caused the outage (self-improvement-induced-regression at highest severity), forward work drought at 36+ cycles. QC healthy (sessions 590/592, all green)."
   },
   "last_cycle": {
-    "issue": 376,
-    "timestamp": "2026-04-05T05:45:00Z",
-    "summary": "Cycle 172. Main orchestrator DOWN — 5 consecutive ghost cycles (#2223-#2227, 17+ hours since 16:06 UTC 4/4). Root cause diagnosed: PR #2212 added PipelineGateError::ReviewDispatchBlocked variant unhandled in dispatch-task/src/main.rs:191 — Rust exhaustive match rejects build. Eva shifted cron (748f7bb) without fixing compilation. Posted diagnosis on #374. Filed #377 (CI workspace-build gap). Verified #369 (C5.5 fix merged but untestable), #370 (C4.1 still open), #372 (lifecycle fixed). QC healthy (session 588, all green). Next convergence assessment: cycle 174."
+    "issue": 378,
+    "timestamp": "2026-04-05T22:10:00Z",
+    "summary": "Cycle 173. Main orchestrator outage at 30+ hours — 8 ghost cycles (#2223-#2230, all zero comments). No new main repo commits since 748f7bb (cron shift). Escalated #374 with duration update. Acceptance verification: #369 (C5.5 gate) caused the outage (self-improvement-induced-regression), #370 (C4.1) blocked, #375/#377 validated. Convergence assessment: DIVERGING — 6+ failed C4.1/C5.5 fix iterations, 36+ cycles without forward work, acceptance-effectiveness gap widening. QC healthy (sessions 590/592, 400 tests, 73/73 parity). No new issues filed — existing #370/#375/#377 cover all findings."
   },
   "finding_classes": [
     "tool-adoption-gap",
@@ -833,7 +833,7 @@
   "convergence_tracking": {
     "baseline_cycle": 154,
     "assessment_interval": 5,
-    "next_assessment_cycle": 174,
+    "next_assessment_cycle": 178,
     "review_score_distribution": {
       "sample_size": 49,
       "score_2": 0.59,
@@ -848,7 +848,7 @@
       "state-integrity": 4,
       "receipt-integrity": 2
     },
-    "trend": "Cycle 169 convergence assessment: PR #2191 merged but C5.5 gate and C4.1 scoping both ineffective — behavioral fixes proven insufficient for structural problems. Review agent adversarial (2/5 sustained) and correctly identifies violations, but findings don't drive behavioral change. Same chronic categories (worklog-accuracy 4/5, journal-quality 4/5, state-integrity 4/5). Pattern: accepted fixes that don't fix the problem — the acceptance workflow treats merge as success rather than verifying behavioral change. QC healthy (steady-state). Next assessment cycle 174."
+    "trend": "Cycle 173 convergence assessment: DIVERGING. Acceptance #369 (C5.5 structural gate, PR #2212) directly caused 30+ hour orchestrator outage — highest-severity self-improvement-induced-regression. 6+ iterations of C4.1/C5.5 fixes, none effective, latest one catastrophic. Forward work drought at 36+ cycles (threshold 10). Review scores unchanged (59% at 2/5). Chronic categories static. Process maintenance loop has no exit criterion. System is in worse state than cycle 169 assessment. Root cause: CI doesn't build full Rust workspace, so cross-crate API breaks escape. Secondary: acceptance pipeline treats PR merge as success without integration verification. QC healthy but idle. Next assessment cycle 178."
   },
   "eva_directives_processed": [
     {"issue": 331, "title": "Assertive recommendations mandate", "processed_cycle": 154, "changes": ["Default FAIL gates", "No behavioral options", "Track time-to-real-adoption", "Convergence assessments every 5 cycles", "Performative acceptance finding class", "Flag vanity metrics"]}
