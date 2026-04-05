@@ -1,8 +1,8 @@
 {
-  "last_updated": "2026-04-04T22:20:00Z",
+  "last_updated": "2026-04-05T05:45:00Z",
   "main_repo": {
     "last_commit_audited": "748f7bb",
-    "last_orchestrator_issue_reviewed": 2215,
+    "last_orchestrator_issue_reviewed": 2227,
     "orchestrator_cycle_count": 447,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
@@ -133,7 +133,8 @@
       "Cycles 404-410: Audit #343 accepted (main#1974, 149th — PR #1976 merged, temporal ordering verification in pipeline-check). Verified working: no Step 1 retroactive posting in any observed cycle. C4.1 FAIL still not blocking C5 — all 4 sessions (408, 409, 410 x2) show C4.1 FAIL then C5 proceeds. audit-inbound main#1958 closed with incorrect gate claim. PRs merged: #1976 (temporal ordering), #1982 (body-only timestamp fallback), #1989 (receipt timestamp bounding), #1994 (worklog immutability baseline), #1999 (frozen-commit verification), #2004 (field-inventory cadence). Review scores: 2/5 (c409, c410). All process maintenance, zero forward schema work. Filed #345 (process maintenance loop exit criterion). QC sessions 538-545 idle (justified). (2026-03-30)",
       "Cycles 441-445: PR main#2191 merged (C4.1 scoping + C5.5 gate enforcement from #365/#366). Both fixes ineffective: C5.5 gate bypass in cycles 443-444 (review caught it, orchestrator repeated), C4.1 pipeline mismatch 3/5 cycles. Filed #369 (C5.5 structural enforcement, 3rd iteration) and #370 (C4.1 scoping, 6th iteration). New pattern class: acceptance-effectiveness gap (merge ≠ fix). Step-commenting PASS, temporal disorder cycles 441/444. QC healthy (sessions 579-582, steady state). Convergence assessment: no convergence on C4.1/C5.5, review scores flat at 2/5, chronic categories unchanged. (2026-04-04)",
       "Cycle 446: #369/#370 accepted in Step 5 but NO audit-inbound issues created (lifecycle regression — filed #372). PR #2212 dispatched (C5.5 structural gate enforcement in record-dispatch, +225/-23, reads state.json c5_5_gate). C4.1 FAIL with different cause (commit receipts missing vs pipeline status mismatch). Step-commenting PASS (26 comments), temporal disorder (0/4/7/8 batch-posted). QC healthy (sessions 582-583, steady state). (2026-04-04)",
-      "Cycle 447: #372 accepted — audit-inbound lifecycle restored (#2216/#2217/#2218 created). PR #2212 (C5.5 structural gate) merged. PR #2214 (cycle 446 review) merged. Dispatched #2219 (auto-gate-history) and #2221 (cycle 447 review). C4.1 FAIL persists (pipeline status mismatch). C5.5 PASS. Step-commenting PASS (28 comments, all mandatory IDs). Then TWO consecutive workflow failures: #2223 (16:06 UTC, orchestrate job failed 79s) and #2224 (21:07 UTC, failed 36s). 10+ hour orchestrator outage. Ghost detection cannot catch workflow-level failures. (2026-04-04)"
+      "Cycle 447: #372 accepted — audit-inbound lifecycle restored (#2216/#2217/#2218 created). PR #2212 (C5.5 structural gate) merged. PR #2214 (cycle 446 review) merged. Dispatched #2219 (auto-gate-history) and #2221 (cycle 447 review). C4.1 FAIL persists (pipeline status mismatch). C5.5 PASS. Step-commenting PASS (28 comments, all mandatory IDs). Then TWO consecutive workflow failures: #2223 (16:06 UTC, orchestrate job failed 79s) and #2224 (21:07 UTC, failed 36s). 10+ hour orchestrator outage. Ghost detection cannot catch workflow-level failures. (2026-04-04)",
+      "Post-cycle-447 outage: FIVE consecutive ghost cycles (#2223-#2227, 16:06 UTC 4/4 through 04:48 UTC 4/5, 17+ hours). Root cause: PR #2212 added PipelineGateError::ReviewDispatchBlocked variant to record-dispatch but dispatch-task/src/main.rs:191 has unhandled match arm — Rust exhaustive pattern checking rejects build. Eva shifted cron schedule (748f7bb) but did not fix the compilation error. Audit cycle 172 diagnosed root cause and posted on #374. Filed #377 (CI workspace build gap). (2026-04-05)"
     ],
     "recurring_pr_revision_patterns": [
       "100% Copilot PR merge rate for TS port Phases 1-3g: 11/11 sessions merged without revision",
@@ -330,8 +331,8 @@
   },
   "qc_repo": {
     "last_commit_audited": "748f7bb",
-    "last_orchestrator_issue_reviewed": 586,
-    "orchestrator_cycle_count": 586,
+    "last_orchestrator_issue_reviewed": 588,
+    "orchestrator_cycle_count": 588,
     "self_improvement_actions": [
       "Journal and worklog alignment per Eva request (2026-02-27)",
       "PHP 8.5 CI support added (2026-02-27)",
@@ -628,7 +629,8 @@
   "recommendations": {
     "open": [
       {"issue": 370, "title": "C4.1 Option B scoping fix incomplete — pipeline status mismatch persists", "filed": "2026-04-04"},
-      {"issue": 375, "title": "Ghost cycle detection cannot catch workflow-level failures — consecutive outages are silent", "filed": "2026-04-04"}
+      {"issue": 375, "title": "Ghost cycle detection cannot catch workflow-level failures — consecutive outages are silent", "filed": "2026-04-04"},
+      {"issue": 377, "title": "Copilot PR CI must build full Rust workspace — PR #2212 broke dispatch-task via unhandled enum variant", "filed": "2026-04-05"}
     ],
     "accepted": [
       {"issue": 2, "title": "Idle cycle spinning", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
@@ -806,26 +808,27 @@
     ]
   },
   "metrics": {
-    "total_filed": 169,
+    "total_filed": 170,
     "total_accepted": 165,
     "total_deferred": 2,
     "total_rejected": 0,
     "total_dropped": 1,
-    "total_open": 2,
+    "total_open": 3,
     "questions_for_eva": 1,
     "acceptance_rate": 0.988,
     "response_rate": 1.0,
-    "trend": "Audit cycle 171. #369/#372 closed (accepted, implementations verified). #370 remains open (C4.1 still failing). Cycle 447 productive: PR #2212 merged (C5.5 structural gate), audit-inbound lifecycle restored (#2216/#2217/#2218). CRITICAL: 2 consecutive workflow failures (#2223/#2224) — 10+ hour orchestrator outage, ghost detection blind spot. Filed #374 (question-for-eva: workflow diagnosis) and #375 (audit-outbound: infrastructure monitoring gap). QC healthy (session 586, all green)."
+    "trend": "Audit cycle 172. Main orchestrator DOWN — 5 consecutive ghost cycles (#2223-#2227, 17+ hours). Root cause: PR #2212 (C5.5 gate) introduced unhandled PipelineGateError::ReviewDispatchBlocked in dispatch-task, failing Rust workspace build. Eva shifted cron (748f7bb) but didn't fix compilation. Diagnosed root cause on #374. Filed #377 (CI workspace build gap). #370 still open (C4.1). #375 validated (5 ghosts confirms detection gap). QC healthy (session 588, all green). No new main cycles to audit."
   },
   "last_cycle": {
-    "issue": 373,
-    "timestamp": "2026-04-04T22:20:00Z",
-    "summary": "Cycle 171. Main repo: cycle 447 completed — PR #2212 (C5.5 structural gate) merged, audit-inbound lifecycle restored (#2216/#2217/#2218), C4.1 FAIL persists. Then 2 consecutive workflow failures (#2223/#2224): orchestrate job fails in 36-79s, Claude Code skipped. 10+ hour outage. Ghost detection blind spot exposed — can't catch workflow-level failures. #369/#372 closed (verified). #370 open (C4.1). Filed #374 (question-for-eva: workflow diagnosis) and #375 (audit-outbound: infrastructure monitoring). QC healthy (session 586, all green). Next convergence assessment: cycle 174."
+    "issue": 376,
+    "timestamp": "2026-04-05T05:45:00Z",
+    "summary": "Cycle 172. Main orchestrator DOWN — 5 consecutive ghost cycles (#2223-#2227, 17+ hours since 16:06 UTC 4/4). Root cause diagnosed: PR #2212 added PipelineGateError::ReviewDispatchBlocked variant unhandled in dispatch-task/src/main.rs:191 — Rust exhaustive match rejects build. Eva shifted cron (748f7bb) without fixing compilation. Posted diagnosis on #374. Filed #377 (CI workspace-build gap). Verified #369 (C5.5 fix merged but untestable), #370 (C4.1 still open), #372 (lifecycle fixed). QC healthy (session 588, all green). Next convergence assessment: cycle 174."
   },
   "finding_classes": [
     "tool-adoption-gap",
     "narrative-fabrication",
-    "performative-acceptance"
+    "performative-acceptance",
+    "self-improvement-induced-regression"
   ],
   "convergence_tracking": {
     "baseline_cycle": 154,
