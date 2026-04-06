@@ -1,8 +1,8 @@
 {
-  "last_updated": "2026-04-05T22:10:00Z",
+  "last_updated": "2026-04-06T05:47:00Z",
   "main_repo": {
     "last_commit_audited": "748f7bb",
-    "last_orchestrator_issue_reviewed": 2230,
+    "last_orchestrator_issue_reviewed": 2233,
     "orchestrator_cycle_count": 447,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
@@ -331,8 +331,8 @@
   },
   "qc_repo": {
     "last_commit_audited": "748f7bb",
-    "last_orchestrator_issue_reviewed": 592,
-    "orchestrator_cycle_count": 592,
+    "last_orchestrator_issue_reviewed": 593,
+    "orchestrator_cycle_count": 593,
     "self_improvement_actions": [
       "Journal and worklog alignment per Eva request (2026-02-27)",
       "PHP 8.5 CI support added (2026-02-27)",
@@ -817,12 +817,12 @@
     "questions_for_eva": 1,
     "acceptance_rate": 0.988,
     "response_rate": 1.0,
-    "trend": "Audit cycle 173. Main orchestrator DOWN — 30+ hour outage, 8 consecutive ghost cycles (#2223-#2230). Root cause unchanged: dispatch-task Rust build failure (unhandled PipelineGateError::ReviewDispatchBlocked from PR #2212). Eva shifted cron (748f7bb) but no build fix pushed. Escalated #374 with 30-hour update. Open: #370 (C4.1), #375 (ghost detection), #377 (CI workspace build). Convergence assessment: DIVERGING — C4.1/C5.5 arc has 6+ failed iterations, acceptance #369 caused the outage (self-improvement-induced-regression at highest severity), forward work drought at 36+ cycles. QC healthy (sessions 590/592, all green)."
+    "trend": "Audit cycle 174. Main orchestrator DOWN — 37+ hour outage, 11 consecutive ghost cycles (#2223-#2233). Root cause unchanged: dispatch-task Rust build failure (unhandled PipelineGateError::ReviewDispatchBlocked from PR #2212). No code changes since 748f7bb (cron shift). Eva acknowledged #374 ('next week'). Escalated with 37-hour update. Open: #370 (C4.1), #375 (ghost detection), #377 (CI workspace build). Collateral: 2 stale Copilot PRs (#2220/#2222), 3 stale audit-inbound (#2216-#2218), input-from-eva #2039 unprocessable 7 days. Convergence: DIVERGING (next formal assessment cycle 178). QC healthy (session 593, all green)."
   },
   "last_cycle": {
-    "issue": 378,
-    "timestamp": "2026-04-05T22:10:00Z",
-    "summary": "Cycle 173. Main orchestrator outage at 30+ hours — 8 ghost cycles (#2223-#2230, all zero comments). No new main repo commits since 748f7bb (cron shift). Escalated #374 with duration update. Acceptance verification: #369 (C5.5 gate) caused the outage (self-improvement-induced-regression), #370 (C4.1) blocked, #375/#377 validated. Convergence assessment: DIVERGING — 6+ failed C4.1/C5.5 fix iterations, 36+ cycles without forward work, acceptance-effectiveness gap widening. QC healthy (sessions 590/592, 400 tests, 73/73 parity). No new issues filed — existing #370/#375/#377 cover all findings."
+    "issue": 379,
+    "timestamp": "2026-04-06T05:47:00Z",
+    "summary": "Cycle 174. Main orchestrator outage at 37+ hours — 11 ghost cycles (#2223-#2233, all zero comments). No new commits since 748f7bb. Eva acknowledged #374 ('next week'). Escalated with 37-hour update including collateral damage inventory. Acceptance verification: #369 caused outage, #370 blocked, #375/#377 validated. No new issues filed — existing coverage adequate. QC healthy (session 593, 400 tests, 73/73 parity). Convergence: DIVERGING (next assessment cycle 178)."
   },
   "finding_classes": [
     "tool-adoption-gap",
@@ -848,7 +848,7 @@
       "state-integrity": 4,
       "receipt-integrity": 2
     },
-    "trend": "Cycle 173 convergence assessment: DIVERGING. Acceptance #369 (C5.5 structural gate, PR #2212) directly caused 30+ hour orchestrator outage — highest-severity self-improvement-induced-regression. 6+ iterations of C4.1/C5.5 fixes, none effective, latest one catastrophic. Forward work drought at 36+ cycles (threshold 10). Review scores unchanged (59% at 2/5). Chronic categories static. Process maintenance loop has no exit criterion. System is in worse state than cycle 169 assessment. Root cause: CI doesn't build full Rust workspace, so cross-crate API breaks escape. Secondary: acceptance pipeline treats PR merge as success without integration verification. QC healthy but idle. Next assessment cycle 178."
+    "trend": "Cycle 173 convergence assessment: DIVERGING. Cycle 174 update: outage at 37+ hours (11 ghost cycles), no fix pushed. Eva acknowledged 'next week'. Collateral accumulating: 2 stale Copilot PRs, 3 stale audit-inbound, input-from-eva #2039 unprocessable 7 days. Original assessment stands — acceptance #369 (C5.5 structural gate, PR #2212) caused outage via unhandled enum variant. 6+ iterations of C4.1/C5.5 fixes none effective. Forward work drought at 37+ cycles. Process maintenance loop has no exit criterion. Root cause: CI doesn't build full Rust workspace. QC healthy but idle. Next formal assessment cycle 178."
   },
   "eva_directives_processed": [
     {"issue": 331, "title": "Assertive recommendations mandate", "processed_cycle": 154, "changes": ["Default FAIL gates", "No behavioral options", "Track time-to-real-adoption", "Convergence assessments every 5 cycles", "Performative acceptance finding class", "Flag vanity metrics"]}
