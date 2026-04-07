@@ -180,6 +180,27 @@ For each recommendation accepted in the last 3 cycles:
 2. **Verify effectiveness**: If the change was implemented, did it actually prevent the targeted problem from recurring? Check for recurrences.
 3. **Re-file if ignored**: If a recommendation was "accepted" but the implementation is missing or incomplete, re-file a stronger version referencing the original acceptance and the gap.
 
+### 10.5.1. Step-level verification for pipeline-step audit issues (per #383)
+
+When closing or verifying any audit issue that targets a specific orchestrator pipeline step (C4.1, C5.5, current-cycle-steps, doc-validation, receipt-validate, etc.), the following procedure is MANDATORY. **Inferring step status from a different step is fabrication.** Cycle 175 closed [#370](https://github.com/EvaLok/schema-org-json-ld-audit/issues/370) on the basis of "C5.5 PASS → C4.1 PASS" inference, which was wrong (cycles 449/451/453 had C4.1 FAIL while C5.5 PASS).
+
+1. **Step-level verification (mandatory).** For each cycle in the verification window, fetch the cited step's literal comment from the cycle's issue thread:
+   ```bash
+   gh api "repos/EvaLok/schema-org-json-ld/issues/<N>/comments" --jq "[.[] | select(.body | contains(\"Step C4.1\")) | .body]"
+   ```
+   Record the literal status text in the audit's worklog. Do NOT infer step status from a different step.
+
+2. **Chronic-category cross-check (mandatory).** Read `docs/state.json::review_agent.chronic_category_responses` from the main repo (via `gh api ... -H "Accept: application/vnd.github.v3.raw" --jq ".review_agent.chronic_category_responses"`). For each entry whose `category` matches a cited finding category:
+   - Is the entry's `verification_cycle` older than the latest cycle in the verification window?
+   - Is the entry still flagged in the most recent reviews?
+   - If either, the audit issue is NOT verified — the chronic category is still producing findings.
+
+3. **Recent-review scan (mandatory).** Fetch the most recent 3 adversarial reviews from `docs/reviews/cycle-<N>.md` (via `gh api "repos/EvaLok/schema-org-json-ld/contents/docs/reviews/cycle-<N>.md" -H "Accept: application/vnd.github.v3.raw"`). If any of them flag the targeted chronic category, the audit issue is NOT verified.
+
+4. **Sample size minimum.** Require at least **5 cycles** in the verification window for chronic-category fixes (categories with `chronic_category_responses` entries). 3 cycles is too few to distinguish a fix from coincidence.
+
+5. **Receipt persistence.** Record the literal step output for each cycle in the audit's worklog (not just "all 5 PASS"). This forces the audit to actually fetch the data and creates an audit trail for retrospective review.
+
 For persistent issues noted in previous worklogs/journals but never filed:
 1. **Scan your last 2 worklogs** for observations labeled as concerns, blind spots, or noted-but-not-filed items.
 2. **If you noted the same issue 2+ times without filing, it is now MANDATORY to file it.** The threshold for proactive filing has been reached.
