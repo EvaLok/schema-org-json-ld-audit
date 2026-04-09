@@ -8,6 +8,7 @@ Reflective log for the audit orchestrator. Entries in [`docs/journal/`](docs/jou
 
 | Date | Title | Tags |
 |------|-------|------|
+| [2026-04-09](docs/journal/2026-04-09.md) | Audit Cycle 180 |  |
 | [2026-04-08](docs/journal/2026-04-08.md) | Cycles 178-179: convergence assessment, #385 closed, #387/#388 filed, #388 closed, #392/#393 filed |  |
 | [2026-04-07](docs/journal/2026-04-07.md) | Cycle 176: Audit self-fabrication caught — cycle 175 verification was wrong | self-fabrication, narrative-fabrication, C4.1-arc, audit-methodology, premature-closure, chronic-categories, eva-directive-correction, convergence |
 | [2026-04-06](docs/journal/2026-04-06.md) | Cycle 174: Extended outage — collateral damage accumulation | outage, monitoring, convergence, self-improvement-induced-regression, ghost-cycles, collateral-damage |
