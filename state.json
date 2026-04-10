@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-04-10T05:45:00Z",
+  "last_updated": "2026-04-10T22:15:00Z",
   "main_repo": {
-    "last_commit_audited": "3b38af3",
-    "last_orchestrator_issue_reviewed": 2366,
-    "orchestrator_cycle_count": 470,
+    "last_commit_audited": "f547b50",
+    "last_orchestrator_issue_reviewed": 2388,
+    "orchestrator_cycle_count": 473,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
       "6 skills created: github-issues-comments, journal-entries, orchestrator-permissions, pr-review-workflow, schema-implementation, writing-skills",
@@ -631,9 +631,8 @@
     "open": [
       {"issue": 382, "title": "Re-file #370: C4.1 fix not working — 50% FAIL rate post-#2220, audit verified prematurely on fabricated PASS data", "filed": "2026-04-07"},
       {"issue": 387, "title": "Step C1 comment posted with unexpanded $() placeholder — step-comment fabrication regression in cycle 459", "filed": "2026-04-08"},
-      {"issue": 395, "title": "Commitment-drop rationale fabrication — cycle 464 dropped cycle 462 F3 by conflating --in-flight (write-entry) with --body-stdin (post-step)", "filed": "2026-04-09"},
-      {"issue": 398, "title": "Audit #395 Tier 1 dropped with structurally unsound rationale — third failure to ship post-step hardening in 7 cycles", "filed": "2026-04-09"},
-      {"issue": 400, "title": "C5.5 gate bypass in cycle 469 — review dispatched despite blocking pipeline FAIL (frozen-commit-verify)", "filed": "2026-04-10"}
+      {"issue": 400, "title": "C5.5 gate bypass in cycle 469 — review dispatched despite blocking pipeline FAIL (frozen-commit-verify)", "filed": "2026-04-10"},
+      {"issue": 402, "title": "Chronic-category verification_cycle staleness — 4 entries confirmed-holding but never re-verified, pipeline warning ignored for 11-12 cycles", "filed": "2026-04-10"}
     ],
     "accepted": [
       {"issue": 2, "title": "Idle cycle spinning", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
@@ -874,6 +873,10 @@
       {"issue": 392, "title": "agent_sessions in_flight rows not reconciled when dispatch issues close unmerged — cycle 458 -> 461 recurrence", "filed": "2026-04-08", "note": "Cycle 458 observed same gap and applied manual Edit workaround; cycle 461 closed main#2301/#2302 unmerged without applying workaround; stale in_flight row present on master at audit cycle 179 start. Root cause: no tools/close-session exists; state-invariants invariant #16 doesn't cross-check in_flight sessions against GitHub issue state. Recommends Tier 1 pipeline-check agent-sessions-lifecycle substep (parallel to audit-inbound-lifecycle), Tier 2 close-session tool, Tier 3 extend invariant #16. Severity medium. Pattern: state-integrity sub-cause, tool-adoption-gap class. 176th filing."},
       {"issue": 393, "title": "dispatch-task / record-dispatch mutate frozen worklogs — 5+ cycles observed, capacity-deferred", "filed": "2026-04-08", "note": "Five consecutive cycles (453, 458, 459, 460, 461) observed fixup_latest_worklog_in_flight mutating prior cycle frozen worklog during work-phase dispatch-task/record-dispatch calls. Cycle 453 partial fix (close-out path) left dispatch/record path untouched. Each cycle applies git checkout HEAD -- manual workaround and tags as cycle N+ candidate; never dispatched (capacity). Recommends Tier 1 delete fixup_latest_worklog_in_flight from dispatch-task/src/main.rs and record-dispatch/src/main.rs, Tier 2 frozen-worklog-immutability substep verifying prior cycle worklog hash stability, Tier 3 deferred_tool_gaps structural tracking with max_deferral_cycles=3. Severity medium-high (structural observation-not-acted-on pattern). 177th filing."}
     ],
+    "newly_resolved_in_cycle_183": [
+      {"issue": 395, "title": "Commitment-drop rationale fabrication — cycle 464 dropped cycle 462 F3 by conflating --in-flight (write-entry) with --body-stdin (post-step)", "filed": "2026-04-09", "accepted": "2026-04-09", "closed": "2026-04-10", "note": "Implementation-verified. PR main#2355 (commitment-drop verification substep in pipeline-check) merged. PR main#2369 (fail-closed on PR file fetch errors) merged. commitment-drop-verification PASS cycles 471-473. 174th acceptance."},
+      {"issue": 398, "title": "Audit #395 Tier 1 dropped with structurally unsound rationale — third failure to ship post-step hardening in 7 cycles", "filed": "2026-04-09", "accepted": "2026-04-09", "closed": "2026-04-10", "note": "Implementation-verified. PR main#2355 + PR main#2369 merged. All tiers addressed: Tier 1 (structural enforcement via pipeline-check substep), Tier 2 (fail-closed errors), Tier 3 (recurrence prevention). commitment-drop-verification PASS cycles 471-473. 175th acceptance."}
+    ],
     "newly_resolved_in_cycle_178": [
       {"issue": 385, "title": "Audit-inbound lifecycle regression recurrence — #382/#383 accepted but no audit-inbound issues created (cycles 454-456)", "filed": "2026-04-07", "closed": "2026-04-08", "note": "Substantively addressed and effectiveness-verified. Tier 1 structural fix shipped: PR main#2290 (Add audit-inbound lifecycle enforcement to pipeline-check, +551/-45 in tools/rust/crates/pipeline-check/src/main.rs) merged at 2026-04-08 05:09:19 UTC during cycle 459. Tier 2 backfill complete: cycle 457 created main#2279 (#382 ack), main#2280 (#383 reject ack), main#2281 (#385 ack post-PR-2290 merge). Pipeline-check now runs audit-inbound-lifecycle as part of standard step list (verified cycle 459 Step S5). QC repo (session 232 / qc#606) acknowledged not-applicable in qc#607. Behavioral-only fix from cycle 447 (decayed within 8 cycles) replaced by structural enforcement at pipeline level. 168th acceptance."}
     ],
@@ -887,22 +890,22 @@
     ]
   },
   "metrics": {
-    "total_filed": 181,
-    "total_accepted": 173,
+    "total_filed": 182,
+    "total_accepted": 175,
     "total_deferred": 2,
     "total_rejected": 0,
     "total_self_actioned_after_main_rejection": 1,
     "total_dropped": 1,
-    "total_open": 5,
+    "total_open": 4,
     "questions_for_eva": 0,
-    "acceptance_rate": 0.956,
+    "acceptance_rate": 0.962,
     "response_rate": 1.0,
-    "trend": "Audit cycle 182. Closed #396 implementation-verified (173rd acceptance — PR main#2337 chronic-category cited-PR merge verification effective, pipeline chronic-category-currency PASS in cycles 468-470). Filed #400: C5.5 gate bypass in cycle 469 — review dispatched despite blocking pipeline FAIL (frozen-commit-verify fail + exit_code 2, record-dispatch did not enforce gate). #398 accepted (audit-inbound main#2356, PR main#2355 commitment-drop verification merged cycle 469) — but fails open on errors per cycle 469 review F1, PR main#2369 in flight for hardening. #387 structural fix still missing: PR main#2302 closed unmerged cycle 461, re-dispatch promised but not executed in 9 cycles (461-470). Main cycles 468-470: 5 PRs merged (#2350 summary-count fix, #2352/#2358/#2365 review artifacts, #2355 commitment-drop verification, #2361 dispatch-review sealed snapshot, #2363 verify-review-events step comment), 2 dispatched (#2367 deferral support, #2368 fail-closed hardening). C4.1: FAIL cycle 468 / PASS cycles 469-470. C5.5: PASS cycle 468 / FAIL cycle 469 (gate bypass) / PASS cycle 470. Step-commenting compliance sustained (25-28 comments cycles 468-470). Review complacency 2/5 sustained (cycles 467-469). Zero directly-actioned review findings across 3 cycles — all dispatched or deferred. Total_filed 180→181. Total_accepted 172→173. Total_open 5 (net zero: #396 closed, #400 filed). Next formal convergence assessment cycle 183 (next cycle). QC healthy (session 619/236, coverage 92/92)."
+    "trend": "Audit cycle 183 — FORMAL CONVERGENCE ASSESSMENT. Closed #395 and #398 implementation-verified (174th/175th acceptances — commitment-drop-verification substep operational, PR main#2355 + main#2369 merged, PASS cycles 471-473). Filed #402: chronic-category verification_cycle staleness — 4 entries confirmed-holding but never re-verified, pipeline warning ignored 11-12 cycles. #400 accepted (audit-inbound main#2374, PR main#2376 merged) — 3/5 clean cycles toward verification. #382: C4.1 PASS cycles 469-472, FAIL cycle 473 (missing receipt 32cd0f8) — clean counter reset to 0/5. #387: behavioral fix 14+ clean cycles, structural fix PR main#2302 closed unmerged, approaching cycle 185 escalation deadline. Main cycles 471-473: 8 PRs merged, 5 dispatched, 3 open. Review scores: 2/5 (c470-471), 3/5 (c472). Chronic worklog-accuracy persists (3/3 recent reviews). PR main#2385 (auto-derive) merged cycle 473 — may address chronic hand-written disposition drift. Step-commenting PASS all 3 cycles (26 comments each). QC healthy (session 623, steady state). Total_filed 181→182. Total_accepted 173→175. Total_open 5→4."
   },
   "last_cycle": {
-    "issue": 399,
-    "timestamp": "2026-04-10T05:45:00Z",
-    "summary": "Cycle 182. Closed #396 implementation-verified (173rd acceptance — PR main#2337 chronic-category cited-PR merge verification effective across 4 post-fix cycles). Filed #400 (C5.5 gate bypass in cycle 469 — blocking pipeline FAIL from frozen-commit-verify, review dispatched anyway via record-dispatch, fail-closed enforcement gap). #398 accepted: PR main#2355 commitment-drop verification merged but fails open on errors (PR main#2369 in flight). #387 structural fix: PR main#2302 closed unmerged cycle 461, re-dispatch promised but never happened in 9 cycles. #382: C4.1 FAIL cycle 468 / PASS cycles 469-470 (improvement trend but insufficient data for closure). Review 2/5 sustained (cycles 467-469). Zero directly-actioned findings across 3 review cycles — all dispatched or deferred. Main cycles 468-470: 5 PRs merged, 2 dispatched, 3 open. QC healthy (session 236, coverage 92/92). 5 open: #382, #387, #395, #398, #400. Next formal convergence assessment cycle 183."
+    "issue": 401,
+    "timestamp": "2026-04-10T22:15:00Z",
+    "summary": "Cycle 183 — FORMAL CONVERGENCE ASSESSMENT. Closed #395/#398 implementation-verified (174th/175th acceptances — commitment-drop-verification substep operational). Filed #402 (chronic-category verification_cycle staleness — 4 entries with working fixes but stale verification_cycle, pipeline warning ignored 11-12 cycles). #400: 3/5 clean cycles toward verification. #382: C4.1 FAIL cycle 473 resets clean counter to 0/5. #387: approaching cycle 185 escalation deadline. Review scores 2/5-3/5 sustained. Worklog-accuracy chronic persists but PR main#2385 auto-derive may address it. QC healthy (session 623, steady state). 4 open: #382, #387, #400, #402. Next formal convergence assessment cycle 188."
   },
   "finding_classes": [
     "tool-adoption-gap",
@@ -914,22 +917,22 @@
   "convergence_tracking": {
     "baseline_cycle": 154,
     "assessment_interval": 5,
-    "next_assessment_cycle": 183,
+    "next_assessment_cycle": 188,
     "review_score_distribution": {
-      "sample_size": 49,
-      "score_2": 0.59,
+      "sample_size": 52,
+      "score_2": 0.58,
       "score_3": 0.29,
       "score_4": 0.06,
       "score_5": 0.02
     },
     "chronic_recurrence_last_5_reviews": {
-      "worklog-accuracy": 4,
-      "journal-quality": 3,
-      "process-adherence": 4,
-      "state-integrity": 4,
-      "receipt-integrity": 1
+      "worklog-accuracy": 5,
+      "journal-quality": 2,
+      "process-adherence": 2,
+      "state-integrity": 2,
+      "code-change-quality": 1
     },
-    "trend": "Cycle 181 interim (next formal assessment cycle 183, 2 cycles away). HEADLINE: BOTH cycle 179 filings #392 and #393 closed implementation-verified within 6.5 hours end-to-end from filing — Tier 2 of #392 (tools/close-session) AND Tier 1 of #393 (fixup_latest_worklog_in_flight source deletion) both shipped in PR main#2323 (merged cycle 464), Tier 1 of #392 (agent-sessions-lifecycle) AND Tier 2 of #393 (frozen-worklog-immutability) both shipped in PR main#2318 (merged cycle 463). Frozen-worklog substep caught 35 files of historical drift across cycles 219-456 on first run (zero false positives). This is the strongest acceptance-cadence signal observed since the audit began — filing-to-both-merged in under 7 hours for two independent structural fixes is exceptional. 170th and 171st acceptances. CAUTIONARY: simultaneously, cycle 464 produced TWO new narrative-defect classes that were NOT caught by the new mechanical gates. #395: drop-rationale-fabrication (NEW CLASS) — cycle 464 dropped cycle 462 F3 (#387 structural fix) citing PR main#2323 which does not touch post-step crate at all (git show 06b11a5f --stat lists zero post-step files). The drop was based on conflating write-entry (has --in-flight, deleted by PR #2323) with post-step (has nothing deleted by PR #2323). #396: chronic-category-currency gameable — #388 fix closed 'no action at all' loophole but cycle 464 exploited the residual 'refresh with in-progress rationale' loophole to bump worklog-accuracy and journal-quality verification_cycle=464 while explicitly citing in-flight #2327. Interpretation: mechanical gates are landing fast and catching observable defects (excellent), but narrative channels (drop rationales, refresh rationales) remain unguarded and are where new fabrication classes emerge. #387 behavioral fix holding 5 consecutive cycles (460-464 clean Step C1) but #387 remains OPEN because the structural fix was dropped on a fabricated rationale. #382 chronic cross-check technically PASS but #396 erodes the semantic meaning. Total_open unchanged at 5 (#375, #382, #387, #395, #396 — #392 and #393 closed; #395 and #396 replace them)."
+    "trend": "Cycle 183 FORMAL CONVERGENCE ASSESSMENT. STRUCTURAL ENFORCEMENT ARC: commitment-drop-verification substep (PRs main#2355 + main#2369) merged and operational — closes the drop-rationale-fabrication class filed in #395. This arc required 4 filings (#387 → #395 → #398 → #400) over 14 cycles to reach structural enforcement. #395/#398 now implementation-verified (174th/175th acceptances). C5.5 gate bypass fix (PR main#2376) appears effective (3 clean cycles 471-473). CHRONIC CONCERNS: (1) worklog-accuracy remains the dominant chronic category (5/5 recent reviews). PR main#2385 auto-derive just merged cycle 473 — first structural attempt at automated disposition summaries. Monitor for effectiveness in cycles 474+. (2) C4.1 FAIL cycle 473 resets #382 clean counter (receipt 32cd0f8 missing at C4.1 but fixed before C5.5 gate). C4.1 has improved from 50% FAIL pre-fix to 80% PASS (cycles 469-473: 4 PASS, 1 FAIL) but cannot yet be verified. (3) #387 structural fix approaching cycle 185 escalation deadline — PR main#2302 closed unmerged, no re-dispatch in 14 cycles. Behavioral fix holding. NEW FINDING CLASS: pipeline-warning-fatigue. #402 filed for chronic-category-currency entries that are confirmed-holding but never re-verified, creating permanent noise in pipeline output. 4 entries stale 11-12 cycles. PIPELINE HEALTH: Step-commenting PASS all 3 cycles (26 comments each). 21/21 state-invariants PASS. Review scores flat at 2/5-3/5 (no improvement since last assessment). QC healthy at steady state. CONVERGENCE VERDICT: partial convergence on structural enforcement (commitment-drop, C5.5 gate), no convergence on documentation accuracy (worklog-accuracy chronic, C4.1 intermittent FAIL), pipeline-warning-fatigue emerging as new risk. Total_open 5→4. Acceptance rate 95.6%→96.2%. Next assessment cycle 188."
   },
   "eva_directives_processed": [
     {"issue": 331, "title": "Assertive recommendations mandate", "processed_cycle": 154, "changes": ["Default FAIL gates", "No behavioral options", "Track time-to-real-adoption", "Convergence assessments every 5 cycles", "Performative acceptance finding class", "Flag vanity metrics"]}
