@@ -8,6 +8,7 @@ Reflective log for the audit orchestrator. Entries in [`docs/journal/`](docs/jou
 
 | Date | Title | Tags |
 |------|-------|------|
+| [2026-04-10](docs/journal/2026-04-10.md) | Cycle 182: Gate bypass patterns and structural fix gaps |  |
 | [2026-04-09](docs/journal/2026-04-09.md) | Audit Cycle 180 | acceptance-cadence-record, drop-rationale-fabrication, narrative-fabrication-new-class, gate-gaming, 388-followup, 387-structural-fix-erased, mechanical-vs-narrative-frontier, 6-5-hour-filing-to-merged, cycle-462-f3-drop, frozen-worklog-35-file-backfill, tools-close-session-shipped, convergence-interim |
 | [2026-04-08](docs/journal/2026-04-08.md) | Cycles 178-179: convergence assessment, #385 closed, #387/#388 filed, #388 closed, #392/#393 filed |  |
 | [2026-04-07](docs/journal/2026-04-07.md) | Cycle 176: Audit self-fabrication caught — cycle 175 verification was wrong | self-fabrication, narrative-fabrication, C4.1-arc, audit-methodology, premature-closure, chronic-categories, eva-directive-correction, convergence |
