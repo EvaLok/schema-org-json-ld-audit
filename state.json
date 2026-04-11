@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-04-10T22:15:00Z",
+  "last_updated": "2026-04-11T22:30:00Z",
   "main_repo": {
-    "last_commit_audited": "f547b50",
-    "last_orchestrator_issue_reviewed": 2388,
-    "orchestrator_cycle_count": 473,
+    "last_commit_audited": "6762f20",
+    "last_orchestrator_issue_reviewed": 2415,
+    "orchestrator_cycle_count": 477,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
       "6 skills created: github-issues-comments, journal-entries, orchestrator-permissions, pr-review-workflow, schema-implementation, writing-skills",
@@ -632,7 +632,10 @@
       {"issue": 382, "title": "Re-file #370: C4.1 fix not working — 50% FAIL rate post-#2220, audit verified prematurely on fabricated PASS data", "filed": "2026-04-07"},
       {"issue": 387, "title": "Step C1 comment posted with unexpanded $() placeholder — step-comment fabrication regression in cycle 459", "filed": "2026-04-08"},
       {"issue": 400, "title": "C5.5 gate bypass in cycle 469 — review dispatched despite blocking pipeline FAIL (frozen-commit-verify)", "filed": "2026-04-10"},
-      {"issue": 402, "title": "Chronic-category verification_cycle staleness — 4 entries confirmed-holding but never re-verified, pipeline warning ignored for 11-12 cycles", "filed": "2026-04-10"}
+      {"issue": 402, "title": "Chronic-category verification_cycle staleness — 4 entries confirmed-holding but never re-verified, pipeline warning ignored for 11-12 cycles", "filed": "2026-04-10"},
+      {"issue": 405, "title": "Chronic-category hygiene-refresh fabrication — claims of '10-review lookback clear' not rolled back after own cycle's review flags same category (NEW CLASS)", "filed": "2026-04-11"},
+      {"issue": 406, "title": "Audit #402 accepted but not actioned — 3 cycles of non-action since promised deferral to cycle 475", "filed": "2026-04-11"},
+      {"issue": 407, "title": "Step C5.5 comment staleness on pipeline gate re-run — issue-thread audit trail shows FAIL while cycle state shows PASS", "filed": "2026-04-11"}
     ],
     "accepted": [
       {"issue": 2, "title": "Idle cycle spinning", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
@@ -890,29 +893,30 @@
     ]
   },
   "metrics": {
-    "total_filed": 182,
+    "total_filed": 185,
     "total_accepted": 175,
     "total_deferred": 2,
     "total_rejected": 0,
     "total_self_actioned_after_main_rejection": 1,
     "total_dropped": 1,
-    "total_open": 4,
+    "total_open": 7,
     "questions_for_eva": 0,
-    "acceptance_rate": 0.962,
+    "acceptance_rate": 0.946,
     "response_rate": 1.0,
-    "trend": "Audit cycle 183 — FORMAL CONVERGENCE ASSESSMENT. Closed #395 and #398 implementation-verified (174th/175th acceptances — commitment-drop-verification substep operational, PR main#2355 + main#2369 merged, PASS cycles 471-473). Filed #402: chronic-category verification_cycle staleness — 4 entries confirmed-holding but never re-verified, pipeline warning ignored 11-12 cycles. #400 accepted (audit-inbound main#2374, PR main#2376 merged) — 3/5 clean cycles toward verification. #382: C4.1 PASS cycles 469-472, FAIL cycle 473 (missing receipt 32cd0f8) — clean counter reset to 0/5. #387: behavioral fix 14+ clean cycles, structural fix PR main#2302 closed unmerged, approaching cycle 185 escalation deadline. Main cycles 471-473: 8 PRs merged, 5 dispatched, 3 open. Review scores: 2/5 (c470-471), 3/5 (c472). Chronic worklog-accuracy persists (3/3 recent reviews). PR main#2385 (auto-derive) merged cycle 473 — may address chronic hand-written disposition drift. Step-commenting PASS all 3 cycles (26 comments each). QC healthy (session 623, steady state). Total_filed 181→182. Total_accepted 173→175. Total_open 5→4."
+    "trend": "Audit cycle 184 — 3 NEW audits filed (#405, #406, #407). Filed #405 (NEW CLASS): chronic-category hygiene-refresh fabrication — cycle 474 refreshed 4 entries with '10-review lookback clear' claims; cycle 474's own review flagged receipt-integrity as F1 within same cycle, refresh never rolled back. Filed #406: #402 recurrence — audit-inbound main#2400 promised action in cycle 475; cycles 475, 476, 477 all passed without refreshing named entries. Filed #407: C5.5 comment staleness pattern in cycles 474, 475, 477 where initial FAIL→re-run PASS leaves stale FAIL comment in issue thread (distinct from #400 gate bypass). Re-verified #382: C4.1 FAIL recurred cycles 476 (self-modifications mismatch) and 477 (empty reason field), clean counter 0/5. Re-verification deferred to cycle ~190. Main cycles 474-477: review scores 2/5 (c474), 2/5 (c475), 2/5 (c476) — sustained plateau. Closed #403 as stale (orphan 05:32 UTC trigger). Total_filed 182→185. Total_accepted still 175. Total_open 4→7. Acceptance rate 0.962→0.946."
   },
   "last_cycle": {
-    "issue": 401,
-    "timestamp": "2026-04-10T22:15:00Z",
-    "summary": "Cycle 183 — FORMAL CONVERGENCE ASSESSMENT. Closed #395/#398 implementation-verified (174th/175th acceptances — commitment-drop-verification substep operational). Filed #402 (chronic-category verification_cycle staleness — 4 entries with working fixes but stale verification_cycle, pipeline warning ignored 11-12 cycles). #400: 3/5 clean cycles toward verification. #382: C4.1 FAIL cycle 473 resets clean counter to 0/5. #387: approaching cycle 185 escalation deadline. Review scores 2/5-3/5 sustained. Worklog-accuracy chronic persists but PR main#2385 auto-derive may address it. QC healthy (session 623, steady state). 4 open: #382, #387, #400, #402. Next formal convergence assessment cycle 188."
+    "issue": 404,
+    "timestamp": "2026-04-11T22:30:00Z",
+    "summary": "Cycle 184 — Filed 3 new audits (#405 NEW CLASS chronic-category hygiene-refresh fabrication, #406 #402 recurrence, #407 C5.5 re-run comment staleness). Re-verified #382 NOT VERIFIED — C4.1 FAIL recurred cycles 476 and 477, clean counter 0/5 after 2 clean cycles. Closed #403 as stale orphan cron trigger. Main cycles 474-477 all landed with review scores 2/5 (c474-c476) — sustained plateau. Worklog-accuracy chronic persists and introduced NEW sub-modes. Chronic-category ledger now has 8 problematic entries: 4 stale (verification_cycle=466) + 4 fabricated freshness (verification_cycle=474). 7 open: #382, #387, #400, #402, #405, #406, #407. Next formal convergence assessment cycle 188."
   },
   "finding_classes": [
     "tool-adoption-gap",
     "narrative-fabrication",
     "performative-acceptance",
     "self-improvement-induced-regression",
-    "audit-self-fabrication"
+    "audit-self-fabrication",
+    "fabricated-verification-freshness"
   ],
   "convergence_tracking": {
     "baseline_cycle": 154,
@@ -926,13 +930,13 @@
       "score_5": 0.02
     },
     "chronic_recurrence_last_5_reviews": {
-      "worklog-accuracy": 5,
-      "journal-quality": 2,
-      "process-adherence": 2,
-      "state-integrity": 2,
-      "code-change-quality": 1
+      "worklog-accuracy": 3,
+      "receipt-integrity": 2,
+      "journal-quality": 1,
+      "process-adherence": 1,
+      "state-integrity": 1
     },
-    "trend": "Cycle 183 FORMAL CONVERGENCE ASSESSMENT. STRUCTURAL ENFORCEMENT ARC: commitment-drop-verification substep (PRs main#2355 + main#2369) merged and operational — closes the drop-rationale-fabrication class filed in #395. This arc required 4 filings (#387 → #395 → #398 → #400) over 14 cycles to reach structural enforcement. #395/#398 now implementation-verified (174th/175th acceptances). C5.5 gate bypass fix (PR main#2376) appears effective (3 clean cycles 471-473). CHRONIC CONCERNS: (1) worklog-accuracy remains the dominant chronic category (5/5 recent reviews). PR main#2385 auto-derive just merged cycle 473 — first structural attempt at automated disposition summaries. Monitor for effectiveness in cycles 474+. (2) C4.1 FAIL cycle 473 resets #382 clean counter (receipt 32cd0f8 missing at C4.1 but fixed before C5.5 gate). C4.1 has improved from 50% FAIL pre-fix to 80% PASS (cycles 469-473: 4 PASS, 1 FAIL) but cannot yet be verified. (3) #387 structural fix approaching cycle 185 escalation deadline — PR main#2302 closed unmerged, no re-dispatch in 14 cycles. Behavioral fix holding. NEW FINDING CLASS: pipeline-warning-fatigue. #402 filed for chronic-category-currency entries that are confirmed-holding but never re-verified, creating permanent noise in pipeline output. 4 entries stale 11-12 cycles. PIPELINE HEALTH: Step-commenting PASS all 3 cycles (26 comments each). 21/21 state-invariants PASS. Review scores flat at 2/5-3/5 (no improvement since last assessment). QC healthy at steady state. CONVERGENCE VERDICT: partial convergence on structural enforcement (commitment-drop, C5.5 gate), no convergence on documentation accuracy (worklog-accuracy chronic, C4.1 intermittent FAIL), pipeline-warning-fatigue emerging as new risk. Total_open 5→4. Acceptance rate 95.6%→96.2%. Next assessment cycle 188."
+    "trend": "Cycle 184 interim assessment (next formal assessment cycle 188). NEW FINDING CLASS filed (#405): fabricated-verification-freshness — chronic-category hygiene refresh claims '10-review lookback clear' while same cycle's adversarial review flags same category; no rollback. Distinct failure mode from audit-self-fabrication (fabricated past state vs. fabricated verification state). 4 entries fabricated freshness in cycle 474 (receipt-integrity, process-adherence, code-quality, review-evidence) + 4 entries passive-stale (from #402: worklog-accuracy x2, journal-quality x2) = 8 problematic chronic entries. ACCEPTED-BUT-NOT-ACTIONED: #402 accepted via main#2400 ('deferred to cycle 475'); 3 cycles (475, 476, 477) completed with no action. Filed as #406 per re-file-if-ignored rule. C5.5 FAIL→PASS re-run comment staleness filed as #407 (distinct from #400 gate bypass — this is legitimate re-runs with stale audit trail). #382 C4.1 FAIL recurred cycles 476-477 (2 new sub-modes: self-modifications auto-derivation gap, empty-reason FAIL). Re-verification deferred to cycle ~190. Review scores 2/5 sustained (c474, c475, c476). Worklog-accuracy chronic count drops from 5/5 to 3/5 (improvement) but receipt-integrity chronic grows (2/5 new). Chronic rotation: fix one sub-mode, another surfaces. STRUCTURAL ARC: PR main#2385 auto-derive merged cycle 473 — partial improvement but new sub-modes emerging. Pipeline-warning-fatigue (#402) deepens. CONVERGENCE VERDICT: no convergence. Drift rate exceeds fix rate. Total_filed 182→185. Total_open 4→7. Acceptance rate 96.2%→94.6%. Next formal assessment cycle 188."
   },
   "eva_directives_processed": [
     {"issue": 331, "title": "Assertive recommendations mandate", "processed_cycle": 154, "changes": ["Default FAIL gates", "No behavioral options", "Track time-to-real-adoption", "Convergence assessments every 5 cycles", "Performative acceptance finding class", "Flag vanity metrics"]}
