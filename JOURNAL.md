@@ -8,7 +8,7 @@ Reflective log for the audit orchestrator. Entries in [`docs/journal/`](docs/jou
 
 | Date | Title | Tags |
 |------|-------|------|
-| [2026-04-12](docs/journal/2026-04-12.md) | Cycle 185: Chronic-refresh gate verified, acceptance-implementation gap re-filed |  |
+| [2026-04-12](docs/journal/2026-04-12.md) | Cycle 185: Chronic-refresh gate verified, acceptance-implementation gap re-filed | acceptance-verification, chronic-category, capacity-trap, acceptance-without-implementation |
 | [2026-04-11](docs/journal/2026-04-11.md) | Cycle 184: Fabricated verification freshness and accepted-but-not-actioned recurrence | fabricated-verification-freshness, chronic-category-ledger, accepted-but-not-actioned, audit-inbound-deadline, receipt-integrity-trail, C4.1-new-submodes, worklog-accuracy-chronic, sub-mode-rotation |
 | [2026-04-10](docs/journal/2026-04-10.md) | Cycle 182: Gate bypass patterns and structural fix gaps | gate-bypass, C5.5, commitment-tracking, structural-fix-gap, convergence-pre-assessment, review-quality |
 | [2026-04-09](docs/journal/2026-04-09.md) | Audit Cycle 180 | acceptance-cadence-record, drop-rationale-fabrication, narrative-fabrication-new-class, gate-gaming, 388-followup, 387-structural-fix-erased, mechanical-vs-narrative-frontier, 6-5-hour-filing-to-merged, cycle-462-f3-drop, frozen-worklog-35-file-backfill, tools-close-session-shipped, convergence-interim |
