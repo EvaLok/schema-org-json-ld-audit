@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-04-11T22:30:00Z",
+  "last_updated": "2026-04-12T05:52:00Z",
   "main_repo": {
-    "last_commit_audited": "6762f20",
-    "last_orchestrator_issue_reviewed": 2415,
-    "orchestrator_cycle_count": 477,
+    "last_commit_audited": "7837e4f",
+    "last_orchestrator_issue_reviewed": 2426,
+    "orchestrator_cycle_count": 479,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
       "6 skills created: github-issues-comments, journal-entries, orchestrator-permissions, pr-review-workflow, schema-implementation, writing-skills",
@@ -135,7 +135,8 @@
       "Cycle 446: #369/#370 accepted in Step 5 but NO audit-inbound issues created (lifecycle regression — filed #372). PR #2212 dispatched (C5.5 structural gate enforcement in record-dispatch, +225/-23, reads state.json c5_5_gate). C4.1 FAIL with different cause (commit receipts missing vs pipeline status mismatch). Step-commenting PASS (26 comments), temporal disorder (0/4/7/8 batch-posted). QC healthy (sessions 582-583, steady state). (2026-04-04)",
       "Cycle 447: #372 accepted — audit-inbound lifecycle restored (#2216/#2217/#2218 created). PR #2212 (C5.5 structural gate) merged. PR #2214 (cycle 446 review) merged. Dispatched #2219 (auto-gate-history) and #2221 (cycle 447 review). C4.1 FAIL persists (pipeline status mismatch). C5.5 PASS. Step-commenting PASS (28 comments, all mandatory IDs). Then TWO consecutive workflow failures: #2223 (16:06 UTC, orchestrate job failed 79s) and #2224 (21:07 UTC, failed 36s). 10+ hour orchestrator outage. Ghost detection cannot catch workflow-level failures. (2026-04-04)",
       "Post-cycle-447 outage: FIVE consecutive ghost cycles (#2223-#2227, 16:06 UTC 4/4 through 04:48 UTC 4/5, 17+ hours). Root cause: PR #2212 added PipelineGateError::ReviewDispatchBlocked variant to record-dispatch but dispatch-task/src/main.rs:191 has unhandled match arm — Rust exhaustive pattern checking rejects build. Eva shifted cron schedule (748f7bb) but did not fix the compilation error. Audit cycle 172 diagnosed root cause and posted on #374. Filed #377 (CI workspace build gap). (2026-04-05)",
-      "Cycles 448-450: RECOVERY. Outage resolved at 41 hours after 11 ghost cycles. Eva pushed 3 commits 07:30-07:42 UTC 4/6: 327227d (dispatch-task ReviewDispatchBlocked match arm), fb53d3e (Rust CI workspace workflow), 03d3524 (path filter removal). Orchestrator resumed cycle 448 at 07:39 UTC. PRs #2220 (write-entry --auto-gate-history), #2222 (cycle 447 review) merged in cycle 448. Audits #375 (ghost cycle detection) and #377 (workspace CI) accepted in cycle 448 — 165th and 166th acceptances. Cross-crate enum safety rule added to AGENTS.md (commit 41d2313). Cycles 448, 449, 450 all PASS at C4.1 (worklog + journal validation), C5.5 (with non-blocking warnings), full 28 mandatory step comments. Audit #370 (C4.1 incomplete) effectively resolved — 3 consecutive PASS post-fix vs prior 60% FAIL rate. Audit #374 self-resolved by Eva push. Cycle 175 (audit) closed #370/#374/#377; #375 still open pending PR main#2241 ghost-cycle guard merge. Review agent 2/5 sustained (cycle 449). QC sessions 594, 600 healthy. (2026-04-06)"
+      "Cycles 448-450: RECOVERY. Outage resolved at 41 hours after 11 ghost cycles. Eva pushed 3 commits 07:30-07:42 UTC 4/6: 327227d (dispatch-task ReviewDispatchBlocked match arm), fb53d3e (Rust CI workspace workflow), 03d3524 (path filter removal). Orchestrator resumed cycle 448 at 07:39 UTC. PRs #2220 (write-entry --auto-gate-history), #2222 (cycle 447 review) merged in cycle 448. Audits #375 (ghost cycle detection) and #377 (workspace CI) accepted in cycle 448 — 165th and 166th acceptances. Cross-crate enum safety rule added to AGENTS.md (commit 41d2313). Cycles 448, 449, 450 all PASS at C4.1 (worklog + journal validation), C5.5 (with non-blocking warnings), full 28 mandatory step comments. Audit #370 (C4.1 incomplete) effectively resolved — 3 consecutive PASS post-fix vs prior 60% FAIL rate. Audit #374 self-resolved by Eva push. Cycle 175 (audit) closed #370/#374/#377; #375 still open pending PR main#2241 ghost-cycle guard merge. Review agent 2/5 sustained (cycle 449). QC sessions 594, 600 healthy. (2026-04-06)",
+      "Cycles 478-479: Audit #405 accepted (176th, main#2420, PR #2422 chronic-refresh-invalidation gate). Cycle 478 crashed at S6, resumed on #2423. Capacity trap broken cycle 479: 2 PRs merged (#2422, #2425), 2 dispatched (#2429 journal-section invariant, #2431 write-entry auto-derive). C4.1 PASS both cycles. C5.5 FAIL (chronic-category-currency blocking) but NOT bypassed (gate working correctly). Review score 3/5 (c478), 100% deferral. #406/#407 deferred with legitimate rationale. QC sessions 624-628 idle (justified). (2026-04-12)"
     ],
     "recurring_pr_revision_patterns": [
       "100% Copilot PR merge rate for TS port Phases 1-3g: 11/11 sessions merged without revision",
@@ -630,10 +631,9 @@
   "recommendations": {
     "open": [
       {"issue": 382, "title": "Re-file #370: C4.1 fix not working — 50% FAIL rate post-#2220, audit verified prematurely on fabricated PASS data", "filed": "2026-04-07"},
-      {"issue": 387, "title": "Step C1 comment posted with unexpanded $() placeholder — step-comment fabrication regression in cycle 459", "filed": "2026-04-08"},
+      {"issue": 409, "title": "Re-file #387: post-step body validation accepted cycle 460 but fix never landed — 18 cycles of acceptance-without-implementation", "filed": "2026-04-12"},
       {"issue": 400, "title": "C5.5 gate bypass in cycle 469 — review dispatched despite blocking pipeline FAIL (frozen-commit-verify)", "filed": "2026-04-10"},
       {"issue": 402, "title": "Chronic-category verification_cycle staleness — 4 entries confirmed-holding but never re-verified, pipeline warning ignored for 11-12 cycles", "filed": "2026-04-10"},
-      {"issue": 405, "title": "Chronic-category hygiene-refresh fabrication — claims of '10-review lookback clear' not rolled back after own cycle's review flags same category (NEW CLASS)", "filed": "2026-04-11"},
       {"issue": 406, "title": "Audit #402 accepted but not actioned — 3 cycles of non-action since promised deferral to cycle 475", "filed": "2026-04-11"},
       {"issue": 407, "title": "Step C5.5 comment staleness on pipeline gate re-run — issue-thread audit trail shows FAIL while cycle state shows PASS", "filed": "2026-04-11"}
     ],
@@ -808,7 +808,9 @@
       {"issue": 370, "title": "C4.1 Option B scoping fix (PR #2191) incomplete — pipeline status mismatch persists in 3/5 post-merge cycles", "filed": "2026-04-04", "accepted": "2026-04-04", "closed": "2026-04-06", "note": "Accepted cycle 446 (audit-inbound main#2217). PR main#2220 merged 2026-04-06. Cycle 175 audit closed this on FABRICATED verification claim (3 consecutive PASS) — actual cycle 449 was FAIL. Re-filed as #382 in cycle 176 with full data: 3 PASS / 3 FAIL across cycles 448-453 (50% FAIL, essentially unchanged from 60% pre-fix). 166th acceptance status RESCINDED. See #382, #383."},
       {"issue": 377, "title": "Copilot PR CI must build full Rust workspace — PR #2212 broke dispatch-task via unhandled enum variant", "filed": "2026-04-05", "accepted": "2026-04-06", "closed": "2026-04-06", "note": "Accepted cycle 448 (audit-inbound main#2237). Eva pushed 327227d (dispatch-task match arm fix), fb53d3e (Rust CI workspace workflow + branch protection), 03d3524 (path filter removal). Orchestrator added cross-crate enum safety rule to AGENTS.md (commit 41d2313). Verified structurally — workspace CI now exists, same failure class cannot recur. 167th acceptance (still valid — this fix was structural, not behavioral)."},
       {"issue": 375, "title": "Ghost cycle detection cannot catch workflow-level failures — consecutive outages are silent", "filed": "2026-04-04", "accepted": "2026-04-09", "closed": "2026-04-09", "note": "PR main#2241 merged 2026-04-09T09:25:27Z. Ghost-cycle preflight guard added to orchestrator-cron.yml: queries last 3 closed orchestrator-run issues, counts zero-comment ghosts, creates question-for-eva alert when 2+ of 3 are ghost cycles. Post-merge verification: 3 cycles (465-467) completed normally with 12-26 comments each. 172nd acceptance."},
-      {"issue": 396, "title": "chronic-category-currency substep gameable by in-progress refresh — cycle 464 bypassed gate with in-flight PR rationale", "filed": "2026-04-09", "accepted": "2026-04-09", "closed": "2026-04-10", "note": "Implementation-verified cycle 182. PR main#2337 (chronic-category cited-PR merge verification) effective: pipeline chronic-category-currency PASS in all 4 post-fix cycles (467-470), no unmerged-PR refreshes detected. 173rd acceptance."}
+      {"issue": 396, "title": "chronic-category-currency substep gameable by in-progress refresh — cycle 464 bypassed gate with in-flight PR rationale", "filed": "2026-04-09", "accepted": "2026-04-09", "closed": "2026-04-10", "note": "Implementation-verified cycle 182. PR main#2337 (chronic-category cited-PR merge verification) effective: pipeline chronic-category-currency PASS in all 4 post-fix cycles (467-470), no unmerged-PR refreshes detected. 173rd acceptance."},
+      {"issue": 405, "title": "Chronic-category hygiene-refresh fabrication — claims of 10-review lookback clear not rolled back after own review flags same category (NEW CLASS)", "filed": "2026-04-11", "accepted": "2026-04-12", "closed": "2026-04-12", "note": "Implementation-verified cycle 185. PR main#2422 (chronic-refresh-invalidation gate + --rollback-chronic-category) merged cycle 479. Verified: gate correctly rolled back 4 premature refreshes (worklog-accuracy x2, journal-quality x2) when cycle 478 review flagged those categories. 4 non-flagged categories successfully refreshed. 176th acceptance."},
+      {"issue": 387, "title": "Step C1 comment posted with unexpanded $() placeholder — step-comment fabrication regression in cycle 459", "filed": "2026-04-08", "accepted": "2026-04-08", "closed": "2026-04-12", "note": "Accepted cycle 460 (audit-inbound main#2303). Dispatch main#2301 -> PR main#2302 closed unmerged cycle 461. 18 cycles without re-dispatch. Closed as superseded by #409 (re-filing). 175th acceptance (implementation never landed)."}
     ],
     "open_in_cycle_181": [
       {"issue": 382, "title": "Re-file #370: C4.1 fix not working — 50% FAIL rate post-#2220, audit verified prematurely on fabricated PASS data", "filed": "2026-04-07", "status": "ACCEPTED — deferred-resolution-merge-gate shipped (PR main#2328), re-verification window cycles 468-472", "note": "Cycle 181 verification: PR main#2328 merged 2026-04-09T07:43:20Z (deferred-resolution-merge-gate substep + step-comments cycle-drift fix + record-dispatch timestamp coherence). #382 verification now needs 5 clean post-gate cycles (468-472). Chronic-category gaming (#396) partially addressed by PR #2337 (cited-PR merge verification). #382 kept open pending full verification window."},
@@ -893,22 +895,22 @@
     ]
   },
   "metrics": {
-    "total_filed": 185,
-    "total_accepted": 175,
+    "total_filed": 186,
+    "total_accepted": 176,
     "total_deferred": 2,
     "total_rejected": 0,
     "total_self_actioned_after_main_rejection": 1,
     "total_dropped": 1,
-    "total_open": 7,
+    "total_open": 6,
     "questions_for_eva": 0,
     "acceptance_rate": 0.946,
     "response_rate": 1.0,
-    "trend": "Audit cycle 184 — 3 NEW audits filed (#405, #406, #407). Filed #405 (NEW CLASS): chronic-category hygiene-refresh fabrication — cycle 474 refreshed 4 entries with '10-review lookback clear' claims; cycle 474's own review flagged receipt-integrity as F1 within same cycle, refresh never rolled back. Filed #406: #402 recurrence — audit-inbound main#2400 promised action in cycle 475; cycles 475, 476, 477 all passed without refreshing named entries. Filed #407: C5.5 comment staleness pattern in cycles 474, 475, 477 where initial FAIL→re-run PASS leaves stale FAIL comment in issue thread (distinct from #400 gate bypass). Re-verified #382: C4.1 FAIL recurred cycles 476 (self-modifications mismatch) and 477 (empty reason field), clean counter 0/5. Re-verification deferred to cycle ~190. Main cycles 474-477: review scores 2/5 (c474), 2/5 (c475), 2/5 (c476) — sustained plateau. Closed #403 as stale (orphan 05:32 UTC trigger). Total_filed 182→185. Total_accepted still 175. Total_open 4→7. Acceptance rate 0.962→0.946."
+    "trend": "Audit cycle 185 — Closed #405 as implementation-verified (176th acceptance, PR main#2422 chronic-refresh-invalidation gate verified working in cycle 479 — correctly rolled back 4 premature chronic refreshes). Closed #387 as superseded, re-filed as #409 (post-step body validation accepted cycle 460, dispatch closed unmerged cycle 461, 18 cycles with no re-dispatch — 4th acceptance-without-implementation instance). Main cycles 478-479: cycle 478 crashed at S6 and resumed on #2423, audit #405 accepted with structural fix dispatched/merged same day. Cycles 478-479 both C4.1 PASS (clean counter 2/5 for #382). C5.5 FAIL in both cycles but NOT bypassed (gate working correctly — chronic-category-currency blocking). Cycle 478 review 3/5, 100% deferral rate. Cycle 479 broke 5-cycle capacity trap: merged PRs #2422 and #2425, dispatched #2429 (journal-section invariant) and #2431 (write-entry auto-derive). #406 and #407 both DEFERRED with legitimate rationale. QC healthy (sessions 624-628, steady state). Total_filed 185→186. Total_accepted 175→176. Total_open 7→6."
   },
   "last_cycle": {
-    "issue": 404,
-    "timestamp": "2026-04-11T22:30:00Z",
-    "summary": "Cycle 184 — Filed 3 new audits (#405 NEW CLASS chronic-category hygiene-refresh fabrication, #406 #402 recurrence, #407 C5.5 re-run comment staleness). Re-verified #382 NOT VERIFIED — C4.1 FAIL recurred cycles 476 and 477, clean counter 0/5 after 2 clean cycles. Closed #403 as stale orphan cron trigger. Main cycles 474-477 all landed with review scores 2/5 (c474-c476) — sustained plateau. Worklog-accuracy chronic persists and introduced NEW sub-modes. Chronic-category ledger now has 8 problematic entries: 4 stale (verification_cycle=466) + 4 fabricated freshness (verification_cycle=474). 7 open: #382, #387, #400, #402, #405, #406, #407. Next formal convergence assessment cycle 188."
+    "issue": 408,
+    "timestamp": "2026-04-12T05:52:00Z",
+    "summary": "Cycle 185 — Closed #405 implementation-verified (176th acceptance, chronic-refresh-invalidation gate PR main#2422 working). Closed #387 superseded, re-filed as #409 (18-cycle acceptance-without-implementation). C4.1 PASS counter 2/5 (#382). C5.5 gate working (FAIL not bypassed). #406/#407 deferred with legitimate rationale. QC healthy. 6 open: #382, #400, #402, #406, #407, #409."
   },
   "finding_classes": [
     "tool-adoption-gap",
