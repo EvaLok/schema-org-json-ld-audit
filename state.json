@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-04-13T22:35:00Z",
+  "last_updated": "2026-04-14T05:55:00Z",
   "main_repo": {
-    "last_commit_audited": "6aededc",
-    "last_orchestrator_issue_reviewed": 2480,
-    "orchestrator_cycle_count": 488,
+    "last_commit_audited": "86d37f4",
+    "last_orchestrator_issue_reviewed": 2498,
+    "orchestrator_cycle_count": 491,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
       "6 skills created: github-issues-comments, journal-entries, orchestrator-permissions, pr-review-workflow, schema-implementation, writing-skills",
@@ -633,8 +633,8 @@
   "recommendations": {
     "open": [
       {"issue": 402, "title": "Chronic-category verification_cycle staleness — 4 entries confirmed-holding but never re-verified, pipeline warning ignored for 11-12 cycles", "filed": "2026-04-10"},
-      {"issue": 406, "title": "Audit #402 accepted but not actioned — 3 cycles of non-action since promised deferral to cycle 475", "filed": "2026-04-11"},
-      {"issue": 415, "title": "Chronic category granularity too coarse for convergence — refresh/rollback cycle structurally non-convergent for 22 cycles", "filed": "2026-04-13"}
+      {"issue": 417, "title": "Audit #415 sub-categorization deployed but not utilized — review agent emits parent-level categories, convergence benefit unrealized", "filed": "2026-04-14"},
+      {"issue": 418, "title": "Review finding disposition dispatch_created used for planned-not-dispatched fixes — inflates perceived responsiveness", "filed": "2026-04-14"}
     ],
     "accepted": [
       {"issue": 2, "title": "Idle cycle spinning", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
@@ -880,7 +880,12 @@
       {"issue": 392, "title": "agent_sessions in_flight rows not reconciled when dispatch issues close unmerged — cycle 458 -> 461 recurrence", "filed": "2026-04-08", "note": "Cycle 458 observed same gap and applied manual Edit workaround; cycle 461 closed main#2301/#2302 unmerged without applying workaround; stale in_flight row present on master at audit cycle 179 start. Root cause: no tools/close-session exists; state-invariants invariant #16 doesn't cross-check in_flight sessions against GitHub issue state. Recommends Tier 1 pipeline-check agent-sessions-lifecycle substep (parallel to audit-inbound-lifecycle), Tier 2 close-session tool, Tier 3 extend invariant #16. Severity medium. Pattern: state-integrity sub-cause, tool-adoption-gap class. 176th filing."},
       {"issue": 393, "title": "dispatch-task / record-dispatch mutate frozen worklogs — 5+ cycles observed, capacity-deferred", "filed": "2026-04-08", "note": "Five consecutive cycles (453, 458, 459, 460, 461) observed fixup_latest_worklog_in_flight mutating prior cycle frozen worklog during work-phase dispatch-task/record-dispatch calls. Cycle 453 partial fix (close-out path) left dispatch/record path untouched. Each cycle applies git checkout HEAD -- manual workaround and tags as cycle N+ candidate; never dispatched (capacity). Recommends Tier 1 delete fixup_latest_worklog_in_flight from dispatch-task/src/main.rs and record-dispatch/src/main.rs, Tier 2 frozen-worklog-immutability substep verifying prior cycle worklog hash stability, Tier 3 deferred_tool_gaps structural tracking with max_deferral_cycles=3. Severity medium-high (structural observation-not-acted-on pattern). 177th filing."},
       {"issue": 400, "title": "C5.5 gate bypass in cycle 469 — review dispatched despite blocking pipeline FAIL (frozen-commit-verify)", "filed": "2026-04-10", "accepted": "2026-04-10", "closed": "2026-04-13", "note": "Implementation-verified over 7-cycle window (482-488). Cycle 487 critical test: C5.5 FAIL (frozen-commit-verify), fix applied, rerun PASS, review dispatched only after PASS. No gate bypass in any cycle. Structural fix (gate enforcement). 180th acceptance."},
-      {"issue": 407, "title": "Step C5.5 comment staleness on pipeline gate re-run — issue-thread audit trail shows FAIL while cycle state shows PASS", "filed": "2026-04-11", "accepted": "2026-04-11", "closed": "2026-04-13", "note": "Implementation-verified. PR main#2466 merged (C5.5 rerun receipt tracking). Cycle 487: C5.5 FAIL then 'rerun, supersedes prior' PASS posted as second comment. Structural (tool-level) fix. 181st acceptance."}
+      {"issue": 407, "title": "Step C5.5 comment staleness on pipeline gate re-run — issue-thread audit trail shows FAIL while cycle state shows PASS", "filed": "2026-04-11", "accepted": "2026-04-11", "closed": "2026-04-13", "note": "Implementation-verified. PR main#2466 merged (C5.5 rerun receipt tracking). Cycle 487: C5.5 FAIL then 'rerun, supersedes prior' PASS posted as second comment. Structural (tool-level) fix. 181st acceptance."},
+      {"issue": 415, "title": "Chronic category granularity too coarse for convergence — refresh/rollback cycle structurally non-convergent for 22 cycles", "filed": "2026-04-13", "accepted": "2026-04-13", "closed": "2026-04-14", "note": "Implementation-verified. PR main#2490 merged (sub-category support for chronic tracking). Infrastructure in place but not yet utilized — follow-up filed as #417. 182nd acceptance."}
+    ],
+    "newly_resolved_in_cycle_189": [
+      {"issue": 415, "title": "Chronic category granularity — sub-categorization", "closed": "2026-04-14", "note": "Implementation-verified. PR main#2490 merged. Follow-up #417 filed for adoption gap. 182nd acceptance."},
+      {"issue": 406, "title": "Audit #402 non-action", "closed": "2026-04-14", "note": "Superseded by root cause fix (#415 → PR main#2490). Non-action complaint resolved via alternative approach."}
     ],
     "newly_resolved_in_cycle_188": [
       {"issue": 400, "title": "C5.5 gate bypass in cycle 469", "closed": "2026-04-13", "note": "Implementation-verified. 7-cycle window including C5.5 FAIL scenario (cycle 487). 180th acceptance."},
@@ -906,22 +911,22 @@
     ]
   },
   "metrics": {
-    "total_filed": 189,
-    "total_accepted": 181,
+    "total_filed": 191,
+    "total_accepted": 182,
     "total_deferred": 2,
     "total_rejected": 1,
     "total_self_actioned_after_main_rejection": 1,
     "total_dropped": 1,
     "total_open": 3,
     "questions_for_eva": 0,
-    "acceptance_rate": 0.958,
+    "acceptance_rate": 0.953,
     "response_rate": 1.0,
-    "trend": "Audit cycle 188 (FORMAL CONVERGENCE ASSESSMENT). Closed #400 implementation-verified (180th acceptance, C5.5 gate bypass fix, 7-cycle window). Closed #407 implementation-verified (181st acceptance, PR main#2466 rerun receipts). Closed #413 rejection-acknowledged (first factual rejection — wrong field name, audit error). Filed #415 (chronic category granularity too coarse for convergence, 22-cycle non-convergent refresh/rollback pattern). Main repo cycles 486-488: C4.1 PASS/PASS/FAIL-then-fixed. C5.5: 486 PASS, 487 FAIL→rerun PASS (fix working), 488 PASS. Step comments 28/30/27 (compliance sustained). Review scores 3/2/2. Chronic entries worklog-accuracy/journal-quality/state-integrity ALL rolled back from vc 487 to 466 in cycle 488 (22 cycles stale). QC healthy (sessions 637-639, 92/92 coverage, 73/73 parity, justified idle). CONVERGENCE VERDICT: no convergence. Chronic refresh/rollback cycle is stable but non-convergent. 3 open: #402, #406, #415."
+    "trend": "Audit cycle 189. Closed #415 implementation-verified (182nd acceptance — PR main#2490 sub-category infrastructure, fast turnaround). Closed #406 superseded (root cause addressed via #415 path). Filed #417 (sub-categorization deployed but not utilized — review agent still parent-level, 190th filing) and #418 (dispatch_created disposition inflated — planned-not-dispatched, 191st filing). Main repo cycles 489-491: C4.1 PASS/PASS/PASS. C5.5 PASS all 3. Step comments 28/28/28 (compliance sustained). Review scores 2/5 and 2/5 (489-490, adversarial calibration holding). Sub-category infrastructure (PR #2490) merged cycle 490 — journal-quality refreshed to vc 491 (positive signal), but state-integrity and review-evidence rolled back in cycle 491 (parent-level findings still invalidate). worklog-accuracy x2 still vc 466 (25 cycles stale). Disposition inflation: cycle 490 F1/F3 classified dispatch_created with no agent_sessions entries. QC healthy (session 640, 92/92 coverage, 73/73 parity). 3 open: #402, #417, #418."
   },
   "last_cycle": {
-    "issue": 414,
-    "timestamp": "2026-04-13T22:35:00Z",
-    "summary": "Cycle 188 (FORMAL CONVERGENCE ASSESSMENT) — Closed #400 (180th acceptance, gate bypass fix verified), #407 (181st acceptance, rerun receipts verified), #413 (rejection acknowledged, audit error). Filed #415 (chronic category granularity non-convergence, 189th filing). Cycles 486-488: C5.5 487 FAIL→rerun PASS (fix working). Chronic entries rolled back 487→466 (22 cycles stale). QC healthy. 3 open: #402, #406, #415."
+    "issue": 416,
+    "timestamp": "2026-04-14T05:55:00Z",
+    "summary": "Cycle 189 — Closed #415 (182nd acceptance, sub-category infrastructure verified via PR main#2490). Closed #406 (superseded by root cause fix). Filed #417 (sub-categorization adoption gap, 190th filing) and #418 (dispatch_created disposition inflation, 191st filing). Cycles 489-491: All pipeline gates PASS. Step comments 28/28/28. Review 2/5 sustained. journal-quality refreshed to vc 491 (positive). state-integrity/review-evidence rolled back cycle 491. QC healthy (session 640). 3 open: #402, #417, #418."
   },
   "finding_classes": [
     "tool-adoption-gap",
@@ -949,7 +954,7 @@
       "journal-quality": 2,
       "receipt-integrity": 0
     },
-    "trend": "FORMAL CONVERGENCE ASSESSMENT — Cycle 188. Review scores (c482-487): 3, 2, 2, 2, 3, 2 — distribution stable at 2/5 dominant (adversarial reviews functioning). CHRONIC NON-CONVERGENCE DIAGNOSED: worklog-accuracy, journal-quality, state-integrity all at verification_cycle 466 for 22 cycles. Cycle 487 refreshed all 3 to vc 487; cycle 487 review flagged all 3 for new sub-instances; cycle 488 rolled back all 3 to vc 466. This is the 4th consecutive refresh/rollback cycle for these entries. ROOT CAUSE FILED (#415): category granularity too coarse. Categories cover many sub-instances; each fix addresses one but review finds another. Rollback gate (PR #2422) correctly prevents premature verification but makes convergence structurally impossible at current granularity. receipt-integrity and process-adherence CLEAN (0 and 1 appearances in last 6 reviews respectively, at vc 479 — stable fixes holding). code-change-quality at vc 486 (stable). POSITIVE ARC: #400 and #407 verified and closed. Gate bypass and rerun staleness both structurally fixed. Step compliance sustained (28/30/27). Pipeline pipeline working (catches issues, orchestrator fixes). NEGATIVE ARC: #413 rejected — first factual audit error. Chronic staleness deepening (22 cycles). #402/#406 still open. CONVERGENCE VERDICT: MIXED. Process infrastructure improving (gates, reruns, step comments). Chronic category system non-convergent — needs architectural fix (#415). Acceptance rate 95.8% (181/189). Total open 3 (down from 5). Next formal assessment cycle 193."
+    "trend": "Cycle 189 (post-convergence assessment). Sub-categorization infrastructure landed (PR main#2490, audit #415 accepted). PARTIAL PROGRESS: journal-quality (both entries) refreshed to vc 491 — first time in 25 cycles a chronic entry advanced past vc 466. But state-integrity and review-evidence rolled back from vc 490 to vc 466 in cycle 491 (same pattern continues). worklog-accuracy x2 still vc 466. ROOT CAUSE: review agent emits parent-level categories, sub-categorization infrastructure not utilized yet (#417 filed). 6/10 chronic entries now refreshed (vc >= 486), 4/10 stuck at vc 466. Review scores: 2/5, 2/5 (cycles 489-490). Step compliance: 28/28/28. Disposition accuracy gap found: cycle 490 classified 2 findings as dispatch_created without agent_sessions entries (#418 filed). Acceptance rate 95.3% (182/191). 3 open: #402, #417, #418. Next formal assessment cycle 193."
   },
   "eva_directives_processed": [
     {"issue": 331, "title": "Assertive recommendations mandate", "processed_cycle": 154, "changes": ["Default FAIL gates", "No behavioral options", "Track time-to-real-adoption", "Convergence assessments every 5 cycles", "Performative acceptance finding class", "Flag vanity metrics"]}

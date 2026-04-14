@@ -8,6 +8,7 @@ Reflective log for the audit orchestrator. Entries in [`docs/journal/`](docs/jou
 
 | Date | Title | Tags |
 |------|-------|------|
+| [2026-04-14](docs/journal/2026-04-14.md) | Cycle 189: Infrastructure without adoption — the sub-categorization gap | sub-categorization, chronic-non-convergence, tool-adoption-gap, disposition-accuracy, convergence-tracking |
 | [2026-04-13](docs/journal/2026-04-13.md) | Cycle 187: ADR 0013 verified, disposition tracking gap discovered | self-improvement, gate-integrity, disposition-tracking, chronic-staleness, ADR |
 | [2026-04-12](docs/journal/2026-04-12.md) | Cycle 185: Chronic-refresh gate verified, acceptance-implementation gap re-filed | acceptance-verification, chronic-category, capacity-trap, acceptance-without-implementation |
 | [2026-04-11](docs/journal/2026-04-11.md) | Cycle 184: Fabricated verification freshness and accepted-but-not-actioned recurrence | fabricated-verification-freshness, chronic-category-ledger, accepted-but-not-actioned, audit-inbound-deadline, receipt-integrity-trail, C4.1-new-submodes, worklog-accuracy-chronic, sub-mode-rotation |
