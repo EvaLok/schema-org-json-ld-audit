@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-04-14T05:55:00Z",
+  "last_updated": "2026-04-14T22:30:00Z",
   "main_repo": {
-    "last_commit_audited": "86d37f4",
-    "last_orchestrator_issue_reviewed": 2498,
-    "orchestrator_cycle_count": 491,
+    "last_commit_audited": "ca41970",
+    "last_orchestrator_issue_reviewed": 2513,
+    "orchestrator_cycle_count": 494,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
       "6 skills created: github-issues-comments, journal-entries, orchestrator-permissions, pr-review-workflow, schema-implementation, writing-skills",
@@ -632,9 +632,7 @@
   },
   "recommendations": {
     "open": [
-      {"issue": 402, "title": "Chronic-category verification_cycle staleness — 4 entries confirmed-holding but never re-verified, pipeline warning ignored for 11-12 cycles", "filed": "2026-04-10"},
-      {"issue": 417, "title": "Audit #415 sub-categorization deployed but not utilized — review agent emits parent-level categories, convergence benefit unrealized", "filed": "2026-04-14"},
-      {"issue": 418, "title": "Review finding disposition dispatch_created used for planned-not-dispatched fixes — inflates perceived responsiveness", "filed": "2026-04-14"}
+      {"issue": 420, "title": "Sub-categorization adoption chain incomplete after 3 implementation cycles — three broken links remain (review agent, rollback gate, immediate invalidation)", "filed": "2026-04-14"}
     ],
     "accepted": [
       {"issue": 2, "title": "Idle cycle spinning", "filed": "2026-02-28", "accepted": "2026-02-28", "closed": "2026-02-28"},
@@ -881,7 +879,15 @@
       {"issue": 393, "title": "dispatch-task / record-dispatch mutate frozen worklogs — 5+ cycles observed, capacity-deferred", "filed": "2026-04-08", "note": "Five consecutive cycles (453, 458, 459, 460, 461) observed fixup_latest_worklog_in_flight mutating prior cycle frozen worklog during work-phase dispatch-task/record-dispatch calls. Cycle 453 partial fix (close-out path) left dispatch/record path untouched. Each cycle applies git checkout HEAD -- manual workaround and tags as cycle N+ candidate; never dispatched (capacity). Recommends Tier 1 delete fixup_latest_worklog_in_flight from dispatch-task/src/main.rs and record-dispatch/src/main.rs, Tier 2 frozen-worklog-immutability substep verifying prior cycle worklog hash stability, Tier 3 deferred_tool_gaps structural tracking with max_deferral_cycles=3. Severity medium-high (structural observation-not-acted-on pattern). 177th filing."},
       {"issue": 400, "title": "C5.5 gate bypass in cycle 469 — review dispatched despite blocking pipeline FAIL (frozen-commit-verify)", "filed": "2026-04-10", "accepted": "2026-04-10", "closed": "2026-04-13", "note": "Implementation-verified over 7-cycle window (482-488). Cycle 487 critical test: C5.5 FAIL (frozen-commit-verify), fix applied, rerun PASS, review dispatched only after PASS. No gate bypass in any cycle. Structural fix (gate enforcement). 180th acceptance."},
       {"issue": 407, "title": "Step C5.5 comment staleness on pipeline gate re-run — issue-thread audit trail shows FAIL while cycle state shows PASS", "filed": "2026-04-11", "accepted": "2026-04-11", "closed": "2026-04-13", "note": "Implementation-verified. PR main#2466 merged (C5.5 rerun receipt tracking). Cycle 487: C5.5 FAIL then 'rerun, supersedes prior' PASS posted as second comment. Structural (tool-level) fix. 181st acceptance."},
-      {"issue": 415, "title": "Chronic category granularity too coarse for convergence — refresh/rollback cycle structurally non-convergent for 22 cycles", "filed": "2026-04-13", "accepted": "2026-04-13", "closed": "2026-04-14", "note": "Implementation-verified. PR main#2490 merged (sub-category support for chronic tracking). Infrastructure in place but not yet utilized — follow-up filed as #417. 182nd acceptance."}
+      {"issue": 415, "title": "Chronic category granularity too coarse for convergence — refresh/rollback cycle structurally non-convergent for 22 cycles", "filed": "2026-04-13", "accepted": "2026-04-13", "closed": "2026-04-14", "note": "Implementation-verified. PR main#2490 merged (sub-category support for chronic tracking). Infrastructure in place but not yet utilized — follow-up filed as #417. 182nd acceptance."},
+      {"issue": 418, "title": "Review finding disposition dispatch_created used for planned-not-dispatched fixes — inflates perceived responsiveness", "filed": "2026-04-14", "accepted": "2026-04-14", "closed": "2026-04-14", "note": "Partial implementation verified. PR main#2505 merged (state-invariants 22nd invariant for dispatch_created without matching agent_sessions, 96 historical cases flagged at WARN). Item 2 (definition tightening) partial via cycle 491 worklog self-correction. Item 3 (retroactive correction of 96 historical cases) deferred. Structural fix is operational. 183rd acceptance."}
+    ],
+    "newly_resolved_in_cycle_190": [
+      {"issue": 420, "title": "Sub-categorization adoption chain incomplete — three broken links", "filed": "2026-04-14", "note": "192nd filing. Comprehensive follow-up to #417 covering review agent (still parent-level findings cycle 493), rollback gate (Item 3 deferred without tracking — sub-entries invalidated by parent findings cycle 494), and immediate invalidation (vc=0 entries cannot survive same-cycle review)."},
+      {"issue": 418, "title": "Review finding disposition dispatch_created", "closed": "2026-04-14", "note": "183rd acceptance — partial implementation verified. State-invariant operational, 96 historical fabrications flagged at WARN."},
+      {"issue": 417, "title": "Sub-categorization deployed but not utilized", "closed": "2026-04-14", "note": "Superseded by #420. Items 1+2 partial implementation, Item 3 deferred — convergence benefit unrealized."},
+      {"issue": 402, "title": "Chronic-category verification_cycle staleness", "closed": "2026-04-14", "note": "Superseded by #420 (root diagnosis of why staleness persists)."},
+      {"issue": 421, "title": "Self-locking pipeline check (chronic-category-currency could block its own fixes)", "filed": "2026-04-14", "note": "question-for-eva. Architectural concern raised in cycle 494 worklog but not filed by orchestrator. Workaround is fragile per-tool exclusion in record-dispatch."}
     ],
     "newly_resolved_in_cycle_189": [
       {"issue": 415, "title": "Chronic category granularity — sub-categorization", "closed": "2026-04-14", "note": "Implementation-verified. PR main#2490 merged. Follow-up #417 filed for adoption gap. 182nd acceptance."},
@@ -911,22 +917,22 @@
     ]
   },
   "metrics": {
-    "total_filed": 191,
-    "total_accepted": 182,
+    "total_filed": 192,
+    "total_accepted": 183,
     "total_deferred": 2,
     "total_rejected": 1,
     "total_self_actioned_after_main_rejection": 1,
     "total_dropped": 1,
-    "total_open": 3,
-    "questions_for_eva": 0,
+    "total_open": 1,
+    "questions_for_eva": 1,
     "acceptance_rate": 0.953,
     "response_rate": 1.0,
-    "trend": "Audit cycle 189. Closed #415 implementation-verified (182nd acceptance — PR main#2490 sub-category infrastructure, fast turnaround). Closed #406 superseded (root cause addressed via #415 path). Filed #417 (sub-categorization deployed but not utilized — review agent still parent-level, 190th filing) and #418 (dispatch_created disposition inflated — planned-not-dispatched, 191st filing). Main repo cycles 489-491: C4.1 PASS/PASS/PASS. C5.5 PASS all 3. Step comments 28/28/28 (compliance sustained). Review scores 2/5 and 2/5 (489-490, adversarial calibration holding). Sub-category infrastructure (PR #2490) merged cycle 490 — journal-quality refreshed to vc 491 (positive signal), but state-integrity and review-evidence rolled back in cycle 491 (parent-level findings still invalidate). worklog-accuracy x2 still vc 466 (25 cycles stale). Disposition inflation: cycle 490 F1/F3 classified dispatch_created with no agent_sessions entries. QC healthy (session 640, 92/92 coverage, 73/73 parity). 3 open: #402, #417, #418."
+    "trend": "Audit cycle 190. Closed #418 (183rd acceptance — PR main#2505 merged, state-invariant 22 catches dispatch_created fabrications at WARN, 96 historical cases flagged). Closed #417 superseded by #420 (sub-categorization Items 1+2 implemented but Item 3 — rollback gate refinement — deferred without follow-up tracking). Closed #402 superseded by #420 (root diagnosis of staleness). Filed #420 (192nd filing — sub-categorization adoption chain has three broken links: review agent still parent-level cycle 493, rollback gate not sub-category aware, sub-entries created vc=0 immediately invalidated cycle 494). Filed #421 question-for-eva (self-locking pipeline check observed in cycle 494 worklog but not filed by orchestrator). Main repo cycles 492-494: 6 PRs merged (#2500, #2505, #2507, #2509, #2512, #2495 partial), #2514 in flight, #2517 cycle 494 review pending. Cycle 493 review 3/5 (improvement from 2/5 sustained). Sub-category entries created cycle 493 (worklog-accuracy/scope-boundary, state-integrity/last-cycle-summary-stale) immediately rolled back to vc=0 cycle 494 — convergence benefit STILL zero despite 4 cycles implementation effort. record-dispatch idempotency bug discovered cycle 494 (honest self-report). QC healthy (session 645, 92/92 coverage, 73/73 parity, 88/88 inventory, package ca41970). 1 open: #420."
   },
   "last_cycle": {
-    "issue": 416,
-    "timestamp": "2026-04-14T05:55:00Z",
-    "summary": "Cycle 189 — Closed #415 (182nd acceptance, sub-category infrastructure verified via PR main#2490). Closed #406 (superseded by root cause fix). Filed #417 (sub-categorization adoption gap, 190th filing) and #418 (dispatch_created disposition inflation, 191st filing). Cycles 489-491: All pipeline gates PASS. Step comments 28/28/28. Review 2/5 sustained. journal-quality refreshed to vc 491 (positive). state-integrity/review-evidence rolled back cycle 491. QC healthy (session 640). 3 open: #402, #417, #418."
+    "issue": 419,
+    "timestamp": "2026-04-14T22:30:00Z",
+    "summary": "Cycle 190 — Closed #418 (183rd acceptance, dispatch_created state-invariant operational, 96 historical fabrications flagged at WARN). Closed #417 and #402 superseded by #420 (comprehensive follow-up). Filed #420 (192nd filing — sub-categorization adoption chain incomplete after 4 cycles implementation, three broken links: review agent parent-level, rollback gate not sub-category aware, vc=0 immediate invalidation). Filed #421 question-for-eva (self-locking pipeline check). Cycles 492-494 audited: 6 PRs merged. Cycle 493 review 3/5 (small improvement). Sub-entries created cycle 493 immediately rolled back cycle 494 — convergence benefit STILL zero. record-dispatch idempotency bug self-reported. QC healthy (session 645, package ca41970). 1 open: #420."
   },
   "finding_classes": [
     "tool-adoption-gap",
