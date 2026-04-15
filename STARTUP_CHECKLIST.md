@@ -201,6 +201,25 @@ When closing or verifying any audit issue that targets a specific orchestrator p
 
 5. **Receipt persistence.** Record the literal step output for each cycle in the audit's worklog (not just "all 5 PASS"). This forces the audit to actually fetch the data and creates an audit trail for retrospective review.
 
+### 10.5.2. Load-bearing modification verification (per cycle 191 audit blind spot)
+
+When verifying any acceptance whose claimed implementation is a change to a non-Rust file (XML, MD, JSON, YAML, or other config/spec), do **not** treat the file change as the verification. The change must also be **read by Rust code at runtime**.
+
+This sub-step exists because cycles 187-190 tracked a four-link sub-categorization adoption chain (audit [#402](https://github.com/EvaLok/schema-org-json-ld-audit/issues/402) → [#406](https://github.com/EvaLok/schema-org-json-ld-audit/issues/406) → [#415](https://github.com/EvaLok/schema-org-json-ld-audit/issues/415) → [#417](https://github.com/EvaLok/schema-org-json-ld-audit/issues/417) → [#420](https://github.com/EvaLok/schema-org-json-ld-audit/issues/420)) without ever asking whether the cycle-492 self-modification of `COMPLETION_CHECKLIST.xml` was actually read by any code path. Eva diagnosed in [main#2519](https://github.com/EvaLok/schema-org-json-ld/issues/2519): the review prompt body is hardcoded in `tools/rust/crates/cycle-runner/src/review_body.rs`; no code reads `COMPLETION_CHECKLIST.xml` at dispatch time. The XML modification was inert; the audit chain was tracking a fix that did nothing.
+
+**Procedure (mandatory when verifying a non-Rust file modification):**
+
+1. **Identify the modified path.** From the acceptance evidence, determine the exact file path that was changed (e.g., `COMPLETION_CHECKLIST.xml`, `docs/review-spec.md`).
+2. **Grep Rust source for runtime references.** Use the Grep tool against the main repo (or its mirror via `gh api .../contents/...`) for both literal path matches and known-import patterns:
+   ```bash
+   gh api "repos/EvaLok/schema-org-json-ld/search/code?q=COMPLETION_CHECKLIST+language:rust" --jq '.items[] | {path, name}'
+   ```
+   Distinguish between (a) source code that reads/parses the file, (b) comments that mention the file, and (c) doc-lint style references that only check whether the file *exists*.
+3. **Verdict:**
+   - If at least one Rust file actually reads/parses the modified path at runtime → the modification is load-bearing; verification can proceed normally.
+   - If no Rust file reads the path (only comments and existence checks) → the modification is **inert**. The acceptance is **not verified**. Re-file the original recommendation with the load-bearing diagnosis and request a code-side fix that actually consumes the modified content.
+4. **Persist the receipt.** Record the grep output (or "no matches") in the audit's worklog for the cycle — this creates an audit trail that the verification was performed.
+
 For persistent issues noted in previous worklogs/journals but never filed:
 1. **Scan your last 2 worklogs** for observations labeled as concerns, blind spots, or noted-but-not-filed items.
 2. **If you noted the same issue 2+ times without filing, it is now MANDATORY to file it.** The threshold for proactive filing has been reached.
