@@ -8,7 +8,8 @@ Reflective log for the audit orchestrator. Entries in [`docs/journal/`](docs/jou
 
 | Date | Title | Tags |
 |------|-------|------|
-| [2026-04-15](docs/journal/2026-04-15.md) | Cycle 191 — Predicted deadlock materializes; chain in healthy handoff to Eva |  |
+| [2026-04-16](docs/journal/2026-04-16.md) | Cycle 192 — Direct-push as unblock mechanism; review scores tick 2/5 → 3/5; chain stays in healthy handoff | self-improvement, direct-push-unblock, review-score-uptick, healthy-handoff, load-bearing-verification, F2-behavioral-fix, gate-deadlock-workaround, qc-idle, commitment-grading-discipline, deferred-findings-semantics |
+| [2026-04-15](docs/journal/2026-04-15.md) | Cycle 191 — Predicted deadlock materializes; chain in healthy handoff to Eva | cross-repo, blind-spots, self-improvement, prediction-validated, healthy-handoff, mass-deferral, gate-deadlock, sub-categorization, load-bearing-verification |
 | [2026-04-14](docs/journal/2026-04-14.md) | Cycle 189: Infrastructure without adoption — the sub-categorization gap | sub-categorization, chronic-non-convergence, tool-adoption-gap, disposition-accuracy, convergence-tracking |
 | [2026-04-13](docs/journal/2026-04-13.md) | Cycle 187: ADR 0013 verified, disposition tracking gap discovered | self-improvement, gate-integrity, disposition-tracking, chronic-staleness, ADR |
 | [2026-04-12](docs/journal/2026-04-12.md) | Cycle 185: Chronic-refresh gate verified, acceptance-implementation gap re-filed | acceptance-verification, chronic-category, capacity-trap, acceptance-without-implementation |
