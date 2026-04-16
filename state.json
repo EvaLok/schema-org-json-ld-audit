@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-04-16T05:47:29Z",
+  "last_updated": "2026-04-16T19:05:33Z",
   "main_repo": {
-    "last_commit_audited": "dd11f16",
-    "last_orchestrator_issue_reviewed": 2551,
-    "orchestrator_cycle_count": 503,
+    "last_commit_audited": "714da6f",
+    "last_orchestrator_issue_reviewed": 2557,
+    "orchestrator_cycle_count": 505,
     "self_improvement_actions": [
       "AGENTS.md updated for PHPStan level 6 and enum namespace (2026-02-26)",
       "6 skills created: github-issues-comments, journal-entries, orchestrator-permissions, pr-review-workflow, schema-implementation, writing-skills",
@@ -333,7 +333,7 @@
     "directory_layout": "php/src/, php/test/, ts/src/, ts/test/ (restructured 2026-03-01, PR #263; TS port COMPLETE 2026-03-01, 14 PRs — 89/89 schema classes including SeekToAction)"
   },
   "qc_repo": {
-    "last_commit_audited": "748f7bb",
+    "last_commit_audited": "02b5cca",
     "last_orchestrator_issue_reviewed": 600,
     "orchestrator_cycle_count": 600,
     "self_improvement_actions": [
@@ -917,22 +917,22 @@
     ]
   },
   "metrics": {
-    "total_filed": 192,
+    "total_filed": 193,
     "total_accepted": 183,
     "total_deferred": 2,
     "total_rejected": 1,
     "total_self_actioned_after_main_rejection": 1,
     "total_dropped": 1,
-    "total_open": 1,
-    "questions_for_eva": 1,
-    "acceptance_rate": 0.953,
+    "total_open": 2,
+    "questions_for_eva": 0,
+    "acceptance_rate": 0.948,
     "response_rate": 1.0,
-    "trend": "Audit cycle 192. No closures, no new filings — observational cycle. Main orchestrator cycles 501-503 audited (cycle 503 review pending, not yet merged). Cycle 501/502 review scores 3/5 (up from 2/5 band in 495-500), first uptick in weeks. Cycle 503 landed substantive work: two direct-push structural fixes (commit e43102b + 5 tests for Open-questions state-aware validation, commit 8862abc + 4 tests for orchestrator model identity separation), one behavioral fix (commitment monitoring/delivery split applied to cycle 503 itself — honestly graded its own cycle 502 commitment 1 as 'Not followed'), one deferral resolved at deadline (cycle 498 state-integrity via agent_sessions backfill of main#2531/main#2533), one staleness escalation comment posted on main#2542 (3-cycle signoff-timeout branch). Direct-push for tool-scoped fixes emerges as a valid unblock mechanism while the main Copilot-dispatch gate remains deadlocked — cycle-499 F1/F2/F3 and freeze_worklog_at_c5_5 payloads still unfiled. Eva has not responded on main#2542 or main#2519 yet. Chain #420 + #421 stays in healthy handoff. QC at 3 consecutive idle cycles (QC itself flagged >3 as cron-frequency reduction threshold); no issues. 1 open audit-outbound: #420; 1 question-for-eva: #421."
+    "trend": "Audit cycle 193 (first Opus 4.7 cycle, observation-window mode per Eva #425). Main orchestrator upgraded claude-opus-4-6 → claude-opus-4-7 at 2026-04-16T18:18Z (commit 3db8b24), cron reduced 6x/day → 4x/day. QC scheduled cron disabled entirely. Eva direct-push at 18:50Z (commit 714da6f) cleared main#2542 state-cleanup deadlock by dropping two chronic-category deferrals (infrastructure-consistency, complacency-detection). #421 (question-for-eva) closed/superseded. Main cycles 504-505 completed post-upgrade-prep; 505 opening comment still reported Claude Opus 4.6 (correct at that point). Observational finding filed as #427: DEFAULT_ORCHESTRATOR_MODEL constant in tools/rust/crates/state-schema/src/lib.rs still hardcoded to 'Claude Opus 4.6' — will misreport model on every cycle from 506 onward. Filed as fact-integrity defect (concrete bug), NOT as methodology change (observation-window restraint respected). Structural critique — static-data model identity — deferred to post-observation-window review per Eva #2560. 2 open audit-outbound: #420 (sub-categorization adoption chain, awaiting Eva on main#2519), #427 (model constant). 0 question-for-eva open."
   },
   "last_cycle": {
-    "issue": 424,
-    "timestamp": "2026-04-16T05:47:29Z",
-    "summary": "Cycle 192 — Observational cycle, no new filings. Main repo advanced 500 → 503, last commit 87f7cfa → dd11f16. Cycle 503 material substance: direct-push structural fixes landed for cycle-502 F1 (journal-quality — commit e43102b adds validate_open_questions_against_state in tools/rust/crates/validate-docs/src/main.rs + 5 unit tests; fails doc-validation when journal says Open questions: None but state has pending open_questions_for_eva) and F3 (process-adherence — commit 8862abc adds DEFAULT_ORCHESTRATOR_MODEL constant to state-schema, cycle-runner startup.rs now reports Claude Opus 4.6 instead of Copilot default gpt-5.4 + 4 unit tests). F2 (self-sealing commitments with OR-clauses) applied behaviorally: cycle 503 journal separates monitoring from delivery, and cycle 503 honestly self-graded its cycle 502 commitment 1 as 'Not followed' per the new F2 rule. State-integrity deferral from cycle 498 resolved at deadline via process-review --resolve-deferral (receipt b01d35a, backfilling PR main#2531/main#2533 into agent_sessions). #2542 staleness escalation comment posted (3-cycle signoff-timeout branch; wall-clock 7.5h still under 24h). Eva has not responded yet on #2542 or #2519. Positive trend: review scores edging from 2/5 band toward 3/5 (501: 3/5, 502: 3/5). Direct-push for tool-scoped fixes emerges as a valid unblock mechanism while Copilot-dispatch gate remains deadlocked. Chronic category structural fixes still gate-blocked for cycle-499 F1/F2/F3 and freeze_worklog_at_c5_5 payloads. QC idle at 3 consecutive cycles (session 245, package 8be4b4e, 92/92 coverage, 73/73 parity, 0 E2E errors; QC itself flagged >3 as cron-frequency reduction threshold). Existing audit chain #420 + #421 stays in healthy handoff to Eva — no new audit-outbound filed. 1 open audit-outbound: #420; 1 question-for-eva: #421."
+    "issue": 426,
+    "timestamp": "2026-04-16T19:05:33Z",
+    "summary": "Cycle 193 — First Opus 4.7 cycle (observation-window mode per Eva #425; cron reduced to 1x/day at 03 UTC). 1 new filing: #427 — audit-outbound on DEFAULT_ORCHESTRATOR_MODEL constant hardcoded to 'Claude Opus 4.6' in tools/rust/crates/state-schema/src/lib.rs despite main's orchestrator.yml upgrade to claude-opus-4-7 at 18:18Z (commit 3db8b24); next main cycle 506 (~21 UTC) will misreport running model. Filed as fact-integrity defect (concrete bug, direct-push eligible). Structural critique of cycle 503 F3 fix design (static data vs runtime config) deferred to post-observation-window per Eva #2560. Main repo advanced 503 → 505: cycle 504 worklog, cycle 505 standard close via main#2557. Eva direct-push at 18:50Z (714da6f) cleared main#2542 deadlock by dropping two chronic-category deferrals (infrastructure-consistency 88 cycles overdue, complacency-detection 33 cycles overdue); both continue via chronic-category-tracking machinery (audit #420 thread). Audit #421 (question-for-eva, self-locking gate) closed/superseded by Eva's main#2542 decision — deadlock resolved at deadline, not via 'answer the question' path but via unblock-and-proceed. QC cron disabled entirely (only workflow_dispatch remains) — Eva's direct response to QC 4-idle-cycle staleness. Review scores band remains at 3/5 (first non-regression posted last cycle). Chronic category work proceeds via #420 — structural fixes for deferral-accumulation + chronic-category-currency detectors now unblocked post-#2542. Open: #420, #427. Questions for Eva: 0."
   },
   "finding_classes": [
     "tool-adoption-gap",
