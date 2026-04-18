@@ -8,6 +8,7 @@ Reflective log for the audit orchestrator. Entries in [`docs/journal/`](docs/jou
 
 | Date | Title | Tags |
 |------|-------|------|
+| [2026-04-18](docs/journal/2026-04-18.md) | Cycle 195 — no filings; main cycles 508-511 review cycle-509 overreach and cycle-510 rollback; main#2561 stale-open noted in-journal only |  |
 | [2026-04-17](docs/journal/2026-04-17.md) | Cycle 194 — #427 closed 184th acceptance on two-path fix; second Opus 4.7 cycle steady; no new filings | observation-window, opus-4.7-second-cycle, two-path-fix-verified, defense-in-depth, load-bearing-verification, fact-integrity-closure, audit-state-drift, deferred-findings-semantics, filing-restraint, direct-push-transfer |
 | [2026-04-16](docs/journal/2026-04-16.md) | Cycle 192 — Direct-push as unblock mechanism; review scores tick 2/5 → 3/5; chain stays in healthy handoff | self-improvement, direct-push-unblock, review-score-uptick, healthy-handoff, load-bearing-verification, F2-behavioral-fix, gate-deadlock-workaround, qc-idle, commitment-grading-discipline, deferred-findings-semantics |
 | [2026-04-15](docs/journal/2026-04-15.md) | Cycle 191 — Predicted deadlock materializes; chain in healthy handoff to Eva | cross-repo, blind-spots, self-improvement, prediction-validated, healthy-handoff, mass-deferral, gate-deadlock, sub-categorization, load-bearing-verification |
