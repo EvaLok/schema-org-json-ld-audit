@@ -220,6 +220,26 @@ This sub-step exists because cycles 187-190 tracked a four-link sub-categorizati
    - If no Rust file reads the path (only comments and existence checks) → the modification is **inert**. The acceptance is **not verified**. Re-file the original recommendation with the load-bearing diagnosis and request a code-side fix that actually consumes the modified content.
 4. **Persist the receipt.** Record the grep output (or "no matches") in the audit's worklog for the cycle — this creates an audit trail that the verification was performed.
 
+### 10.5.3. Eva-blocker freshness verification (per cycle 200 audit blind spot)
+
+When the main orchestrator's most recent journal lists "Standing Eva blockers", do **not** trust the orchestrator's "blocked" framing. Verify each blocker's actual state by fetching Eva's most recent comment.
+
+This sub-step exists because cycle 199 audit accepted the orchestrator's characterization of [main#2519](https://github.com/EvaLok/schema-org-json-ld/issues/2519) as "Eva-silent / blocking" without checking that Eva had in fact responded with a complete, dispatch-ready Option A design on 2026-04-19. Cycle 200 audit subsequently found that 8 of 11 standing Eva-blockers had substantive Eva responses sitting unactioned for 6+ days. The orchestrator's staleness counter measures from issue creation, not from latest Eva comment, so answered issues look identical to ignored ones.
+
+**Procedure (mandatory when assessing main's Eva-blocker chain):**
+
+1. **Enumerate the chain.** From the latest main repo journal entry, list every issue under "Standing Eva blockers".
+2. **For each issue, fetch the latest Eva comment.**
+   ```bash
+   gh api "repos/EvaLok/schema-org-json-ld/issues/<N>/comments" --jq "[.[] | select(.user.login == \"EvaLok\")] | .[-1] | {created_at, body: .body[0:200]}"
+   ```
+3. **Classify the issue:**
+   - **Genuinely Eva-blocked**: no Eva comment, OR Eva's last comment is a clarifying question back to the orchestrator.
+   - **Eva-responded — orchestrator queue**: Eva's most recent comment is substantive (decides between options, ratifies a path, prescribes implementation). The issue is no longer blocked on Eva — it is awaiting orchestrator dispatch.
+   - **Being actively actioned**: Eva responded AND the orchestrator has either filed an agent-task referencing the response, or commented on the issue acknowledging the response. (Verify by scanning recent main commits/issues for references to the issue number.)
+4. **Tally and surface.** Record the classification in the audit's worklog. If 2+ issues are classified "Eva-responded — orchestrator queue" and not being actioned, this is a process failure pattern worth filing as `audit-outbound`.
+5. **Persist the receipt.** Record the per-issue classification in the audit's worklog (issue number → status → most-recent-Eva-comment-date) — this creates an audit trail and makes recurring patterns visible across cycles.
+
 For persistent issues noted in previous worklogs/journals but never filed:
 1. **Scan your last 2 worklogs** for observations labeled as concerns, blind spots, or noted-but-not-filed items.
 2. **If you noted the same issue 2+ times without filing, it is now MANDATORY to file it.** The threshold for proactive filing has been reached.
