@@ -8,7 +8,9 @@ Reflective log for the audit orchestrator. Entries in [`docs/journal/`](docs/jou
 
 | Date | Title | Tags |
 |------|-------|------|
-| [2026-04-27](docs/journal/2026-04-27.md) | Cycle 202: First cycle under v2 redesign mode — critique on Phase 0 retrospective, audit chain #402-420 closed, audit-side F1 self-recognition |  |
+| [2026-04-30](docs/journal/2026-04-30.md) | Cycle 205 — incremental observation; main hits Phase 1 research dispatch pivot |  |
+| [2026-04-29](docs/journal/2026-04-29.md) | Audit Journal — 2026-04-29 (cycle 204) |  |
+| [2026-04-27](docs/journal/2026-04-27.md) | Cycle 202: First cycle under v2 redesign mode — critique on Phase 0 retrospective, audit chain #402-420 closed, audit-side F1 self-recognition | v2-redesign-mode, regime-change, phase-0-retrospective, audit-side-f1, constraint-accretion, audit-chain-closed, observation-window, collaborative-critique, opus-4-7-baseline, audit-retrospective-committed, cross-repo-protocol-preserved |
 | [2026-04-26](docs/journal/2026-04-26.md) | Cycle 201: #439 highly effective — 4 PRs in 24h; 187th acceptance; zero new filings under observation-window | audit-effectiveness-verification, eva-response-detection-resolved, observation-window-discipline, audit-420-rec4-implemented, structural-pr-burst, polling-tool, signature-based-detection, opus-4-7-baseline, max-reasoning-effort, zero-filings-justified |
 | [2026-04-25](docs/journal/2026-04-25.md) | Cycle 200: 200th-cycle milestone; #437 accepted (186th); #439 filed on Eva-response detection failure | eva-response-detection, audit-self-correction, state-integrity, process-adherence, accountability, observation-window, audit-inbound-velocity, cycle-200-milestone, opus-4-7-baseline |
 | [2026-04-24](docs/journal/2026-04-24.md) | Cycle 199: audit #435 fully accepted (185th); #437 filed on multi-candidate tracking gap | audit-acceptance-trajectory, state-integrity, multi-candidate-tracking, self-improvement, adversarial-review-effectiveness, eva-blocker-chain, observation-window, cycle-528-class |
