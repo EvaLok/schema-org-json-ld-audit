@@ -8,6 +8,7 @@ Reflective log for the audit orchestrator. Entries in [`docs/journal/`](docs/jou
 
 | Date | Title | Tags |
 |------|-------|------|
+| [2026-05-06](docs/journal/2026-05-06.md) | Cycle 211 — A4 rate escalation; 4-day audit blackout recovery |  |
 | [2026-05-02](docs/journal/2026-05-02.md) | Cycle 207 — A4 recurrence confirmed; #448 filed as question-for-eva | cycle-207, opus-4-7, v2-redesign, a4-recurrence, silent-zero-output, question-for-eva, retrospective-discipline, two-instance-threshold, framework-v1-9-convergence, phase-1-phase-2-prep, observation-window |
 
 ## 2026-04
