@@ -64,9 +64,9 @@ gh api "repos/EvaLok/schema-org-json-ld/contents/docs/state.json" --jq '.content
 
 ## 3.5. Poll for cross-repo responses
 
-Discover `audit-inbound` response issues from both repos. These are how the main and QC orchestrators communicate their responses to audit recommendations (since neither can write directly to this repo).
+Discover `audit-inbound` response issues from both repos (V1 channel — preserved for older threads).
 
-Responses from main repo:
+Responses from main repo (V1 label, deprecated under V2):
 ```bash
 gh api "repos/EvaLok/schema-org-json-ld/issues?labels=audit-inbound&state=all&sort=created&direction=desc&per_page=10" --jq '.[] | {number, title, state, created_at}'
 ```
@@ -77,6 +77,29 @@ gh api "repos/EvaLok/schema-org-json-ld-qc/issues?labels=audit-inbound&state=all
 ```
 
 Cross-reference against `state.json` recommendations to identify new responses. Update recommendation status accordingly.
+
+## 3.6. Cross-repo audit-request discovery (V2, per [#455](https://github.com/EvaLok/schema-org-json-ld-audit/issues/455))
+
+V2 deprecated V1's `audit-inbound`/`audit-outbound` label-based channel. Main now files audit-engagement requests in its own repo using the `[audit-request]` title prefix convention. There is no formal label yet — Eva may create one (per [#455](https://github.com/EvaLok/schema-org-json-ld-audit/issues/455) Option C/D); until then, this step queries by title prefix.
+
+Query main repo for open `[audit-request]` issues:
+```bash
+gh api "search/issues?q=is:issue+state:open+repo:EvaLok/schema-org-json-ld+%5Baudit-request%5D+in:title" --jq '.items[] | {number, title, created_at, html_url}'
+```
+
+If results returned: read each issue body in full via `gh api "repos/EvaLok/schema-org-json-ld/issues/<N>"` and treat as priority engagement target (priority equal to `input-from-eva`). Produce substantive critique per the precedent of [#442](https://github.com/EvaLok/schema-org-json-ld-audit/issues/442) and [#454](https://github.com/EvaLok/schema-org-json-ld-audit/issues/454) (5 strongly-agree + 5 disagree + 5 missing patterns + N Phase 2 implications, or analogous structure for non-cluster-framework material).
+
+Also check the latest 3-5 main repo commit messages for "awaiting audit cycle N" or "audit-engagement" references — main may signal pending requests in commit messages. Use:
+```bash
+gh api "repos/EvaLok/schema-org-json-ld/commits?per_page=5" --jq '.[] | {sha: .sha[0:7], message: .commit.message[0:200], date: .commit.committer.date}'
+```
+
+For previously-engaged audit-request issues, also re-fetch comments to detect new absorption responses (main's response pattern is to comment back on the originating issue with ACCEPT / REJECT / DEFER verdicts):
+```bash
+gh api "repos/EvaLok/schema-org-json-ld/issues/<N>/comments" --jq '.[] | {user: .user.login, created_at, body: .body[0:300]}'
+```
+
+If Eva creates a label per [#455](https://github.com/EvaLok/schema-org-json-ld-audit/issues/455) Option C/D (e.g., `audit-request`), update this step's query from title-prefix search to label-based filter.
 
 ## 4. Read QC repo activity
 
