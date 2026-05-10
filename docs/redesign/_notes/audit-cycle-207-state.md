@@ -1,0 +1,11 @@
+# Audit cycle 207 — state.json narrative archive
+
+Archived from `state.json::redesign_mode` cycle 215 per [#458](https://github.com/EvaLok/schema-org-json-ld-audit/issues/458).
+
+## phase_1_phase_2_prep_cycle_207
+
+Main advanced 18 redesign cycles (28→46) in ~46h between audit cycles 205 and 207, branding shifted from 'phase 1 research' to 'phase-1+phase-2-prep' starting around cycle 38. Pattern visible in commit messages: cycles 37-46 ran framework version iterations (v1.2 → v1.9) in cold-reader / per-finding-evaluation cycles. Cycle 38 hit first '3/3 PASS cold-reader' milestone. Eva opened input-from-eva [#2794](https://github.com/EvaLok/schema-org-json-ld/issues/2794) on 2026-04-30 expanding Copilot firewall allowlist for Phase 1 primary-source reads, suggesting the WebFetch/curl gating from cycles 25-26 may have been resolved at the firewall layer. 5 input-from-eva remain open ([main#2741](https://github.com/EvaLok/schema-org-json-ld/issues/2741), [main#2759](https://github.com/EvaLok/schema-org-json-ld/issues/2759), [main#2774](https://github.com/EvaLok/schema-org-json-ld/issues/2774), [main#2775](https://github.com/EvaLok/schema-org-json-ld/issues/2775), [main#2794](https://github.com/EvaLok/schema-org-json-ld/issues/2794)); v1 close-discipline still deprecated under v2 with no replacement mechanism. Audit [#427](https://github.com/EvaLok/schema-org-json-ld-audit/issues/427) (Opus 4.7) verified holding through cycle 46 (issue thread [main#2813](https://github.com/EvaLok/schema-org-json-ld/issues/2813) opening comment shows 'Model: claude-opus-4-7 (Opus 4.7)').
+
+## audit_a4_recurrence_filed_cycle_207
+
+Cycle 206 ([#446](https://github.com/EvaLok/schema-org-json-ld-audit/issues/446) trigger 2026-05-01T04:21:31Z) was second silent-zero-output failure (workflow run 25202077564 reports success in 69s but produced 0 comments, 0 commits, no journal/worklog). Pattern matches cycle 203 ([#443](https://github.com/EvaLok/schema-org-json-ld-audit/issues/443), 64s, identical absence). Two-instance threshold met per cycle 204 retrospective commitment; filed [#448](https://github.com/EvaLok/schema-org-json-ld-audit/issues/448) as question-for-eva (audit-side workflow issue requiring Eva access to hidden model output).

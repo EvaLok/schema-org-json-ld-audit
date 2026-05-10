@@ -109,7 +109,18 @@ Root cause not fully diagnosed (output is hidden per security policy). Most like
 
 **Cross-reference**: this is the audit-side analog of main's F8 (single-tool defects cascading) — except the "tool" here is the entire orchestrator session. One silent failure produces zero artifacts and zero detection signal.
 
-**Status**: single occurrence in v1 audit period as of cycle 204. Pattern not yet established. Documenting here so the next occurrence is recognized as recurrence rather than novel. v2 design should include a liveness assertion at the workflow layer (post-condition check on the trigger issue's comment count or an emitted heartbeat).
+**Status (revised cycle 215)**: A4 has now occurred 6 times across cycles 203 / 206 / 208 / 209 / 210 / 213. v1 baseline (1 in 30+ cycles) has been replaced by a sustained ~50% rate over the 12 cycles since cycle 203. [#448](https://github.com/EvaLok/schema-org-json-ld-audit/issues/448) is the question-for-eva tracking the pattern (filed cycle 207, updated cycles 211 and 214 with rate-escalation evidence; Eva-silent 8+ days as of cycle 215).
+
+Cycle 211's hypothesis-C (model-side guardrail/classifier intersecting with cycle context) remains most plausible given deterministic 27-31s "Run Audit Orchestrator" step durations. The cycle 211/212 success-then-cycle-213-revert sequence falsified the transient-cluster hypothesis; A4 is not self-bounded.
+
+**Commitment-thread cascade interaction (named cycle 215)**: A4 produces a secondary failure mode beyond zero-output. When cycle N filed a commitment to take action in cycle N+1, and cycle N+1 silently fails, the commitment cascades to cycle N+2 with no user-visible notification. This has occurred twice:
+
+- Cycle 207 → cycle 211 [#448](https://github.com/EvaLok/schema-org-json-ld-audit/issues/448) escalation: cycle 207's "re-file only if rate increases" commitment was scheduled to be evaluated cycle 208; cycles 208/209/210 silently failed; cycle 211 (cycle 207 + 4) executed the escalation.
+- Cycle 213 → cycle 214 [#455](https://github.com/EvaLok/schema-org-json-ld-audit/issues/455) Option A: cycle 212's "audit will adopt Option A in cycle 213 if no Eva direction" commitment was scheduled for cycle 213; cycle 213 silently failed; cycle 214 (cycle 212 + 2) implemented Option A.
+
+The commitment-thread discipline (see "What appears to be working") survives the cascade, but with a cycle-count latency penalty proportional to the A4 run length. v2 design must specify both a liveness assertion (catches A4) AND a commitment-thread observability mechanism (catches A4 ∩ commitment-thread cascade).
+
+v2 design must include a liveness assertion at the workflow layer (post-condition check on the trigger issue's comment count or an emitted heartbeat) AND a commitment-thread observability mechanism that surfaces deferred commitments at cycle N+1 entry.
 
 ### A5 — State.json size growth, append-only registry
 
@@ -120,12 +131,20 @@ Audit's `state.json` has grown to 253KB / ~5,500 lines as of cycle 204. The domi
 - No entry has ever been pruned or compressed.
 - Reads of `state.json` from this repo via `gh api` exceed the 25KB tool-content limit; full-file reads via local Read also approach the model's working-memory cap.
 - Cycle 202 worklog explicitly notes: "state.json read via targeted `jq` queries (full-file Read exceeded 25K token limit)."
+- **Cycle 214 ([#458](https://github.com/EvaLok/schema-org-json-ld-audit/issues/458))**: state.json reached 273674 bytes (267KB), exceeding the Read tool's 256KB default limit. A5 crossed operational threshold.
+- **Cycle 215 (named threshold + first archival applied)**: STARTUP_CHECKLIST Step 13.1 added with size thresholds (100KB advisory / 200KB mandatory / 250KB hard). First archival applied — cycles 205/207/211 narrative fields moved to `docs/redesign/_notes/audit-cycle-N-state.md` mirroring main's `_notes/` pattern. State.json reduced 271KB → 264KB (-8KB / ~3%).
 
 **Hypothesis**: audit's state-shape is a milder version of main's F5 (state-as-procedural-implementation-leak). Audit's state is mostly a single append-only registry, so it doesn't have the field-family proliferation main has. But it has the same growth-without-decay shape, and the same eventual readability cost. At current rate (~10 acceptances per ~30 cycles), the 250KB threshold reaches 500KB in roughly 200 more cycles.
 
 **Cross-reference**: main's F5; less severe in audit because audit's state surface is smaller and more uniform. Same root cause: write-only retention without an explicit decay or summarization mechanism.
 
-**Status**: not yet load-bearing for cycle execution (jq queries work). Will become load-bearing at sufficient scale. v2 design should specify a retention or summarization mechanism for the accept-list.
+**Status (revised cycle 215)**: load-bearing for cycle execution as of cycle 214. Cycle 215 implementation:
+
+- **Named threshold**: STARTUP_CHECKLIST Step 13.1 specifies 100KB advisory / 200KB mandatory / 250KB hard, against the 256KB Read tool ceiling.
+- **Archival pattern**: `redesign_mode.audit_*_cycle_N` narrative fields older than 5 cycles are moved to `docs/redesign/_notes/audit-cycle-N-state.md`, replaced with one-line pointers.
+- **Cycle 215 first application**: cycles 205/207/211 archived; cycle 212 retained (within 5-cycle window); cycle 214 had no narrative fields per [#458](https://github.com/EvaLok/schema-org-json-ld-audit/issues/458) commitment to bound growth during design phase.
+
+**Remaining gap**: the dominant size driver (`recommendations.accepted` at ~190 entries / ~190KB) is NOT addressed by the cycle 215 archival. That decision is structurally larger — full archival of older entries vs summarization vs partition by acceptance-status — and is deferred separately from the cycle 215 redesign_mode-narrative archival. v2 design must specify the recommendations-registry retention shape; this is the audit-side instance of main's F5 at full severity.
 
 ### A6 — Audit's blind spots are the cases where audit took main's framing at face value
 
@@ -169,6 +188,21 @@ Things in audit v1 that genuinely work and should be preserved through cutover.
 - **The journal as freeform reflective log**. Audit's per-day journals (`docs/journal/YYYY-MM-DD.md`) capture observations that don't fit in the worklog's per-cycle format — meta-observations across cycles, regime-change reading, blind-spot recognition. Cycle 202's journal entry recognized the audit-side instance of main's F1 (the [#420](https://github.com/EvaLok/schema-org-json-ld-audit/issues/420) chain) — a recognition that did not fit the worklog's structure. *Caveat*: same as main's caveat — works *when written*. Cycle 203 produced no journal at all.
 - **Independent state.json with explicit acceptance tracking**. The recommendations registry produces a measurable signal (acceptance rate, time-to-acceptance, disposition narrative per entry). This is the audit's primary outcome measure. *Caveat*: A5 — the registry is append-only and will become load-bearing readability problem at scale.
 - **Observation-window discipline as filing-rate calibration**. Eva [#425](https://github.com/EvaLok/schema-org-json-ld-audit/issues/425) (the directive, since closed) and its operational continuation through cycles 184–204 have demonstrably improved finding quality (zero process-failure filings during regime-change weeks while still surfacing collaborative critique like [#442](https://github.com/EvaLok/schema-org-json-ld-audit/issues/442)). *Caveat*: discipline depends on directive; v2 should bake calibration into prompt structure rather than rely on out-of-band intervention.
+
+- **Commitment-thread discipline (named cycle 215)**. The pattern: when cycle N identifies a forward action that should be evaluated cycle N+M, encode the threshold *and* the response in writing as a watch item on cycle N's `last_cycle.summary`. Cycle N+M's first action is to evaluate the watch item against the named criterion. Three V2-era instances all produced high-value outcomes:
+
+  - Cycle 207 → cycle 211 [#448](https://github.com/EvaLok/schema-org-json-ld-audit/issues/448) escalation. Cycle 207 commitment: "re-file only if rate increases or cause becomes actionable." Cycle 211 (after 4-cycle A4 blackout) executed the escalation mechanically: rate had increased (5 occurrences in 8 days vs 2 in 24 days), so re-filing was procedural, not a fresh judgment call.
+  - Cycle 211 → cycle 212 [#454](https://github.com/EvaLok/schema-org-json-ld-audit/issues/454) / [#455](https://github.com/EvaLok/schema-org-json-ld-audit/issues/455) filings. Cycle 211 commitment: "audit retrospective iteration discipline — A4 rate-escalation under V2 NOT yet retrospective-warranting." Cycle 212 surfaced the audit-request channel-gap and engaged substantively on [main#2849](https://github.com/EvaLok/schema-org-json-ld/issues/2849) — the substantive engagement was explicit because cycle 211 had named the surfaces audit *was not* iterating on.
+  - Cycle 212 → cycle 214 absorption discovery + Option A implementation. Cycle 212 commitment: "audit will adopt Option A in cycle 213 if no Eva direction." Cycle 213 silently failed (A4 occurrence #6); cycle 214 (cycle 212 + 2) executed Option A AND discovered main cycle 85's 100% verdict-level absorption of [#454](https://github.com/EvaLok/schema-org-json-ld-audit/issues/454). The discovery happened because cycle 212's first watch item was "does main absorb [#454](https://github.com/EvaLok/schema-org-json-ld-audit/issues/454) within cycles 85-90," which made cycle 214's first sub-question on commit-message scan exactly the right query.
+
+  The pattern is structurally similar to main's `<promotion-shape-tracker>` discipline (track promotions across cycles to surface stable patterns). Audit's analog is forward-action-promotion: a commitment named in writing at cycle N is the substrate against which cycle N+M evaluates. *Caveat*: the discipline survives A4 cascades but with cycle-count latency penalty (see A4 revised cycle 215). v2 design should preserve this as an audit primitive AND specify a commitment-thread observability mechanism that surfaces deferred commitments at cycle N+1 entry.
+
+- **V2 cross-repo audit-engagement format (named cycle 215)**. Audit produces substantive critique on surfaces main hasn't yet cold-readed; main absorbs at high verdict-level. Two V2-era instances:
+
+  - [#442](https://github.com/EvaLok/schema-org-json-ld-audit/issues/442) (cycle 202) — first V2 collaborative critique on main's 0-retrospective.md. Main absorbed cycle 3 (`docs/redesign/_notes/cycle-3-audit-442-integration.md`) with structural revisions to F10/F11/F12 + family taxonomy adoption + meta-observation promotion. ~25-cycle window.
+  - [#454](https://github.com/EvaLok/schema-org-json-ld-audit/issues/454) (cycle 212) — second V2 collaborative critique on main's clusters.md cycles 65-75 cluster framework. Main absorbed cycle 85 at 100% verdict-level (5/5 strongly-agree PRESERVED + 5/5 disagree ACCEPTED + 5/5 missing patterns ACCEPTED + 6/6 Phase 2 implications ACCEPTED). 50-min round-trip from audit cycle 212 close.
+
+  Format precedent: 5 strongly-agree + 5 disagree + 5 missing patterns + N implications, structured around the surface main authored. Both instances delivered when audit's broader read scope (F10 property 1) surfaced patterns invisible to main's per-cycle cold-reader rhythm. *Caveat*: low cadence — two instances over ~13 V2 audit cycles. Engagement requires either an explicit audit-request from main OR an implicit ask channel (cycle 215 observed: main's `2-candidates/README.md` includes the "audit critique solicitation — this directory's content is read by the audit-repo orchestrator on its next cycle" directive without filing a `[audit-request]` issue). v2 design should formalize both the explicit and implicit channels.
 
 ---
 
@@ -267,6 +301,7 @@ This document is a v0 deliverable per the cycle-202 commitment. It will iterate 
 | Cycle | Date | Change |
 |---|---|---|
 | 204 | 2026-04-29 | v0 draft. Mirrors main's 0-retrospective.md structure. Documents A1–A6 with cross-references to F1–F12. Inaugural commitment per audit [#442](https://github.com/EvaLok/schema-org-json-ld-audit/issues/442) and main's OQ5. |
+| 215 | 2026-05-10 | A4 revised: 6 occurrences (cycles 203/206/208/209/210/213); status changed from "single occurrence" to "sustained ~50% rate over 12 cycles since cycle 203, NOT self-bounded"; commitment-thread cascade interaction named (A4 ∩ commitment-thread produces cycle-count latency penalty). A5 revised: cycle 214 [#458](https://github.com/EvaLok/schema-org-json-ld-audit/issues/458) crossed operational threshold; cycle 215 added named threshold (Step 13.1 in STARTUP_CHECKLIST: 100KB advisory / 200KB mandatory / 250KB hard) + first archival application (cycles 205/207/211 → `_notes/audit-cycle-N-state.md`). Two new positive patterns added to "What appears to be working": commitment-thread discipline (3 V2-era instances cycles 207→211 / 211→212 / 212→214) and V2 cross-repo audit-engagement format (2 V2-era instances [#442](https://github.com/EvaLok/schema-org-json-ld-audit/issues/442) and [#454](https://github.com/EvaLok/schema-org-json-ld-audit/issues/454)). Recommendations.accepted retention shape remains explicitly deferred. |
 
 ---
 

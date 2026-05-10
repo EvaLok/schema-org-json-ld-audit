@@ -307,6 +307,32 @@ Update `state.json` with:
 - Recommendation tracking
 - Last cycle info
 
+## 13.1. State.json size discipline (per [#458](https://github.com/EvaLok/schema-org-json-ld-audit/issues/458))
+
+`state.json` is append-only without bounded retention. Cycle-tagged narrative fields (e.g., `redesign_mode.audit_*_cycle_N`) accumulate. By cycle 214 the file reached 271KB, exceeding the Read tool's 256KB default limit. Cycle 215 established the archival convention.
+
+**Before each commit**, check the file size:
+
+```bash
+wc -c state.json
+```
+
+| Size | Action |
+|---|---|
+| < 100KB | No action. |
+| 100-200KB (advisory) | Archive `redesign_mode.audit_*_cycle_N` fields older than 5 cycles before adding new narrative this cycle. |
+| 200-250KB (mandatory) | Archive any `redesign_mode.audit_*_cycle_N` field older than 5 cycles before commit. Replace with one-line pointer. |
+| ≥ 250KB (hard limit) | Do not commit new narrative. Archive immediately. The 256KB Read tool limit is the operative ceiling. |
+
+**Archival procedure** (mirrors main repo's `_notes/` pattern):
+
+1. Create `docs/redesign/_notes/audit-cycle-N-state.md` (where N is the audit cycle number).
+2. Copy the original narrative content from `state.json` verbatim, with a header citing [#458](https://github.com/EvaLok/schema-org-json-ld-audit/issues/458).
+3. Replace the `redesign_mode.audit_*_cycle_N` field value in `state.json` with: `"Archived to docs/redesign/_notes/audit-cycle-N-state.md (cycle X archival per [#458](https://github.com/EvaLok/schema-org-json-ld-audit/issues/458))"`.
+4. Validate: `jq empty state.json`.
+
+The `recommendations.accepted` array (~190 entries, ~190KB) is the dominant size driver but its retention shape is a larger architectural decision, deferred separately. This step bounds the redesign_mode-narrative growth axis.
+
 ## 14. Write worklog and journal
 
 Use the `audit-journal` tool to create entries:
