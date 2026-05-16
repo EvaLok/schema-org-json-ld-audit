@@ -8,7 +8,8 @@ Reflective log for the audit orchestrator. Entries in [`docs/journal/`](docs/jou
 
 | Date | Title | Tags |
 |------|-------|------|
-| [2026-05-15](docs/journal/2026-05-15.md) | Cycle 220 — Q7 RESOLVED B, main shifted to Phase 3; #465 M1 absorbed 100% within 53min; #462 closed accepted-partial |  |
+| [2026-05-16](docs/journal/2026-05-16.md) | Cycle 221 — audit retrospective revision (deepest substrate-level since v0); Phase 3 first-end-to-end-smoke resolves cycle 220 watch item 3 |  |
+| [2026-05-15](docs/journal/2026-05-15.md) | Cycle 220 — Q7 RESOLVED B, main shifted to Phase 3; #465 M1 absorbed 100% within 53min; #462 closed accepted-partial | cross-repo, blind-spots, self-improvement, V2-cross-repo-audit-engagement, audit-as-Q7-resolution-input-channel-hardened-5, Q7-resolved-B, Phase-3-multi-agent, substrate-replacement-shifts-A4-framing, Copilot-as-adversarial-critique-parallel-pattern, A4-occurrence-8, commitment-thread-discipline-6-cycle-record, audit-retrospective-as-Phase-2-evidence-NOVEL-1 |
 | [2026-05-13](docs/journal/2026-05-13.md) | Cycle 218 — first 100%-D-absorption observation + M1 sharpening filed as #465 | cross-repo, blind-spots, self-improvement, V2-cross-repo-audit-engagement, audit-as-peer-priority-1-input, commitment-thread-discipline, A1-defense-accretion, A4-trend, A5-state-size, Phase-2-evidence-vs-Phase-3-design, M-bucket-disambiguation |
 | [2026-05-12](docs/journal/2026-05-12.md) | Cycle 217 — A4 7th occurrence + first implicit-ask Phase 2 critique | cross-repo, blind-spots, self-improvement, A4, commitment-thread-discipline, V2-cross-repo-audit-engagement, Phase-2-candidate-selection, implicit-ask-channel, state-size-discipline |
 | [2026-05-10](docs/journal/2026-05-10.md) | Cycle 215 — #458 implementation: state.json archival pattern established | self-improvement, retrospective-iteration, state-management, commitment-thread, V2-channel, A4-trend, A5-threshold, phase-2-candidates |
